@@ -4,23 +4,25 @@ export const MetricsCardGrayLight = () => {
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col gap-8 rounded-2xl bg-secondary px-6 py-10 md:gap-16 md:rounded-none md:bg-transparent md:p-0">
                     <div className="flex w-full flex-col self-center text-center md:max-w-3xl">
-                        <h2 className="text-display-sm font-semibold text-primary md:text-display-md">Great products, faster than ever</h2>
-                        <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Everything you need to build modern UI and great products.</p>
+                        <h2 className="text-display-sm font-semibold text-primary md:text-display-md">Floors are pricing power</h2>
+                        <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">
+                            Granular, dynamic floors keep DSPs honest — so you set the terms the market has to beat.
+                        </p>
                     </div>
 
                     <dl className="flex flex-col gap-8 rounded-2xl bg-secondary md:flex-row md:p-16">
                         {[
                             {
-                                title: "400+",
-                                subtitle: "Projects completed",
+                                title: "+31%",
+                                subtitle: "Average eCPM lift with floors",
                             },
                             {
-                                title: "600%",
-                                subtitle: "Return on investment",
+                                title: "3",
+                                subtitle: "Dimensions to floor: geo, format, size",
                             },
                             {
-                                title: "10k",
-                                subtitle: "Global downloads",
+                                title: "0",
+                                subtitle: "Yield teams required",
                             },
                         ].map((item, index) => (
                             <div key={index} className="flex flex-1 flex-col-reverse gap-3 text-center">

@@ -34,20 +34,21 @@ export const ContentSectionRichText01 = () => {
 
                         <figure>
                             <img
-                                className="h-60 md:h-120"
-                                src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?cs=srgb&dl=pexels-fauxels-3182746.jpg&fm=jpg&w=1920&h=1280"
-                                alt="Woman leaning on wooden table"
+                                className="h-60 w-full object-cover md:h-120"
+                                src="/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-JKUTrJ4vK00.jpg"
+                                alt="Analytics graphs on a laptop screen"
                             />
                             <figcaption>
                                 <Link01 className="size-4 text-utility-neutral-400" />
                                 <span>
-                                    Image courtesy of Fauxels via{" "}
+                                    Photo by{" "}
                                     <a
-                                        href="https://www.pexels.com/photo/photo-of-woman-leaning-on-wooden-table-3182746/"
+                                        href="https://unsplash.com/@lukechesser?utm_source=nimbus_design_system&utm_medium=referral"
                                         className="rounded-xs outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
                                     >
-                                        Pexels
-                                    </a>
+                                        Luke Chesser
+                                    </a>{" "}
+                                    on Unsplash
                                 </span>
                             </figcaption>
                         </figure>
@@ -114,20 +115,21 @@ export const ContentSectionRichText01 = () => {
                         </ol>
                         <figure>
                             <img
-                                className="h-110 md:h-210"
-                                src="https://images.pexels.com/photos/7148059/pexels-photo-7148059.jpeg?cs=srgb&dl=pexels-michael-burrows-7148059.jpg&fm=jpg&w=1920&h=2880"
-                                alt="Woman sitting in light workspace"
+                                className="h-110 w-full object-cover md:h-210"
+                                src="/unsplash/person-using-smartphone-mobile-app/person-using-smartphone-mobile-app-HbyYFFokvm0.jpg"
+                                alt="Person using a mobile app on a smartphone"
                             />
                             <figcaption>
                                 <Link01 className="size-4 text-utility-neutral-400" />
                                 <span>
-                                    Image courtesy of Michael Burrows via{" "}
+                                    Photo by{" "}
                                     <a
-                                        href="https://www.pexels.com/photo/pensive-woman-sitting-in-light-workspace-7148059/"
+                                        href="https://unsplash.com/@plhnk?utm_source=nimbus_design_system&utm_medium=referral"
                                         className="rounded-xs outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
                                     >
-                                        Pexels
-                                    </a>
+                                        Paul Hanaoka
+                                    </a>{" "}
+                                    on Unsplash
                                 </span>
                             </figcaption>
                         </figure>
@@ -164,19 +166,15 @@ export const ContentSectionRichText01 = () => {
 
                     <div className="-mt-px flex flex-col items-start justify-between gap-y-8 border-t border-secondary pt-6 md:flex-row">
                         <div className="flex items-center gap-3 md:gap-4">
-                            <img
-                                src="https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80"
-                                className="size-12 rounded-full object-cover md:size-14"
-                                alt="Olivia Rhye"
-                            />
+                            <img src="https://i.pravatar.cc/150?img=15" className="size-12 rounded-full object-cover md:size-14" alt="Nimbus Ad Ops" />
                             <div>
-                                <p className="text-md font-semibold text-primary md:text-lg">Olivia Rhye</p>
-                                <p className="text-md text-tertiary">Product Designer, Untitled</p>
+                                <p className="text-md font-semibold text-primary md:text-lg">Nimbus Ad Ops</p>
+                                <p className="text-md text-tertiary">Nimbus</p>
                             </div>
                         </div>
 
                         <div className="flex gap-3">
-                            <Button color="secondary" onClick={() => copy("https://www.untitledui.com/")} size="md" iconLeading={copied ? Check : Copy01}>
+                            <Button color="secondary" onClick={() => copy("https://www.adsbynimbus.com/")} size="md" iconLeading={copied ? Check : Copy01}>
                                 {copied ? "Copied" : "Copy link"}
                             </Button>
                             <Button color="secondary" size="md" iconLeading={<X className="size-5 text-fg-quaternary" />} />

@@ -8,7 +8,7 @@ export const NewsletterCardHorizontalBrand = () => {
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col justify-between gap-x-16 gap-y-8 rounded-2xl bg-brand-section px-6 py-10 lg:flex-row lg:p-16">
                     <div className="flex max-w-3xl flex-col">
-                        <h2 className="text-display-sm font-semibold text-primary_on-brand md:text-display-md">Join 2,000+ subscribers</h2>
+                        <h2 className="text-display-sm font-semibold text-primary_on-brand md:text-display-md">Get Nimbus Updates</h2>
                         <p className="mt-4 text-lg text-tertiary_on-brand md:mt-5 lg:text-xl">Stay in the loop with everything you need to know.</p>
                     </div>
                     <Form

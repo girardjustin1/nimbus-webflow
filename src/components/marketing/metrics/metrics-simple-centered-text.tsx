@@ -9,22 +9,24 @@ export const MetricsSimpleCenteredText = () => {
                 <div className="flex flex-col gap-12 md:gap-16">
                     <div className="flex w-full flex-col items-center self-center text-center md:max-w-3xl">
                         <FeaturedIcon icon={ZapFast} color="brand" theme="light" size="xl" />
-                        <h2 className="mt-4 text-display-sm font-semibold text-primary md:mt-6 md:text-display-md">Build something great</h2>
-                        <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Everything you need to build modern UI and great products.</p>
+                        <h2 className="mt-4 text-display-sm font-semibold text-primary md:mt-6 md:text-display-md">One unit, the full auction</h2>
+                        <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">
+                            The Dynamic Unit accepts programmatic demand in multiple formats — so a native-looking ad fills like static or video.
+                        </p>
                     </div>
                     <dl className="flex w-full flex-col justify-center gap-8 md:max-w-3xl md:flex-row md:gap-4 md:self-center">
                         {[
                             {
-                                title: "400+",
-                                subtitle: "Projects completed",
+                                title: "45+",
+                                subtitle: "Demand partners",
                             },
                             {
-                                title: "600%",
-                                subtitle: "Return on investment",
+                                title: "4",
+                                subtitle: "Formats in a single unit",
                             },
                             {
-                                title: "10k",
-                                subtitle: "Global downloads",
+                                title: "99.9%",
+                                subtitle: "Creative render rate",
                             },
                         ].map((item, index) => (
                             <Fragment key={item.title}>

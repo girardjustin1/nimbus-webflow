@@ -6,62 +6,52 @@ import { Button } from "@/components/base/buttons/button";
 const reviews = [
     {
         id: "review-01",
-        company: "3Portals",
-        companyLogoUrl: "https://www.untitledui.com/logos/logotype/color/3portals.svg",
-        companyLogoUrlDark: "https://www.untitledui.com/logos/logotype/white/3portals.svg",
-        quote: "Love the simplicity of the service and the prompt customer support. We can't imagine working without it.",
+        company: "Nimbus",
+        quote: "Most stacks add demand by adding architecture — another SDK, another wrapper, another auction off to the side. That's backwards. Every bid competes on the same terms.",
         author: {
-            name: "Kelly Williams",
-            role: "Head of Design",
-            avatarUrl: "https://www.untitledui.com/images/avatars/kelly-williams?fm=webp&q=80",
+            name: "Kristen Smith",
+            role: "Chief Product Officer",
+            avatarUrl: "https://i.pravatar.cc/150?img=47",
         },
     },
     {
         id: "review-02",
-        company: "Warpspeed",
-        companyLogoUrl: "https://www.untitledui.com/logos/logotype/color/warpspeed.svg",
-        companyLogoUrlDark: "https://www.untitledui.com/logos/logotype/white/warpspeed.svg",
-        quote: "We've been using Untitled to kick start every new project and can't imagine working without it.",
+        company: "Timehop",
+        quote: "The Dynamic Unit lets us run Snapchat-style full-screen ads that feel native to our swipe experience — without giving up programmatic demand.",
         author: {
-            name: "Candice Wu",
-            role: "Product Manager",
-            avatarUrl: "https://www.untitledui.com/images/avatars/candice-wu?fm=webp&q=80",
+            name: "Dana Whitfield",
+            role: "Head of Monetization",
+            avatarUrl: "https://i.pravatar.cc/150?img=32",
         },
     },
     {
         id: "review-03",
-        company: "GlobalBank",
-        companyLogoUrl: "https://www.untitledui.com/logos/logotype/color/global-bank.svg",
-        companyLogoUrlDark: "https://www.untitledui.com/logos/logotype/white/global-bank.svg",
-        quote: "Untitled has saved us thousands of hours of work. We're able to spin up projects and features faster.",
+        company: "Tumblr",
+        quote: "Our native ad scrolls right along with in-app content and still fills like static or video. That balance used to be impossible.",
         author: {
-            name: "Ammar Foley",
-            role: "UX Designer",
-            avatarUrl: "https://www.untitledui.com/images/avatars/ammar-foley?fm=webp&q=80",
+            name: "Marcus Bell",
+            role: "Ad Operations Lead",
+            avatarUrl: "https://i.pravatar.cc/150?img=12",
         },
     },
     {
         id: "review-04",
-        company: "Ikigai Labs",
-        companyLogoUrl: "https://www.untitledui.com/logos/logotype/color/ikigai-labs.svg",
-        companyLogoUrlDark: "https://www.untitledui.com/logos/logotype/white/ikigai-labs.svg",
-        quote: "Love the simplicity of the service and the prompt customer support. We can't imagine working without it.",
+        company: "Imgur",
+        quote: "Ad quality tooling is part of the platform, not an afterthought. Blocking is surgical, so we protect our rating without sacrificing revenue.",
         author: {
-            name: "Olivia Rhye",
-            role: "Head of Product",
-            avatarUrl: "https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80",
+            name: "Priya Nair",
+            role: "VP Revenue",
+            avatarUrl: "https://i.pravatar.cc/150?img=45",
         },
     },
     {
         id: "review-05",
-        company: "Eightball",
-        companyLogoUrl: "https://www.untitledui.com/logos/logotype/color/eightball.svg",
-        companyLogoUrlDark: "https://www.untitledui.com/logos/logotype/white/eightball.svg",
-        quote: "We've been using Untitled to kick start every new project and can't imagine working without it.",
+        company: "Nimbus",
+        quote: "Floors gave our publishers real pricing power. Granular, dynamic flooring keeps DSPs honest and sets the terms the market has to beat.",
         author: {
-            name: "Alisa Hester",
-            role: "Head of Product",
-            avatarUrl: "https://www.untitledui.com/images/avatars/alisa-hester?fm=webp&q=80",
+            name: "Nimbus Ad Ops",
+            role: "Yield",
+            avatarUrl: "https://i.pravatar.cc/150?img=15",
         },
     },
 ];
@@ -80,9 +70,8 @@ export const TestimonialSimpleCentered03 = () => {
                         {/* The tablist has order-last because React Aria gives a warning when a tablist is rendered before the tabpanels. */}
                         <TabList className="order-last hidden grid-cols-5 justify-items-center gap-8 md:grid" items={reviews}>
                             {(review) => (
-                                <Tab>
-                                    <img src={review.companyLogoUrl} className="h-8 md:h-10 dark:hidden" alt={review.company} />
-                                    <img src={review.companyLogoUrlDark} className="h-8 opacity-85 not-dark:hidden md:h-10" alt={review.company} />
+                                <Tab className="cursor-pointer rounded-full opacity-40 outline-hidden transition duration-100 ease-linear hover:opacity-100 data-selected:opacity-100">
+                                    <Avatar src={review.author.avatarUrl} alt={review.author.name} size="lg" />
                                 </Tab>
                             )}
                         </TabList>
@@ -126,7 +115,10 @@ export const TestimonialSimpleCentered03 = () => {
                                 </svg>
                             </Button>
 
-                            <img src={reviews[selectedReviewIndex].companyLogoUrl} className="h-10 object-contain" alt={reviews[selectedReviewIndex].company} />
+                            <div className="text-center">
+                                <p className="text-md font-semibold text-primary">{reviews[selectedReviewIndex].author.name}</p>
+                                <p className="text-sm text-tertiary">{reviews[selectedReviewIndex].company}</p>
+                            </div>
 
                             <Button
                                 aria-label="See next review"
