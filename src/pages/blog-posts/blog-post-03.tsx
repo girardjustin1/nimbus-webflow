@@ -2,11 +2,9 @@ import { Check, Copy01, MarkerPin02 } from "@untitledui/icons";
 import { Avatar } from "@/components/base/avatar/avatar";
 import type { BadgeColor } from "@/components/base/badges/badges";
 import { Button } from "@/components/base/buttons/button";
-import { Form } from "@/components/base/form/form";
-import { Input } from "@/components/base/input/input";
-import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
 import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import { NimbusHeader } from "@/components/marketing/nimbus-header";
+import { NimbusFooter } from "@/components/marketing/nimbus-footer";
 import { useClipboard } from "@/hooks/use-clipboard";
 
 type Article = {
@@ -190,11 +188,7 @@ const ContentAlternative03 = () => {
                         New Zealand is famous for its breathtaking hiking trails that weave their way through its beautiful landscapes.{" "}
                     </p>
                     <div className="mt-8 flex items-center gap-3 md:mt-auto">
-                        <img
-                            src="https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80"
-                            className="size-12 rounded-full object-cover"
-                            alt="Jordan Kim"
-                        />
+                        <div className="size-12 rounded-full object-cover bg-[#84D7D9]" />
                         <div>
                             <p className="text-md font-semibold text-primary">Jordan Kim</p>
                             <p className="text-md text-tertiary">
@@ -210,11 +204,7 @@ const ContentAlternative03 = () => {
                     </div>
                 </div>
 
-                <img
-                    className="h-80 w-full object-cover md:order-first md:h-200"
-                    src="https://www.untitledui.com/marketing/mountains-2.webp"
-                    alt="Roy's Peak mountain landscape in Wanaka, New Zealand"
-                />
+                <div className="h-80 w-full object-cover md:order-first md:h-200 bg-[#84D7D9]" />
             </div>
 
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:py-24">
@@ -239,11 +229,7 @@ const ContentAlternative03 = () => {
                         </p>
 
                         <figure>
-                            <img
-                                className="h-60 md:h-120"
-                                src="https://images.pexels.com/photos/213727/pexels-photo-213727.jpeg?cs=srgb&dl=pexels-scott-webb-213727.jpg&fm=jpg&w=1280&h=853"
-                                alt="Green leafed plant"
-                            />
+                            <div className="h-60 md:h-120 bg-[#84D7D9]" />
                             <figcaption>
                                 <span>
                                     Image courtesy of Scott Webb via{" "}
@@ -317,11 +303,7 @@ const ContentAlternative03 = () => {
                             <li>Suspendisse maecenas ac donec scelerisque diam sed est duis purus.</li>
                         </ol>
                         <figure>
-                            <img
-                                className="h-60 md:h-120"
-                                src="https://images.pexels.com/photos/533509/pexels-photo-533509.jpeg?cs=srgb&dl=pexels-pixabay-533509.jpg&fm=jpg&w=1280&h=854"
-                                alt="Beach surfing action scene"
-                            />
+                            <div className="h-60 md:h-120 bg-[#84D7D9]" />
                             <figcaption>
                                 <span>
                                     Image courtesy of Pixabay via{" "}
@@ -404,7 +386,7 @@ const BlogSectionSplitLayout02 = () => {
                                     className="shrink-0 overflow-hidden rounded-2xl transition duration-100 ease-linear hover:shadow-2xl"
                                     tabIndex={-1}
                                 >
-                                    <img src={article.thumbnailUrl} className="h-60 w-full object-cover xl:h-50 xl:w-91.5" alt={article.title} />
+                                    <div className="h-60 w-full object-cover xl:h-50 xl:w-91.5 bg-[#84D7D9]" />
                                 </a>
 
                                 <div className="flex flex-col gap-6">
@@ -455,33 +437,7 @@ const BlogSectionSplitLayout02 = () => {
     );
 };
 
-const FooterSmall04 = () => {
-    return (
-        <footer className="bg-[#f9f7f3] py-12">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col items-start justify-between gap-y-12 md:flex-row">
-                    <UntitledLogo className="h-7 w-min shrink-0" />
 
-                    <Form
-                        onSubmit={(e) => {
-                            e.preventDefault();
-                            const data = Object.fromEntries(new FormData(e.currentTarget));
-                            console.log("Form data:", data);
-                        }}
-                        className="flex w-full flex-col gap-4 sm:flex-row md:max-w-100"
-                    >
-                        <Input isRequired id="newsletters-email" name="email" type="email" placeholder="Enter your email" size="lg" wrapperClassName="flex-1" />
-                        <Button type="submit" size="lg">
-                            Subscribe
-                        </Button>
-                    </Form>
-                </div>
-
-                <p className="mt-8 text-md text-quaternary md:mt-16 md:text-right">© 2026 Nimbus. All rights reserved.</p>
-            </div>
-        </footer>
-    );
-};
 
 const BlogPost03 = () => {
     return (
@@ -492,7 +448,7 @@ const BlogPost03 = () => {
 
             <BlogSectionSplitLayout02 />
 
-            <FooterSmall04 />
+            <NimbusFooter />
         </div>
     );
 };

@@ -4,11 +4,9 @@ import { Carousel } from "@/components/application/carousel/carousel-base";
 import { BadgeGroup } from "@/components/base/badges/badge-groups";
 import { Badge, type BadgeColor } from "@/components/base/badges/badges";
 import { Button } from "@/components/base/buttons/button";
-import { Form } from "@/components/base/form/form";
-import { Input } from "@/components/base/input/input";
-import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
 import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import { NimbusHeader } from "@/components/marketing/nimbus-header";
+import { NimbusFooter } from "@/components/marketing/nimbus-footer";
 import { SectionDivider } from "@/components/shared-assets/section-divider";
 import { useClipboard } from "@/hooks/use-clipboard";
 import { cx } from "@/utils/cx";
@@ -195,11 +193,7 @@ const ContentSplitImage01 = () => {
                     </p>
 
                     <div className="mt-8 flex items-center gap-3 md:mt-12">
-                        <img
-                            src="https://www.untitledui.com/images/avatars/natali-craig?fm=webp&q=80"
-                            className="size-12 rounded-full object-cover"
-                            alt="Maya Patel"
-                        />
+                        <div className="size-12 rounded-full object-cover bg-[#84D7D9]" />
                         <div>
                             <p className="text-md font-semibold text-primary">Maya Patel</p>
                             <p className="text-md text-tertiary">Published 14 Jan 2026</p>
@@ -207,11 +201,7 @@ const ContentSplitImage01 = () => {
                     </div>
                 </div>
 
-                <img
-                    className="mt-16 h-100 w-full object-cover md:mt-0 md:ml-auto md:h-180 md:w-140 md:max-w-[50vw]"
-                    src="https://www.untitledui.com/marketing/two-people-3.webp"
-                    alt="How the Dynamic Unit creates a native ad experience - two people collaborating"
-                />
+                <div className="mt-16 h-100 w-full object-cover md:mt-0 md:ml-auto md:h-180 md:w-140 md:max-w-[50vw] bg-[#84D7D9]" />
 
                 <svg
                     className="absolute bottom-[53px] left-1/2 hidden -translate-x-[62%] lg:block"
@@ -277,7 +267,7 @@ const ContentSplitImage01 = () => {
                                 molestie aliquet sodales id est ac volutpat.
                             </p>
                             <figure>
-                                <img className="h-60 md:h-120" src="https://www.untitledui.com/marketing/ai-woman-04.webp" alt="Woman working at computer" />
+                                <div className="h-60 md:h-120 bg-[#84D7D9]" />
                                 <figcaption>
                                     Image courtesy of Edmond Dantès via{" "}
                                     <a
@@ -301,11 +291,7 @@ const ContentSplitImage01 = () => {
                                     </p>
                                 </blockquote>
                                 <figcaption className="not-prose mt-6 flex gap-3 text-md md:mt-8">
-                                    <img
-                                        src="https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80"
-                                        className="size-12 rounded-full object-cover"
-                                        alt="Jordan Kim"
-                                    />
+                                    <div className="size-12 rounded-full object-cover bg-[#84D7D9]" />
                                     <div>
                                         <p className="text-md font-semibold text-primary">Jordan Kim</p>
                                         <cite className="text-md text-tertiary not-italic">Product Designer</cite>
@@ -350,7 +336,7 @@ const ContentSplitImage01 = () => {
                                 <li>Suspendisse maecenas ac donec scelerisque diam sed est duis purus.</li>
                             </ol>
                             <figure>
-                                <img className="h-110 md:h-210" src="https://www.untitledui.com/marketing/smiling-girl-10.webp" alt="Smiling woman" />
+                                <div className="h-110 md:h-210 bg-[#84D7D9]" />
                                 <figcaption>
                                     <Link01 className="size-4 text-utility-neutral-400" />
                                     <span>
@@ -441,7 +427,7 @@ const Simple04Vertical = ({ article, imageClassName, className }: { article: Art
     <article className={cx("flex flex-col gap-4", className)}>
         <div className="relative">
             <a href={article.href} className="w-full" tabIndex={-1}>
-                <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full object-cover", imageClassName)} />
+                <div className={cx("aspect-[1.5] w-full object-cover bg-[#84D7D9]", imageClassName)} />
             </a>
             <div className="absolute inset-x-0 bottom-0 overflow-hidden bg-linear-to-b from-transparent to-black/40">
                 <div className="relative flex items-start justify-between bg-alpha-white/30 p-4 backdrop-blur-md before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-alpha-white/30 md:p-5">
@@ -547,52 +533,7 @@ const CTACardHorizontal = () => {
     );
 };
 
-const FooterLarge16 = () => {
-    return (
-        <footer className="dark-mode bg-[#f9f7f3] py-12 md:pt-16">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col gap-8 md:items-center">
-                    <UntitledLogo className="h-7 w-min shrink-0" />
-                    <nav>
-                        <ul className="grid grid-cols-2 gap-x-8 gap-y-3 sm:grid-cols-[repeat(6,max-content)]">
-                            {[
-                                { title: "Overview", href: "#" },
-                                { title: "Features", href: "#" },
-                                { title: "Pricing", href: "#" },
-                                { title: "Careers", href: "#" },
-                                { title: "Help", href: "#" },
-                                { title: "Privacy", href: "#" },
-                            ].map((item) => (
-                                <li key={item.title}>
-                                    <Button color="link-gray" size="md" href={item.href} className="max-h-5">
-                                        {item.title}
-                                    </Button>
-                                </li>
-                            ))}
-                        </ul>
-                    </nav>
-                </div>
-                <div className="relative mt-12 flex flex-col justify-between gap-8 pt-8 md:mt-16 md:flex-row md:items-center">
-                    <div className="absolute top-0 left-0 h-px w-full bg-border-secondary"></div>
-                    <Form
-                        onSubmit={(e) => {
-                            e.preventDefault();
-                            const data = Object.fromEntries(new FormData(e.currentTarget));
-                            console.log("Form data:", data);
-                        }}
-                        className="flex w-full flex-col gap-4 sm:flex-row md:max-w-100"
-                    >
-                        <Input isRequired id="newsletters-email" name="email" type="email" placeholder="Enter your email" size="lg" wrapperClassName="flex-1" />
-                        <Button type="submit" size="lg">
-                            Subscribe
-                        </Button>
-                    </Form>
-                    <p className="text-sm text-quaternary">© 2026 Nimbus. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-    );
-};
+
 
 const BlogPost05 = () => {
     return (
@@ -609,7 +550,7 @@ const BlogPost05 = () => {
 
             <CTACardHorizontal />
 
-            <FooterLarge16 />
+            <NimbusFooter />
         </div>
     );
 };

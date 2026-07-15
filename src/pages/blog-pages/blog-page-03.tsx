@@ -225,11 +225,7 @@ const BlobSubscribeCard = ({ icon, title, description }: { icon: FC<{ className?
 const Simple01Vertical = ({ article, imageClassName }: { article: Article; imageClassName?: string }) => (
     <div className="flex flex-col gap-4">
         <a href={article.href} className="overflow-hidden rounded-2xl" tabIndex={-1}>
-            <img
-                src={article.thumbnailUrl}
-                alt={article.title}
-                className={cx("aspect-[1.5] w-full object-cover transition duration-100 ease-linear hover:scale-105", imageClassName)}
-            />
+            <div className={cx("aspect-[1.5] w-full object-cover transition duration-100 ease-linear hover:scale-105 bg-[#84D7D9]", imageClassName)} />
         </a>
 
         <div className="flex flex-col gap-5">
@@ -341,36 +337,11 @@ const AbstractImages = () => {
                 </div>
 
                 <div className="grid h-122 w-[150%] grid-cols-[repeat(12,1fr)] grid-rows-[repeat(12,1fr)] gap-2 justify-self-center sm:h-124 sm:w-[120%] md:w-auto md:gap-4">
-                    <img
-                        src="https://www.untitledui.com/marketing/abstract-image-01.webp"
-                        className="size-full object-cover"
-                        alt="Abstract geometric pattern"
-                        style={{ gridArea: "3 / 3 / 7 / 7" }}
-                    />
-                    <img
-                        src="https://www.untitledui.com/marketing/abstract-image-02.webp"
-                        className="size-full object-cover"
-                        alt="Abstract geometric pattern"
-                        style={{ gridArea: "1 / 7 / 7 / 11" }}
-                    />
-                    <img
-                        src="https://www.untitledui.com/marketing/abstract-image-03.webp"
-                        className="size-full object-cover"
-                        alt="Abstract geometric pattern"
-                        style={{ gridArea: "7 / 5 / 13 / 9" }}
-                    />
-                    <img
-                        src="https://www.untitledui.com/marketing/abstract-image-04.webp"
-                        className="size-full object-cover"
-                        alt="Abstract geometric pattern"
-                        style={{ gridArea: "7 / 9 / 10 / 13" }}
-                    />
-                    <img
-                        src="https://www.untitledui.com/marketing/smiling-girl-2.webp"
-                        className="size-full object-cover"
-                        alt="Smiling woman"
-                        style={{ gridArea: "7 / 1 / 10 / 5" }}
-                    />
+                    <div className="size-full object-cover bg-[#84D7D9]" />
+                    <div className="size-full object-cover bg-[#84D7D9]" />
+                    <div className="size-full object-cover bg-[#84D7D9]" />
+                    <div className="size-full object-cover bg-[#84D7D9]" />
+                    <div className="size-full object-cover bg-[#84D7D9]" />
                 </div>
             </div>
         </section>

@@ -3,9 +3,9 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Copy01, Link01 } from "@unt
 import { Carousel } from "@/components/application/carousel/carousel-base";
 import { Badge, type BadgeColor } from "@/components/base/badges/badges";
 import { Button } from "@/components/base/buttons/button";
-import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
 import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import { NimbusHeader } from "@/components/marketing/nimbus-header";
+import { NimbusFooter } from "@/components/marketing/nimbus-footer";
 import { useClipboard } from "@/hooks/use-clipboard";
 import { cx } from "@/utils/cx";
 import { isReactComponent } from "@/utils/is-react-component";
@@ -175,82 +175,7 @@ const articles: Article[] = [
     },
 ];
 
-const footerNavList = [
-    {
-        label: "Product",
-        items: [
-            { label: "Overview", href: "#" },
-            { label: "Products", href: "#" },
-            {
-                label: "Solutions",
-                href: "#",
-                badge: (
-                    <Badge color="gray" type="modern" size="sm" className="ml-1">
-                        New
-                    </Badge>
-                ),
-            },
-            { label: "Tutorials", href: "#" },
-            { label: "Pricing", href: "#" },
-            { label: "Releases", href: "#" },
-        ],
-    },
-    {
-        label: "Company",
-        items: [
-            { label: "About us", href: "#" },
-            { label: "Careers", href: "#" },
-            { label: "Press", href: "#" },
-            { label: "News", href: "#" },
-            { label: "Media kit", href: "#" },
-            { label: "Contact", href: "#" },
-        ],
-    },
-    {
-        label: "Resources",
-        items: [
-            { label: "Blog", href: "#" },
-            { label: "Newsletter", href: "#" },
-            { label: "Events", href: "#" },
-            { label: "Help centre", href: "#" },
-            { label: "Tutorials", href: "#" },
-            { label: "Support", href: "#" },
-        ],
-    },
-    {
-        label: "Use cases",
-        items: [
-            { label: "Startups", href: "#" },
-            { label: "Enterprise", href: "#" },
-            { label: "Government", href: "#" },
-            { label: "SaaS centre", href: "#" },
-            { label: "Marketplaces", href: "#" },
-            { label: "Ecommerce", href: "#" },
-        ],
-    },
-    {
-        label: "Social",
-        items: [
-            { label: "X", href: "#" },
-            { label: "LinkedIn", href: "#" },
-            { label: "Facebook", href: "#" },
-            { label: "GitHub", href: "#" },
-            { label: "AngelList", href: "#" },
-            { label: "Dribbble", href: "#" },
-        ],
-    },
-    {
-        label: "Legal",
-        items: [
-            { label: "Terms", href: "#" },
-            { label: "Privacy", href: "#" },
-            { label: "Cookies", href: "#" },
-            { label: "Licenses", href: "#" },
-            { label: "Settings", href: "#" },
-            { label: "Contact", href: "#" },
-        ],
-    },
-];
+
 
 const ContentSplitImage02 = () => {
     const { copied, copy } = useClipboard();
@@ -266,11 +191,7 @@ const ContentSplitImage02 = () => {
                             JavaScript frameworks make development easy with extensive features and functionalities.
                         </p>
                         <div className="mt-8 flex items-center gap-3 md:mt-12">
-                            <img
-                                src="https://www.untitledui.com/images/avatars/drew-cano?fm=webp&q=80"
-                                className="size-12 rounded-full object-cover"
-                                alt="Chris Tanaka"
-                            />
+                            <div className="size-12 rounded-full object-cover bg-[#84D7D9]" />
                             <div>
                                 <p className="text-md font-semibold text-primary">Chris Tanaka</p>
                                 <p className="text-md text-tertiary">Frontend Engineer</p>
@@ -279,11 +200,7 @@ const ContentSplitImage02 = () => {
                     </div>
                 </div>
                 <div className="flex items-center justify-center px-4 md:h-180 md:w-1/2 md:bg-secondary md:p-8">
-                    <img
-                        className="h-100 w-full object-cover md:h-140 md:w-100"
-                        src="https://www.untitledui.com/marketing/girl-3.webp"
-                        alt="Developer working on JavaScript frameworks at her desk"
-                    />
+                    <div className="h-100 w-full object-cover md:h-140 md:w-100 bg-[#84D7D9]" />
                 </div>
             </div>
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:py-24">
@@ -302,11 +219,7 @@ const ContentSplitImage02 = () => {
                         </p>
 
                         <figure>
-                            <img
-                                className="h-60 md:h-120"
-                                src="https://images.unsplash.com/photo-1510172951991-856a654063f9?ixlib=rb-4.0.3&w=1920&q=80&fm=jpg&cs=tinysrgb&crop=bottom&h=0.547&fit=crop"
-                                alt="Modern office workspace with computers and development tools"
-                            />
+                            <div className="h-60 md:h-120 bg-[#84D7D9]" />
                             <figcaption>
                                 <span>
                                     Image courtesy of Laura Davidson via{" "}
@@ -376,11 +289,7 @@ const ContentSplitImage02 = () => {
                         </ol>
 
                         <figure>
-                            <img
-                                className="h-60 md:h-120"
-                                src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?cs=srgb&dl=pexels-fauxels-3182746.jpg&fm=jpg&w=1920&h=1280"
-                                alt="Woman thoughtfully reviewing software development work at her desk"
-                            />
+                            <div className="h-60 md:h-120 bg-[#84D7D9]" />
                             <figcaption>
                                 <Link01 className="size-4 text-utility-neutral-400" />
                                 <span>
@@ -478,7 +387,7 @@ const Simple03Vertical = ({
 }) => (
     <article className={cx("flex flex-col gap-4", className)}>
         <a href={article.href} className="overflow-hidden rounded-2xl" tabIndex={-1}>
-            <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full object-cover", imageClassName)} />
+            <div className={cx("aspect-[1.5] w-full object-cover bg-[#84D7D9]", imageClassName)} />
         </a>
 
         <div className="flex flex-col gap-6">
@@ -555,47 +464,7 @@ const BlogSectionCarouselLayout02 = () => {
     );
 };
 
-const FooterLarge09 = () => {
-    return (
-        <footer className="dark-mode bg-[#f9f7f3] py-12 md:pt-16">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col justify-center text-center">
-                    <h2 className="text-display-xs font-extrabold text-primary md:text-display-sm">Start growing with Nimbus</h2>
-                    <p className="mt-2 text-md text-tertiary md:mt-4 md:text-xl">Join over 4,000+ startups already growing with Nimbus.</p>
-                    <div className="mt-8 flex flex-col-reverse gap-3 self-stretch md:mt-12 md:flex-row md:self-center">
-                        <Button color="secondary" size="xl">
-                            Chat to us
-                        </Button>
-                        <Button size="xl">Get started</Button>
-                    </div>
-                </div>
 
-                <nav className="mt-12 md:mt-16">
-                    <ul className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
-                        {footerNavList.map((category) => (
-                            <li key={category.label}>
-                                <h4 className="text-sm font-semibold text-quaternary">{category.label}</h4>
-                                <ul className="mt-4 flex flex-col gap-3">
-                                    {category.items.map((item) => (
-                                        <li key={item.label} className="flex">
-                                            <Button color="link-gray" size="md" href={item.href} iconTrailing={item.badge} className="max-h-5 gap-1">
-                                                {item.label}
-                                            </Button>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-                <div className="mt-12 flex flex-col justify-between gap-6 border-t border-secondary pt-8 md:mt-16 md:flex-row md:items-center">
-                    <UntitledLogo className="h-7 w-min" />
-                    <p className="text-sm text-quaternary">© 2026 Nimbus. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-    );
-};
 
 const BlogPost06 = () => {
     return (
@@ -606,7 +475,7 @@ const BlogPost06 = () => {
 
             <BlogSectionCarouselLayout02 />
 
-            <FooterLarge09 />
+            <NimbusFooter />
         </div>
     );
 };

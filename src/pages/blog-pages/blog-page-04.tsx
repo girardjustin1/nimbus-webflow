@@ -198,7 +198,7 @@ const Simple02Vertical = ({
 }) => (
     <div className="flex flex-col gap-4">
         <a href={article.href} className="overflow-hidden" tabIndex={-1}>
-            <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full object-cover", imageClassName)} />
+            <div className={cx("aspect-[1.5] w-full object-cover bg-[#84D7D9]", imageClassName)} />
         </a>
 
         <div className="flex flex-col gap-5">
@@ -296,11 +296,7 @@ const BlogHeaderSidebar02 = () => {
                                 {article.isFeatured ? (
                                     <div className="flex flex-col gap-5 lg:flex-row lg:items-start xl:gap-8">
                                         <a href={article.href} className="shrink-0 overflow-hidden" tabIndex={-1}>
-                                            <img
-                                                src={article.thumbnailUrl}
-                                                className="aspect-[1.5] w-full object-cover lg:w-105 xl:w-140"
-                                                alt={article.title}
-                                            />
+                                            <div className="aspect-[1.5] w-full object-cover lg:w-105 xl:w-140 bg-[#84D7D9]" />
                                         </a>
 
                                         <div className="flex flex-col gap-6">

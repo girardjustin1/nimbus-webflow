@@ -7,9 +7,9 @@ import { Button } from "@/components/base/buttons/button";
 import { Form } from "@/components/base/form/form";
 import { Input } from "@/components/base/input/input";
 import { FeaturedIcon } from "@/components/foundations/featured-icon/featured-icon";
-import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
 import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import { NimbusHeader } from "@/components/marketing/nimbus-header";
+import { NimbusFooter } from "@/components/marketing/nimbus-footer";
 import { SectionDivider } from "@/components/shared-assets/section-divider";
 import { useClipboard } from "@/hooks/use-clipboard";
 import { cx } from "@/utils/cx";
@@ -75,11 +75,7 @@ const ContentLargeImage03 = () => {
                     </p>
                 </div>
                 <div className="mt-16 w-full">
-                    <img
-                        className="h-60 w-full object-cover md:h-160"
-                        src="https://www.untitledui.com/marketing/mountains.webp"
-                        alt="Mountain landscape representing leadership perspective and vision"
-                    />
+                    <div className="h-60 w-full object-cover md:h-160 bg-[#84D7D9]" />
                     <div className="mt-8 flex items-start justify-between gap-24">
                         <dl className="flex gap-12 md:gap-12">
                             <div>
@@ -119,11 +115,7 @@ const ContentLargeImage03 = () => {
                         </p>
 
                         <figure>
-                            <img
-                                className="h-60 md:h-120"
-                                src="https://www.untitledui.com/marketing/people.webp"
-                                alt="Team members collaborating and discussing leadership strategies"
-                            />
+                            <div className="h-60 md:h-120 bg-[#84D7D9]" />
                             <figcaption>
                                 <Link01 className="size-4 text-utility-neutral-400" />
                                 <span>
@@ -152,11 +144,7 @@ const ContentLargeImage03 = () => {
                                 </p>
                             </blockquote>
                             <figcaption className="not-prose mt-6 flex gap-3 text-md md:mt-8">
-                                <img
-                                    src="https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80"
-                                    className="size-12 rounded-full object-cover"
-                                    alt="Jordan Kim"
-                                />
+                                <div className="size-12 rounded-full object-cover bg-[#84D7D9]" />
                                 <div>
                                     <p className="text-md font-semibold text-primary">Jordan Kim</p>
                                     <cite className="text-md text-tertiary not-italic">Product Designer</cite>
@@ -210,11 +198,7 @@ const ContentLargeImage03 = () => {
                             <li>Suspendisse maecenas ac donec scelerisque diam sed est duis purus.</li>
                         </ol>
                         <figure>
-                            <img
-                                className="h-60 md:h-120"
-                                src="https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?cs=srgb&dl=pexels-helena-lopes-2253275.jpg&fm=jpg&w=1280&h=853"
-                                alt="Happy golden retriever dog sitting outdoors"
-                            />
+                            <div className="h-60 md:h-120 bg-[#84D7D9]" />
                             <figcaption>
                                 <Link01 className="size-4 text-utility-neutral-400" />
                                 <span>
@@ -286,7 +270,7 @@ const Simple02Vertical = ({
 }) => (
     <article className="flex flex-col gap-4">
         <a href={article.href} className="overflow-hidden" tabIndex={-1}>
-            <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full object-cover", imageClassName)} />
+            <div className={cx("aspect-[1.5] w-full object-cover bg-[#84D7D9]", imageClassName)} />
         </a>
 
         <div className="flex flex-col gap-5">
@@ -400,81 +384,7 @@ const BlogSectionSplitLayout01 = () => {
     );
 };
 
-const FooterLarge08 = () => {
-    return (
-        <footer className="dark-mode bg-[#f9f7f3] py-12 md:pt-16">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col justify-between gap-x-8 gap-y-12 lg:flex-row">
-                    <div className="flex flex-col gap-8 md:items-start">
-                        <UntitledLogo className="h-7 w-min shrink-0" />
-                        <nav>
-                            <ul className="grid grid-cols-2 gap-x-8 gap-y-3 sm:grid-cols-[repeat(6,max-content)]">
-                                {[
-                                    { title: "Overview", href: "#" },
-                                    { title: "Features", href: "#" },
-                                    { title: "Pricing", href: "#" },
-                                    { title: "Careers", href: "#" },
-                                    { title: "Help", href: "#" },
-                                    { title: "Privacy", href: "#" },
-                                ].map((item) => (
-                                    <li key={item.title}>
-                                        <Button color="link-gray" size="md" href={item.href} className="max-h-5">
-                                            {item.title}
-                                        </Button>
-                                    </li>
-                                ))}
-                            </ul>
-                        </nav>
-                    </div>
 
-                    <Form
-                        onSubmit={(e) => {
-                            e.preventDefault();
-                            const data = Object.fromEntries(new FormData(e.currentTarget));
-                            console.log("Form data:", data);
-                        }}
-                        className="flex w-full flex-col gap-4 sm:max-w-90"
-                    >
-                        <label htmlFor="newsletters-email" className="text-sm font-semibold text-primary">
-                            Start growing with Nimbus
-                        </label>
-                        <div className="flex flex-col gap-4 sm:flex-row">
-                            <Input
-                                isRequired
-                                id="newsletters-email"
-                                name="email"
-                                type="email"
-                                placeholder="Enter your email"
-                                size="lg"
-                                wrapperClassName="flex-1"
-                            />
-                            <Button type="submit" size="lg">
-                                Subscribe
-                            </Button>
-                        </div>
-                    </Form>
-                </div>
-                <div className="mt-12 flex flex-col-reverse justify-between gap-4 border-t border-secondary pt-8 md:mt-16 md:flex-row md:gap-6">
-                    <p className="text-sm text-quaternary">© 2026 Nimbus. All rights reserved.</p>
-
-                    <ul className="flex gap-4">
-                        {[
-                            { title: "Terms", href: "#" },
-                            { title: "Privacy", href: "#" },
-                            { title: "Cookies", href: "#" },
-                        ].map(({ title, href }) => (
-                            <li key={title}>
-                                <a href={href} className="text-md text-quaternary transition duration-100 ease-linear hover:text-tertiary">
-                                    {title}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-        </footer>
-    );
-};
 
 const BlogPost09 = () => {
     return (
@@ -487,7 +397,7 @@ const BlogPost09 = () => {
 
             <BlogSectionSplitLayout01 />
 
-            <FooterLarge08 />
+            <NimbusFooter />
         </div>
     );
 };

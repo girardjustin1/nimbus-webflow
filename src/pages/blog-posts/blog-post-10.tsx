@@ -1,25 +1,16 @@
 import { Check, Copy01 } from "@untitledui/icons";
 import { Badge } from "@/components/base/badges/badges";
-import { AppStoreButton, GooglePlayWhiteButton } from "@/components/base/buttons/app-store-buttons";
 import { Button } from "@/components/base/buttons/button";
 import { CloseButton } from "@/components/base/buttons/close-button";
 import { Form } from "@/components/base/form/form";
 import { Input } from "@/components/base/input/input";
-import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
-import { AngelList, Dribbble, Facebook, GitHub, Layers, LinkedIn, X } from "@/components/foundations/social-icons";
+import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import { NimbusHeader } from "@/components/marketing/nimbus-header";
+import { NimbusFooter } from "@/components/marketing/nimbus-footer";
 import { SectionDivider } from "@/components/shared-assets/section-divider";
 import { useClipboard } from "@/hooks/use-clipboard";
 
-const footerSocials = [
-    { label: "X", icon: X, href: "https://x.com/" },
-    { label: "LinkedIn", icon: LinkedIn, href: "https://www.linkedin.com/" },
-    { label: "Facebook", icon: Facebook, href: "https://www.facebook.com/" },
-    { label: "GitHub", icon: GitHub, href: "https://github.com/" },
-    { label: "AngelList", icon: AngelList },
-    { label: "Dribbble", icon: Dribbble },
-    { label: "Layers", icon: Layers },
-];
+
 
 const BannerSlimBrandFullWidth = () => {
     return (
@@ -60,22 +51,14 @@ const ContentLargeImage02 = () => {
                     </p>
 
                     <div className="mt-8 flex items-center gap-4">
-                        <img
-                            src="https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80"
-                            className="size-14 rounded-full object-cover"
-                            alt="Jordan Kim"
-                        />
+                        <div className="size-14 rounded-full object-cover bg-[#84D7D9]" />
                         <div>
                             <p className="text-lg font-semibold text-primary">Jordan Kim</p>
                             <p className="text-md text-tertiary">20 Jan 2026</p>
                         </div>
                     </div>
                 </div>
-                <img
-                    className="mx-auto mt-12 h-60 w-full object-cover md:mt-16 md:h-140 md:max-w-5xl"
-                    src="https://www.untitledui.com/marketing/girl-taking-notes.webp"
-                    alt="Woman taking notes during a UX presentation meeting"
-                />
+                <div className="mx-auto mt-12 h-60 w-full object-cover md:mt-16 md:h-140 md:max-w-5xl bg-[#84D7D9]" />
             </div>
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
                 <div className="mx-auto max-w-prose md:max-w-180">
@@ -99,11 +82,7 @@ const ContentLargeImage02 = () => {
                         </p>
 
                         <figure>
-                            <img
-                                className="h-86 md:h-180"
-                                src="https://images.pexels.com/photos/213727/pexels-photo-213727.jpeg?cs=srgb&dl=pexels-scott-webb-213727.jpg&fm=jpg&w=1920&h=1280"
-                                alt="Green leafed plant in natural lighting"
-                            />
+                            <div className="h-86 md:h-180 bg-[#84D7D9]" />
                             <figcaption>
                                 <span>
                                     Image courtesy of Scott Webb via{" "}
@@ -125,11 +104,7 @@ const ContentLargeImage02 = () => {
                                 </p>
                             </blockquote>
                             <figcaption className="not-prose mt-6 inline-flex flex-col items-center md:mt-8">
-                                <img
-                                    src="https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80"
-                                    className="size-10 rounded-full object-cover"
-                                    alt="Jordan Kim"
-                                />
+                                <div className="size-10 rounded-full object-cover bg-[#84D7D9]" />
                                 <p className="mt-3 text-md font-semibold text-primary">Jordan Kim</p>
                                 <cite className="mt-0.5 text-md text-tertiary not-italic">Product Designer</cite>
                             </figcaption>
@@ -178,11 +153,7 @@ const ContentLargeImage02 = () => {
                             <li>Suspendisse maecenas ac donec scelerisque diam sed est duis purus.</li>
                         </ol>
                         <figure>
-                            <img
-                                className="h-60 md:h-120"
-                                src="https://www.untitledui.com/marketing/smiling-girl-9.webp"
-                                alt="Smiling woman working on presentation design"
-                            />
+                            <div className="h-60 md:h-120 bg-[#84D7D9]" />
                             <figcaption>
                                 <span>
                                     Image courtesy of Leon via{" "}
@@ -324,74 +295,26 @@ const CTASimpleLogos02 = () => {
                     </div>
                     <div className="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-4 md:gap-y-6 lg:mt-0">
                         {/* Light mode images (hidden in dark mode) */}
-                        <img alt="Ephemeral" src="https://www.untitledui.com/logos/logotype/color/ephemeral.svg" className="h-9 md:h-10 dark:hidden" />
-                        <img alt="Wildcrafted" src="https://www.untitledui.com/logos/logotype/color/wildcrafted.svg" className="h-9 md:h-10 dark:hidden" />
-                        <img alt="Codecraft" src="https://www.untitledui.com/logos/logotype/color/codecraft.svg" className="h-9 md:h-10 dark:hidden" />
-                        <img alt="Convergence" src="https://www.untitledui.com/logos/logotype/color/convergence.svg" className="h-9 md:h-10 dark:hidden" />
-                        <img alt="Imgcompress" src="https://www.untitledui.com/logos/logotype/color/img-compress.svg" className="h-9 md:h-10 dark:hidden" />
-                        <img alt="Epicurious" src="https://www.untitledui.com/logos/logotype/color/epicurious.svg" className="h-9 md:h-10 dark:hidden" />
-                        <img
-                            alt="Watchtower"
-                            src="https://www.untitledui.com/logos/logotype/color/watchtower.svg"
-                            className="h-9 max-md:hidden md:h-10 dark:hidden"
-                        />
-                        <img
-                            alt="Renaissance"
-                            src="https://www.untitledui.com/logos/logotype/color/renaissance.svg"
-                            className="h-9 max-md:hidden md:h-10 dark:hidden"
-                        />
-                        <img
-                            alt="Contrastai"
-                            src="https://www.untitledui.com/logos/logotype/color/contrast-ai.svg"
-                            className="h-9 max-md:hidden md:h-10 dark:hidden"
-                        />
+                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
+                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
+                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
+                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
+                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
+                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
+                        <div className="h-9 max-md:hidden md:h-10 dark:hidden bg-[#84D7D9]" />
+                        <div className="h-9 max-md:hidden md:h-10 dark:hidden bg-[#84D7D9]" />
+                        <div className="h-9 max-md:hidden md:h-10 dark:hidden bg-[#84D7D9]" />
 
                         {/* Dark mode images (hidden in light mode) */}
-                        <img
-                            alt="Ephemeral"
-                            src="https://www.untitledui.com/logos/logotype/white/ephemeral.svg"
-                            className="h-9 opacity-85 not-dark:hidden md:h-10"
-                        />
-                        <img
-                            alt="Wildcrafted"
-                            src="https://www.untitledui.com/logos/logotype/white/wildcrafted.svg"
-                            className="h-9 opacity-85 not-dark:hidden md:h-10"
-                        />
-                        <img
-                            alt="Codecraft"
-                            src="https://www.untitledui.com/logos/logotype/white/codecraft.svg"
-                            className="h-9 opacity-85 not-dark:hidden md:h-10"
-                        />
-                        <img
-                            alt="Convergence"
-                            src="https://www.untitledui.com/logos/logotype/white/convergence.svg"
-                            className="h-9 opacity-85 not-dark:hidden md:h-10"
-                        />
-                        <img
-                            alt="Imgcompress"
-                            src="https://www.untitledui.com/logos/logotype/white/img-compress.svg"
-                            className="h-9 opacity-85 not-dark:hidden md:h-10"
-                        />
-                        <img
-                            alt="Epicurious"
-                            src="https://www.untitledui.com/logos/logotype/white/epicurious.svg"
-                            className="h-9 opacity-85 not-dark:hidden md:h-10"
-                        />
-                        <img
-                            alt="Watchtower"
-                            src="https://www.untitledui.com/logos/logotype/white/watchtower.svg"
-                            className="h-9 opacity-85 not-dark:hidden max-md:hidden md:h-10"
-                        />
-                        <img
-                            alt="Renaissance"
-                            src="https://www.untitledui.com/logos/logotype/white/renaissance.svg"
-                            className="h-9 opacity-85 not-dark:hidden max-md:hidden md:h-10"
-                        />
-                        <img
-                            alt="Contrastai"
-                            src="https://www.untitledui.com/logos/logotype/white/contrast-ai.svg"
-                            className="h-9 opacity-85 not-dark:hidden max-md:hidden md:h-10"
-                        />
+                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
+                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
+                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
+                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
+                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
+                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
+                        <div className="h-9 opacity-85 not-dark:hidden max-md:hidden md:h-10 bg-[#84D7D9]" />
+                        <div className="h-9 opacity-85 not-dark:hidden max-md:hidden md:h-10 bg-[#84D7D9]" />
+                        <div className="h-9 opacity-85 not-dark:hidden max-md:hidden md:h-10 bg-[#84D7D9]" />
                     </div>
                 </div>
             </div>
@@ -399,70 +322,7 @@ const CTASimpleLogos02 = () => {
     );
 };
 
-const FooterLarge07 = () => {
-    return (
-        <footer className="bg-brand-section py-12 md:pt-16">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col justify-between gap-x-8 gap-y-12 lg:flex-row">
-                    <div className="flex flex-col gap-8 md:items-start">
-                        <div className="flex w-full flex-col gap-6 md:max-w-xs md:gap-8">
-                            <UntitledLogo className="dark-mode" />
-                            <p className="text-md text-tertiary_on-brand">Design amazing digital experiences that create more happy in the world.</p>
-                        </div>
-                        <nav>
-                            <ul className="grid grid-cols-2 gap-x-8 gap-y-3 sm:grid-cols-[repeat(6,max-content)]">
-                                {[
-                                    { title: "Overview", href: "#" },
-                                    { title: "Features", href: "#" },
-                                    { title: "Pricing", href: "#" },
-                                    { title: "Careers", href: "#" },
-                                    { title: "Help", href: "#" },
-                                    { title: "Privacy", href: "#" },
-                                ].map((item) => (
-                                    <li key={item.title}>
-                                        <Button
-                                            className="max-h-5 text-footer-button-fg hover:text-footer-button-fg_hover"
-                                            color="link-color"
-                                            size="md"
-                                            href={item.href}
-                                        >
-                                            {item.title}
-                                        </Button>
-                                    </li>
-                                ))}
-                            </ul>
-                        </nav>
-                    </div>
 
-                    <div>
-                        <h4 className="text-sm font-medium text-primary_on-brand">Get the app</h4>
-                        <div className="mt-4 flex w-max flex-row gap-4 lg:flex-col">
-                            <AppStoreButton href="#" className="w-[135px] bg-brand-section ring-white" />
-                            <GooglePlayWhiteButton href="#" className="w-[135px] bg-brand-section ring-white" />
-                        </div>
-                    </div>
-                </div>
-                <div className="mt-12 flex flex-col-reverse justify-between gap-6 border-t border-brand_alt pt-8 md:mt-16 md:flex-row">
-                    <p className="text-sm text-quaternary_on-brand">© 2026 Nimbus. All rights reserved.</p>
-                    <ul className="flex gap-6">
-                        {footerSocials.map(({ label, icon: Icon, href }) => (
-                            <li key={label}>
-                                <a
-                                    href={href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-icon-fg-brand_on-brand outline-focus-ring transition duration-100 ease-linear hover:text-fg-quaternary_hover focus-visible:outline-2 focus-visible:outline-offset-2"
-                                >
-                                    <Icon className="size-5" aria-label={label} />
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-        </footer>
-    );
-};
 
 const BlogPost10 = () => {
     return (
@@ -481,7 +341,7 @@ const BlogPost10 = () => {
 
             <CTASimpleLogos02 />
 
-            <FooterLarge07 />
+            <NimbusFooter />
         </div>
     );
 };

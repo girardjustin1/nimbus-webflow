@@ -257,11 +257,7 @@ const footerNavList = [
 const Simple01Vertical = ({ article, imageClassName }: { article: Article; imageClassName?: string }) => (
     <div className="flex flex-col gap-4">
         <a href={article.href} className="overflow-hidden rounded-2xl" tabIndex={-1}>
-            <img
-                src={article.thumbnailUrl}
-                alt={article.title}
-                className={cx("aspect-[1.5] w-full object-cover transition duration-100 ease-linear hover:scale-105", imageClassName)}
-            />
+            <div className={cx("aspect-[1.5] w-full object-cover transition duration-100 ease-linear hover:scale-105 bg-[#84D7D9]", imageClassName)} />
         </a>
 
         <div className="flex flex-col gap-5">
@@ -313,7 +309,7 @@ const Simple02Vertical = ({
 }) => (
     <div className="flex flex-col gap-4">
         <a href={article.href} className="overflow-hidden" tabIndex={-1}>
-            <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full object-cover", imageClassName)} />
+            <div className={cx("aspect-[1.5] w-full object-cover bg-[#84D7D9]", imageClassName)} />
         </a>
 
         <div className="flex flex-col gap-5">
@@ -399,7 +395,7 @@ const BlogHeaderFeaturedPost02 = () => {
                     href={featuredArticle.href}
                     className="relative hidden w-full overflow-hidden outline-focus-ring select-none focus:outline-2 focus:outline-offset-4 md:block md:h-145 lg:h-180"
                 >
-                    <img src={featuredArticle.thumbnailUrl} className="absolute inset-0 size-full object-cover" alt={featuredArticle.title} />
+                    <div className="absolute inset-0 size-full object-cover bg-[#84D7D9]" />
                     <div className="absolute top-0 left-0 size-20 bg-linear-to-br from-bg-primary from-50% via-black via-50% to-black"></div>
 
                     <div className="absolute inset-x-0 bottom-0 w-full bg-linear-to-t from-black/40 to-transparent pt-24">
@@ -489,44 +485,20 @@ const SocialProofFullWidth = () => {
                     <p className="text-center text-md font-medium text-tertiary">Join 4,000+ companies already growing</p>
                     <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 xl:gap-x-6">
                         {/* Light mode images (hidden in dark mode) */}
-                        <img alt="Odeaolabs logo" src="https://www.untitledui.com/logos/logotype/color/odeao-labs.svg" className="h-9 md:h-10 dark:hidden" />
-                        <img alt="Kintsugi logo" src="https://www.untitledui.com/logos/logotype/color/kintsugi.svg" className="h-9 md:h-10 dark:hidden" />
-                        <img alt="Stackedlab logo" src="https://www.untitledui.com/logos/logotype/color/stacked-lab.svg" className="h-9 md:h-10 dark:hidden" />
-                        <img alt="Magnolia logo" src="https://www.untitledui.com/logos/logotype/color/magnolia.svg" className="h-9 md:h-10 dark:hidden" />
-                        <img alt="Warpspeed logo" src="https://www.untitledui.com/logos/logotype/color/warpspeed.svg" className="h-9 md:h-10 dark:hidden" />
-                        <img alt="Sisyphus logo" src="https://www.untitledui.com/logos/logotype/color/sisyphus.svg" className="h-9 md:h-10 dark:hidden" />
+                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
+                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
+                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
+                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
+                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
+                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
 
                         {/* Dark mode images (hidden in light mode) */}
-                        <img
-                            alt="Odeaolabs logo"
-                            src="https://www.untitledui.com/logos/logotype/white/odeao-labs.svg"
-                            className="h-9 opacity-85 not-dark:hidden md:h-10"
-                        />
-                        <img
-                            alt="Kintsugi logo"
-                            src="https://www.untitledui.com/logos/logotype/white/kintsugi.svg"
-                            className="h-9 opacity-85 not-dark:hidden md:h-10"
-                        />
-                        <img
-                            alt="Stackedlab logo"
-                            src="https://www.untitledui.com/logos/logotype/white/stacked-lab.svg"
-                            className="h-9 opacity-85 not-dark:hidden md:h-10"
-                        />
-                        <img
-                            alt="Magnolia logo"
-                            src="https://www.untitledui.com/logos/logotype/white/magnolia.svg"
-                            className="h-9 opacity-85 not-dark:hidden md:h-10"
-                        />
-                        <img
-                            alt="Warpspeed logo"
-                            src="https://www.untitledui.com/logos/logotype/white/warpspeed.svg"
-                            className="h-9 opacity-85 not-dark:hidden md:h-10"
-                        />
-                        <img
-                            alt="Sisyphus logo"
-                            src="https://www.untitledui.com/logos/logotype/white/sisyphus.svg"
-                            className="h-9 opacity-85 not-dark:hidden md:h-10"
-                        />
+                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
+                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
+                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
+                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
+                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
+                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
                     </div>
                 </div>
             </div>

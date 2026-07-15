@@ -6,8 +6,8 @@ import { Badge, type BadgeColor } from "@/components/base/badges/badges";
 import { Button } from "@/components/base/buttons/button";
 import { Form } from "@/components/base/form/form";
 import { Input } from "@/components/base/input/input";
-import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
 import { NimbusHeader } from "@/components/marketing/nimbus-header";
+import { NimbusFooter } from "@/components/marketing/nimbus-footer";
 import { SectionDivider } from "@/components/shared-assets/section-divider";
 import { cx } from "@/utils/cx";
 import { isReactComponent } from "@/utils/is-react-component";
@@ -177,82 +177,7 @@ const articles: Article[] = [
     },
 ];
 
-const footerNavList = [
-    {
-        label: "Product",
-        items: [
-            { label: "Overview", href: "#" },
-            { label: "Products", href: "#" },
-            {
-                label: "Solutions",
-                href: "#",
-                badge: (
-                    <Badge color="gray" type="modern" size="sm" className="ml-1">
-                        New
-                    </Badge>
-                ),
-            },
-            { label: "Tutorials", href: "#" },
-            { label: "Pricing", href: "#" },
-            { label: "Releases", href: "#" },
-        ],
-    },
-    {
-        label: "Company",
-        items: [
-            { label: "About us", href: "#" },
-            { label: "Careers", href: "#" },
-            { label: "Press", href: "#" },
-            { label: "News", href: "#" },
-            { label: "Media kit", href: "#" },
-            { label: "Contact", href: "#" },
-        ],
-    },
-    {
-        label: "Resources",
-        items: [
-            { label: "Blog", href: "#" },
-            { label: "Newsletter", href: "#" },
-            { label: "Events", href: "#" },
-            { label: "Help centre", href: "#" },
-            { label: "Tutorials", href: "#" },
-            { label: "Support", href: "#" },
-        ],
-    },
-    {
-        label: "Use cases",
-        items: [
-            { label: "Startups", href: "#" },
-            { label: "Enterprise", href: "#" },
-            { label: "Government", href: "#" },
-            { label: "SaaS centre", href: "#" },
-            { label: "Marketplaces", href: "#" },
-            { label: "Ecommerce", href: "#" },
-        ],
-    },
-    {
-        label: "Social",
-        items: [
-            { label: "X", href: "#" },
-            { label: "LinkedIn", href: "#" },
-            { label: "Facebook", href: "#" },
-            { label: "GitHub", href: "#" },
-            { label: "AngelList", href: "#" },
-            { label: "Dribbble", href: "#" },
-        ],
-    },
-    {
-        label: "Legal",
-        items: [
-            { label: "Terms", href: "#" },
-            { label: "Privacy", href: "#" },
-            { label: "Cookies", href: "#" },
-            { label: "Licenses", href: "#" },
-            { label: "Settings", href: "#" },
-            { label: "Contact", href: "#" },
-        ],
-    },
-];
+
 
 type RoundButtonProps = ComponentProps<typeof Button> & {
     icon?: FC<{ className?: string }>;
@@ -308,11 +233,7 @@ const ContentAlternative02 = () => {
                             },
                         ].map((item) => (
                             <Carousel.Item key={item.imgUrl} className="basis-auto">
-                                <img
-                                    alt={item.alt}
-                                    src={item.imgUrl}
-                                    className="size-auto max-h-90 max-w-90 cursor-grab object-contain lg:max-h-180 lg:max-w-180"
-                                />
+                                <div className="size-auto max-h-90 max-w-90 cursor-grab object-contain lg:max-h-180 lg:max-w-180 bg-[#84D7D9]" />
                             </Carousel.Item>
                         ))}
                     </Carousel.Content>
@@ -344,7 +265,7 @@ const ContentAlternative02 = () => {
                         </p>
 
                         <figure>
-                            <img className="h-110 md:h-210" src="https://www.untitledui.com/marketing/people.webp" alt="Group of people in discussion" />
+                            <div className="h-110 md:h-210 bg-[#84D7D9]" />
                             <figcaption>
                                 <span>
                                     Image courtesy of Laura Davidson via{" "}
@@ -366,11 +287,7 @@ const ContentAlternative02 = () => {
                                 </p>
                             </blockquote>
                             <figcaption className="not-prose mt-6 flex gap-3 text-md md:mt-8">
-                                <img
-                                    src="https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80"
-                                    className="size-12 rounded-full object-cover"
-                                    alt="Jordan Kim"
-                                />
+                                <div className="size-12 rounded-full object-cover bg-[#84D7D9]" />
                                 <div>
                                     <p className="text-md font-semibold text-primary">Jordan Kim</p>
                                     <cite className="text-md text-tertiary not-italic">Product Designer</cite>
@@ -421,7 +338,7 @@ const ContentAlternative02 = () => {
                             <li>Suspendisse maecenas ac donec scelerisque diam sed est duis purus.</li>
                         </ol>
                         <figure>
-                            <img className="h-60 md:h-120" src="https://www.untitledui.com/marketing/two-people-5.webp" alt="Two people collaborating" />
+                            <div className="h-60 md:h-120 bg-[#84D7D9]" />
                             <figcaption>
                                 <span>
                                     Image courtesy of Helena Lopes via{" "}
@@ -467,11 +384,7 @@ const ContentAlternative02 = () => {
 
                     <div className="-mt-px flex flex-col items-start justify-between gap-y-6 border-t border-secondary pt-6 md:flex-row">
                         <div className="flex items-center gap-3 md:gap-4">
-                            <img
-                                src="https://www.untitledui.com/images/avatars/rene-wells?fm=webp&q=80"
-                                className="size-12 rounded-full object-cover md:size-14"
-                                alt="Rene Wells"
-                            />
+                            <div className="size-12 rounded-full object-cover md:size-14 bg-[#84D7D9]" />
                             <div>
                                 <p className="text-md font-semibold text-primary md:text-lg">Rene Wells</p>
                                 <p className="text-md text-tertiary">Content Writer</p>
@@ -499,11 +412,7 @@ const ContentAlternative02 = () => {
 const Simple01Vertical = ({ article, imageClassName }: { article: Article; imageClassName?: string }) => (
     <article className="flex flex-col gap-4">
         <a href={article.href} className="overflow-hidden rounded-2xl" tabIndex={-1}>
-            <img
-                src={article.thumbnailUrl}
-                alt={article.title}
-                className={cx("aspect-[1.5] w-full object-cover transition duration-100 ease-linear hover:scale-105", imageClassName)}
-            />
+            <div className={cx("aspect-[1.5] w-full object-cover transition duration-100 ease-linear hover:scale-105 bg-[#84D7D9]", imageClassName)} />
         </a>
 
         <div className="flex flex-col gap-5">
@@ -592,36 +501,11 @@ const CTAAbstractImages = () => {
                 </div>
 
                 <div className="grid h-122 w-[150%] grid-cols-[repeat(12,1fr)] grid-rows-[repeat(12,1fr)] gap-2 justify-self-center sm:h-124 sm:w-[120%] md:w-auto md:gap-4">
-                    <img
-                        src="https://www.untitledui.com/marketing/smiling-girl-5.webp"
-                        className="size-full object-cover"
-                        alt="Smiling woman"
-                        style={{ gridArea: "3 / 3 / 7 / 7" }}
-                    />
-                    <img
-                        src="https://www.untitledui.com/marketing/abstract-image-02.webp"
-                        className="size-full object-cover"
-                        alt="Abstract geometric pattern"
-                        style={{ gridArea: "1 / 7 / 7 / 11" }}
-                    />
-                    <img
-                        src="https://www.untitledui.com/marketing/abstract-image-03.webp"
-                        className="size-full object-cover"
-                        alt="Abstract geometric pattern"
-                        style={{ gridArea: "7 / 5 / 13 / 9" }}
-                    />
-                    <img
-                        src="https://www.untitledui.com/marketing/smiling-girl-6.webp"
-                        className="size-full object-cover"
-                        alt="Smiling woman"
-                        style={{ gridArea: "7 / 9 / 10 / 13" }}
-                    />
-                    <img
-                        src="https://www.untitledui.com/marketing/smiling-girl-2.webp"
-                        className="size-full object-cover"
-                        alt="Smiling woman"
-                        style={{ gridArea: "7 / 1 / 10 / 5" }}
-                    />
+                    <div className="size-full object-cover bg-[#84D7D9]" />
+                    <div className="size-full object-cover bg-[#84D7D9]" />
+                    <div className="size-full object-cover bg-[#84D7D9]" />
+                    <div className="size-full object-cover bg-[#84D7D9]" />
+                    <div className="size-full object-cover bg-[#84D7D9]" />
                 </div>
             </div>
         </section>
@@ -675,36 +559,7 @@ const NewsletterCardHorizontal = () => {
     );
 };
 
-const FooterLarge01 = () => {
-    return (
-        <footer className="bg-[#f9f7f3] py-12 md:pt-16">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <nav>
-                    <ul className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
-                        {footerNavList.map((category) => (
-                            <li key={category.label}>
-                                <h4 className="text-sm font-semibold text-quaternary">{category.label}</h4>
-                                <ul className="mt-4 flex flex-col gap-3">
-                                    {category.items.map((item) => (
-                                        <li key={item.label} className="flex">
-                                            <Button color="link-gray" size="md" href={item.href} iconTrailing={item.badge} className="max-h-5 gap-1">
-                                                {item.label}
-                                            </Button>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-                <div className="mt-12 flex flex-col justify-between gap-6 border-t border-secondary pt-8 md:mt-16 md:flex-row md:items-center">
-                    <UntitledLogo className="h-7 w-min" />
-                    <p className="text-sm text-quaternary">© 2026 Nimbus. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-    );
-};
+
 
 const BlogPost01 = () => {
     return (
@@ -723,7 +578,7 @@ const BlogPost01 = () => {
 
             <NewsletterCardHorizontal />
 
-            <FooterLarge01 />
+            <NimbusFooter />
         </div>
     );
 };

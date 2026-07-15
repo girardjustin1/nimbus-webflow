@@ -196,11 +196,7 @@ const articles: Article[] = [
 const Simple01Vertical = ({ article, imageClassName }: { article: Article; imageClassName?: string }) => (
     <div className="flex flex-col gap-4">
         <a href={article.href} className="overflow-hidden rounded-2xl" tabIndex={-1}>
-            <img
-                src={article.thumbnailUrl}
-                alt={article.title}
-                className={cx("aspect-[1.5] w-full object-cover transition duration-100 ease-linear hover:scale-105", imageClassName)}
-            />
+            <div className={cx("aspect-[1.5] w-full object-cover transition duration-100 ease-linear hover:scale-105 bg-[#84D7D9]", imageClassName)} />
         </a>
 
         <div className="flex flex-col gap-5">
@@ -279,11 +275,7 @@ const BlogHeaderFeaturedPost01 = () => {
                     href={featuredArticle.href}
                     className="relative hidden w-full overflow-hidden rounded-2xl outline-focus-ring select-none focus:outline-2 focus:outline-offset-4 md:block md:h-145 lg:h-180"
                 >
-                    <img
-                        src={featuredArticle.thumbnailUrl}
-                        alt={featuredArticle.title}
-                        className="absolute inset-0 size-full rounded-[inherit] object-cover outline-[0.5px] -outline-offset-[0.5px] outline-alpha-black/10"
-                    />
+                    <div className="absolute inset-0 size-full rounded-[inherit] object-cover outline-[0.5px] -outline-offset-[0.5px] outline-alpha-black/10 bg-[#84D7D9]" />
 
                     <div className="absolute inset-x-0 bottom-0 w-full bg-linear-to-t from-black/40 to-transparent pt-24">
                         <div className="flex w-full flex-col gap-6 p-8">
@@ -388,17 +380,9 @@ const ScreenMockup03 = () => {
                     <div className="size-full rounded-[7.9px] bg-primary p-0.5 shadow-modern-mockup-inner-md md:rounded-[28px] md:p-[5.4px] md:shadow-modern-mockup-inner-lg">
                         <div className="relative size-full overflow-hidden rounded-[6.77px] bg-utility-neutral-50 ring-[0.56px] ring-utility-neutral-200 md:rounded-[24px] md:ring-[2px]">
                             {/* Light mode image (hidden in dark mode) */}
-                            <img
-                                src="https://www.untitledui.com/marketing/screen-mockups/dashboard-desktop-mockup-light-01.webp"
-                                alt="Dashboard mockup showing application interface"
-                                className="size-full object-cover dark:hidden"
-                            />
+                            <div className="size-full object-cover dark:hidden bg-[#84D7D9]" />
                             {/* Dark mode image (hidden in light mode) */}
-                            <img
-                                src="https://www.untitledui.com/marketing/screen-mockups/dashboard-desktop-mockup-dark-01.webp"
-                                alt="Dashboard mockup showing application interface"
-                                className="size-full object-cover not-dark:hidden"
-                            />
+                            <div className="size-full object-cover not-dark:hidden bg-[#84D7D9]" />
                         </div>
                     </div>
                 </div>

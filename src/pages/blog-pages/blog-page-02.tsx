@@ -267,7 +267,7 @@ const Simple03Vertical = ({
 }) => (
     <div className={cx("flex flex-col gap-4", className)}>
         <a href={article.href} className="overflow-hidden rounded-2xl" tabIndex={-1}>
-            <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full object-cover", imageClassName)} />
+            <div className={cx("aspect-[1.5] w-full object-cover bg-[#84D7D9]", imageClassName)} />
         </a>
 
         <div className="flex flex-col gap-6">
@@ -306,7 +306,7 @@ const Simple03Vertical = ({
 const Simple03Horizontal = ({ article, imageClassName }: { article: Article; imageClassName?: string }) => (
     <div className="flex flex-col gap-4 xl:flex-row xl:items-start">
         <a href={article.href} className="shrink-0 overflow-hidden rounded-2xl" tabIndex={-1}>
-            <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full object-cover xl:w-91.5", imageClassName)} />
+            <div className={cx("aspect-[1.5] w-full object-cover xl:w-91.5 bg-[#84D7D9]", imageClassName)} />
         </a>
 
         <div className="flex flex-col gap-6">
@@ -428,11 +428,7 @@ const IPhoneMockup02 = () => {
                 {/*  Notifications List */}
                 <ul className="absolute bottom-8 left-1/2 z-10 hidden -translate-x-12 flex-col gap-3 lg:flex" aria-hidden="true">
                     <li className="flex w-full max-w-xs gap-3 rounded-lg bg-alpha-white/90 p-4 backdrop-blur-lg">
-                        <img
-                            src="https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80"
-                            className="size-10 rounded-full object-cover outline-1 -outline-offset-1 outline-black/10"
-                            alt="Jordan Kim"
-                        />
+                        <div className="size-10 rounded-full object-cover outline-1 -outline-offset-1 outline-black/10 bg-[#84D7D9]" />
                         <div>
                             <p className="text-sm text-tertiary">
                                 <span className="font-medium text-brand-secondary">Jordan Kim</span> followed you!
@@ -441,11 +437,7 @@ const IPhoneMockup02 = () => {
                         </div>
                     </li>
                     <li className="flex w-full max-w-xs gap-3 rounded-lg bg-alpha-white/90 p-4 backdrop-blur-lg">
-                        <img
-                            src="https://www.untitledui.com/images/avatars/candice-wu?fm=webp&q=80"
-                            className="size-10 rounded-full object-cover outline-1 -outline-offset-1 outline-black/10"
-                            alt="Sofia Reyes"
-                        />
+                        <div className="size-10 rounded-full object-cover outline-1 -outline-offset-1 outline-black/10 bg-[#84D7D9]" />
                         <div>
                             <p className="text-sm text-tertiary">
                                 <span className="font-medium text-brand-secondary">Sofia Reyes</span> and 2 other gave you kudos on{" "}
@@ -454,11 +446,7 @@ const IPhoneMockup02 = () => {
                         </div>
                     </li>
                     <li className="flex w-full max-w-xs gap-3 rounded-lg bg-alpha-white/90 p-4 opacity-75 backdrop-blur-lg">
-                        <img
-                            src="https://www.untitledui.com/images/avatars/phoenix-baker?fm=webp&q=80"
-                            className="size-10 rounded-full object-cover outline-1 -outline-offset-1 outline-black/10"
-                            alt="Marcus Bell"
-                        />
+                        <div className="size-10 rounded-full object-cover outline-1 -outline-offset-1 outline-black/10 bg-[#84D7D9]" />
                         <div>
                             <p className="text-sm text-tertiary">
                                 <span className="font-medium text-brand-secondary">Marcus Bell</span> joined your team{" "}
@@ -467,11 +455,7 @@ const IPhoneMockup02 = () => {
                         </div>
                     </li>
                     <li className="flex w-full max-w-xs gap-3 rounded-lg bg-alpha-white/90 p-4 opacity-50 backdrop-blur-lg">
-                        <img
-                            src="https://www.untitledui.com/images/avatars/lana-steiner?fm=webp&q=80"
-                            className="size-10 rounded-full object-cover outline-1 -outline-offset-1 outline-black/10"
-                            alt="Elena Vasquez"
-                        />
+                        <div className="size-10 rounded-full object-cover outline-1 -outline-offset-1 outline-black/10 bg-[#84D7D9]" />
                         <div>
                             <p className="text-sm text-tertiary">
                                 <span className="font-medium text-brand-secondary">Elena Vasquez</span> just launched{" "}

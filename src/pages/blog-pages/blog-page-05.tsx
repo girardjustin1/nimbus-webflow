@@ -297,7 +297,7 @@ const Simple03Vertical = ({
 }) => (
     <div className={cx("flex flex-col gap-4", className)}>
         <a href={article.href} className="overflow-hidden rounded-2xl" tabIndex={-1}>
-            <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full object-cover", imageClassName)} />
+            <div className={cx("aspect-[1.5] w-full object-cover bg-[#84D7D9]", imageClassName)} />
         </a>
 
         <div className="flex flex-col gap-6">

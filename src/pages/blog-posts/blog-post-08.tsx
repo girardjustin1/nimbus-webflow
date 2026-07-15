@@ -4,10 +4,9 @@ import { Badge, type BadgeColor } from "@/components/base/badges/badges";
 import { Button } from "@/components/base/buttons/button";
 import { Form } from "@/components/base/form/form";
 import { Input } from "@/components/base/input/input";
-import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
-import { RatingBadge } from "@/components/foundations/rating-badge";
-import { AngelList, Dribbble, Facebook, GitHub, Layers, LinkedIn, X } from "@/components/foundations/social-icons";
+import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import { NimbusHeader } from "@/components/marketing/nimbus-header";
+import { NimbusFooter } from "@/components/marketing/nimbus-footer";
 import { CheckItemText } from "@/components/marketing/pricing-sections/base-components/pricing-tier-card";
 import { SectionDivider } from "@/components/shared-assets/section-divider";
 import { useClipboard } from "@/hooks/use-clipboard";
@@ -178,81 +177,9 @@ const articles: Article[] = [
     },
 ];
 
-const footerSocials = [
-    { label: "X", icon: X, href: "https://x.com/" },
-    { label: "LinkedIn", icon: LinkedIn, href: "https://www.linkedin.com/" },
-    { label: "Facebook", icon: Facebook, href: "https://www.facebook.com/" },
-    { label: "GitHub", icon: GitHub, href: "https://github.com/" },
-    { label: "AngelList", icon: AngelList, href: "https://angel.co/" },
-    { label: "Dribbble", icon: Dribbble, href: "https://dribbble.com/" },
-    { label: "Layers", icon: Layers, href: "https://layers.com/" },
-];
 
-const footerNavList = [
-    {
-        label: "Product",
-        items: [
-            { label: "Overview", href: "#" },
-            { label: "Products", href: "#" },
-            {
-                label: "Solutions",
-                href: "#",
-                badge: (
-                    <Badge color="gray" type="modern" size="sm" className="ml-1">
-                        New
-                    </Badge>
-                ),
-            },
-            { label: "Tutorials", href: "#" },
-            { label: "Pricing", href: "#" },
-            { label: "Releases", href: "#" },
-        ],
-    },
-    {
-        label: "Company",
-        items: [
-            { label: "About us", href: "#" },
-            { label: "Careers", href: "#" },
-            { label: "Press", href: "#" },
-            { label: "News", href: "#" },
-            { label: "Media kit", href: "#" },
-            { label: "Contact", href: "#" },
-        ],
-    },
-    {
-        label: "Resources",
-        items: [
-            { label: "Blog", href: "#" },
-            { label: "Newsletter", href: "#" },
-            { label: "Events", href: "#" },
-            { label: "Help centre", href: "#" },
-            { label: "Tutorials", href: "#" },
-            { label: "Support", href: "#" },
-        ],
-    },
-    {
-        label: "Social",
-        items: [
-            { label: "X", href: "#" },
-            { label: "LinkedIn", href: "#" },
-            { label: "Facebook", href: "#" },
-            { label: "GitHub", href: "#" },
-            { label: "AngelList", href: "#" },
-            { label: "Dribbble", href: "#" },
-        ],
-    },
-    {
-        label: "Legal",
-        items: [
-            { label: "Terms", href: "#" },
-            { label: "Privacy", href: "#" },
-            { label: "Cookies", href: "#" },
-            { label: "Licenses", href: "#" },
-            { label: "Settings", href: "#" },
-            { label: "Contact", href: "#" },
-        ],
-    },
-];
+
+
 
 const ContentSplitImage03 = () => {
     const { copied, copy } = useClipboard();
@@ -270,11 +197,7 @@ const ContentSplitImage03 = () => {
                     </p>
                 </div>
 
-                <img
-                    className="order-first -ml-4 h-60 w-screen max-w-none object-cover md:order-1 md:ml-0 md:h-160 md:w-full md:max-w-full"
-                    src="https://www.untitledui.com/marketing/girl.webp"
-                    alt="Person working on Linear project management setup"
-                />
+                <div className="order-first -ml-4 h-60 w-screen max-w-none object-cover md:order-1 md:ml-0 md:h-160 md:w-full md:max-w-full bg-[#84D7D9]" />
             </div>
 
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
@@ -321,7 +244,7 @@ const ContentSplitImage03 = () => {
                                 ].map((item) => (
                                     <li key={item.name}>
                                         <div className="flex items-center gap-3">
-                                            <img src={item.avatarUrl} className="size-12 rounded-full object-cover" alt={item.name} />
+                                            <div className="size-12 rounded-full object-cover bg-[#84D7D9]" />
                                             <div>
                                                 <p className="text-md font-semibold text-primary">{item.name}</p>
                                                 <p className="text-md text-tertiary">{item.role}</p>
@@ -377,11 +300,7 @@ const ContentSplitImage03 = () => {
                                 molestie aliquet sodales id est ac volutpat.
                             </p>
                             <figure>
-                                <img
-                                    className="h-60 md:h-120"
-                                    src="https://www.untitledui.com/marketing/man-and-laptop-3.webp"
-                                    alt="Developer using Linear for project management and tracking"
-                                />
+                                <div className="h-60 md:h-120 bg-[#84D7D9]" />
                                 <figcaption>
                                     <Link01 className="size-4 text-utility-neutral-400" />
                                     <span>
@@ -408,11 +327,7 @@ const ContentSplitImage03 = () => {
                                     </p>
                                 </blockquote>
                                 <figcaption className="not-prose mt-6 inline-flex flex-col items-center md:mt-8">
-                                    <img
-                                        src="https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80"
-                                        className="size-10 rounded-full object-cover"
-                                        alt="Jordan Kim"
-                                    />
+                                    <div className="size-10 rounded-full object-cover bg-[#84D7D9]" />
                                     <p className="mt-3 text-md font-semibold text-primary">Jordan Kim</p>
                                     <cite className="mt-0.5 text-md text-tertiary not-italic">Product Designer</cite>
                                 </figcaption>
@@ -455,11 +370,7 @@ const ContentSplitImage03 = () => {
                                 <li>Suspendisse maecenas ac donec scelerisque diam sed est duis purus.</li>
                             </ol>
                             <figure>
-                                <img
-                                    className="h-110 md:h-210"
-                                    src="https://www.untitledui.com/marketing/photographer-girl-2.webp"
-                                    alt="Photographer working with equipment in a creative workspace"
-                                />
+                                <div className="h-110 md:h-210 bg-[#84D7D9]" />
                                 <figcaption>
                                     <Link01 className="size-4 text-utility-neutral-400" />
                                     <span>
@@ -524,7 +435,7 @@ const ContentSplitImage03 = () => {
                                     ].map((item) => (
                                         <li key={item.name}>
                                             <div className="flex items-center gap-3">
-                                                <img src={item.avatarUrl} className="size-12 rounded-full object-cover" alt={item.name} />
+                                                <div className="size-12 rounded-full object-cover bg-[#84D7D9]" />
                                                 <div>
                                                     <p className="text-md font-semibold text-primary">{item.name}</p>
                                                     <p className="text-md text-tertiary">{item.role}</p>
@@ -561,7 +472,7 @@ const Simple03Vertical = ({
 }) => (
     <article className={cx("flex flex-col gap-4", className)}>
         <a href={article.href} className="overflow-hidden rounded-2xl" tabIndex={-1}>
-            <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full object-cover", imageClassName)} />
+            <div className={cx("aspect-[1.5] w-full object-cover bg-[#84D7D9]", imageClassName)} />
         </a>
 
         <div className="flex flex-col gap-6">
@@ -648,17 +559,9 @@ const CTAScreenMockup01 = () => {
                         <div className="rounded-[7.9px] bg-primary p-0.5 shadow-modern-mockup-inner-md md:rounded-[23.58px] md:p-1 md:shadow-modern-mockup-inner-lg">
                             <div className="relative overflow-hidden rounded-[6.77px] bg-utility-neutral-50 ring-[0.56px] ring-utility-neutral-200 md:rounded-[20.21px] md:ring-[1.68px]">
                                 {/* Light mode image (hidden in dark mode) */}
-                                <img
-                                    alt="Dashboard mockup showing application interface"
-                                    src="https://www.untitledui.com/marketing/screen-mockups/dashboard-desktop-mockup-light-01.webp"
-                                    className="object-cover object-left-top dark:hidden"
-                                />
+                                <div className="object-cover object-left-top dark:hidden bg-[#84D7D9]" />
                                 {/* Dark mode image (hidden in light mode) */}
-                                <img
-                                    alt="Dashboard mockup showing application interface"
-                                    src="https://www.untitledui.com/marketing/screen-mockups/dashboard-desktop-mockup-dark-01.webp"
-                                    className="object-cover object-left-top not-dark:hidden"
-                                />
+                                <div className="object-cover object-left-top not-dark:hidden bg-[#84D7D9]" />
                             </div>
                         </div>
                     </div>
@@ -714,62 +617,7 @@ const NewsletterSimpleCentered = () => {
     );
 };
 
-const FooterLarge02 = () => {
-    return (
-        <footer>
-            <div className="bg-primary py-12 md:pt-16">
-                <div className="mx-auto max-w-container px-4 md:px-8">
-                    <div className="flex flex-col gap-12 md:gap-16 xl:flex-row">
-                        <div className="flex flex-col items-start gap-6 md:w-80 md:gap-6">
-                            <UntitledLogo className="h-7 w-min shrink-0" />
-                            <p className="text-md text-tertiary">Design amazing digital experiences that create more happy in the world.</p>
-                            <RatingBadge className="origin-top-left scale-[0.78]" />
-                        </div>
-                        <nav className="flex-1">
-                            <ul className="grid flex-1 grid-cols-2 gap-8 md:grid-cols-5">
-                                {footerNavList.slice(0, 5).map((category) => (
-                                    <li key={category.label}>
-                                        <h4 className="text-sm font-semibold text-quaternary">{category.label}</h4>
-                                        <ul className="mt-4 flex flex-col gap-3">
-                                            {category.items.map((item) => (
-                                                <li key={item.label} className="flex">
-                                                    <Button color="link-gray" size="md" href={item.href} iconTrailing={item.badge} className="max-h-5 gap-1">
-                                                        {item.label}
-                                                    </Button>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </li>
-                                ))}
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <div className="bg-secondary_alt py-10 md:py-12">
-                <div className="mx-auto max-w-container px-4 md:px-8">
-                    <div className="flex flex-col-reverse justify-between gap-6 md:flex-row">
-                        <p className="text-sm text-quaternary">© 2026 Nimbus. All rights reserved.</p>
-                        <ul className="flex gap-6">
-                            {footerSocials.map(({ label, icon: Icon, href }) => (
-                                <li key={label}>
-                                    <a
-                                        href={href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-fg-quaternary outline-focus-ring transition duration-100 ease-linear hover:text-fg-quaternary_hover focus-visible:outline-2 focus-visible:outline-offset-2"
-                                    >
-                                        <Icon className="size-5" aria-label={label} />
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    );
-};
+
 
 const BlogPost08 = () => {
     return (
@@ -788,7 +636,7 @@ const BlogPost08 = () => {
 
             <NewsletterSimpleCentered />
 
-            <FooterLarge02 />
+            <NimbusFooter />
         </div>
     );
 };

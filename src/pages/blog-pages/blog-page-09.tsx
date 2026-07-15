@@ -274,7 +274,7 @@ const footerNavList = [
 const Simple01Horizontal = ({ article, imageClassName }: { article: Article; imageClassName?: string }) => (
     <div className="flex flex-col gap-4 xl:flex-row xl:items-start">
         <a href={article.href} className="shrink-0 overflow-hidden rounded-2xl" tabIndex={-1}>
-            <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full object-cover xl:w-80", imageClassName)} />
+            <div className={cx("aspect-[1.5] w-full object-cover xl:w-80 bg-[#84D7D9]", imageClassName)} />
         </a>
 
         <div className="flex flex-col gap-5">
@@ -412,7 +412,7 @@ const BlogSectionSplitLayout02 = () => {
                                     className="shrink-0 overflow-hidden rounded-2xl transition duration-100 ease-linear hover:shadow-2xl"
                                     tabIndex={-1}
                                 >
-                                    <img src={article.thumbnailUrl} alt={article.title} className="h-60 w-full object-cover xl:h-50 xl:w-91.5" />
+                                    <div className="h-60 w-full object-cover xl:h-50 xl:w-91.5 bg-[#84D7D9]" />
                                 </a>
 
                                 <div className="flex flex-col gap-6">

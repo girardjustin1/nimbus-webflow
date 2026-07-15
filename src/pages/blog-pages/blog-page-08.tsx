@@ -267,7 +267,7 @@ const Simple04Vertical = ({ article, imageClassName, className }: { article: Art
     <div className={cx("flex flex-col gap-4", className)}>
         <div className="relative">
             <a href={article.href} className="w-full" tabIndex={-1}>
-                <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full object-cover", imageClassName)} />
+                <div className={cx("aspect-[1.5] w-full object-cover bg-[#84D7D9]", imageClassName)} />
             </a>
             <div className="absolute inset-x-0 bottom-0 overflow-hidden bg-linear-to-b from-transparent to-black/40">
                 <div className="relative flex items-start justify-between bg-alpha-white/30 p-4 backdrop-blur-md before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-alpha-white/30 md:p-5">
