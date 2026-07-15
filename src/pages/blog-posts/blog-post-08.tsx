@@ -1,0 +1,796 @@
+import { ArrowUpRight, Check, Copy01, Link01 } from "@untitledui/icons";
+import { BadgeGroup } from "@/components/base/badges/badge-groups";
+import { Badge, type BadgeColor } from "@/components/base/badges/badges";
+import { Button } from "@/components/base/buttons/button";
+import { Form } from "@/components/base/form/form";
+import { Input } from "@/components/base/input/input";
+import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
+import { RatingBadge } from "@/components/foundations/rating-badge";
+import { AngelList, Dribbble, Facebook, GitHub, Layers, LinkedIn, X } from "@/components/foundations/social-icons";
+import { Header } from "@/components/marketing/header-navigation/header";
+import { CheckItemText } from "@/components/marketing/pricing-sections/base-components/pricing-tier-card";
+import { SectionDivider } from "@/components/shared-assets/section-divider";
+import { useClipboard } from "@/hooks/use-clipboard";
+import { cx } from "@/utils/cx";
+
+type Article = {
+    id: string;
+    href: string;
+    thumbnailUrl: string;
+    title: string;
+    summary: string;
+    category: {
+        href: string;
+        name: string;
+    };
+    author: {
+        href: string;
+        name: string;
+        avatarUrl: string;
+    };
+    publishedAt: string;
+    readingTime: string;
+    tags: Array<{ name: string; color: BadgeColor<"color">; href: string }>;
+    isFeatured?: boolean;
+};
+
+const articles: Article[] = [
+    {
+        id: "article-1",
+        title: "UX review presentations",
+        summary: "How do you create compelling presentations that wow your colleagues and impress your managers?",
+        href: "#",
+        category: { name: "Design", href: "#" },
+        thumbnailUrl: "https://www.untitledui.com/marketing/spirals.webp",
+        publishedAt: "20 Jan 2026",
+        readingTime: "8 min read",
+        author: { name: "Olivia Rhye", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80" },
+        tags: [
+            { name: "Design", color: "brand", href: "#" },
+            { name: "Research", color: "indigo", href: "#" },
+            { name: "Presentation", color: "pink", href: "#" },
+        ],
+        isFeatured: true,
+    },
+    {
+        id: "article-2",
+        title: "Migrating to Linear 101",
+        summary: "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get started.",
+        href: "#",
+        category: { name: "Product", href: "#" },
+        thumbnailUrl: "https://www.untitledui.com/marketing/conversation.webp",
+
+        publishedAt: "19 Jan 2026",
+        readingTime: "8 min read",
+        author: { name: "Phoenix Baker", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/phoenix-baker?fm=webp&q=80" },
+        tags: [
+            { name: "Product", color: "sky", href: "#" },
+            { name: "Tools", color: "pink", href: "#" },
+            { name: "SaaS", color: "pink", href: "#" },
+        ],
+    },
+    {
+        id: "article-3",
+        title: "Building your API stack",
+        summary: "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.",
+        href: "#",
+        category: { name: "Software Engineering", href: "#" },
+        thumbnailUrl: "https://www.untitledui.com/blog/two-mobile-shapes-pattern.webp",
+        publishedAt: "18 Jan 2026",
+        readingTime: "8 min read",
+        author: { name: "Lana Steiner", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/lana-steiner?fm=webp&q=80" },
+        tags: [
+            { name: "Software Development", color: "success", href: "#" },
+            { name: "Tools", color: "pink", href: "#" },
+        ],
+    },
+    {
+        id: "article-3.5",
+        title: "PM mental models",
+        summary: "Mental models are simple expressions of complex processes or relationships.",
+        href: "#",
+        category: { name: "Product", href: "#" },
+        thumbnailUrl: "https://www.untitledui.com/blog/two-people.webp",
+        publishedAt: "17 Jan 2026",
+        readingTime: "8 min read",
+        author: { name: "Demi Wilkinson", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/demi-wilkinson?fm=webp&q=80" },
+        tags: [
+            { name: "Leadership", color: "brand", href: "#" },
+            { name: "Management", color: "slate", href: "#" },
+        ],
+    },
+    {
+        id: "article-4",
+        title: "PM mental models",
+        summary: "Mental models are simple expressions of complex processes or relationships.",
+        href: "#",
+        category: { name: "Product", href: "#" },
+        thumbnailUrl: "https://www.untitledui.com/marketing/brainstorming.webp",
+        publishedAt: "16 Jan 2026",
+        readingTime: "8 min read",
+        author: { name: "Demi Wilkinson", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/demi-wilkinson?fm=webp&q=80" },
+        tags: [
+            { name: "Product", color: "sky", href: "#" },
+            { name: "Research", color: "indigo", href: "#" },
+            { name: "Frameworks", color: "orange", href: "#" },
+        ],
+    },
+    {
+        id: "article-5",
+        title: "What is Wireframing?",
+        summary: "Introduction to Wireframing and its Principles. Learn from the best in the industry.",
+        href: "#",
+        category: { name: "Design", href: "#" },
+        thumbnailUrl: "https://www.untitledui.com/marketing/workspace-4.webp",
+        publishedAt: "15 Jan 2026",
+        readingTime: "8 min read",
+        author: { name: "Candice Wu", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/candice-wu?fm=webp&q=80" },
+        tags: [
+            { name: "Design", color: "brand", href: "#" },
+            { name: "Research", color: "indigo", href: "#" },
+        ],
+    },
+    {
+        id: "article-6",
+        title: "How collaboration makes us better designers",
+        summary: "Collaboration can make our teams stronger, and our individual designs better.",
+        href: "#",
+        category: { name: "Design", href: "#" },
+        thumbnailUrl: "https://www.untitledui.com/marketing/collaboration.webp",
+        publishedAt: "14 Jan 2026",
+        readingTime: "8 min read",
+        author: { name: "Natali Craig", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/natali-craig?fm=webp&q=80" },
+        tags: [
+            { name: "Design", color: "brand", href: "#" },
+            { name: "Research", color: "indigo", href: "#" },
+        ],
+    },
+    {
+        id: "article-7",
+        title: "Our top 10 Javascript frameworks to use",
+        summary: "JavaScript frameworks make development easy with extensive features and functionalities.",
+        href: "#",
+        category: { name: "Product", href: "#" },
+        thumbnailUrl: "https://www.untitledui.com/marketing/man-and-laptop-2.webp",
+        publishedAt: "13 Jan 2026",
+        readingTime: "8 min read",
+        author: { name: "Drew Cano", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/drew-cano?fm=webp&q=80" },
+        tags: [
+            { name: "Software development", color: "success", href: "#" },
+            { name: "Tools", color: "pink", href: "#" },
+            { name: "SaaS", color: "pink", href: "#" },
+        ],
+    },
+    {
+        id: "article-8",
+        title: "Podcast: Creating a better CX Community",
+        summary: "Starting a community doesn't need to be complicated, but how do you get started?",
+        href: "#",
+        category: { name: "Customer Success", href: "#" },
+        thumbnailUrl: "https://www.untitledui.com/marketing/podcast-girl-2.webp",
+        publishedAt: "12 Jan 2026",
+        readingTime: "8 min read",
+        author: { name: "Orlando Diggs", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/orlando-diggs?fm=webp&q=80" },
+        tags: [
+            { name: "Podcasts", color: "brand", href: "#" },
+            { name: "Customer success", color: "slate", href: "#" },
+        ],
+    },
+];
+
+const footerSocials = [
+    { label: "X", icon: X, href: "https://x.com/" },
+    { label: "LinkedIn", icon: LinkedIn, href: "https://www.linkedin.com/" },
+    { label: "Facebook", icon: Facebook, href: "https://www.facebook.com/" },
+    { label: "GitHub", icon: GitHub, href: "https://github.com/" },
+    { label: "AngelList", icon: AngelList, href: "https://angel.co/" },
+    { label: "Dribbble", icon: Dribbble, href: "https://dribbble.com/" },
+    { label: "Layers", icon: Layers, href: "https://layers.com/" },
+];
+
+const footerNavList = [
+    {
+        label: "Product",
+        items: [
+            { label: "Overview", href: "#" },
+            { label: "Features", href: "#" },
+            {
+                label: "Solutions",
+                href: "#",
+                badge: (
+                    <Badge color="gray" type="modern" size="sm" className="ml-1">
+                        New
+                    </Badge>
+                ),
+            },
+            { label: "Tutorials", href: "#" },
+            { label: "Pricing", href: "#" },
+            { label: "Releases", href: "#" },
+        ],
+    },
+    {
+        label: "Company",
+        items: [
+            { label: "About us", href: "#" },
+            { label: "Careers", href: "#" },
+            { label: "Press", href: "#" },
+            { label: "News", href: "#" },
+            { label: "Media kit", href: "#" },
+            { label: "Contact", href: "#" },
+        ],
+    },
+    {
+        label: "Resources",
+        items: [
+            { label: "Blog", href: "#" },
+            { label: "Newsletter", href: "#" },
+            { label: "Events", href: "#" },
+            { label: "Help centre", href: "#" },
+            { label: "Tutorials", href: "#" },
+            { label: "Support", href: "#" },
+        ],
+    },
+    {
+        label: "Social",
+        items: [
+            { label: "X", href: "#" },
+            { label: "LinkedIn", href: "#" },
+            { label: "Facebook", href: "#" },
+            { label: "GitHub", href: "#" },
+            { label: "AngelList", href: "#" },
+            { label: "Dribbble", href: "#" },
+        ],
+    },
+    {
+        label: "Legal",
+        items: [
+            { label: "Terms", href: "#" },
+            { label: "Privacy", href: "#" },
+            { label: "Cookies", href: "#" },
+            { label: "Licenses", href: "#" },
+            { label: "Settings", href: "#" },
+            { label: "Contact", href: "#" },
+        ],
+    },
+];
+
+const ContentSplitImage03 = () => {
+    const { copied, copy } = useClipboard();
+
+    return (
+        <div className="bg-primary">
+            <div className="relative mx-auto grid max-w-container grid-cols-1 items-center gap-16 px-4 pb-16 md:grid-cols-2 md:gap-8 md:px-8 md:pt-16 md:pb-24">
+                <div className="flex max-w-180 flex-col items-start">
+                    <BadgeGroup size="md" addonText="Product" color="brand" theme="modern" className="pr-3" iconTrailing={null}>
+                        8 min read
+                    </BadgeGroup>
+                    <h1 className="mt-4 text-display-md font-semibold text-primary md:text-display-lg">Migrating to Linear 101</h1>
+                    <p className="mt-4 text-lg text-tertiary md:mt-6 md:max-w-120 md:text-xl">
+                        Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get started.
+                    </p>
+                </div>
+
+                <img
+                    className="order-first -ml-4 h-60 w-screen max-w-none object-cover md:order-1 md:ml-0 md:h-160 md:w-full md:max-w-full"
+                    src="https://www.untitledui.com/marketing/girl.webp"
+                    alt="Person working on Linear project management setup"
+                />
+            </div>
+
+            <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
+                <div className="mx-auto flex justify-center gap-16">
+                    <div className="hidden w-70 flex-col gap-8 lg:flex">
+                        <div className="w-full border-t border-secondary" />
+                        <div className="flex flex-col gap-4">
+                            <p className="text-md font-semibold text-brand-secondary">Table of contents</p>
+                            <ul className="flex flex-col gap-3">
+                                {[
+                                    { title: "Introduction", href: "#" },
+                                    { title: "Software and tools", href: "#" },
+                                    { title: "Other resources", href: "#" },
+                                    { title: "Conclusion", href: "#" },
+                                ].map((item) => (
+                                    <li key={item.title}>
+                                        <Button href={item.href} size="lg" color="link-gray">
+                                            {item.title}
+                                        </Button>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="w-full border-t border-secondary" />
+                        <div className="flex flex-col gap-6">
+                            <p className="text-md font-semibold text-brand-secondary">Contributors</p>
+                            <ul className="flex flex-col gap-6">
+                                {[
+                                    {
+                                        name: "Phoenix Baker",
+                                        role: "Product Manager",
+                                        avatarUrl: "https://www.untitledui.com/images/avatars/phoenix-baker?fm=webp&q=80",
+                                    },
+                                    {
+                                        name: "Lori Bryson",
+                                        role: "Product Manager",
+                                        avatarUrl: "https://www.untitledui.com/images/avatars/lori-bryson?fm=webp&q=80",
+                                    },
+                                    {
+                                        name: "Loki Bright",
+                                        role: "Frontend Engineer",
+                                        avatarUrl: "https://www.untitledui.com/images/avatars/loki-bright?fm=webp&q=80",
+                                    },
+                                ].map((item) => (
+                                    <li key={item.name}>
+                                        <div className="flex items-center gap-3">
+                                            <img src={item.avatarUrl} className="size-12 rounded-full object-cover" alt={item.name} />
+                                            <div>
+                                                <p className="text-md font-semibold text-primary">{item.name}</p>
+                                                <p className="text-md text-tertiary">{item.role}</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="w-full border-t border-secondary" />
+                        <Form
+                            onSubmit={(e) => {
+                                e.preventDefault();
+                                const data = Object.fromEntries(new FormData(e.currentTarget));
+                                console.log("Form data:", data);
+                            }}
+                            className="flex flex-col gap-4"
+                        >
+                            <label htmlFor="email-input" className="text-md font-semibold text-brand-secondary">
+                                Subscribe to our newsletter
+                            </label>
+                            <Input isRequired id="email-input" name="email" type="email" placeholder="Enter your email" size="lg" />
+                            <Button type="submit" size="xl">
+                                Subscribe
+                            </Button>
+                        </Form>
+                        <div className="w-full border-t border-secondary" />
+                        <div className="flex gap-3">
+                            <Button color="secondary" size="md" iconLeading={Link01} />
+                            <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={X} />
+                            <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={Facebook} />
+                            <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={LinkedIn} />
+                        </div>
+                    </div>
+
+                    <div className="max-w-prose lg:max-w-180">
+                        <div className="prose-centered-quote mx-auto prose md:prose-lg">
+                            <p className="lead">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo
+                                massa. Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non massa enim vitae duis mattis. Vel in ultricies vel
+                                fringilla.
+                            </p>
+                            <hr />
+                            <h2>Introduction</h2>
+                            <p>
+                                Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum
+                                quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae nisi, tellus tincidunt. At
+                                feugiat sapien varius id.
+                            </p>
+                            <p>
+                                Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames
+                                arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum
+                                molestie aliquet sodales id est ac volutpat.
+                            </p>
+                            <figure>
+                                <img
+                                    className="h-60 md:h-120"
+                                    src="https://www.untitledui.com/marketing/man-and-laptop-3.webp"
+                                    alt="Developer using Linear for project management and tracking"
+                                />
+                                <figcaption>
+                                    <Link01 className="size-4 text-utility-neutral-400" />
+                                    <span>
+                                        Image courtesy of Vlada Karpovich via{" "}
+                                        <a
+                                            href="https://www.pexels.com/photo/photo-of-woman-leaning-on-wooden-table-3182746/"
+                                            className="rounded-xs outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
+                                        >
+                                            Pexels
+                                        </a>
+                                    </span>
+                                </figcaption>
+                            </figure>
+                            <p>
+                                Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis.
+                                Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus. Quis velit eget ut tortor tellus. Sed vel, congue
+                                felis elit erat nam nibh orci.
+                            </p>
+                            <figure>
+                                <blockquote>
+                                    <p>
+                                        In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we
+                                        have lost or never attained, living by voices we shall never hear.
+                                    </p>
+                                </blockquote>
+                                <figcaption className="not-prose mt-6 inline-flex flex-col items-center md:mt-8">
+                                    <img
+                                        src="https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80"
+                                        className="size-10 rounded-full object-cover"
+                                        alt="Olivia Rhye"
+                                    />
+                                    <p className="mt-3 text-md font-semibold text-primary">Olivia Rhye</p>
+                                    <cite className="mt-0.5 text-md text-tertiary not-italic">Product Designer</cite>
+                                </figcaption>
+                            </figure>
+                            <p>
+                                Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet pellentesque aenean hac
+                                vestibulum turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada fringilla.
+                            </p>
+                            <p>
+                                Elit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus. Sed condimentum enim
+                                dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate posuere purus sit
+                                congue convallis aliquet. Arcu id augue ut feugiat donec porttitor neque. Mauris, neque ultricies eu vestibulum, bibendum quam
+                                lorem id. Dolor lacus, eget nunc lectus in tellus, pharetra, porttitor.
+                            </p>
+                            <p>
+                                Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis.
+                                Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus. Quis velit eget ut tortor tellus. Sed vel, congue
+                                felis elit erat nam nibh orci.
+                            </p>
+                            <h3>Software and tools</h3>
+                            <p>
+                                Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum
+                                quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae nisi, tellus tincidunt. At
+                                feugiat sapien varius id.
+                            </p>
+                            <p>
+                                Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames
+                                arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum
+                                molestie aliquet sodales id est ac volutpat.
+                            </p>
+                            <h3>Other resources</h3>
+                            <p>
+                                Sagittis et eu at elementum, quis in. Proin praesent volutpat egestas sociis sit lorem nunc nunc sit. Eget diam curabitur mi ac.
+                                Auctor rutrum lacus malesuada massa ornare et. Vulputate consectetur ac ultrices at diam dui eget fringilla tincidunt. Arcu sit
+                                dignissim massa erat cursus vulputate gravida id. Sed quis auctor vulputate hac elementum gravida cursus dis.
+                            </p>
+                            <ol>
+                                <li>Lectus id duis vitae porttitor enim gravida morbi.</li>
+                                <li>Eu turpis posuere semper feugiat volutpat elit, ultrices suspendisse. Auctor vel in vitae placerat.</li>
+                                <li>Suspendisse maecenas ac donec scelerisque diam sed est duis purus.</li>
+                            </ol>
+                            <figure>
+                                <img
+                                    className="h-110 md:h-210"
+                                    src="https://www.untitledui.com/marketing/photographer-girl-2.webp"
+                                    alt="Photographer working with equipment in a creative workspace"
+                                />
+                                <figcaption>
+                                    <Link01 className="size-4 text-utility-neutral-400" />
+                                    <span>
+                                        Image courtesy of Michael Burrows via{" "}
+                                        <a
+                                            href="https://www.pexels.com/photo/pensive-woman-sitting-in-light-workspace-7148059/"
+                                            className="rounded-xs outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
+                                        >
+                                            Pexels
+                                        </a>
+                                    </span>
+                                </figcaption>
+                            </figure>
+                            <p>
+                                Lectus leo massa amet posuere. Malesuada mattis non convallis quisque. Libero sit et imperdiet bibendum quisque dictum
+                                vestibulum in non. Pretium ultricies tempor non est diam. Enim ut enim amet amet integer cursus. Sit ac commodo pretium sed
+                                etiam turpis suspendisse at.
+                            </p>
+                            <p>
+                                Tristique odio senectus nam posuere ornare leo metus, ultricies. Blandit duis ultricies vulputate morbi feugiat cras placerat
+                                elit. Aliquam tellus lorem sed ac. Montes, sed mattis pellentesque suscipit accumsan. Cursus viverra aenean magna risus
+                                elementum faucibus molestie pellentesque. Arcu ultricies sed mauris vestibulum.
+                            </p>
+                            <div className="not-prose my-8 rounded-2xl bg-secondary px-5 py-6 text-lg text-tertiary md:my-12 md:p-8 [&>p+p]:mt-4.5">
+                                <h2 className="mb-4 text-display-xs font-semibold text-primary">Conclusion</h2>
+                                <p>
+                                    Morbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies. Duis est sit sed
+                                    leo nisl, blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet nulla purus habitasse.
+                                </p>
+                                <p>
+                                    Nunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas condimentum mi massa. In tincidunt pharetra consectetur sed
+                                    duis facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit dictum eget nibh tortor commodo cursus.
+                                </p>
+                                <p>
+                                    Odio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet erat dolor enim.
+                                    Ornare id morbi eget ipsum. Aliquam senectus neque ut id eget consectetur dictum. Donec posuere pharetra odio consequat
+                                    scelerisque et, nunc tortor.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col items-start justify-between gap-y-8 lg:hidden lg:flex-row">
+                            <div className="flex flex-col gap-6">
+                                <p className="text-md font-semibold text-brand-secondary">Contributors</p>
+                                <ul className="flex flex-col gap-6">
+                                    {[
+                                        {
+                                            name: "Phoenix Baker",
+                                            role: "Product Manager",
+                                            avatarUrl: "https://www.untitledui.com/images/avatars/phoenix-baker?fm=webp&q=80",
+                                        },
+                                        {
+                                            name: "Lori Bryson",
+                                            role: "Product Manager",
+                                            avatarUrl: "https://www.untitledui.com/images/avatars/lori-bryson?fm=webp&q=80",
+                                        },
+                                        {
+                                            name: "Loki Bright",
+                                            role: "Frontend Engineer",
+                                            avatarUrl: "https://www.untitledui.com/images/avatars/loki-bright?fm=webp&q=80",
+                                        },
+                                    ].map((item) => (
+                                        <li key={item.name}>
+                                            <div className="flex items-center gap-3">
+                                                <img src={item.avatarUrl} className="size-12 rounded-full object-cover" alt={item.name} />
+                                                <div>
+                                                    <p className="text-md font-semibold text-primary">{item.name}</p>
+                                                    <p className="text-md text-tertiary">{item.role}</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className="flex gap-3">
+                                <Button color="secondary" size="md" onClick={() => copy("https://www.untitledui.com/")} iconLeading={copied ? Check : Copy01} />
+                                <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={X} />
+                                <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={Facebook} />
+                                <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={LinkedIn} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const Simple03Vertical = ({
+    article,
+    imageClassName,
+    titleClassName,
+    className,
+}: {
+    article: Article;
+    imageClassName?: string;
+    titleClassName?: string;
+    className?: string;
+}) => (
+    <article className={cx("flex flex-col gap-4", className)}>
+        <a href={article.href} className="overflow-hidden rounded-2xl" tabIndex={-1}>
+            <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full object-cover", imageClassName)} />
+        </a>
+
+        <div className="flex flex-col gap-6">
+            <div className="flex flex-col items-start gap-2">
+                <p className="text-sm font-semibold text-brand-secondary">
+                    {article.author.name} • <time>{article.publishedAt}</time>
+                </p>
+                <div className="flex w-full flex-col gap-1">
+                    <a
+                        href={article.category.href}
+                        className={cx(
+                            "flex justify-between gap-x-4 rounded-md text-lg font-semibold text-primary outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2",
+                            titleClassName,
+                        )}
+                    >
+                        {article.title}
+                        <ArrowUpRight className="mt-0.5 size-6 shrink-0 text-fg-quaternary" aria-hidden="true" />
+                    </a>
+                    <p className="line-clamp-2 text-md text-tertiary">{article.summary}</p>
+                </div>
+            </div>
+
+            <div className="flex gap-2">
+                {article.tags.map((tag) => (
+                    <a key={tag.name} href={tag.href} className="rounded-xl outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2">
+                        <Badge color={tag.color} size="md">
+                            {tag.name}
+                        </Badge>
+                    </a>
+                ))}
+            </div>
+        </div>
+    </article>
+);
+
+const BlogSectionSimpleCenterAligned01 = () => {
+    return (
+        <section className="bg-primary py-16 md:py-24">
+            <div className="mx-auto max-w-container px-4 md:px-8">
+                <div className="mx-auto max-w-3xl text-center">
+                    <p className="text-sm font-semibold text-brand-secondary md:text-md">Latest posts</p>
+
+                    <h2 className="mt-3 text-display-sm font-semibold text-primary md:text-display-md">Untitled blog</h2>
+                    <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Interviews, tips, guides, industry best practices, and news.</p>
+                </div>
+
+                <ul className="mt-12 grid grid-cols-1 gap-x-8 gap-y-12 md:mt-16 md:grid-cols-2 md:gap-y-16 lg:grid-cols-3">
+                    {articles.slice(0, 3).map((article) => (
+                        <li key={article.id}>
+                            <Simple03Vertical article={article} />
+                        </li>
+                    ))}
+                </ul>
+
+                <div className="mt-12 flex flex-col justify-center gap-3 md:mt-16 md:flex-row">
+                    <Button size="xl">View all posts</Button>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+const CTAScreenMockup01 = () => {
+    return (
+        <section className="overflow-hidden bg-primary py-16 md:py-24">
+            <div className="mx-auto grid max-w-container grid-cols-1 items-center gap-16 px-4 md:px-8 lg:grid-cols-2">
+                <div className="flex w-full max-w-3xl flex-col">
+                    <h1 className="text-display-sm font-semibold text-primary md:text-display-lg">Join 4,000+ startups growing with Untitled</h1>
+                    <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
+                        {["30-day free trial", "Personalized onboarding", "Access to all features"].map((feat) => (
+                            <CheckItemText key={feat} size="md" iconStyle="outlined" color="primary" text={feat} />
+                        ))}
+                    </ul>
+                    <div className="mt-8 flex w-full flex-col-reverse items-stretch gap-3 sm:w-auto sm:flex-row sm:items-start md:mt-12">
+                        <Button color="secondary" size="xl">
+                            Learn more
+                        </Button>
+                        <Button size="xl">Get started</Button>
+                    </div>
+                </div>
+
+                <div className="relative mx-auto w-full lg:h-128">
+                    <div className="top-0 left-0 w-full max-w-5xl rounded-[9.03px] bg-primary p-[0.9px] shadow-lg ring-[0.56px] ring-utility-neutral-300 ring-inset md:rounded-[26.95px] md:p-[3.5px] md:ring-[1.68px] lg:absolute lg:w-max">
+                        <div className="rounded-[7.9px] bg-primary p-0.5 shadow-modern-mockup-inner-md md:rounded-[23.58px] md:p-1 md:shadow-modern-mockup-inner-lg">
+                            <div className="relative overflow-hidden rounded-[6.77px] bg-utility-neutral-50 ring-[0.56px] ring-utility-neutral-200 md:rounded-[20.21px] md:ring-[1.68px]">
+                                {/* Light mode image (hidden in dark mode) */}
+                                <img
+                                    alt="Dashboard mockup showing application interface"
+                                    src="https://www.untitledui.com/marketing/screen-mockups/dashboard-desktop-mockup-light-01.webp"
+                                    className="object-cover object-left-top dark:hidden"
+                                />
+                                {/* Dark mode image (hidden in light mode) */}
+                                <img
+                                    alt="Dashboard mockup showing application interface"
+                                    src="https://www.untitledui.com/marketing/screen-mockups/dashboard-desktop-mockup-dark-01.webp"
+                                    className="object-cover object-left-top not-dark:hidden"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+const NewsletterSimpleCentered = () => {
+    return (
+        <section className="bg-secondary py-16 md:py-24">
+            <div className="mx-auto max-w-container px-4 md:px-8">
+                <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
+                    <h1 className="text-display-sm font-semibold text-primary md:text-display-md">Sign up for our newsletter</h1>
+                    <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Be the first to know about releases and industry news and insights.</p>
+
+                    <Form
+                        onSubmit={(e) => {
+                            e.preventDefault();
+                            const data = Object.fromEntries(new FormData(e.currentTarget));
+                            console.log("Form data:", data);
+                        }}
+                        className="mt-8 flex w-full flex-col gap-4 md:max-w-120 md:flex-row"
+                    >
+                        <Input
+                            isRequired
+                            size="lg"
+                            name="email"
+                            type="email"
+                            placeholder="Enter your email"
+                            wrapperClassName="py-0.5 md:max-w-[345px]"
+                            hint={
+                                <span>
+                                    We care about your data in our{" "}
+                                    <a
+                                        href="#"
+                                        className="rounded-xs underline underline-offset-3 outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
+                                    >
+                                        privacy policy
+                                    </a>
+                                    .
+                                </span>
+                            }
+                        />
+                        <Button type="submit" size="xl">
+                            Subscribe
+                        </Button>
+                    </Form>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+const FooterLarge02 = () => {
+    return (
+        <footer>
+            <div className="bg-primary py-12 md:pt-16">
+                <div className="mx-auto max-w-container px-4 md:px-8">
+                    <div className="flex flex-col gap-12 md:gap-16 xl:flex-row">
+                        <div className="flex flex-col items-start gap-6 md:w-80 md:gap-6">
+                            <UntitledLogo className="h-7 w-min shrink-0" />
+                            <p className="text-md text-tertiary">Design amazing digital experiences that create more happy in the world.</p>
+                            <RatingBadge className="origin-top-left scale-[0.78]" />
+                        </div>
+                        <nav className="flex-1">
+                            <ul className="grid flex-1 grid-cols-2 gap-8 md:grid-cols-5">
+                                {footerNavList.slice(0, 5).map((category) => (
+                                    <li key={category.label}>
+                                        <h4 className="text-sm font-semibold text-quaternary">{category.label}</h4>
+                                        <ul className="mt-4 flex flex-col gap-3">
+                                            {category.items.map((item) => (
+                                                <li key={item.label} className="flex">
+                                                    <Button color="link-gray" size="md" href={item.href} iconTrailing={item.badge} className="max-h-5 gap-1">
+                                                        {item.label}
+                                                    </Button>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </li>
+                                ))}
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div className="bg-secondary_alt py-10 md:py-12">
+                <div className="mx-auto max-w-container px-4 md:px-8">
+                    <div className="flex flex-col-reverse justify-between gap-6 md:flex-row">
+                        <p className="text-sm text-quaternary">© 2077 Untitled UI. All rights reserved.</p>
+                        <ul className="flex gap-6">
+                            {footerSocials.map(({ label, icon: Icon, href }) => (
+                                <li key={label}>
+                                    <a
+                                        href={href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-fg-quaternary outline-focus-ring transition duration-100 ease-linear hover:text-fg-quaternary_hover focus-visible:outline-2 focus-visible:outline-offset-2"
+                                    >
+                                        <Icon className="size-5" aria-label={label} />
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+};
+
+const BlogPost08 = () => {
+    return (
+        <div className="bg-primary">
+            <Header />
+
+            <ContentSplitImage03 />
+
+            <SectionDivider />
+
+            <BlogSectionSimpleCenterAligned01 />
+
+            <SectionDivider />
+
+            <CTAScreenMockup01 />
+
+            <NewsletterSimpleCentered />
+
+            <FooterLarge02 />
+        </div>
+    );
+};
+
+export default BlogPost08;
