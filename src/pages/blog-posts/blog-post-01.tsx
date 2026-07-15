@@ -278,7 +278,7 @@ const RoundButton = ({ icon: Icon, ...props }: RoundButtonProps) => {
 
 const ContentAlternative02 = () => {
     return (
-        <div className="overflow-hidden bg-primary">
+        <div className="overflow-hidden bg-[#f9f7f3]">
             <div className="mx-auto w-full max-w-container px-4 py-16 md:px-8 md:py-24">
                 <div className="max-w-3xl">
                     <div className="text-sm font-semibold text-brand-secondary md:text-md">Published 13 Jan 2026</div>
@@ -546,7 +546,7 @@ const Simple01Vertical = ({ article, imageClassName }: { article: Article; image
 
 const BlogSectionSimpleLeftAligned01 = () => {
     return (
-        <section className="bg-primary py-16 md:py-24">
+        <section className="bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-start justify-between lg:flex-row">
                     <div className="max-w-3xl">
@@ -577,7 +577,7 @@ const BlogSectionSimpleLeftAligned01 = () => {
 
 const CTAAbstractImages = () => {
     return (
-        <section className="bg-primary py-16 lg:py-24">
+        <section className="bg-[#f9f7f3] py-16 lg:py-24">
             <div className="mx-auto grid max-w-container grid-cols-1 gap-16 overflow-hidden px-4 md:px-8 lg:grid-cols-2 lg:items-center">
                 <div className="flex max-w-3xl flex-col items-start">
                     <h2 className="text-display-sm font-semibold text-primary md:text-display-md lg:text-display-lg">No long-term contracts. No catches.</h2>
@@ -630,7 +630,7 @@ const CTAAbstractImages = () => {
 
 const NewsletterCardHorizontal = () => {
     return (
-        <section className="bg-primary pb-16 md:pb-24">
+        <section className="bg-[#f9f7f3] pb-16 md:pb-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-start justify-between gap-x-16 gap-y-8 rounded-2xl bg-secondary px-6 py-10 lg:flex-row lg:p-16">
                     <div className="flex max-w-3xl flex-col">
@@ -677,7 +677,7 @@ const NewsletterCardHorizontal = () => {
 
 const FooterLarge01 = () => {
     return (
-        <footer className="bg-primary py-12 md:pt-16">
+        <footer className="bg-[#f9f7f3] py-12 md:pt-16">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <nav>
                     <ul className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
@@ -708,7 +708,7 @@ const FooterLarge01 = () => {
 
 const BlogPost01 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <Header />
 
             <ContentAlternative02 />

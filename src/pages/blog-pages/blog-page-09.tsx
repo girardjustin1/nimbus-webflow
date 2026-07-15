@@ -317,8 +317,8 @@ const BlogHeaderSimple06 = () => {
     const [selectedTabIndex, setSelectedTabIndex] = useState(1);
 
     return (
-        <div className="bg-primary">
-            <section className="bg-primary py-16 md:py-24">
+        <div className="bg-[#f9f7f3]">
+            <section className="bg-[#f9f7f3] py-16 md:py-24">
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mb-3 text-sm font-semibold text-brand-secondary md:text-md">Our blog</div>
                     <div className="grid grid-cols-[minmax(1fr,768px)] gap-x-16 lg:grid-cols-[2fr_1fr]">
@@ -393,7 +393,7 @@ const BlogHeaderSimple06 = () => {
 
 const BlogSectionSplitLayout02 = () => {
     return (
-        <section className="bg-primary py-16 md:py-24">
+        <section className="bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto flex max-w-container flex-col gap-x-16 gap-y-12 px-4 md:px-8 lg:flex-row">
                 <div className="w-full max-w-100">
                     <h2 className="text-display-sm font-semibold text-primary md:text-display-md">From the blog</h2>
@@ -484,7 +484,7 @@ const SimpleCentered = () => {
 
 const FooterLarge05 = () => {
     return (
-        <footer className="dark-mode bg-primary py-12 md:pt-16">
+        <footer className="dark-mode bg-[#f9f7f3] py-12 md:pt-16">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-start justify-between gap-8 border-secondary md:flex-row md:border-b md:pb-16">
                     <div className="flex flex-col gap-2">
@@ -552,7 +552,7 @@ const FooterLarge05 = () => {
 
 const BlogPage09 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <Header />
 
             <BlogHeaderSimple06 />

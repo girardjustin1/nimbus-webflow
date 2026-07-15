@@ -258,7 +258,7 @@ const ContentSplitImage03 = () => {
     const { copied, copy } = useClipboard();
 
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <div className="relative mx-auto grid max-w-container grid-cols-1 items-center gap-16 px-4 pb-16 md:grid-cols-2 md:gap-8 md:px-8 md:pt-16 md:pb-24">
                 <div className="flex max-w-180 flex-col items-start">
                     <BadgeGroup size="md" addonText="Product" color="brand" theme="modern" className="pr-3" iconTrailing={null}>
@@ -599,7 +599,7 @@ const Simple03Vertical = ({
 
 const BlogSectionSimpleCenterAligned01 = () => {
     return (
-        <section className="bg-primary py-16 md:py-24">
+        <section className="bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="mx-auto max-w-3xl text-center">
                     <p className="text-sm font-semibold text-brand-secondary md:text-md">Latest posts</p>
@@ -626,7 +626,7 @@ const BlogSectionSimpleCenterAligned01 = () => {
 
 const CTAScreenMockup01 = () => {
     return (
-        <section className="overflow-hidden bg-primary py-16 md:py-24">
+        <section className="overflow-hidden bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto grid max-w-container grid-cols-1 items-center gap-16 px-4 md:px-8 lg:grid-cols-2">
                 <div className="flex w-full max-w-3xl flex-col">
                     <h1 className="text-display-sm font-semibold text-primary md:text-display-lg">Join 4,000+ startups growing with Untitled</h1>
@@ -773,7 +773,7 @@ const FooterLarge02 = () => {
 
 const BlogPost08 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <Header />
 
             <ContentSplitImage03 />

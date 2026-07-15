@@ -252,8 +252,8 @@ const BlogHeaderSidebar02 = () => {
     const [selectedTabIndex, setSelectedTabIndex] = useState(1);
 
     return (
-        <div className="bg-primary">
-            <section className="bg-primary py-16 md:py-24">
+        <div className="bg-[#f9f7f3]">
+            <section className="bg-[#f9f7f3] py-16 md:py-24">
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="flex w-full max-w-3xl flex-col">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Our blog</span>
@@ -428,7 +428,7 @@ const FooterLarge08 = () => {
 
 const BlogPage04 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <Header />
 
             <BlogHeaderSidebar02 />

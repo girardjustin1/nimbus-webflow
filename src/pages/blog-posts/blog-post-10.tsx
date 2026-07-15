@@ -50,7 +50,7 @@ const ContentLargeImage02 = () => {
     const { copied, copy } = useClipboard();
 
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <div className="mx-auto max-w-container px-4 py-16 md:px-8 md:py-24">
                 <div className="mx-auto flex w-full max-w-180 flex-col items-center text-center">
                     <span className="text-sm font-semibold text-brand-secondary md:text-md">Design</span>
@@ -256,7 +256,7 @@ const ContentLargeImage02 = () => {
 
 const NewsletterCardVerticalBrand = () => {
     return (
-        <section className="bg-primary pb-16 md:pb-24">
+        <section className="bg-[#f9f7f3] pb-16 md:pb-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-center rounded-2xl bg-brand-section px-6 py-10 text-center lg:p-16">
                     <h2 className="text-display-sm font-semibold text-primary_on-brand xl:text-display-md">
@@ -306,7 +306,7 @@ const NewsletterCardVerticalBrand = () => {
 
 const CTASimpleLogos02 = () => {
     return (
-        <section className="bg-primary py-16 md:py-24">
+        <section className="bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-16">
                     <div className="flex flex-col">
@@ -466,7 +466,7 @@ const FooterLarge07 = () => {
 
 const BlogPost10 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <BannerSlimBrandFullWidth />
 
             <Header isFloating />

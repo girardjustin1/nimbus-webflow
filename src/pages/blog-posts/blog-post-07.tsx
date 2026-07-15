@@ -106,7 +106,7 @@ const ContentLargeImage04 = () => {
     const { copied, copy } = useClipboard();
 
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <div className="w-full bg-brand-section py-16 pb-32 md:pt-24 md:pb-40">
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mx-auto flex w-full max-w-240 flex-col items-center text-center">
@@ -414,7 +414,7 @@ const articles: Article[] = [
 
 const BlogSectionSplitLayout01 = () => {
     return (
-        <section className="bg-primary py-16 md:py-24">
+        <section className="bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto flex max-w-container flex-col gap-x-16 gap-y-12 px-4 md:px-8 lg:flex-row">
                 <div className="w-full max-w-100">
                     <p className="text-sm font-semibold text-brand-secondary md:text-md">Latest</p>
@@ -444,7 +444,7 @@ const BlogSectionSplitLayout01 = () => {
 
 const NewsletterCardVerticalBrand = () => {
     return (
-        <section className="bg-primary py-16 md:py-24">
+        <section className="bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-center rounded-2xl bg-brand-section px-6 py-10 text-center lg:p-16">
                     <h2 className="text-display-sm font-semibold text-primary_on-brand xl:text-display-md">
@@ -589,7 +589,7 @@ const FooterLarge06 = () => {
 
 const BlogPost07 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <HeaderPrimaryDark />
 
             <ContentLargeImage04 />

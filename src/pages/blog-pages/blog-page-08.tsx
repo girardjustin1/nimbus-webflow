@@ -321,7 +321,7 @@ const BlogHeaderSimple05 = () => {
     const [selectedTabIndex, setSelectedTabIndex] = useState(1);
 
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <section className="bg-secondary py-16 md:py-24">
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mb-3 text-sm font-semibold text-brand-secondary md:text-md">Blog</div>
@@ -391,7 +391,7 @@ const BlogHeaderSimple05 = () => {
 
 const SimpleCentered = () => {
     return (
-        <section className="dark-mode bg-primary py-16 md:py-24">
+        <section className="dark-mode bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                     <h1 className="text-display-sm font-semibold text-primary md:text-display-md">Sign up for our newsletter</h1>
@@ -504,7 +504,7 @@ const BlogSectionSimpleLeftAligned02 = () => {
     ];
 
     return (
-        <section className="bg-primary py-16 md:py-24">
+        <section className="bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="max-w-3xl">
                     <h2 className="text-display-sm font-semibold text-primary md:text-display-md">From the blog</h2>
@@ -560,7 +560,7 @@ const FooterLarge01 = () => {
 
 const BlogPage08 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <Header className="bg-secondary" />
 
             <BlogHeaderSimple05 />

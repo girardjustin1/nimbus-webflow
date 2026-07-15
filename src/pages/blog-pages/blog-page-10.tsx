@@ -364,8 +364,8 @@ const BlogHeaderAltLayout04 = () => {
     ];
 
     return (
-        <div className="bg-primary">
-            <section className="bg-primary py-16 md:py-24">
+        <div className="bg-[#f9f7f3]">
+            <section className="bg-[#f9f7f3] py-16 md:py-24">
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Resources</span>
@@ -400,7 +400,7 @@ const BlogHeaderAltLayout04 = () => {
                 </div>
             </section>
 
-            <section className="mx-auto flex w-full max-w-container flex-col gap-12 bg-primary px-4 pb-16 md:gap-16 md:px-8 md:pb-24">
+            <section className="mx-auto flex w-full max-w-container flex-col gap-12 bg-[#f9f7f3] px-4 pb-16 md:gap-16 md:px-8 md:pb-24">
                 <ul className="mx-auto grid grid-cols-1 gap-x-8 gap-y-12 sm:max-w-lg xl:max-w-3xl">
                     {articles.map((article) => (
                         <li key={article.id} className={cx(!isDesktop && "nth-[n+7]:hidden")}>
@@ -466,7 +466,7 @@ const Simple03Vertical = ({
 
 const BlogSectionSimpleCenterAligned01 = () => {
     return (
-        <section className="bg-primary py-16 md:py-24">
+        <section className="bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="mx-auto max-w-3xl text-center">
                     <p className="text-sm font-semibold text-brand-secondary md:text-md">Latest posts</p>
@@ -493,7 +493,7 @@ const BlogSectionSimpleCenterAligned01 = () => {
 
 const CardVertical = () => {
     return (
-        <section className="bg-primary pb-16 md:pb-24">
+        <section className="bg-[#f9f7f3] pb-16 md:pb-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-center rounded-2xl bg-secondary px-6 py-10 text-center lg:p-16">
                     <h2 className="text-display-sm font-semibold text-primary xl:text-display-md">
@@ -652,7 +652,7 @@ const FooterLarge04 = () => {
 
 const BlogPage10 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <Header isFloating />
 
             <BlogHeaderAltLayout04 />

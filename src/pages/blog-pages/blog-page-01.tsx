@@ -263,8 +263,8 @@ const BlogHeaderFeaturedPost01 = () => {
     };
 
     return (
-        <div className="bg-primary">
-            <section className="bg-primary py-16 md:py-24">
+        <div className="bg-[#f9f7f3]">
+            <section className="bg-[#f9f7f3] py-16 md:py-24">
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="flex w-full max-w-3xl flex-col">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Our blog</span>
@@ -367,7 +367,7 @@ const BlogHeaderFeaturedPost01 = () => {
 
 const ScreenMockup03 = () => {
     return (
-        <section className="overflow-hidden bg-primary py-16 md:pt-24 md:pb-0">
+        <section className="overflow-hidden bg-[#f9f7f3] py-16 md:pt-24 md:pb-0">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col justify-center text-center">
                     <h2 className="text-display-sm font-semibold text-primary md:text-display-md">
@@ -508,7 +508,7 @@ const footerNavList = [
 
 const FooterLarge05 = () => {
     return (
-        <footer className="bg-primary py-12 md:pt-16">
+        <footer className="bg-[#f9f7f3] py-12 md:pt-16">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-start justify-between gap-8 border-secondary md:flex-row md:border-b md:pb-16">
                     <div className="flex flex-col gap-2">
@@ -576,7 +576,7 @@ const FooterLarge05 = () => {
 
 const BlogPage01 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <Header />
 
             <BlogHeaderFeaturedPost01 />

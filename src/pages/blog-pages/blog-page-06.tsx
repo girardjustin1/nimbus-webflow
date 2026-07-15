@@ -383,8 +383,8 @@ const BlogHeaderFeaturedPost02 = () => {
     const isDesktop = useBreakpoint("lg");
 
     return (
-        <div className="bg-primary">
-            <section className="bg-primary py-16 md:py-24">
+        <div className="bg-[#f9f7f3]">
+            <section className="bg-[#f9f7f3] py-16 md:py-24">
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Our blog</span>
@@ -459,7 +459,7 @@ const BlogHeaderFeaturedPost02 = () => {
 
 const CardHorizontal = () => {
     return (
-        <section className="bg-primary pb-16 md:pb-24">
+        <section className="bg-[#f9f7f3] pb-16 md:pb-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col gap-x-8 gap-y-8 rounded-2xl bg-secondary px-6 py-10 lg:flex-row lg:p-16">
                     <div className="flex max-w-3xl flex-1 flex-col">
@@ -536,7 +536,7 @@ const SocialProofFullWidth = () => {
 
 const SimpleCentered = () => {
     return (
-        <section className="dark-mode bg-primary py-16 md:py-24">
+        <section className="dark-mode bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col justify-center text-center">
                     <h2 className="text-display-sm font-semibold text-primary md:text-display-md">Start your free trial</h2>
@@ -586,7 +586,7 @@ const FooterLarge01 = () => {
 
 const BlogPage06 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <Header />
 
             <BlogHeaderFeaturedPost02 />

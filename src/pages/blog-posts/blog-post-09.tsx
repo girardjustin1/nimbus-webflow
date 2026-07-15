@@ -61,7 +61,7 @@ const ContentLargeImage03 = () => {
     const { copied, copy } = useClipboard();
 
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <div className="mx-auto max-w-container px-4 py-16 md:px-8 md:py-24">
                 <div className="w-full max-w-3xl">
                     <BadgeGroup size="md" addonText="Leadership" color="brand" theme="light" className="pr-3" iconTrailing={null}>
@@ -372,7 +372,7 @@ const articles: Article[] = [
 
 const BlogSectionSplitLayout01 = () => {
     return (
-        <section className="bg-primary py-16 md:py-24">
+        <section className="bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto flex max-w-container flex-col gap-x-16 gap-y-12 px-4 md:px-8 lg:flex-row">
                 <div className="w-full max-w-100">
                     <p className="text-sm font-semibold text-brand-secondary md:text-md">Latest</p>
@@ -402,7 +402,7 @@ const BlogSectionSplitLayout01 = () => {
 
 const FooterLarge08 = () => {
     return (
-        <footer className="dark-mode bg-primary py-12 md:pt-16">
+        <footer className="dark-mode bg-[#f9f7f3] py-12 md:pt-16">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col justify-between gap-x-8 gap-y-12 lg:flex-row">
                     <div className="flex flex-col gap-8 md:items-start">
@@ -478,7 +478,7 @@ const FooterLarge08 = () => {
 
 const BlogPost09 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <Header />
 
             <ContentLargeImage03 />

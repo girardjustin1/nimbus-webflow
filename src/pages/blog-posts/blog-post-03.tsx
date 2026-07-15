@@ -178,7 +178,7 @@ const ContentAlternative03 = () => {
     const { copied, copy } = useClipboard();
 
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <div className="grid grid-cols-1 gap-16 px-4 py-16 md:grid-cols-2 md:justify-items-start md:gap-0 md:p-0">
                 <div className="flex w-full max-w-(--breakpoint-sm) flex-col justify-between md:pt-24 md:pr-8 md:pb-16 md:pl-16">
                     <MarkerPin02 className="size-6 text-fg-quaternary" />
@@ -457,7 +457,7 @@ const BlogSectionSplitLayout02 = () => {
 
 const FooterSmall04 = () => {
     return (
-        <footer className="bg-primary py-12">
+        <footer className="bg-[#f9f7f3] py-12">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-start justify-between gap-y-12 md:flex-row">
                     <UntitledLogo className="h-7 w-min shrink-0" />
@@ -485,7 +485,7 @@ const FooterSmall04 = () => {
 
 const BlogPost03 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <Header />
 
             <ContentAlternative03 />

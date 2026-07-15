@@ -275,8 +275,8 @@ const BlogHeaderSimple01 = () => {
     const [sortBy, setSortBy] = useState(sortByOptions[0].id);
 
     return (
-        <div className="bg-primary">
-            <section className="bg-primary py-16 md:py-24">
+        <div className="bg-[#f9f7f3]">
+            <section className="bg-[#f9f7f3] py-16 md:py-24">
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Our blog</span>
@@ -326,7 +326,7 @@ const BlogHeaderSimple01 = () => {
 
 const AbstractImages = () => {
     return (
-        <section className="bg-primary pb-16 lg:pb-24">
+        <section className="bg-[#f9f7f3] pb-16 lg:pb-24">
             <div className="mx-auto grid max-w-container grid-cols-1 gap-16 overflow-hidden px-4 md:px-8 lg:grid-cols-2 lg:items-center">
                 <div className="flex max-w-3xl flex-col items-start">
                     <h2 className="text-display-sm font-semibold text-primary md:text-display-md lg:text-display-lg">No long-term contracts. No catches.</h2>
@@ -379,7 +379,7 @@ const AbstractImages = () => {
 
 const FooterLarge08 = () => {
     return (
-        <footer className="bg-primary py-12 md:pt-16">
+        <footer className="bg-[#f9f7f3] py-12 md:pt-16">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col justify-between gap-x-8 gap-y-12 lg:flex-row">
                     <div className="flex flex-col gap-8 md:items-start">
@@ -455,7 +455,7 @@ const FooterLarge08 = () => {
 
 const BlogPage03 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <Header />
 
             <BlogHeaderSimple01 />

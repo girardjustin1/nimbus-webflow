@@ -346,8 +346,8 @@ const BlogHeaderAltLayout02 = () => {
     const isDesktop = useBreakpoint("lg");
 
     return (
-        <div className="bg-primary">
-            <section className="bg-primary py-16 md:py-24">
+        <div className="bg-[#f9f7f3]">
+            <section className="bg-[#f9f7f3] py-16 md:py-24">
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Our blog</span>
@@ -384,7 +384,7 @@ const BlogHeaderAltLayout02 = () => {
                 </div>
             </section>
 
-            <section className="mx-auto flex w-full max-w-container flex-col gap-8 bg-primary px-4 pb-16 md:px-8 md:pb-24">
+            <section className="mx-auto flex w-full max-w-container flex-col gap-8 bg-[#f9f7f3] px-4 pb-16 md:px-8 md:pb-24">
                 <h2 className="text-xl font-semibold text-primary md:text-display-xs">Recent blog posts</h2>
                 <ul className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 md:gap-y-8">
                     {articles.slice(0, 3).map((article, index) => (
@@ -395,7 +395,7 @@ const BlogHeaderAltLayout02 = () => {
                 </ul>
             </section>
 
-            <section className="mx-auto flex w-full max-w-container flex-col gap-8 bg-primary px-4 pb-16 md:px-8 md:pb-24 lg:gap-16">
+            <section className="mx-auto flex w-full max-w-container flex-col gap-8 bg-[#f9f7f3] px-4 pb-16 md:px-8 md:pb-24 lg:gap-16">
                 <div className="flex flex-col gap-8">
                     <h2 className="text-xl font-semibold text-primary md:text-display-xs">All blog posts</h2>
                     <ul className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
@@ -414,7 +414,7 @@ const BlogHeaderAltLayout02 = () => {
 
 const IPhoneMockup02 = () => {
     return (
-        <section className="bg-primary md:pb-24">
+        <section className="bg-[#f9f7f3] md:pb-24">
             <div className="relative mx-auto grid w-full max-w-container grid-cols-1 gap-16 px-4 md:px-8 lg:grid-cols-2 lg:items-center">
                 <div className="z-20 flex max-w-3xl flex-col items-start">
                     <h2 className="text-display-sm font-semibold text-primary md:text-display-md lg:text-display-lg">Growth performance tracking made easy</h2>
@@ -495,7 +495,7 @@ const IPhoneMockup02 = () => {
 
 const FooterLarge09 = () => {
     return (
-        <footer className="dark-mode bg-primary py-12 md:pt-16">
+        <footer className="dark-mode bg-[#f9f7f3] py-12 md:pt-16">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col justify-center text-center">
                     <h2 className="text-display-xs font-semibold text-primary md:text-display-sm">Let's get started on something great</h2>
@@ -537,7 +537,7 @@ const FooterLarge09 = () => {
 
 const BlogPage02 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <Header isFloating />
 
             <BlogHeaderAltLayout02 />

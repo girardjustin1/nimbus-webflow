@@ -258,7 +258,7 @@ const featuredArticle: Article = {
 
 const BlogHeaderFeaturedPost04 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <section className="bg-brand-section pt-16 pb-32 md:pt-24 md:pb-40">
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
@@ -361,7 +361,7 @@ const SimpleCentered = () => {
 
 const IPhoneMockup02 = () => {
     return (
-        <section className="bg-primary pt-16 md:py-24">
+        <section className="bg-[#f9f7f3] pt-16 md:py-24">
             <div className="relative mx-auto grid w-full max-w-container grid-cols-1 gap-16 px-4 md:px-8 lg:grid-cols-2 lg:items-center">
                 <div className="z-20 flex max-w-3xl flex-col items-start">
                     <h2 className="text-display-sm font-semibold text-primary md:text-display-md lg:text-display-lg">Growth performance tracking made easy</h2>
@@ -442,7 +442,7 @@ const IPhoneMockup02 = () => {
 
 const FooterLarge08 = () => {
     return (
-        <footer className="dark-mode bg-primary py-12 md:pt-16">
+        <footer className="dark-mode bg-[#f9f7f3] py-12 md:pt-16">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col justify-between gap-x-8 gap-y-12 lg:flex-row">
                     <div className="flex flex-col gap-8 md:items-start">
@@ -518,7 +518,7 @@ const FooterLarge08 = () => {
 
 const BlogPage07 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <HeaderPrimaryDark />
 
             <BlogHeaderFeaturedPost04 />

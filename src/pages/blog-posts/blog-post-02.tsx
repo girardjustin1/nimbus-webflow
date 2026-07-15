@@ -14,7 +14,7 @@ const ContentLargeImage01 = () => {
     const { copied, copy } = useClipboard();
 
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <div className="mx-auto max-w-container px-4 py-16 md:px-8 md:py-24">
                 <div className="mx-auto flex w-full max-w-5xl flex-col items-center">
                     <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
@@ -379,7 +379,7 @@ const articles: Article[] = [
 
 const BlogSectionSimpleLeftAligned02 = () => {
     return (
-        <section className="bg-primary py-16 md:py-24">
+        <section className="bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="max-w-3xl">
                     <h2 className="text-display-sm font-semibold text-primary md:text-display-md">From the blog</h2>
@@ -486,7 +486,7 @@ const navList = [
 
 const FooterLarge04 = () => {
     return (
-        <footer className="dark-mode bg-primary py-12 md:pt-16">
+        <footer className="dark-mode bg-[#f9f7f3] py-12 md:pt-16">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col gap-12 md:gap-16 xl:flex-row">
                     <div className="flex w-full flex-col gap-6 md:max-w-xs md:gap-8">
@@ -562,7 +562,7 @@ const FooterLarge04 = () => {
 
 const BlogPost02 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <Header isFloating />
 
             <ContentLargeImage01 />

@@ -338,8 +338,8 @@ const BlogHeaderFeaturedPost03 = () => {
     const featuredArticle = articles[0];
 
     return (
-        <div className="bg-primary">
-            <section className="bg-primary py-16 md:py-24">
+        <div className="bg-[#f9f7f3]">
+            <section className="bg-[#f9f7f3] py-16 md:py-24">
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Our blog</span>
@@ -487,7 +487,7 @@ const SplitImageQuote02 = () => {
     const transition: Transition = { type: "tween", duration: 0.8, ease: [0.8, 0, 0.2, 1] };
 
     return (
-        <section className="bg-primary py-16 lg:py-24">
+        <section className="bg-[#f9f7f3] py-16 lg:py-24">
             <div className="mx-auto grid w-full max-w-container grid-cols-1 gap-x-16 gap-y-12 px-4 md:px-8 lg:grid-cols-2 lg:items-center">
                 <div className="flex max-w-3xl flex-col items-start">
                     <h2 className="text-display-sm font-semibold text-primary md:text-display-md lg:text-display-lg">
@@ -648,7 +648,7 @@ const FooterLarge02 = () => {
 
 const BlogPage05 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <BannerSlimBrandFullWidth />
 
             <Header />

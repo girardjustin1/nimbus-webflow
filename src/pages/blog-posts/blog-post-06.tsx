@@ -256,7 +256,7 @@ const ContentSplitImage02 = () => {
     const { copied, copy } = useClipboard();
 
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <div className="flex flex-col gap-16 py-16 md:flex-row md:gap-0 md:py-0">
                 <div className="flex md:w-1/2 md:items-end md:justify-end md:py-24">
                     <div className="flex w-full max-w-(--breakpoint-sm) flex-col px-4 md:px-8">
@@ -557,7 +557,7 @@ const BlogSectionCarouselLayout02 = () => {
 
 const FooterLarge09 = () => {
     return (
-        <footer className="dark-mode bg-primary py-12 md:pt-16">
+        <footer className="dark-mode bg-[#f9f7f3] py-12 md:pt-16">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col justify-center text-center">
                     <h2 className="text-display-xs font-semibold text-primary md:text-display-sm">Start growing with Untitled</h2>
@@ -599,7 +599,7 @@ const FooterLarge09 = () => {
 
 const BlogPost06 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-[#f9f7f3]">
             <Header />
 
             <ContentSplitImage02 />
