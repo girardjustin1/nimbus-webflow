@@ -74,7 +74,7 @@ const ContentLargeImage03 = ({ article }: { article: NimbusArticle }) => {
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">{article.summary}</p>
                 </div>
                 <div className="mt-16 w-full">
-                    <div className="h-60 w-full object-cover md:h-160 bg-[#84D7D9]" />
+                    <img src="/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-JKUTrJ4vK00.jpg" alt="Analytics graphs on a laptop screen" className="h-60 w-full object-cover md:h-160" />
                     <div className="mt-8 flex items-start justify-between gap-24">
                         <dl className="flex gap-12 md:gap-12">
                             <div>
@@ -146,7 +146,7 @@ const Simple02Vertical = ({
 }) => (
     <article className="flex flex-col gap-4">
         <a href={article.href} className="overflow-hidden" tabIndex={-1}>
-            <div className={cx("aspect-[1.5] w-full object-cover bg-[#84D7D9]", imageClassName)} />
+            <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full object-cover", imageClassName)} />
         </a>
 
         <div className="flex flex-col gap-5">
@@ -192,7 +192,7 @@ const articles: Article[] = [
         summary: "How to review the ads that actually served in your app and block surgically without sacrificing revenue.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/spirals.webp",
+        thumbnailUrl: "/unsplash/programmatic-advertising/programmatic-advertising-ZQZrvL7DwiI.jpg",
         publishedAt: "20 Jan 2026",
         readingTime: "8 min read",
         author: {
@@ -213,7 +213,7 @@ const articles: Article[] = [
         summary: "In-app header bidding gave publishers a better auction. Here is how to migrate without losing fill.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/conversation.webp",
+        thumbnailUrl: "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-n31x0hhnzOs.jpg",
 
         publishedAt: "19 Jan 2026",
         readingTime: "8 min read",

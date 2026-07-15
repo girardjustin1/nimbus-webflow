@@ -1,4 +1,4 @@
-import { Check, Copy01, Link01 } from "@untitledui/icons";
+import { Check, Copy01 } from "@untitledui/icons";
 import { Button } from "@/components/base/buttons/button";
 import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import { useClipboard } from "@/hooks/use-clipboard";
@@ -11,164 +11,95 @@ export const ContentSplitImage02 = () => {
             <div className="flex flex-col gap-16 py-16 md:flex-row md:gap-0 md:py-0">
                 <div className="flex md:w-1/2 md:items-end md:justify-end md:py-24">
                     <div className="flex w-full max-w-(--breakpoint-sm) flex-col px-4 md:px-8">
-                        <span className="text-sm font-semibold text-brand-secondary md:text-md">13 Jan 2027 • 10 min read</span>
-                        <h1 className="mt-3 text-display-md font-semibold text-primary md:mt-4 md:text-display-lg">Our top 10 Javascript frameworks to use</h1>
+                        <span className="text-sm font-semibold text-brand-secondary md:text-md">30 Jun 2026 • 5 min read</span>
+                        <h1 className="mt-3 text-display-md font-semibold text-primary md:mt-4 md:text-display-lg">Floors Are a Publisher's Pricing Power</h1>
                         <p className="mt-4 text-lg text-tertiary md:mt-6 md:max-w-120 md:text-xl">
-                            JavaScript frameworks make development easy with extensive features and functionalities.
+                            Bidding handed pricing leverage to the buy side. Floors are how publishers push back — and with granular, dynamic flooring, you set
+                            the terms the market has to beat.
                         </p>
                         <div className="mt-8 flex items-center gap-3 md:mt-12">
-                            <img
-                                src="https://www.untitledui.com/images/avatars/drew-cano?fm=webp&q=80"
-                                className="size-12 rounded-full object-cover"
-                                alt="Olivia Rhye"
-                            />
+                            <img src="https://i.pravatar.cc/150?img=15" className="size-12 rounded-full object-cover" alt="Nimbus Ad Ops" />
                             <div>
-                                <p className="text-md font-semibold text-primary">Drew Cano</p>
-                                <p className="text-md text-tertiary">Frontend Engineer</p>
+                                <p className="text-md font-semibold text-primary">Nimbus Ad Ops</p>
+                                <p className="text-md text-tertiary">Yield</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="flex items-center justify-center px-4 md:h-180 md:w-1/2 md:bg-secondary md:p-8">
-                    <img alt="Girl 3" className="h-100 w-full object-cover md:h-140 md:w-100" src="https://www.untitledui.com/marketing/girl-3.webp" />
+                    <div aria-hidden="true" className="h-100 w-full rounded-2xl bg-[#84D7D9] md:h-140 md:w-100" />
                 </div>
             </div>
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:py-24">
                 <div className="mx-auto max-w-prose md:max-w-180">
                     <div className="mx-auto prose md:prose-lg">
-                        <h2>Introduction</h2>
+                        <p>In-app bidding gave publishers a better auction. It also handed pricing leverage to the buy side in ways that are easy to miss.</p>
                         <p>
-                            Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis
-                            montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae nisi, tellus tincidunt. At feugiat
-                            sapien varius id.
+                            DSPs are optimized to spend as little as possible for the same outcome. That's not bad behavior — it's their job. Bidding algorithms
+                            learn the minimum price your inventory will accept, and without resistance, they'll find it. The result is a market that drifts toward
+                            the lowest tolerable price, one fractional bid adjustment at a time.
+                        </p>
+                        <p>Floors are how publishers push back. Used well, they are one of the few levers in programmatic that the publisher controls completely.</p>
+
+                        <h2>What a floor actually does</h2>
+                        <p>
+                            A floor is a minimum price for your inventory: bids below it don't win, no matter what. Its real function is behavioral — a floor tells
+                            bidding algorithms that the discount-hunting stops here, restoring competitive pressure that bid shading quietly removes. Floors keep
+                            DSPs honest.
                         </p>
                         <p>
-                            Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu
-                            quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie
-                            aliquet sodales id est ac volutpat.
+                            The objection is always the same: won't floors cost me fill? Sometimes, yes — that's the tradeoff being managed. A floor set too high
+                            costs impressions; a floor set too low (or not at all) costs price. The job is finding the level where the pricing gain outweighs the
+                            fill loss, and that level is discovered, not declared.
                         </p>
 
-                        <figure>
-                            <img
-                                className="h-60 md:h-120"
-                                src="https://images.unsplash.com/photo-1510172951991-856a654063f9?ixlib=rb-4.0.3&w=1920&q=80&fm=jpg&cs=tinysrgb&crop=bottom&h=0.547&fit=crop"
-                                alt="A person working on a laptop"
-                            />
-                            <figcaption>
-                                <span>
-                                    Image courtesy of Laura Davidson via{" "}
-                                    <a
-                                        href="https://unsplash.com/photos/2zDw14yCYqk"
-                                        className="rounded-xs outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
-                                    >
-                                        Unsplash
-                                    </a>
-                                </span>
-                            </figcaption>
-                        </figure>
+                        <h2>Granularity is what makes floors work</h2>
+                        <p>
+                            A single global floor is a blunt instrument, because inventory value isn't uniform. The same placement commands different prices by
+                            geography, format, and size — and treating it all identically underprices your best impressions to protect your weakest ones.
+                        </p>
+                        <p>
+                            Nimbus flooring is built for that granularity. Publishers can set and adjust floors across the dimensions where value actually varies
+                            — geo, ad type, and size — and refine them as reporting reveals what each slice commands. Identified and anonymous traffic behave
+                            differently in the auction, and your flooring strategy can account for that.
+                        </p>
+
+                        <div aria-hidden="true" className="h-60 w-full rounded-2xl bg-[#84D7D9] md:h-120" />
 
                         <figure>
                             <blockquote>
-                                <p>
-                                    In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we have
-                                    lost or never attained, living by voices we shall never hear.
-                                </p>
+                                <p>Let the market determine price — but set the terms it has to beat.</p>
                             </blockquote>
                             <figcaption className="not-prose mt-6 text-md md:mt-8">
-                                — Olivia Rhye, <cite className="not-italic">Product Designer</cite>
+                                — Nimbus Ad Ops, <cite className="not-italic">Yield</cite>
                             </figcaption>
                         </figure>
 
+                        <h2>Dynamic floors: pricing that keeps up</h2>
                         <p>
-                            Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet pellentesque aenean hac vestibulum
-                            turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada fringilla.
+                            Markets move. Demand surges around seasonal spend, softens in slow weeks, and shifts as buyers come and go. A static floor that was
+                            right in March can be wrong in June. Dynamic floors adjust to those conditions, keeping pricing competitive without manually
+                            re-deriving the right number every week. For publishers without a dedicated yield team, this is the difference between flooring as a
+                            strategy and flooring as a setup task that quietly goes stale.
                         </p>
 
-                        <p>
-                            Elit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus. Sed condimentum enim
-                            dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate posuere purus sit
-                            congue convallis aliquet. Arcu id augue ut feugiat donec porttitor neque. Mauris, neque ultricies eu vestibulum, bibendum quam lorem
-                            id. Dolor lacus, eget nunc lectus in tellus, pharetra, porttitor.
-                        </p>
-                        <p>
-                            Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien,
-                            dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus. Quis velit eget ut tortor tellus. Sed vel, congue felis elit
-                            erat nam nibh orci.
-                        </p>
-
-                        <h3>Software and tools</h3>
-
-                        <p>
-                            Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis
-                            montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae nisi, tellus tincidunt. At feugiat
-                            sapien varius id.
-                        </p>
-                        <p>
-                            Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu
-                            quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie
-                            aliquet sodales id est ac volutpat.
-                        </p>
-
-                        <h3>Other resources</h3>
-
-                        <p>
-                            Sagittis et eu at elementum, quis in. Proin praesent volutpat egestas sociis sit lorem nunc nunc sit. Eget diam curabitur mi ac.
-                            Auctor rutrum lacus malesuada massa ornare et. Vulputate consectetur ac ultrices at diam dui eget fringilla tincidunt. Arcu sit
-                            dignissim massa erat cursus vulputate gravida id. Sed quis auctor vulputate hac elementum gravida cursus dis.
-                        </p>
+                        <h3>A practical way to start</h3>
                         <ol>
-                            <li>Lectus id duis vitae porttitor enim gravida morbi.</li>
-                            <li>Eu turpis posuere semper feugiat volutpat elit, ultrices suspendisse. Auctor vel in vitae placerat.</li>
-                            <li>Suspendisse maecenas ac donec scelerisque diam sed est duis purus.</li>
+                            <li>Baseline first. Pull eCPM and fill by geo and format before changing anything.</li>
+                            <li>Start where value is concentrated. Floor your highest-value slices first — premium geos, video, large formats.</li>
+                            <li>Move in steps, not leaps. Set a floor, let it run, then adjust. Floors are a dial, not a switch.</li>
+                            <li>Watch the auction respond. If eCPM rises and fill holds, keep going. If fill drops faster than price rises, step back.</li>
+                            <li>Revisit quarterly at minimum. Demand conditions change; your floors should too.</li>
                         </ol>
 
-                        <figure>
-                            <img
-                                alt="A person working on a laptop"
-                                className="h-60 md:h-120"
-                                src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?cs=srgb&dl=pexels-fauxels-3182746.jpg&fm=jpg&w=1920&h=1280"
-                            />
-                            <figcaption>
-                                <Link01 className="size-4 text-utility-neutral-400" />
-                                <span>
-                                    Image courtesy of Fauxels via{" "}
-                                    <a
-                                        href="https://www.pexels.com/photo/photo-of-woman-leaning-on-wooden-table-3182746/"
-                                        className="rounded-xs outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
-                                    >
-                                        Pexels
-                                    </a>
-                                </span>
-                            </figcaption>
-                        </figure>
-
-                        <p>
-                            Lectus leo massa amet posuere. Malesuada mattis non convallis quisque. Libero sit et imperdiet bibendum quisque dictum vestibulum in
-                            non. Pretium ultricies tempor non est diam. Enim ut enim amet amet integer cursus. Sit ac commodo pretium sed etiam turpis
-                            suspendisse at.
-                        </p>
-
-                        <p>
-                            Tristique odio senectus nam posuere ornare leo metus, ultricies. Blandit duis ultricies vulputate morbi feugiat cras placerat elit.
-                            Aliquam tellus lorem sed ac. Montes, sed mattis suscipit accumsan. Cursus viverra aenean magna risus elementum faucibus molestie
-                            pellentesque. Arcu ultricies sed mauris vestibulum.
-                        </p>
-
                         <div className="not-prose my-8 rounded-2xl bg-secondary px-5 py-6 text-lg text-tertiary md:my-12 md:p-8 [&>p+p]:mt-4.5">
-                            <h2 className="mb-4 text-display-xs font-semibold text-primary">Conclusion</h2>
+                            <h2 className="mb-4 text-display-xs font-semibold text-primary">Pricing control is the point</h2>
                             <p>
-                                Morbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies. Duis est sit sed leo
-                                nisl, blandit elit sagittis. Quisque consequat quam sed. Nisl at scelerisque amet nulla purus habitasse.
+                                The shift to bidding asked publishers to trust the market. Trust is fine — leverage is better. Flooring strategy, alongside
+                                traffic shaping and transparent reporting, is how publishers regain mastery over an auction environment that was supposed to serve
+                                them. Let the market determine price — but set the terms it has to beat.
                             </p>
-                            <p>
-                                Nunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas condimentum mi massa. In tincidunt pharetra consectetur sed duis
-                                facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit dictum eget nibh tortor commodo cursus.
-                            </p>
-                            <p>
-                                Odio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet erat dolor enim. Ornare
-                                id morbi eget ipsum. Aliquam senectus neque ut id eget consectetur dictum. Donec posuere pharetra odio consequat scelerisque et,
-                                nunc tortor.
-                            </p>
+                            <p>Your Nimbus Account Manager can walk through your current floor setup and where there's room to work. Or get started at nimbus.co.</p>
                         </div>
                     </div>
 
@@ -176,7 +107,7 @@ export const ContentSplitImage02 = () => {
                         <p className="text-md font-semibold text-tertiary">Share this post</p>
 
                         <div className="flex gap-3">
-                            <Button color="secondary" size="md" onClick={() => copy("https://www.untitledui.com/")} iconLeading={copied ? Check : Copy01}>
+                            <Button color="secondary" size="md" onClick={() => copy("https://www.nimbus.co/")} iconLeading={copied ? Check : Copy01}>
                                 {copied ? "Copied" : "Copy link"}
                             </Button>
                             <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={X} />

@@ -11,7 +11,7 @@ const preview: Preview = {
                 method: "alphabetical",
                 order: [
                     "Styles",
-                    ["Color", "Elevation", "Icons", "Shape", "Typography"],
+                    ["Color", "Elevation", "Icons", "Imagery", "Logos", "Shape", "Typography"],
                     "Components",
                     ["Navigation", "Breadcrumbs", "Body", "Footer"],
                     "Blog Sections",

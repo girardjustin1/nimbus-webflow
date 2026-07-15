@@ -38,7 +38,7 @@ const ContentLargeImage01 = ({ article }: { article: NimbusArticle }) => {
                         </div>
                     </div>
                 </div>
-                <div className="mt-12 h-60 w-full object-cover md:mt-16 md:h-160 bg-[#84D7D9]" />
+                <img src="/unsplash/abstract-technology-gradient-blue/abstract-technology-gradient-blue-6EQZ2JcHZmk.jpg" alt="Abstract blue technology gradient" className="mt-12 h-60 w-full object-cover md:mt-16 md:h-160" />
             </div>
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
                 <div className="mx-auto max-w-prose md:max-w-180">
@@ -93,7 +93,7 @@ const Simple04Vertical = ({ article, imageClassName, className }: { article: Art
     <article className={cx("flex flex-col gap-4", className)}>
         <div className="relative">
             <a href={article.href} className="w-full" tabIndex={-1}>
-                <div className={cx("aspect-[1.5] w-full object-cover bg-[#84D7D9]", imageClassName)} />
+                <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full object-cover", imageClassName)} />
             </a>
             <div className="absolute inset-x-0 bottom-0 overflow-hidden bg-linear-to-b from-transparent to-black/40">
                 <div className="relative flex items-start justify-between bg-alpha-white/30 p-4 backdrop-blur-md before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-alpha-white/30 md:p-5">
@@ -141,7 +141,7 @@ const articles: Article[] = [
         summary: "How to review the ads that actually served in your app and block surgically without sacrificing revenue.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/spirals.webp",
+        thumbnailUrl: "/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-hpjSkU2UYSU.jpg",
         publishedAt: "20 Jan 2026",
         readingTime: "8 min read",
         author: {
@@ -162,7 +162,7 @@ const articles: Article[] = [
         summary: "In-app header bidding gave publishers a better auction. Here is how to migrate without losing fill.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/conversation.webp",
+        thumbnailUrl: "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-w33-zg-dNL4.jpg",
 
         publishedAt: "19 Jan 2026",
         readingTime: "8 min read",
@@ -183,7 +183,7 @@ const articles: Article[] = [
         summary: "The rise of in-app bidding has been met by a rise in tools for pricing, quality, and reporting.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/blog/two-mobile-shapes-pattern.webp",
+        thumbnailUrl: "/unsplash/server-network-data-center/server-network-data-center-VHmBX7FnXw0.jpg",
         publishedAt: "18 Jan 2026",
         readingTime: "8 min read",
         author: {
@@ -202,7 +202,7 @@ const articles: Article[] = [
         summary: "How top publishers turn floors into pricing power and set the terms the market has to beat.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/blog/two-people.webp",
+        thumbnailUrl: "/unsplash/modern-office-business-team/modern-office-business-team-l90zRbWvCoE.jpg",
         publishedAt: "17 Jan 2026",
         readingTime: "8 min read",
         author: {

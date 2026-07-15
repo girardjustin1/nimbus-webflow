@@ -40,7 +40,7 @@ const articles: Article[] = [
         summary: "How to review the ads that actually served in your app and block surgically without sacrificing revenue.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/spirals.webp",
+        thumbnailUrl: "/unsplash/programmatic-advertising/programmatic-advertising-jyoSxjUE22g.jpg",
         publishedAt: "20 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Jordan Kim", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80" },
@@ -57,7 +57,7 @@ const articles: Article[] = [
         summary: "In-app header bidding gave publishers a better auction. Here is how to migrate without losing fill.",
         href: "#",
         category: { name: "Product", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/conversation.webp",
+        thumbnailUrl: "/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-JKUTrJ4vK00.jpg",
 
         publishedAt: "19 Jan 2026",
         readingTime: "8 min read",
@@ -74,7 +74,7 @@ const articles: Article[] = [
         summary: "The rise of in-app bidding has been met by a rise in tools for pricing, quality, and reporting.",
         href: "#",
         category: { name: "Programmatic", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/blog/two-mobile-shapes-pattern.webp",
+        thumbnailUrl: "/unsplash/server-network-data-center/server-network-data-center-pgdaAwf6IJg.jpg",
         publishedAt: "18 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Elena Vasquez", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/lana-steiner?fm=webp&q=80" },
@@ -89,7 +89,7 @@ const articles: Article[] = [
         summary: "Simple mental models for yield management: a floor is a dial, not a switch.",
         href: "#",
         category: { name: "Product", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/blog/two-people.webp",
+        thumbnailUrl: "/unsplash/modern-office-business-team/modern-office-business-team-l90zRbWvCoE.jpg",
         publishedAt: "17 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Demi WIlkinson", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/demi-wilkinson?fm=webp&q=80" },
@@ -104,7 +104,7 @@ const articles: Article[] = [
         summary: "Simple mental models for yield management: a floor is a dial, not a switch.",
         href: "#",
         category: { name: "Product", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/brainstorming.webp",
+        thumbnailUrl: "/unsplash/abstract-technology-gradient-blue/abstract-technology-gradient-blue-r5lbaK3fDaM.jpg",
         publishedAt: "16 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Demi WIlkinson", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/demi-wilkinson?fm=webp&q=80" },
@@ -120,7 +120,7 @@ const articles: Article[] = [
         summary: "A plain-language guide to bid shading and how floors keep DSPs honest in the auction.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/workspace-4.webp",
+        thumbnailUrl: "/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-qwtCeJ5cLYs.jpg",
         publishedAt: "15 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Sofia Reyes", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/candice-wu?fm=webp&q=80" },
@@ -135,7 +135,7 @@ const articles: Article[] = [
         summary: "The Dynamic Unit adapts to your app's look and UX while accepting programmatic demand in multiple formats.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/collaboration.webp",
+        thumbnailUrl: "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-w33-zg-dNL4.jpg",
         publishedAt: "14 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Maya Patel", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/natali-craig?fm=webp&q=80" },
@@ -150,7 +150,7 @@ const articles: Article[] = [
         summary: "Ten practical tactics our ad ops team uses to lift eCPMs across geos, formats, and sizes.",
         href: "#",
         category: { name: "Product", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/man-and-laptop-2.webp",
+        thumbnailUrl: "/unsplash/advertising-billboard-city/advertising-billboard-city-bPHY2KV1Oe4.jpg",
         publishedAt: "13 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Chris Tanaka", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/drew-cano?fm=webp&q=80" },
@@ -166,7 +166,7 @@ const articles: Article[] = [
         summary: "Building a healthier programmatic auction does not need to be complicated. Here is where to start.",
         href: "#",
         category: { name: "Publisher Success", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/podcast-girl-2.webp",
+        thumbnailUrl: "/unsplash/programmatic-advertising/programmatic-advertising-ZQZrvL7DwiI.jpg",
         publishedAt: "12 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Andre Okafor", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/orlando-diggs?fm=webp&q=80" },
@@ -200,7 +200,7 @@ const ContentSplitImage02 = ({ article }: { article: NimbusArticle }) => {
                     </div>
                 </div>
                 <div className="flex items-center justify-center px-4 md:h-180 md:w-1/2 md:bg-secondary md:p-8">
-                    <div className="h-100 w-full object-cover md:h-140 md:w-100 bg-[#84D7D9]" />
+                    <img src="/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-9e9PD9blAto.jpg" alt="Person holding a smartphone showing an app" className="h-100 w-full object-cover md:h-140 md:w-100" />
                 </div>
             </div>
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:py-24">
@@ -260,7 +260,7 @@ const Simple03Vertical = ({
 }) => (
     <article className={cx("flex flex-col gap-4", className)}>
         <a href={article.href} className="overflow-hidden rounded-2xl" tabIndex={-1}>
-            <div className={cx("aspect-[1.5] w-full object-cover bg-[#84D7D9]", imageClassName)} />
+            <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full object-cover", imageClassName)} />
         </a>
 
         <div className="flex flex-col gap-6">

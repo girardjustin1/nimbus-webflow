@@ -39,7 +39,7 @@ const articles: Article[] = [
         summary: "How to review the ads that actually served in your app and block surgically without sacrificing revenue.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/spirals.webp",
+        thumbnailUrl: "/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-qwtCeJ5cLYs.jpg",
         publishedAt: "20 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Jordan Kim", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80" },
@@ -56,7 +56,7 @@ const articles: Article[] = [
         summary: "In-app header bidding gave publishers a better auction. Here is how to migrate without losing fill.",
         href: "#",
         category: { name: "Product", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/conversation.webp",
+        thumbnailUrl: "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-sScmok4Iq1o.jpg",
 
         publishedAt: "19 Jan 2026",
         readingTime: "8 min read",
@@ -73,7 +73,7 @@ const articles: Article[] = [
         summary: "The rise of in-app bidding has been met by a rise in tools for pricing, quality, and reporting.",
         href: "#",
         category: { name: "Programmatic", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/blog/two-mobile-shapes-pattern.webp",
+        thumbnailUrl: "/unsplash/server-network-data-center/server-network-data-center-iZe21DzHnUg.jpg",
         publishedAt: "18 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Elena Vasquez", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/lana-steiner?fm=webp&q=80" },
@@ -198,7 +198,7 @@ const ContentSplitImage04 = ({ article }: { article: NimbusArticle }) => {
                     </div>
                 </div>
 
-                <div className="order-first h-60 w-screen max-w-none object-cover md:order-1 md:h-180 md:w-full md:max-w-full bg-[#84D7D9]" />
+                <img src="/unsplash/abstract-technology-gradient-blue/abstract-technology-gradient-blue-FpC3XIFM2Bg.jpg" alt="Concentric blue light circles" className="order-first h-60 w-screen max-w-none object-cover md:order-1 md:h-180 md:w-full md:max-w-full" />
             </div>
 
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:py-24">
@@ -226,7 +226,7 @@ const ContentSplitImage04 = ({ article }: { article: NimbusArticle }) => {
 export const Simple01Vertical = ({ article, imageClassName }: { article: Article; imageClassName?: string }) => (
     <article className="flex flex-col gap-4">
         <a href={article.href} className="overflow-hidden rounded-2xl" tabIndex={-1}>
-            <div className={cx("aspect-[1.5] w-full object-cover transition duration-100 ease-linear hover:scale-105 bg-[#84D7D9]", imageClassName)} />
+            <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full object-cover transition duration-100 ease-linear hover:scale-105", imageClassName)} />
         </a>
 
         <div className="flex flex-col gap-5">

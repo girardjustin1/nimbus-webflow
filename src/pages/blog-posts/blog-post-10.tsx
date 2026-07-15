@@ -31,7 +31,7 @@ const ContentLargeImage02 = ({ article }: { article: NimbusArticle }) => {
                         </div>
                     </div>
                 </div>
-                <div className="mx-auto mt-12 h-60 w-full object-cover md:mt-16 md:h-140 md:max-w-5xl bg-[#84D7D9]" />
+                <img src="/unsplash/modern-office-business-team/modern-office-business-team-q1jHh0MWTFk.jpg" alt="Diverse professionals collaborating in an office" className="mx-auto mt-12 h-60 w-full object-cover md:mt-16 md:h-140 md:max-w-5xl" />
             </div>
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
                 <div className="mx-auto max-w-prose md:max-w-180">

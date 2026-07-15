@@ -40,7 +40,7 @@ const articles: Article[] = [
         summary: "How to review the ads that actually served in your app and block surgically without sacrificing revenue.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/spirals.webp",
+        thumbnailUrl: "/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-JKUTrJ4vK00.jpg",
         publishedAt: "20 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Jordan Kim", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80" },
@@ -57,7 +57,7 @@ const articles: Article[] = [
         summary: "In-app header bidding gave publishers a better auction. Here is how to migrate without losing fill.",
         href: "#",
         category: { name: "Product", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/conversation.webp",
+        thumbnailUrl: "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-9e9PD9blAto.jpg",
 
         publishedAt: "19 Jan 2026",
         readingTime: "8 min read",
@@ -74,7 +74,7 @@ const articles: Article[] = [
         summary: "The rise of in-app bidding has been met by a rise in tools for pricing, quality, and reporting.",
         href: "#",
         category: { name: "Programmatic", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/blog/two-mobile-shapes-pattern.webp",
+        thumbnailUrl: "/unsplash/server-network-data-center/server-network-data-center-pgdaAwf6IJg.jpg",
         publishedAt: "18 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Elena Vasquez", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/lana-steiner?fm=webp&q=80" },
@@ -214,23 +214,18 @@ const ContentAlternative02 = ({ article }: { article: NimbusArticle }) => {
                 <Carousel.Root opts={{ align: "start" }} className="mt-12 md:mt-16">
                     <Carousel.Content overflowHidden={false} className="gap-6 pr-4 md:pr-8 lg:gap-8">
                         {[
-                            { alt: "Image provided by Unsplash.com", imgUrl: "https://www.untitledui.com/marketing/blog-post-carousel-0.webp" },
-                            { alt: "Image provided by Unsplash.com", imgUrl: "https://www.untitledui.com/marketing/blog-post-carousel-1.webp" },
-                            {
-                                alt: "Image provided by Unsplash.com",
-                                imgUrl: "https://images.unsplash.com/photo-1609081144289-eacc3108cd03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80",
-                            },
-                            {
-                                alt: "Image provided by Unsplash.com",
-                                imgUrl: "https://images.unsplash.com/photo-1656356594220-7bec7673307f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2971&q=80",
-                            },
-                            {
-                                alt: "Image provided by Unsplash.com",
-                                imgUrl: "https://images.unsplash.com/photo-1648536474453-2b9e03f0238c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80",
-                            },
+                            { alt: "Analytics dashboard on a laptop screen", imgUrl: "/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-JKUTrJ4vK00.jpg" },
+                            { alt: "Person holding a smartphone", imgUrl: "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-n31x0hhnzOs.jpg" },
+                            { alt: "Illuminated billboards on a building at dusk", imgUrl: "/unsplash/advertising-billboard-city/advertising-billboard-city-5GBvm1lhrFM.jpg" },
+                            { alt: "Server rack with blinking green lights", imgUrl: "/unsplash/server-network-data-center/server-network-data-center-VHmBX7FnXw0.jpg" },
+                            { alt: "Team collaborating around a laptop in an office", imgUrl: "/unsplash/modern-office-business-team/modern-office-business-team-yd_RKGH_RH4.jpg" },
                         ].map((item) => (
                             <Carousel.Item key={item.imgUrl} className="basis-auto">
-                                <div className="size-auto max-h-90 max-w-90 cursor-grab object-contain lg:max-h-180 lg:max-w-180 bg-[#84D7D9]" />
+                                <img
+                                    src={item.imgUrl}
+                                    alt={item.alt}
+                                    className="size-auto max-h-90 max-w-90 cursor-grab rounded-2xl object-contain lg:max-h-180 lg:max-w-180"
+                                />
                             </Carousel.Item>
                         ))}
                     </Carousel.Content>
@@ -276,7 +271,7 @@ const ContentAlternative02 = ({ article }: { article: NimbusArticle }) => {
 const Simple01Vertical = ({ article, imageClassName }: { article: Article; imageClassName?: string }) => (
     <article className="flex flex-col gap-4">
         <a href={article.href} className="overflow-hidden rounded-2xl" tabIndex={-1}>
-            <div className={cx("aspect-[1.5] w-full object-cover transition duration-100 ease-linear hover:scale-105 bg-[#84D7D9]", imageClassName)} />
+            <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full object-cover transition duration-100 ease-linear hover:scale-105", imageClassName)} />
         </a>
 
         <div className="flex flex-col gap-5">

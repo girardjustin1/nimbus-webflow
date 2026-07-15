@@ -44,7 +44,7 @@ const ContentLargeImage04 = ({ article }: { article: NimbusArticle }) => {
                 </div>
             </div>
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
-                <div className="mx-auto -mt-16 h-60 w-full object-cover md:-mt-24 md:h-160 bg-[#84D7D9]" />
+                <img src="/unsplash/abstract-technology-gradient-blue/abstract-technology-gradient-blue-6EQZ2JcHZmk.jpg" alt="Abstract blue technology gradient" className="mx-auto -mt-16 h-60 w-full object-cover md:-mt-24 md:h-160" />
                 <div className="mx-auto max-w-prose pt-16 md:max-w-180 md:pt-24">
                     <ArticleBody blocks={article.body} className="mx-auto max-w-none" />
 
@@ -104,7 +104,7 @@ const Simple02Vertical = ({
 }) => (
     <article className="flex flex-col gap-4">
         <a href={article.href} className="overflow-hidden" tabIndex={-1}>
-            <div className={cx("aspect-[1.5] w-full object-cover bg-[#84D7D9]", imageClassName)} />
+            <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full object-cover", imageClassName)} />
         </a>
 
         <div className="flex flex-col gap-5">
@@ -150,7 +150,7 @@ const articles: Article[] = [
         summary: "How to review the ads that actually served in your app and block surgically without sacrificing revenue.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/spirals.webp",
+        thumbnailUrl: "/unsplash/programmatic-advertising/programmatic-advertising-MjVq8u7bHhM.jpg",
         publishedAt: "20 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Jordan Kim", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80" },
@@ -167,7 +167,7 @@ const articles: Article[] = [
         summary: "In-app header bidding gave publishers a better auction. Here is how to migrate without losing fill.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/conversation.webp",
+        thumbnailUrl: "/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-hpjSkU2UYSU.jpg",
 
         publishedAt: "19 Jan 2026",
         readingTime: "8 min read",

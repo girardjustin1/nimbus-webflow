@@ -37,7 +37,7 @@ const articles: Article[] = [
         summary: "How to review the ads that actually served in your app and block surgically without sacrificing revenue.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/spirals.webp",
+        thumbnailUrl: "/unsplash/advertising-billboard-city/advertising-billboard-city-5GBvm1lhrFM.jpg",
         publishedAt: "20 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Jordan Kim", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80" },
@@ -54,7 +54,7 @@ const articles: Article[] = [
         summary: "In-app header bidding gave publishers a better auction. Here is how to migrate without losing fill.",
         href: "#",
         category: { name: "Product", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/conversation.webp",
+        thumbnailUrl: "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-q8U1YgBaRQk.jpg",
 
         publishedAt: "19 Jan 2026",
         readingTime: "8 min read",
@@ -201,7 +201,7 @@ const ContentAlternative03 = ({ article }: { article: NimbusArticle }) => {
                     </div>
                 </div>
 
-                <div className="h-80 w-full object-cover md:order-first md:h-200 bg-[#84D7D9]" />
+                <img src="/unsplash/abstract-technology-gradient-blue/abstract-technology-gradient-blue-eEjlchmojyU.jpg" alt="Blue glowing technology waves" className="h-80 w-full object-cover md:order-first md:h-200" />
             </div>
 
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:py-24">
@@ -247,7 +247,7 @@ const BlogSectionSplitLayout02 = () => {
                                     className="shrink-0 overflow-hidden rounded-2xl transition duration-100 ease-linear hover:shadow-2xl"
                                     tabIndex={-1}
                                 >
-                                    <div className="h-60 w-full object-cover xl:h-50 xl:w-91.5 bg-[#84D7D9]" />
+                                    <img src={article.thumbnailUrl} alt={article.title} className="h-60 w-full object-cover xl:h-50 xl:w-91.5" />
                                 </a>
 
                                 <div className="flex flex-col gap-6">
