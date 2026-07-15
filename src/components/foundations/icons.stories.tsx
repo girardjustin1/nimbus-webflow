@@ -32,7 +32,7 @@ import {
  * blog cards, bylines, article meta, and share/engagement actions).
  */
 const meta = {
-    title: "Foundations/Icons",
+    title: "Styles/Icons",
     parameters: { layout: "fullscreen" },
     tags: ["autodocs"],
 } satisfies Meta;

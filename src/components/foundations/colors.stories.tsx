@@ -7,7 +7,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
  * tokens in `src/styles/theme.css` (brand = Nimbus teal).
  */
 const meta = {
-    title: "Foundations/Colors",
+    title: "Styles/Color",
     parameters: { layout: "fullscreen" },
     tags: ["autodocs"],
 } satisfies Meta;

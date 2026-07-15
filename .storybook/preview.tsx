@@ -9,7 +9,8 @@ const preview: Preview = {
         options: {
             storySort: {
                 order: [
-                    "Foundations",
+                    "Styles",
+                    ["Color", "Elevation", "Icons", "Shape", "Typography"],
                     "Components",
                     ["Navigation", "Breadcrumbs", "Body", "Footer"],
                     "Blog Layouts",

@@ -6,7 +6,7 @@ import { NimbusLogo } from "@/components/foundations/logo/nimbus-logo";
  * The Nimbus wordmark assets in both variants.
  */
 const meta = {
-    title: "Foundations/Logos",
+    title: "Styles/Logos",
     component: NimbusLogo,
     parameters: { layout: "fullscreen" },
     tags: ["autodocs"],

@@ -6,7 +6,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
  * Class names are full literal strings so Tailwind v4's scanner generates them.
  */
 const meta = {
-    title: "Foundations/Typography",
+    title: "Styles/Typography",
     parameters: { layout: "fullscreen" },
     tags: ["autodocs"],
 } satisfies Meta;
