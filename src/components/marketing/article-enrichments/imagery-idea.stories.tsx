@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ImageryIdea } from "./imagery-idea";
 
 const meta = {
-    title: "Components/Body/Enrichments/Imagery Idea",
+    title: "Components/Body/Imagery Idea",
     component: ImageryIdea,
     parameters: { layout: "padded" },
     tags: ["autodocs"],

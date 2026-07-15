@@ -8,3 +8,7 @@ export { PullQuote } from "./pull-quote";
 export { KeyTakeaway } from "./key-takeaway";
 export { Checklist } from "./checklist";
 export { ImageryIdea } from "./imagery-idea";
+export { MetricsRow } from "./metrics-row";
+export { DemandMixPie } from "./demand-mix-pie";
+export { StackComparisonRadar } from "./stack-comparison-radar";
+export { MetricsTable } from "./metrics-table";

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Checklist } from "./checklist";
 
 const meta = {
-    title: "Components/Body/Enrichments/Checklist",
+    title: "Components/Body/Checklist",
     component: Checklist,
     parameters: { layout: "padded" },
     tags: ["autodocs"],

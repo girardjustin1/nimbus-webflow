@@ -44,7 +44,7 @@ export const FAQAccordion04 = ({
     heading = "Frequently asked questions",
     description = "Everything you need to know. Can't find an answer? Reach out to your Nimbus Account Manager.",
 }: { faqs?: FAQItem[]; eyebrow?: string; heading?: string; description?: string } = {}) => {
-    const [openQuestions, setOpenQuestions] = useState(new Set([0]));
+    const [openQuestions, setOpenQuestions] = useState(new Set<number>());
 
     const handleToggle = (index: number) => {
         openQuestions.has(index) ? openQuestions.delete(index) : openQuestions.add(index);
@@ -52,9 +52,9 @@ export const FAQAccordion04 = ({
     };
 
     return (
-        <section className="bg-primary py-16 md:py-24">
+        <section className="py-8 md:py-10">
             <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col gap-12 lg:flex-row lg:gap-16">
+                <div className="flex flex-col gap-6">
                     <div className="flex w-full max-w-3xl flex-col lg:max-w-xl">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">{eyebrow}</span>
 

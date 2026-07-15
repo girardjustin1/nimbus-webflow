@@ -15,7 +15,7 @@ export const ContentLargeImage04 = ({ article }: { article: NimbusArticle }) => 
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mx-auto flex w-full max-w-240 flex-col items-center text-center">
                         <span className="text-sm font-semibold text-primary_on-brand md:text-md">{article.category.name}</span>
-                        <h1 className="mt-3 text-display-md font-extrabold text-tertiary_on-brand md:text-display-lg">{article.title}</h1>
+                        <h1 className="mt-3 text-display-md font-extrabold text-primary_on-brand md:text-display-lg">{article.title}</h1>
                         <p className="mt-4 max-w-3xl text-lg text-primary_on-brand md:mt-6 md:text-xl">{article.summary}</p>
 
                         <div className="mt-8 flex items-center gap-3 text-left">

@@ -1,11 +1,11 @@
-import { Checklist, ImageryIdea, KeyTakeaway, PullQuote, StatCallout, StatGrid } from "@/components/marketing/article-enrichments/article-enrichments";
+import { Checklist, ImageryIdea, KeyTakeaway, MetricsRow, PullQuote, StatCallout } from "@/components/marketing/article-enrichments/article-enrichments";
 import { CTASimpleCenteredBrand } from "@/components/marketing/cta/cta-simple-centered-brand";
 import { FAQAccordion04 } from "@/components/marketing/faq/faq-accordion-04";
 import type { BlogBlock } from "@/content/blog/nimbus-articles";
 
 const Block = ({ block }: { block: BlogBlock }) => {
     if (block.type === "stat") return <StatCallout value={block.value} label={block.label} />;
-    if (block.type === "statGrid") return <StatGrid stats={block.stats} />;
+    if (block.type === "statGrid") return <MetricsRow metrics={block.stats.map((s) => ({ title: s.value, subtitle: s.label }))} />;
     if (block.type === "checklist") return <Checklist heading={block.heading} items={block.items} />;
     if (block.type === "keyTakeaway") return <KeyTakeaway title={block.title} text={block.text} />;
     if (block.type === "imageryIdea") return <ImageryIdea caption={block.caption} />;
