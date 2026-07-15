@@ -565,7 +565,7 @@ const FooterLarge06 = () => {
 
                     <div className="relative mt-12 flex flex-col-reverse justify-between gap-6 pt-8 md:mt-16 md:flex-row">
                         <div className="absolute top-0 left-0 h-px w-full bg-border-secondary"></div>
-                        <p className="text-sm text-quaternary">© 2077 Untitled UI. All rights reserved.</p>
+                        <p className="text-sm text-quaternary">© 2026 Nimbus. All rights reserved.</p>
                         <ul className="flex gap-6">
                             {footerSocials.map(({ label, icon: Icon, href }) => (
                                 <li key={label}>

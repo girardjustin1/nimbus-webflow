@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import {
-    type Article,
     CardFullWidthImage01Vertical,
     Simple01Horizontal,
     Simple01Vertical,
@@ -8,11 +7,12 @@ import {
     Simple03Vertical,
     Simple04Vertical,
 } from "@/components/marketing/blog/base-components/blog-cards";
+import { nimbusArticles } from "@/content/blog/nimbus-articles";
 
 /**
- * Blog Components → Blog Cards
+ * Components → Blog Cards
  * The reusable article-card variants used to build the blog listing pages,
- * themed with the Nimbus design system.
+ * populated with real Nimbus articles and themed with the Nimbus design system.
  */
 const meta = {
     title: "Components/Body/Blog Cards",
@@ -23,38 +23,7 @@ const meta = {
 export default meta;
 type Story = StoryObj;
 
-const article: Article = {
-    id: "1",
-    href: "#",
-    thumbnailUrl: "https://www.untitledui.com/marketing/spirals.webp",
-    title: "How Nimbus builds a design system with Untitled UI",
-    summary: "A look at our approach to tokens, theming, and shipping a consistent component library across products.",
-    category: { href: "#", name: "Design" },
-    author: {
-        href: "#",
-        name: "Justin Girard",
-        avatarUrl: "https://i.pravatar.cc/150?img=13",
-    },
-    publishedAt: "20 Jan 2026",
-    readingTime: "8 min read",
-    tags: [
-        { name: "Design", color: "brand", href: "#" },
-        { name: "Research", color: "indigo", href: "#" },
-        { name: "Systems", color: "pink", href: "#" },
-    ],
-};
-
-const secondArticle: Article = {
-    ...article,
-    id: "2",
-    title: "Theming Untitled UI with a custom brand palette",
-    summary: "Deriving a full 50–950 scale from a single brand color, and wiring it through semantic tokens.",
-    category: { href: "#", name: "Engineering" },
-    tags: [
-        { name: "Product", color: "sky", href: "#" },
-        { name: "Tokens", color: "brand", href: "#" },
-    ],
-};
+const [article, secondArticle] = nimbusArticles;
 
 export const SimpleVertical: Story = {
     render: () => (

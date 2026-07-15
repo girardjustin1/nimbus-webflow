@@ -675,7 +675,7 @@ const FooterLarge01 = () => {
                 </nav>
                 <div className="mt-12 flex flex-col justify-between gap-6 border-t border-secondary pt-8 md:mt-16 md:flex-row md:items-center">
                     <UntitledLogo className="h-7 w-min" />
-                    <p className="text-sm text-quaternary">© 2077 Untitled UI. All rights reserved.</p>
+                    <p className="text-sm text-quaternary">© 2026 Nimbus. All rights reserved.</p>
                 </div>
             </div>
         </footer>

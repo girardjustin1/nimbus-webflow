@@ -28,7 +28,7 @@ const columns: MenuColumn[] = [
             },
             {
                 title: "Customer stories",
-                subtitle: "Learn how our customers are using Untitled UI to 10x their growth.",
+                subtitle: "Learn how publishers are growing revenue with Nimbus.",
                 href: "/",
                 Icon: Stars02,
             },

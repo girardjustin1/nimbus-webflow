@@ -105,7 +105,7 @@ export const Palette: Story = {
                 </div>
             </Section>
 
-            <Section title="Neutrals" desc="Warm cream through near-black — matches Untitled UI's gray tokens.">
+            <Section title="Neutrals" desc="Warm cream through near-black — matches Nimbus's gray tokens.">
                 <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 md:grid-cols-6">
                     {NEUTRAL.map((c) => (
                         <HexSwatch key={c.label} {...c} />

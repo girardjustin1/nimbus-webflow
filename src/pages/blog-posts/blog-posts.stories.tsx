@@ -11,7 +11,7 @@ import BlogPost09 from "./blog-post-09";
 import BlogPost10 from "./blog-post-10";
 
 /**
- * Blog Post Pages — full article / blog-post reading layouts from Untitled UI,
+ * Blog Post Pages — full article / blog-post reading layouts from Nimbus,
  * themed with the Nimbus design system. One story per variant (01–10).
  */
 const meta = {

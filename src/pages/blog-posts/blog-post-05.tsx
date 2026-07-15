@@ -587,7 +587,7 @@ const FooterLarge16 = () => {
                             Subscribe
                         </Button>
                     </Form>
-                    <p className="text-sm text-quaternary">© 2077 Untitled UI. All rights reserved.</p>
+                    <p className="text-sm text-quaternary">© 2026 Nimbus. All rights reserved.</p>
                 </div>
             </div>
         </footer>

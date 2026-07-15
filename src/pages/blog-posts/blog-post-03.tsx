@@ -477,7 +477,7 @@ const FooterSmall04 = () => {
                     </Form>
                 </div>
 
-                <p className="mt-8 text-md text-quaternary md:mt-16 md:text-right">© 2077 Untitled UI. All rights reserved.</p>
+                <p className="mt-8 text-md text-quaternary md:mt-16 md:text-right">© 2026 Nimbus. All rights reserved.</p>
             </div>
         </footer>
     );

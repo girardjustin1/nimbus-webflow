@@ -5,7 +5,7 @@ import { MetricsSimpleCenteredText } from "@/components/marketing/metrics/metric
 
 /**
  * Components → Metrics
- * Untitled UI metrics / stats sections, Nimbus-themed.
+ * Nimbus metrics / stats sections, Nimbus-themed.
  */
 const meta = {
     title: "Components/Body/Metrics",

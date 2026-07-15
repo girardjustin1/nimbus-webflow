@@ -749,7 +749,7 @@ const FooterLarge02 = () => {
             <div className="bg-secondary_alt py-10 md:py-12">
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="flex flex-col-reverse justify-between gap-6 md:flex-row">
-                        <p className="text-sm text-quaternary">© 2077 Untitled UI. All rights reserved.</p>
+                        <p className="text-sm text-quaternary">© 2026 Nimbus. All rights reserved.</p>
                         <ul className="flex gap-6">
                             {footerSocials.map(({ label, icon: Icon, href }) => (
                                 <li key={label}>

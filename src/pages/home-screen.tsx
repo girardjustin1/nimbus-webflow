@@ -14,7 +14,7 @@ export const HomeScreen = () => {
                     <UntitledLogoMinimal className="size-10" />
                 </div>
 
-                <h1 className="max-w-3xl text-center text-display-sm font-semibold text-primary">Untitled UI Vite starter kit</h1>
+                <h1 className="max-w-3xl text-center text-display-sm font-semibold text-primary">Nimbus Vite starter kit</h1>
 
                 <p className="mt-2 max-w-xl text-center text-lg text-tertiary">
                     Get started by using existing components that came with this starter kit or add new ones:

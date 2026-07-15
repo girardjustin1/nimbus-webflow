@@ -13,7 +13,7 @@ const Trail = () => (
 
 /**
  * Components → Breadcrumbs
- * Untitled UI breadcrumbs, Nimbus-themed (current item uses the teal brand color).
+ * Nimbus breadcrumbs, Nimbus-themed (current item uses the teal brand color).
  */
 const meta = {
     title: "Components/Breadcrumbs",
