@@ -11,7 +11,7 @@ const meta = {
         size: { control: "inline-radio", options: ["xs", "sm", "md", "lg", "xl"] },
         color: {
             control: "select",
-            options: ["primary", "secondary", "tertiary", "link-color", "link-gray", "primary-destructive"],
+            options: ["primary", "primary-pink", "secondary", "tertiary", "link-color", "link-gray", "primary-destructive"],
         },
         isDisabled: { control: "boolean" },
     },
@@ -23,6 +23,22 @@ type Story = StoryObj<typeof meta>;
 /** Primary button — uses the Nimbus brand-solid (teal) token. */
 export const Primary: Story = {
     args: { color: "primary", size: "md" },
+};
+
+/** Pink primary variant (#DA6EA3) — an alternate accent alongside the teal primary. */
+export const PrimaryPink: Story = {
+    args: { color: "primary-pink", size: "md" },
+};
+
+/** Teal vs pink primary side by side. */
+export const PrimaryVariants: Story = {
+    render: (args) => (
+        <div className="flex flex-wrap items-center gap-3">
+            <Button {...args} color="primary">Teal primary</Button>
+            <Button {...args} color="primary-pink">Pink primary</Button>
+        </div>
+    ),
+    args: { size: "md" },
 };
 
 export const Secondary: Story = {

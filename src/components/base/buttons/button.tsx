@@ -61,6 +61,16 @@ export const styles = sortCx({
                 "*:data-icon:text-white/60 hover:*:data-icon:text-white/70",
             ].join(" "),
         },
+        // Nimbus pink primary — an alternate accent to the teal primary.
+        "primary-pink": {
+            root: [
+                "bg-[#DA6EA3] text-white shadow-xs-skeuomorphic ring-1 ring-transparent ring-inset hover:bg-[#c85c92] data-loading:bg-[#c85c92]",
+                // Inner border gradient
+                "before:absolute before:inset-px before:border before:border-white/12 before:mask-b-from-0%",
+                // Icon styles
+                "*:data-icon:text-white/60 hover:*:data-icon:text-white/70",
+            ].join(" "),
+        },
         secondary: {
             root: [
                 "bg-primary text-secondary shadow-xs-skeuomorphic ring-1 ring-primary ring-inset hover:bg-primary_hover hover:text-secondary_hover data-loading:bg-primary_hover",
