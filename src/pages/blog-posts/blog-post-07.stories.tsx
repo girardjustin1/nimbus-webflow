@@ -22,79 +22,124 @@ export const Floors: Story = { name: "Floors: Pricing Power", args: { article: n
 export const Prebid: Story = { name: "Prebid Is Now Live", args: { article: nimbusArticles[3] } };
 
 const enriched07: NimbusArticle = {
-    ...nimbusArticles[2],
+    ...nimbusArticles[0],
     body: [
+        { type: "heading", text: "What is the Nimbus Dynamic Unit?" },
         {
             type: "paragraph",
-            text: "In-app bidding gave publishers a better auction. It also handed pricing leverage to the buy side in ways that are easy to miss.",
+            text: "The Dynamic Unit is Nimbus' proprietary offering for in-app programmatic native advertising. Our incredibly flexible unit can be customized to suit almost any app's unique visual and UX needs without sacrificing available demand — resulting in a great-looking, unique ad that appeals to both publishers and buyers.",
+        },
+        { type: "stat", value: "45+", label: "demand partners competing in the Nimbus core auction" },
+        { type: "heading", text: "What Makes It Great?" },
+        {
+            type: "paragraph",
+            lead: "Infinite customizability.",
+            text: "Unlike other SDKs, with the Nimbus Dynamic Unit you can make your ads look however you want. Full-screen horizontal slider like Snapchat? No problem. Full-screen vertical slider like TikTok? No problem. Want an X button? Great. No X button? Also great.",
         },
         {
             type: "paragraph",
-            text: "DSPs are optimized to spend as little as possible for the same outcome. That's not bad behavior — it's their job. Bidding algorithms learn the minimum price your inventory will accept, and without resistance, they'll find it. The result is a market that drifts toward the lowest tolerable price, one fractional bid adjustment at a time.",
-        },
-        {
-            type: "paragraph",
-            text: "Floors are how publishers push back. Used well, they are one of the few levers in programmatic that the publisher controls completely.",
-        },
-        { type: "stat", value: "42%", label: "revenue increase Tumblr saw with Nimbus" },
-        { type: "heading", text: "What a floor actually does" },
-        {
-            type: "paragraph",
-            text: "A floor is a minimum price for your inventory: bids below it don't win, no matter what. Its real function is behavioral — a floor tells bidding algorithms that the discount-hunting stops here, restoring competitive pressure that bid shading quietly removes. Floors keep DSPs honest.",
-        },
-        {
-            type: "paragraph",
-            text: "The objection is always the same: won't floors cost me fill? Sometimes, yes — that's the tradeoff being managed. A floor set too high costs impressions; a floor set too low (or not at all) costs price. The job is finding the level where the pricing gain outweighs the fill loss, and that level is discovered, not declared.",
+            lead: "No demand limitations.",
+            text: "The Dynamic Unit accepts programmatic demand in multiple formats — it is not limited to 'native programmatic demand,' which is notoriously spotty and hard to come by. That gives you access to a vastly increased ecosystem of demand, letting a native unit fill and earn CPMs at levels more akin to static or video.",
         },
         {
             type: "keyTakeaway",
-            text: "A floor is a dial, not a switch — set the terms the market has to beat.",
-        },
-        { type: "heading", text: "Granularity is what makes floors work" },
-        {
-            type: "paragraph",
-            text: "A single global floor is a blunt instrument, because inventory value isn't uniform. The same placement commands different prices by geography, format, and size — and treating it all identically underprices your best impressions to protect your weakest ones.",
+            text: "The Dynamic Unit decouples native look from native demand: you design the experience, and the full programmatic auction fills it.",
         },
         {
-            type: "paragraph",
-            text: "Nimbus flooring is built for that granularity. Publishers can set and adjust floors across the dimensions where value actually varies — geo, ad type, and size — and refine them as reporting reveals what each slice commands. Identified and anonymous traffic behave differently in the auction, and your flooring strategy can account for that.",
-        },
-        {
-            type: "statGrid",
-            stats: [
-                { value: "31%", label: "avg lift with Nimbus+" },
-                { value: "24%", label: "avg lift with Nimbus Core" },
-                { value: "60+", label: "demand sources" },
+            type: "demandMixPie",
+            title: "How demand fills a Dynamic Unit",
+            data: [
+                { name: "Static / MRAID", value: 38 },
+                { name: "Video (VAST)", value: 30 },
+                { name: "Interstitial", value: 22 },
+                { name: "Native programmatic", value: 10 },
             ],
         },
-        { type: "heading", text: "Dynamic floors: pricing that keeps up" },
+        { type: "heading", text: "The Dynamic Unit vs. Traditional 'Native'" },
         {
             type: "paragraph",
-            text: "Markets move. Demand surges around seasonal spend, softens in slow weeks, and shifts as buyers come and go. A static floor that was right in March can be wrong in June. Dynamic floors adjust to those conditions, keeping pricing competitive without manually re-deriving the right number every week. For publishers without a dedicated yield team, this is the difference between flooring as a strategy and flooring as a setup task that quietly goes stale.",
+            lead: "Publisher native ads",
+            text: "are ad units custom-designed by publishers to work with their specific product, layout, and experience — a fullscreen, side-swipeable unit like Tinder, or something even more custom. You are looking for demand to fill this unit.",
+        },
+        {
+            type: "paragraph",
+            lead: "Native programmatic ads",
+            text: "refer to a specific type of ad delivered by certain demand partners. These are delivered in 'pieces' and assembled per your app's specifications, giving you some ability to customize.",
+        },
+        {
+            type: "paragraph",
+            lead: "The Nimbus Dynamic Unit",
+            text: "means you are not required to fill your publisher native ad only with native programmatic ads. The unit accepts programmatic demand in multiple formats and widens the auction to bidders on interstitial, static, and video demand.",
+        },
+        {
+            type: "quote",
+            text: "You shouldn't have to choose between an ad that fits your app and an auction that actually fills. The Dynamic Unit is built so you never trade a native feel for demand.",
+            attribution: "Kristen Smith",
+            role: "Chief Product Officer, Nimbus",
+            avatarSrc: "https://i.pravatar.cc/150?img=47",
+            variant: "navy",
+            layout: "card",
+        },
+        { type: "stat", value: "4", label: "programmatic formats fill one unit: interstitial, static, video, and native" },
+        { type: "heading", text: "Achieving a Native Feel" },
+        {
+            type: "paragraph",
+            text: "Nimbus works with 45+ demand partners in the core auction, and we make each creative asset they send look great within the custom-designed Dynamic Unit. Once you've specified your design, there is no extra work: the Nimbus SDK automatically places the winning creative to best fit your container — resizing, scaling, or letterboxing as appropriate, or not scaling at all. The decisions are in your hands.",
+        },
+        {
+            type: "paragraph",
+            text: "Depending on your implementation, your CPMs might not be as high as a static-only or video-only unit, but they will almost certainly be significantly higher than the CPMs from native programmatic ads. And you can A/B test to find the best performance for your app.",
         },
         {
             type: "imageryIdea",
-            caption: "a pricing dial turning up as an eCPM curve rises while fill holds steady.",
+            caption: "a single Dynamic Unit container morphing to fit static, video, and interstitial creatives while the app chrome stays put.",
         },
-        { type: "heading", text: "A practical way to start" },
+        { type: "heading", text: "How Top Publishers Use the Dynamic Unit" },
         {
-            type: "list",
+            type: "paragraph",
+            lead: "Timehop",
+            text: "deploys Snapchat-style, full-screen interstitial ads — auto-muted, without a close button or ad timers. Users swipe right to advance, up for a click-through.",
+        },
+        {
+            type: "paragraph",
+            lead: "Tumblr",
+            text: "deploys a publisher native ad that scrolls along with in-app content, then appears full-screen before the user swipes it away.",
+        },
+        {
+            type: "paragraph",
+            lead: "Imgur",
+            text: "uses the Dynamic Unit similarly to Timehop, serving ads within a swipe-based in-app experience.",
+        },
+        { type: "stat", value: "3", label: "flagship apps already ship it: Timehop, Tumblr, and Imgur" },
+        {
+            type: "quote",
+            text: "Timehop, Tumblr, and Imgur all ship completely different-looking units — and they all pull from the same full programmatic auction underneath. That's the whole point of the Dynamic Unit.",
+            attribution: "Nimbus Ad Ops",
+            role: "Publisher Solutions",
+            variant: "navy",
+            layout: "card",
+        },
+        {
+            type: "faq",
             items: [
-                "Baseline first. Pull eCPM and fill by geo and format before changing anything.",
-                "Start where value is concentrated. Floor your highest-value slices first — premium geos, video, large formats.",
-                "Move in steps, not leaps. Set a floor, let it run, then adjust. Floors are a dial, not a switch.",
-                "Watch the auction respond. If eCPM rises and fill holds, keep going. If fill drops faster than price rises, step back.",
-                "Revisit quarterly at minimum. Demand conditions change; your floors should too.",
+                {
+                    question: "Is it difficult to implement?",
+                    answer: "No. It's only slightly more complex than a general Nimbus implementation. Most of the lift comes with customizations, which are up to you and can expand over time.",
+                },
+                {
+                    question: "Am I limited to programmatic interstitial?",
+                    answer: "No. You can also run static, video, and Meta native. Because static, MRAID, and VAST demand tends to outperform native programmatic in these units, few publishers end up implementing native programmatic — but we'll help if you want it.",
+                },
+                {
+                    question: "Is the Dynamic Unit oRTB compliant?",
+                    answer: "Yes. It uses the oRTB spec and is fully compliant with all standards for proper performance and reporting.",
+                },
             ],
         },
-        { type: "heading", text: "Pricing control is the point" },
         {
-            type: "paragraph",
-            text: "The shift to bidding asked publishers to trust the market. Trust is fine — leverage is better. Flooring strategy, alongside traffic shaping and transparent reporting, is how publishers regain mastery over an auction environment that was supposed to serve them. Let the market determine price — but set the terms it has to beat.",
-        },
-        {
-            type: "paragraph",
-            text: "Your Nimbus Account Manager can walk through your current floor setup and where there's room to work. Or get started at nimbus.co.",
+            type: "cta",
+            heading: "Get started with Nimbus",
+            description: "Reach out to your Nimbus Account Manager to learn more about the Dynamic Unit, or get started at nimbus.co.",
         },
     ],
 };

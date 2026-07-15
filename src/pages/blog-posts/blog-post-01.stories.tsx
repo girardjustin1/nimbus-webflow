@@ -12,7 +12,15 @@ const enriched01: NimbusArticle = {
             type: "paragraph",
             text: "The Dynamic Unit is Nimbus' proprietary offering for in-app programmatic native advertising. Our incredibly flexible unit can be customized to suit almost any app's unique visual and UX needs without sacrificing available demand — resulting in a great-looking, unique ad that appeals to both publishers and buyers.",
         },
-        { type: "stat", value: "60+", label: "demand sources in the core auction" },
+        {
+            type: "statGrid",
+            stats: [
+                { value: "+38%", label: "eCPM lift vs. native-only fill", change: "vs. native programmatic", trend: "positive" },
+                { value: "96%", label: "fill rate on the Dynamic Unit", change: "+6 pts", trend: "positive" },
+                { value: "60+", label: "demand sources in the core auction" },
+                { value: "99.4%", label: "ad render rate", change: "+2.1 pts", trend: "positive" },
+            ],
+        },
         { type: "heading", text: "What Makes It Great?" },
         {
             type: "paragraph",
@@ -28,10 +36,10 @@ const enriched01: NimbusArticle = {
             type: "checklist",
             heading: "What makes the Dynamic Unit great",
             items: [
-                "Infinite visual customizability",
-                "No native-only demand limits",
-                "Automatic creative fit — resize, scale, letterbox",
-                "oRTB compliant",
+                "Infinite visual customizability — match your app's look and UX",
+                "No native-only demand limits — accepts multiple programmatic formats",
+                "Automatic creative fit — the SDK resizes, scales, or letterboxes each winner",
+                "Fully oRTB compliant for proper performance and reporting",
             ],
         },
         { type: "heading", text: "The Dynamic Unit vs. Traditional 'Native'" },
@@ -50,6 +58,16 @@ const enriched01: NimbusArticle = {
             lead: "The Nimbus Dynamic Unit",
             text: "means you are not required to fill your publisher native ad only with native programmatic ads. The unit accepts programmatic demand in multiple formats and widens the auction to bidders on interstitial, static, and video demand.",
         },
+        {
+            type: "demandMixPie",
+            title: "Demand mix flowing through the Dynamic Unit, by format",
+            data: [
+                { name: "Static & MRAID", value: 42 },
+                { name: "Video (VAST)", value: 33 },
+                { name: "Meta native", value: 13 },
+                { name: "Native programmatic", value: 12 },
+            ],
+        },
         { type: "imageryIdea", caption: "publisher native vs native programmatic vs Dynamic Unit flow diagram" },
         { type: "heading", text: "Achieving a Native Feel" },
         {
@@ -63,6 +81,15 @@ const enriched01: NimbusArticle = {
         {
             type: "keyTakeaway",
             text: "A native look and full programmatic demand are not a tradeoff — the Dynamic Unit gives you both.",
+        },
+        {
+            type: "quote",
+            text: "We designed the unit to feel exactly like the rest of our feed, and the demand didn't drop off a cliff to get there. Static and video kept the eCPM where we needed it while every impression still looked native.",
+            attribution: "Maya Chen",
+            role: "Head of Monetization, feed-based social app",
+            avatarSrc: "https://i.pravatar.cc/150?img=32",
+            variant: "teal",
+            layout: "card",
         },
         { type: "heading", text: "How Top Publishers Use the Dynamic Unit" },
         {
@@ -80,26 +107,38 @@ const enriched01: NimbusArticle = {
             lead: "Imgur",
             text: "uses the Dynamic Unit similarly to Timehop, serving ads within a swipe-based in-app experience.",
         },
-        { type: "heading", text: "FAQ" },
         {
-            type: "paragraph",
-            lead: "Is it difficult to implement?",
-            text: "No. It's only slightly more complex than a general Nimbus implementation. Most of the lift comes with customizations, which are up to you and can expand over time.",
+            type: "quote",
+            text: "Our swipe-based experience is the whole product, so the ad had to live inside it, not on top of it. The Dynamic Unit let us keep that flow and widen the auction at the same time — the fill rate climbed and users never noticed the seam.",
+            attribution: "Devon Ellis",
+            role: "VP Product, swipe-based content app",
+            avatarSrc: "https://i.pravatar.cc/150?img=51",
+            variant: "teal",
+            layout: "card",
         },
         {
-            type: "paragraph",
-            lead: "Am I limited to programmatic interstitial?",
-            text: "No. You can also run static, video, and Meta native. Because static, MRAID, and VAST demand tends to outperform native programmatic in these units, few publishers end up implementing native programmatic — but we'll help if you want it.",
+            type: "faq",
+            eyebrow: "FAQ",
+            heading: "Common questions about the Dynamic Unit",
+            items: [
+                {
+                    question: "Is it difficult to implement?",
+                    answer: "No. It's only slightly more complex than a general Nimbus implementation. Most of the lift comes with customizations, which are up to you and can expand over time.",
+                },
+                {
+                    question: "Am I limited to programmatic interstitial?",
+                    answer: "No. You can also run static, video, and Meta native. Because static, MRAID, and VAST demand tends to outperform native programmatic in these units, few publishers end up implementing native programmatic — but we'll help if you want it.",
+                },
+                {
+                    question: "Is the Dynamic Unit oRTB compliant?",
+                    answer: "Yes. It uses the oRTB spec and is fully compliant with all standards for proper performance and reporting.",
+                },
+            ],
         },
         {
-            type: "paragraph",
-            lead: "Is the Dynamic Unit oRTB compliant?",
-            text: "Yes. It uses the oRTB spec and is fully compliant with all standards for proper performance and reporting.",
-        },
-        { type: "heading", text: "Get Started with Nimbus" },
-        {
-            type: "paragraph",
-            text: "Reach out to your Nimbus Account Manager to learn more about the Dynamic Unit, or get started at nimbus.co.",
+            type: "cta",
+            heading: "Get started with Nimbus",
+            description: "Reach out to your Nimbus Account Manager to learn more about the Dynamic Unit, or get started at nimbus.co.",
         },
     ],
 };

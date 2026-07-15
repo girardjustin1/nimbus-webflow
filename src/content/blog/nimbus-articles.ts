@@ -5,13 +5,25 @@ export type BlogBlock =
     | { type: "heading"; text: string }
     | { type: "paragraph"; lead?: string; text: string }
     | { type: "list"; items: string[] }
-    | { type: "quote"; text: string; attribution?: string; avatarSrc?: string }
+    | {
+          type: "quote";
+          text: string;
+          attribution?: string;
+          role?: string;
+          avatarSrc?: string;
+          variant?: "teal" | "pink" | "navy";
+          layout?: "border" | "centered" | "card";
+      }
     // --- enrichment blocks (rendered via article-enrichments) ---
     | { type: "stat"; value: string; label: string }
-    | { type: "statGrid"; stats: { value: string; label: string }[] }
+    | { type: "statGrid"; stats: { value: string; label: string; change?: string; trend?: "positive" | "negative" }[] }
     | { type: "checklist"; heading?: string; items: string[] }
     | { type: "keyTakeaway"; title?: string; text: string }
     | { type: "imageryIdea"; caption: string }
+    // --- data-viz enrichment blocks ---
+    | { type: "demandMixPie"; title?: string; data: { name: string; value: number }[] }
+    | { type: "stackRadar"; title?: string; data: { dimension: string; Nimbus: number; "Legacy stack": number }[] }
+    | { type: "metricsTable"; title?: string; description?: string; rows: { geo: string; unflooredEcpm: string; flooredEcpm: string; lift: string }[] }
     | { type: "faq"; eyebrow?: string; heading?: string; description?: string; items: { question: string; answer: string }[] }
     | { type: "cta"; heading?: string; description?: string; primaryLabel?: string; primaryHref?: string };
 

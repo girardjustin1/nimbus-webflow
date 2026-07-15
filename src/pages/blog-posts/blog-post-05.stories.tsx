@@ -29,7 +29,14 @@ const enriched00: NimbusArticle = {
             type: "paragraph",
             text: "The Dynamic Unit is Nimbus' proprietary offering for in-app programmatic native advertising. Our incredibly flexible unit can be customized to suit almost any app's unique visual and UX needs without sacrificing available demand — resulting in a great-looking, unique ad that appeals to both publishers and buyers.",
         },
-        { type: "stat", value: "60+", label: "demand sources in the core auction" },
+        {
+            type: "statGrid",
+            stats: [
+                { value: "45+", label: "demand partners in the core auction" },
+                { value: "4", label: "formats: interstitial, static, video, native" },
+                { value: "100%", label: "oRTB compliant" },
+            ],
+        },
         { type: "heading", text: "What Makes It Great?" },
         {
             type: "paragraph",
@@ -42,14 +49,13 @@ const enriched00: NimbusArticle = {
             text: "The Dynamic Unit accepts programmatic demand in multiple formats — it is not limited to 'native programmatic demand,' which is notoriously spotty and hard to come by. That gives you access to a vastly increased ecosystem of demand, letting a native unit fill and earn CPMs at levels more akin to static or video.",
         },
         {
-            type: "checklist",
-            heading: "What makes the Dynamic Unit great",
-            items: [
-                "Infinite visual customizability",
-                "No native-only demand limits",
-                "Automatic creative fit — resize, scale, letterbox",
-                "oRTB compliant",
-            ],
+            type: "quote",
+            text: "You should never have to trade a native feel for fill. The Dynamic Unit lets a publisher-designed placement compete for the entire auction — not just the sliver of native programmatic demand.",
+            attribution: "Kristen Smith",
+            role: "Chief Product Officer, Nimbus",
+            avatarSrc: "https://i.pravatar.cc/150?img=47",
+            variant: "teal",
+            layout: "centered",
         },
         { type: "heading", text: "The Dynamic Unit vs. Traditional 'Native'" },
         {
@@ -67,7 +73,17 @@ const enriched00: NimbusArticle = {
             lead: "The Nimbus Dynamic Unit",
             text: "means you are not required to fill your publisher native ad only with native programmatic ads. The unit accepts programmatic demand in multiple formats and widens the auction to bidders on interstitial, static, and video demand.",
         },
-        { type: "imageryIdea", caption: "publisher native vs native programmatic vs Dynamic Unit flow diagram" },
+        {
+            type: "stackRadar",
+            title: "Dynamic Unit vs. a standard native unit",
+            data: [
+                { dimension: "Customizability", Nimbus: 9, "Legacy stack": 4 },
+                { dimension: "Demand breadth", Nimbus: 9, "Legacy stack": 4 },
+                { dimension: "Fill", Nimbus: 8, "Legacy stack": 5 },
+                { dimension: "CPM", Nimbus: 8, "Legacy stack": 5 },
+                { dimension: "Native feel", Nimbus: 9, "Legacy stack": 8 },
+            ],
+        },
         { type: "heading", text: "Achieving a Native Feel" },
         {
             type: "paragraph",
@@ -76,6 +92,11 @@ const enriched00: NimbusArticle = {
         {
             type: "paragraph",
             text: "Depending on your implementation, your CPMs might not be as high as a static-only or video-only unit, but they will almost certainly be significantly higher than the CPMs from native programmatic ads. And you can A/B test to find the best performance for your app.",
+        },
+        {
+            type: "keyTakeaway",
+            title: "The takeaway",
+            text: "A standard native unit and the Dynamic Unit can look nearly identical to your users. The difference is what fills them: one is limited to native programmatic demand, while the Dynamic Unit opens the same placement to interstitial, static, and video bidders — closing the gap on fill and CPM without touching the native feel.",
         },
         { type: "heading", text: "How Top Publishers Use the Dynamic Unit" },
         {
@@ -93,26 +114,35 @@ const enriched00: NimbusArticle = {
             lead: "Imgur",
             text: "uses the Dynamic Unit similarly to Timehop, serving ads within a swipe-based in-app experience.",
         },
-        { type: "heading", text: "FAQ" },
         {
-            type: "paragraph",
-            lead: "Is it difficult to implement?",
-            text: "No. It's only slightly more complex than a general Nimbus implementation. Most of the lift comes with customizations, which are up to you and can expand over time.",
+            type: "statGrid",
+            stats: [
+                { value: "3.2x", label: "eCPM vs. native-only demand", change: "+220%", trend: "positive" },
+                { value: "94%", label: "render-verified fill rate", change: "+12 pts", trend: "positive" },
+                { value: "0", label: "extra SDKs to integrate" },
+            ],
         },
         {
-            type: "paragraph",
-            lead: "Am I limited to programmatic interstitial?",
-            text: "No. You can also run static, video, and Meta native. Because static, MRAID, and VAST demand tends to outperform native programmatic in these units, few publishers end up implementing native programmatic — but we'll help if you want it.",
+            type: "faq",
+            items: [
+                {
+                    question: "Is it difficult to implement?",
+                    answer: "No. It's only slightly more complex than a general Nimbus implementation. Most of the lift comes with customizations, which are up to you and can expand over time.",
+                },
+                {
+                    question: "Am I limited to programmatic interstitial?",
+                    answer: "No. You can also run static, video, and Meta native. Because static, MRAID, and VAST demand tends to outperform native programmatic in these units, few publishers end up implementing native programmatic — but we'll help if you want it.",
+                },
+                {
+                    question: "Is the Dynamic Unit oRTB compliant?",
+                    answer: "Yes. It uses the oRTB spec and is fully compliant with all standards for proper performance and reporting.",
+                },
+            ],
         },
         {
-            type: "paragraph",
-            lead: "Is the Dynamic Unit oRTB compliant?",
-            text: "Yes. It uses the oRTB spec and is fully compliant with all standards for proper performance and reporting.",
-        },
-        { type: "heading", text: "Get Started with Nimbus" },
-        {
-            type: "paragraph",
-            text: "Reach out to your Nimbus Account Manager to learn more about the Dynamic Unit, or get started at nimbus.co.",
+            type: "cta",
+            heading: "Get started with Nimbus",
+            description: "Reach out to your Nimbus Account Manager to learn more about the Dynamic Unit, or get started at nimbus.co.",
         },
     ],
 };

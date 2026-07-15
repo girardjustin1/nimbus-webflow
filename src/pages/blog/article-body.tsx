@@ -1,14 +1,28 @@
-import { Checklist, ImageryIdea, KeyTakeaway, MetricsRow, PullQuote, StatCallout } from "@/components/marketing/article-enrichments/article-enrichments";
+import {
+    Checklist,
+    DemandMixPie,
+    ImageryIdea,
+    KeyTakeaway,
+    MetricsRow,
+    MetricsTable,
+    PullQuote,
+    StackComparisonRadar,
+    StatCallout,
+} from "@/components/marketing/article-enrichments/article-enrichments";
 import { CTASimpleCenteredBrand } from "@/components/marketing/cta/cta-simple-centered-brand";
 import { FAQAccordion04 } from "@/components/marketing/faq/faq-accordion-04";
 import type { BlogBlock } from "@/content/blog/nimbus-articles";
 
 const Block = ({ block }: { block: BlogBlock }) => {
     if (block.type === "stat") return <StatCallout value={block.value} label={block.label} />;
-    if (block.type === "statGrid") return <MetricsRow metrics={block.stats.map((s) => ({ title: s.value, subtitle: s.label }))} />;
+    if (block.type === "statGrid")
+        return <MetricsRow metrics={block.stats.map((s) => ({ title: s.value, subtitle: s.label, change: s.change, trend: s.trend }))} />;
     if (block.type === "checklist") return <Checklist heading={block.heading} items={block.items} />;
     if (block.type === "keyTakeaway") return <KeyTakeaway title={block.title} text={block.text} />;
     if (block.type === "imageryIdea") return <ImageryIdea caption={block.caption} />;
+    if (block.type === "demandMixPie") return <DemandMixPie title={block.title} data={block.data} />;
+    if (block.type === "stackRadar") return <StackComparisonRadar title={block.title} data={block.data} />;
+    if (block.type === "metricsTable") return <MetricsTable title={block.title} description={block.description} rows={block.rows} />;
     if (block.type === "faq") {
         return <FAQAccordion04 faqs={block.items} eyebrow={block.eyebrow} heading={block.heading} description={block.description} />;
     }
@@ -28,7 +42,16 @@ const Block = ({ block }: { block: BlogBlock }) => {
         );
     }
     if (block.type === "quote") {
-        return <PullQuote quote={block.text} attribution={block.attribution} avatarSrc={block.avatarSrc} />;
+        return (
+            <PullQuote
+                quote={block.text}
+                attribution={block.attribution}
+                role={block.role}
+                avatarSrc={block.avatarSrc}
+                variant={block.variant}
+                layout={block.layout}
+            />
+        );
     }
     return (
         <p className="my-4 text-[18px] leading-[28px] text-[#535862]">

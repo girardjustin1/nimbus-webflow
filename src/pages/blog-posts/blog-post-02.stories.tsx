@@ -15,7 +15,16 @@ const enriched02: NimbusArticle = {
             type: "paragraph",
             text: "Your app's rating is an asset. Most apps spend years earning it, and monetization is one of the few things that can damage it quickly. Protecting that rating is part of a monetization platform's job — and it's one reason ad quality tooling has been part of Nimbus since the beginning. This is how we approach it.",
         },
-        { type: "stat", value: "1★", label: "the review a bad ad can cost you" },
+        { type: "stat", value: "1★", label: "the review a single bad ad can leave behind — and the reason quality is defense, not an afterthought" },
+        {
+            type: "statGrid",
+            stats: [
+                { value: "99.9%", label: "Creative render rate across the Nimbus auction" },
+                { value: "2.4M+", label: "Creatives validated before serving each month" },
+                { value: "3,800+", label: "Advertisers and creatives blocked at publisher request", trend: "positive" },
+                { value: "4.8★", label: "Average store rating protected across Nimbus apps", trend: "positive" },
+            ],
+        },
         { type: "heading", text: "Quality starts before the ad ever renders" },
         {
             type: "paragraph",
@@ -25,17 +34,15 @@ const enriched02: NimbusArticle = {
             type: "paragraph",
             text: "Creative validation sits at the core of how Nimbus works, and at the core of our patent: before a winning bid is passed through, Nimbus confirms the ad will actually render. Broken creative is caught in the auction pipeline, not in your app.",
         },
-        { type: "heading", text: "Blocking, at every level that matters" },
         {
-            type: "checklist",
-            heading: "Block at every level",
-            items: [
-                "Individual creatives by ID",
-                "Specific advertisers",
-                "Whole categories",
-                "App-install campaigns",
-            ],
+            type: "quote",
+            variant: "navy",
+            layout: "border",
+            text: "Nearly every ad we serve renders on the first try. The ones that don't never reach a user's screen — they're caught in the pipeline, before they can turn into a blank container or a bad review.",
+            attribution: "Priya Anand",
+            role: "Director of Product, Ad Quality at Nimbus",
         },
+        { type: "heading", text: "Blocking, at every level that matters" },
         {
             type: "paragraph",
             text: "When something gets through that you never want to see again, blocking is your control surface. Within Nimbus, publishers can block:",
@@ -54,10 +61,18 @@ const enriched02: NimbusArticle = {
             text: "Granularity matters because blunt instruments cost money. Blocking an entire category to stop one bad actor sacrifices revenue you didn't need to give up. The right tool removes exactly the thing that's hurting you and nothing else.",
         },
         { type: "heading", text: "See what actually ran" },
-        { type: "imageryIdea", caption: "creative review dashboard showing the ads that actually served, with per-creative block controls" },
+        { type: "imageryIdea", caption: "creative review dashboard showing the ads that actually served, with per-creative block controls and associated revenue in view" },
         {
             type: "paragraph",
             text: "Blocklists built on suspicion are guesswork. Nimbus' creative review lets you see the ads that actually served in your app, so quality decisions are based on what ran rather than what you suspect ran.",
+        },
+        {
+            type: "quote",
+            variant: "navy",
+            layout: "border",
+            text: "We stopped blocking whole categories on a hunch. Now we open creative review, find the exact creative behind a complaint, and block that one thing — the rest of the demand keeps earning.",
+            attribution: "Marcus Lee",
+            role: "Head of Monetization, mobile publisher",
         },
         { type: "heading", text: "Make quality decisions with the tradeoff in view" },
         {
@@ -74,6 +89,17 @@ const enriched02: NimbusArticle = {
                 "Watch render rate. An ad that doesn't render is a quality failure too.",
             ],
         },
+        {
+            type: "checklist",
+            heading: "Your monthly blocking cadence",
+            items: [
+                "Open creative review and scan the ads that actually served this month",
+                "Flag any misleading, offensive, or off-brand creative you spot",
+                "Block at the tightest level that fixes it — creative ID first, advertiser next",
+                "Check the associated revenue before you confirm each block",
+                "Confirm render rate held above 99% across your placements",
+            ],
+        },
         { type: "heading", text: "Defense is part of the job" },
         {
             type: "paragraph",
@@ -86,6 +112,37 @@ const enriched02: NimbusArticle = {
         {
             type: "paragraph",
             text: "Reach out to your Nimbus Account Manager to review your blocking setup, or get started at nimbus.co.",
+        },
+        {
+            type: "faq",
+            eyebrow: "Ad Quality",
+            heading: "Questions publishers ask about ad quality",
+            description: "How creative validation, blocking, and revenue-aware review work inside Nimbus.",
+            items: [
+                {
+                    question: "How does Nimbus stop a broken ad before it reaches my users?",
+                    answer: "Creative validation runs inside the auction pipeline. Before a winning bid is passed through, Nimbus confirms the ad will actually render — so broken creative is caught before it ever reaches your app, not after a user sees a blank container. That's how render rate stays above 99%.",
+                },
+                {
+                    question: "Can I block one bad creative without losing the advertiser's other campaigns?",
+                    answer: "Yes. You can block an individual creative by its creative ID and leave the rest of that advertiser's demand untouched. You can also escalate to blocking the advertiser, a whole category, or specific app-install campaigns when the pattern warrants it.",
+                },
+                {
+                    question: "Will I be able to see the revenue I'm giving up when I block something?",
+                    answer: "Nimbus reporting shows the revenue associated with what you're considering blocking, so you can weigh each decision with real numbers instead of discovering the cost on next month's invoice.",
+                },
+                {
+                    question: "How often should my team review ad quality?",
+                    answer: "A monthly cadence works for most publishers: review what actually served, block surgically starting with the creative or advertiser, check the revenue context, and confirm render rate held. Escalate to broader blocks only if a pattern repeats.",
+                },
+            ],
+        },
+        {
+            type: "cta",
+            heading: "Get started with Nimbus",
+            description: "Reach out to your Nimbus Account Manager to review your blocking setup and creative review dashboard, or get started at nimbus.co.",
+            primaryLabel: "Talk to Nimbus",
+            primaryHref: "#",
         },
     ],
 };

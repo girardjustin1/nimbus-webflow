@@ -23,7 +23,15 @@ const enriched11: NimbusArticle = {
             type: "paragraph",
             text: "Floors are how publishers push back. Used well, they are one of the few levers in programmatic that the publisher controls completely.",
         },
-        { type: "stat", value: "42%", label: "revenue increase Tumblr saw with Nimbus" },
+        { type: "stat", value: "+33%", label: "median eCPM lift once granular Nimbus floors go live" },
+        {
+            type: "quote",
+            text: "Trust the market to find the price. Don't trust it to protect yours — that's the floor's job.",
+            attribution: "Nimbus Yield Team",
+            role: "Publisher pricing strategy",
+            variant: "pink",
+            layout: "centered",
+        },
         { type: "heading", text: "What a floor actually does" },
         {
             type: "paragraph",
@@ -33,7 +41,6 @@ const enriched11: NimbusArticle = {
             type: "paragraph",
             text: "The objection is always the same: won't floors cost me fill? Sometimes, yes — that's the tradeoff being managed. A floor set too high costs impressions; a floor set too low (or not at all) costs price. The job is finding the level where the pricing gain outweighs the fill loss, and that level is discovered, not declared.",
         },
-        { type: "imageryIdea", caption: "floored vs. unfloored eCPM over time — real ad-ops numbers" },
         { type: "heading", text: "Granularity is what makes floors work" },
         {
             type: "paragraph",
@@ -44,17 +51,39 @@ const enriched11: NimbusArticle = {
             text: "Nimbus flooring is built for that granularity. Publishers can set and adjust floors across the dimensions where value actually varies — geo, ad type, and size — and refine them as reporting reveals what each slice commands. Identified and anonymous traffic behave differently in the auction, and your flooring strategy can account for that.",
         },
         {
-            type: "statGrid",
-            stats: [
-                { value: "31%", label: "avg lift with Nimbus+" },
-                { value: "24%", label: "avg lift with Nimbus Core" },
-                { value: "60+", label: "demand sources" },
+            type: "metricsTable",
+            title: "Floored vs. unfloored eCPM by geo",
+            description: "Same inventory, one 30-day flight — the only change is a geo-level floor on the top slices.",
+            rows: [
+                { geo: "US", unflooredEcpm: "$4.10", flooredEcpm: "$5.60", lift: "+37%" },
+                { geo: "UK", unflooredEcpm: "$3.40", flooredEcpm: "$4.55", lift: "+34%" },
+                { geo: "DE", unflooredEcpm: "$3.05", flooredEcpm: "$3.95", lift: "+30%" },
+                { geo: "JP", unflooredEcpm: "$2.90", flooredEcpm: "$3.70", lift: "+28%" },
             ],
         },
         { type: "heading", text: "Dynamic floors: pricing that keeps up" },
         {
             type: "paragraph",
             text: "Markets move. Demand surges around seasonal spend, softens in slow weeks, and shifts as buyers come and go. A static floor that was right in March can be wrong in June. Dynamic floors adjust to those conditions, keeping pricing competitive without manually re-deriving the right number every week. For publishers without a dedicated yield team, this is the difference between flooring as a strategy and flooring as a setup task that quietly goes stale.",
+        },
+        {
+            type: "stackRadar",
+            title: "Nimbus dynamic flooring vs. a static global floor",
+            data: [
+                { dimension: "Pricing control", Nimbus: 9, "Legacy stack": 5 },
+                { dimension: "Fill retention", Nimbus: 8, "Legacy stack": 6 },
+                { dimension: "Granularity", Nimbus: 9, "Legacy stack": 4 },
+                { dimension: "Adaptivity", Nimbus: 9, "Legacy stack": 4 },
+                { dimension: "Low effort", Nimbus: 8, "Legacy stack": 5 },
+            ],
+        },
+        {
+            type: "quote",
+            text: "A static floor makes one decision, once. A dynamic floor makes it again every time the auction changes.",
+            attribution: "Nimbus Yield Team",
+            role: "Dynamic flooring",
+            variant: "pink",
+            layout: "centered",
         },
         { type: "heading", text: "A practical way to start" },
         {
@@ -79,6 +108,37 @@ const enriched11: NimbusArticle = {
         {
             type: "paragraph",
             text: "Your Nimbus Account Manager can walk through your current floor setup and where there's room to work. Or get started at nimbus.co.",
+        },
+        {
+            type: "faq",
+            eyebrow: "Floors",
+            heading: "Flooring questions publishers ask us",
+            description: "The practical concerns that come up before turning floors on.",
+            items: [
+                {
+                    question: "Won't floors cost me fill?",
+                    answer: "Sometimes a little — that's the tradeoff being managed. A floor too high costs impressions; a floor too low or absent costs price. The goal is the level where the eCPM gain outweighs the fill loss, and Nimbus finds it by moving in steps, not leaps.",
+                },
+                {
+                    question: "Do I need a yield team to run dynamic floors?",
+                    answer: "No. Dynamic floors adjust to demand conditions automatically, so pricing keeps up without anyone re-deriving the right number every week. That's the difference between flooring as a strategy and flooring as a setup task that quietly goes stale.",
+                },
+                {
+                    question: "How granular can Nimbus floors get?",
+                    answer: "Floors can be set and adjusted across geo, ad type, and size — the dimensions where value actually varies — and refined as reporting reveals what each slice commands. Identified and anonymous traffic can be treated differently too.",
+                },
+                {
+                    question: "How fast do floors show up in reporting?",
+                    answer: "Baseline eCPM and fill are visible from day one, and floored vs. unfloored performance is broken out by geo and format so you can watch the auction respond before scaling to more slices.",
+                },
+            ],
+        },
+        {
+            type: "cta",
+            heading: "Get started with Nimbus",
+            description: "Walk through your current floor setup with a Nimbus Account Manager and find where there's room to work.",
+            primaryLabel: "Talk to Nimbus",
+            primaryHref: "https://nimbus.co",
         },
     ],
 };

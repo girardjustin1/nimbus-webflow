@@ -54,7 +54,7 @@ export const FAQAccordion04 = ({
     return (
         <section className="py-8 md:py-10">
             <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-6 rounded-3xl bg-white p-6 ring-1 ring-black/5 ring-inset md:p-10">
                     <div className="flex w-full max-w-3xl flex-col lg:max-w-xl">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">{eyebrow}</span>
 

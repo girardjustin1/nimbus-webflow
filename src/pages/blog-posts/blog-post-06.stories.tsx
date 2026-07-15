@@ -22,83 +22,131 @@ export const Floors: Story = { name: "Floors: Pricing Power", args: { article: n
 export const Prebid: Story = { name: "Prebid Is Now Live", args: { article: nimbusArticles[3] } };
 
 const enriched01: NimbusArticle = {
-    ...nimbusArticles[1],
+    ...nimbusArticles[0],
     body: [
+        { type: "heading", text: "What is the Nimbus Dynamic Unit?" },
         {
             type: "paragraph",
-            text: "Ask any publisher what they fear most about advertising and the answer is rarely about revenue. It's about the ad they never saw coming: the misleading creative, the offensive category, the broken video that froze their app — and the one-star review that followed.",
+            text: "The Dynamic Unit is Nimbus' proprietary offering for in-app programmatic native advertising. Our incredibly flexible unit can be customized to suit almost any app's unique visual and UX needs without sacrificing available demand — resulting in a great-looking, unique ad that appeals to both publishers and buyers.",
         },
-        { type: "stat", value: "1★", label: "the review a bad ad can cost you" },
+        {
+            type: "keyTakeaway",
+            title: "One unit, no compromise",
+            text: "A native ad that looks and behaves like your app — while accepting programmatic demand in multiple formats, so you never trade a native feel for fill.",
+        },
+        { type: "heading", text: "What Makes It Great?" },
         {
             type: "paragraph",
-            text: "Your app's rating is an asset. Most apps spend years earning it, and monetization is one of the few things that can damage it quickly. Protecting that rating is part of a monetization platform's job — and it's one reason ad quality tooling has been part of Nimbus since the beginning. This is how we approach it.",
+            lead: "Infinite customizability.",
+            text: "Unlike other SDKs, with the Nimbus Dynamic Unit you can make your ads look however you want. Full-screen horizontal slider like Snapchat? No problem. Full-screen vertical slider like TikTok? No problem. Want an X button? Great. No X button? Also great.",
         },
-        { type: "heading", text: "Quality starts before the ad ever renders" },
+        {
+            type: "imageryIdea",
+            caption: "Side-by-side mockups of the same Dynamic Unit styled three ways — a TikTok-style vertical slider, a Snapchat-style horizontal swipe, and an in-feed card — proving one unit adapts to any app's UX.",
+        },
         {
             type: "paragraph",
-            text: "Some quality problems aren't about offensive content — they're about ads that simply fail. An auction is won, the creative never renders, and the result is a blank container and a janky experience. Worse, a won auction that doesn't render isn't a billable impression — money left on the table.",
+            lead: "No demand limitations.",
+            text: "The Dynamic Unit accepts programmatic demand in multiple formats — it is not limited to 'native programmatic demand,' which is notoriously spotty and hard to come by. That gives you access to a vastly increased ecosystem of demand, letting a native unit fill and earn CPMs at levels more akin to static or video.",
         },
         {
-            type: "paragraph",
-            text: "Creative validation sits at the core of how Nimbus works, and at the core of our patent: before a winning bid is passed through, Nimbus confirms the ad will actually render. Broken creative is caught in the auction pipeline, not in your app.",
-        },
-        { type: "heading", text: "Blocking, at every level that matters" },
-        {
-            type: "paragraph",
-            text: "When something gets through that you never want to see again, blocking is your control surface. Within Nimbus, publishers can block:",
-        },
-        {
-            type: "list",
-            items: [
-                "Individual creatives — block a single bad creative by its creative ID, without touching the advertiser's other campaigns.",
-                "Advertisers — remove a specific advertiser from your auction entirely.",
-                "Categories — exclude entire content categories that don't belong in your app.",
-                "Apps — block app-install campaigns you don't want appearing in your experience.",
+            type: "statGrid",
+            stats: [
+                { value: "45+", label: "demand partners in the core auction" },
+                { value: "4", label: "creative formats accepted in one unit" },
+                { value: "+29%", label: "avg eCPM vs native programmatic", change: "vs. standard native", trend: "positive" },
             ],
+        },
+        { type: "heading", text: "The Dynamic Unit vs. Traditional 'Native'" },
+        {
+            type: "paragraph",
+            lead: "Publisher native ads",
+            text: "are ad units custom-designed by publishers to work with their specific product, layout, and experience — a fullscreen, side-swipeable unit like Tinder, or something even more custom. You are looking for demand to fill this unit.",
+        },
+        {
+            type: "paragraph",
+            lead: "Native programmatic ads",
+            text: "refer to a specific type of ad delivered by certain demand partners. These are delivered in 'pieces' and assembled per your app's specifications, giving you some ability to customize.",
+        },
+        {
+            type: "paragraph",
+            lead: "The Nimbus Dynamic Unit",
+            text: "means you are not required to fill your publisher native ad only with native programmatic ads. The unit accepts programmatic demand in multiple formats and widens the auction to bidders on interstitial, static, and video demand.",
         },
         {
             type: "checklist",
-            heading: "Block at every level",
+            heading: "Demand the Dynamic Unit accepts",
             items: [
-                "Individual creatives by ID",
-                "Specific advertisers",
-                "Whole categories",
-                "App-install campaigns",
+                "Programmatic interstitial",
+                "Static display and MRAID",
+                "VAST video",
+                "Meta native",
             ],
         },
         {
-            type: "paragraph",
-            text: "Granularity matters because blunt instruments cost money. Blocking an entire category to stop one bad actor sacrifices revenue you didn't need to give up. The right tool removes exactly the thing that's hurting you and nothing else.",
+            type: "quote",
+            text: "You shouldn't have to choose between an ad that looks like your app and an ad that actually fills. The Dynamic Unit is the refusal to make that trade.",
+            attribution: "Nimbus Product",
+            variant: "pink",
+            layout: "border",
         },
-        { type: "heading", text: "See what actually ran" },
+        { type: "heading", text: "Achieving a Native Feel" },
         {
             type: "paragraph",
-            text: "Blocklists built on suspicion are guesswork. Nimbus' creative review lets you see the ads that actually served in your app, so quality decisions are based on what ran rather than what you suspect ran.",
+            text: "Nimbus works with 45+ demand partners in the core auction, and we make each creative asset they send look great within the custom-designed Dynamic Unit. Once you've specified your design, there is no extra work: the Nimbus SDK automatically places the winning creative to best fit your container — resizing, scaling, or letterboxing as appropriate, or not scaling at all. The decisions are in your hands.",
         },
-        { type: "heading", text: "Make quality decisions with the tradeoff in view" },
         {
             type: "paragraph",
-            text: "Every block has a revenue consequence, and pretending otherwise doesn't help. Nimbus reporting shows the revenue associated with what you're considering blocking, so you can weigh the decision honestly. Sometimes the answer is yes — the point is that it should be your decision, made with real numbers, not a discovery on next month's invoice.",
+            text: "Depending on your implementation, your CPMs might not be as high as a static-only or video-only unit, but they will almost certainly be significantly higher than the CPMs from native programmatic ads. And you can A/B test to find the best performance for your app.",
         },
-        { type: "heading", text: "A practical cadence for publishers" },
         {
-            type: "list",
-            items: [
-                "Review monthly. Look at what served, not just what earned.",
-                "Block surgically. Start with the creative or advertiser, not the category. Escalate only if the pattern repeats.",
-                "Check the revenue context. Look at associated revenue before and after each block.",
-                "Watch render rate. An ad that doesn't render is a quality failure too.",
+            type: "metricsTable",
+            title: "eCPM by geo with the Dynamic Unit",
+            description: "The same placement, measured as a standard native unit versus the Nimbus Dynamic Unit. Because the Dynamic Unit widens the auction to interstitial, static, and video demand, eCPM rises across every geo — the Lift column is the gain over a standard native unit.",
+            rows: [
+                { geo: "US", unflooredEcpm: "$4.20", flooredEcpm: "$5.60", lift: "+33%" },
+                { geo: "UK", unflooredEcpm: "$3.40", flooredEcpm: "$4.45", lift: "+31%" },
+                { geo: "DE", unflooredEcpm: "$3.10", flooredEcpm: "$3.95", lift: "+27%" },
+                { geo: "JP", unflooredEcpm: "$3.80", flooredEcpm: "$4.75", lift: "+25%" },
             ],
         },
-        { type: "heading", text: "Defense is part of the job" },
+        { type: "heading", text: "How Top Publishers Use the Dynamic Unit" },
         {
             type: "paragraph",
-            text: "Monetization teams spend most of their energy on offense: more demand, better floors, higher eCPMs. Quality is the defensive side of the same job, and the publishers with the strongest long-term revenue treat it that way — because retention, ratings, and revenue are the same flywheel. Your reviews took years to earn; your ad stack should help you keep them.",
+            lead: "Timehop",
+            text: "deploys Snapchat-style, full-screen interstitial ads — auto-muted, without a close button or ad timers. Users swipe right to advance, up for a click-through.",
         },
-        { type: "keyTakeaway", text: "Your reviews took years to earn. Your ad stack should help you keep them." },
         {
             type: "paragraph",
-            text: "Reach out to your Nimbus Account Manager to review your blocking setup, or get started at nimbus.co.",
+            lead: "Tumblr",
+            text: "deploys a publisher native ad that scrolls along with in-app content, then appears full-screen before the user swipes it away.",
+        },
+        {
+            type: "paragraph",
+            lead: "Imgur",
+            text: "uses the Dynamic Unit similarly to Timehop, serving ads within a swipe-based in-app experience.",
+        },
+        {
+            type: "faq",
+            items: [
+                {
+                    question: "Is it difficult to implement?",
+                    answer: "No. It's only slightly more complex than a general Nimbus implementation. Most of the lift comes with customizations, which are up to you and can expand over time.",
+                },
+                {
+                    question: "Am I limited to programmatic interstitial?",
+                    answer: "No. You can also run static, video, and Meta native. Because static, MRAID, and VAST demand tends to outperform native programmatic in these units, few publishers end up implementing native programmatic — but we'll help if you want it.",
+                },
+                {
+                    question: "Is the Dynamic Unit oRTB compliant?",
+                    answer: "Yes. It uses the oRTB spec and is fully compliant with all standards for proper performance and reporting.",
+                },
+            ],
+        },
+        {
+            type: "cta",
+            heading: "Get started with Nimbus",
+            description: "Reach out to your Nimbus Account Manager to learn more about the Dynamic Unit, or get started at nimbus.co.",
         },
     ],
 };

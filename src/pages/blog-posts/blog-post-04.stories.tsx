@@ -22,12 +22,12 @@ const enriched03: NimbusArticle = {
         },
         {
             type: "checklist",
-            heading: "Prebid on Nimbus",
+            heading: "What Prebid on Nimbus actually means",
             items: [
-                "No new SDK — server-to-server",
-                "One unified auction, one set of rules",
-                "Accurate win/loss signaling",
-                "A cleaner supply path for buyers",
+                "Prebid Server demand connected server-to-server — no new SDK",
+                "One unified auction, one normalized set of rules",
+                "Accurate win/loss signaling passed to every participant",
+                "A cleaner, more trustworthy supply path for buyers",
             ],
         },
         { type: "heading", text: "Access the demand, skip the SDK tax" },
@@ -39,18 +39,38 @@ const enriched03: NimbusArticle = {
             type: "paragraph",
             text: "Nimbus connects Prebid Server demand server-to-server, through the integration you already have. No additional SDK. Your app size, startup time, and crash profile stay exactly where they are. The demand shows up. The overhead doesn't.",
         },
+        {
+            type: "keyTakeaway",
+            title: "The point",
+            text: "You get the demand without paying the SDK tax — no added app weight, no extra startup latency, no new crash surface.",
+        },
         { type: "heading", text: "One auction, one set of rules" },
         {
             type: "paragraph",
             text: "Most stacks don't run one auction. They run several — a wrapper deciding one thing, SDK bidders deciding another, a mediation layer arbitrating on top, server participants settling somewhere underneath. Decisioning gets fragmented across hops, and 'competition' starts to mean 'whoever the architecture happened to favor.'",
         },
         {
-            type: "keyTakeaway",
-            text: "Every bid competes on the same terms. That's the whole design.",
+            type: "demandMixPie",
+            title: "Every source competes in the same unified auction",
+            data: [
+                { name: "SDK bidders", value: 31 },
+                { name: "Exchange demand", value: 27 },
+                { name: "Prebid Server", value: 24 },
+                { name: "Direct", value: 18 },
+            ],
         },
         {
             type: "paragraph",
             text: "On Nimbus, Prebid Server demand competes in the same unified auction as every other source, under the same normalized rules. One environment. One set of signals. The highest bid wins, no matter the source — including this one. Prebid demand doesn't get a head start, and it doesn't get held back. It bids, and the auction decides.",
+        },
+        {
+            type: "quote",
+            text: "Most stacks add demand by adding architecture. That's backwards.",
+            attribution: "Kristen Smith, Chief Product Officer, Nimbus",
+            role: "Chief Product Officer, Nimbus",
+            avatarSrc: "https://i.pravatar.cc/150?img=47",
+            variant: "navy",
+            layout: "card",
         },
         { type: "heading", text: "Accurate signals in, accurate optimization out" },
         {
@@ -61,15 +81,25 @@ const enriched03: NimbusArticle = {
             type: "paragraph",
             text: "Nimbus passes accurate win/loss signaling to every participant. Prebid Server demand sees what actually happened, which means it can optimize correctly instead of chasing a distorted loop. No double dipping. No preferred networks. No shadow economics running in the background with their own scorekeeping.",
         },
+        {
+            type: "stackRadar",
+            title: "Nimbus vs. a legacy stack",
+            data: [
+                { dimension: "Transparency", Nimbus: 9, "Legacy stack": 4 },
+                { dimension: "Demand competition", Nimbus: 9, "Legacy stack": 6 },
+                { dimension: "Signal accuracy", Nimbus: 9, "Legacy stack": 5 },
+                { dimension: "Latency", Nimbus: 8, "Legacy stack": 4 },
+                { dimension: "Fill", Nimbus: 8, "Legacy stack": 6 },
+            ],
+        },
         { type: "heading", text: "A cleaner supply path for buyers" },
         {
             type: "paragraph",
             text: "DSPs are paying closer attention than ever to where their supply comes from and whether the path is honest. Accurate outcome representation and consistent signaling make Nimbus an easy supply path to trust — clean, agnostic, and free of the opaque intermediary auctions that erode supply-path efficiency. Better signaling on the publisher side is better SPO on the buyer side.",
         },
         {
-            type: "quote",
-            text: "Most stacks add demand by adding architecture. That's backwards.",
-            attribution: "Kristen Smith, Chief Product Officer, Nimbus", avatarSrc: "https://i.pravatar.cc/150?img=47",
+            type: "imageryIdea",
+            caption: "One clean supply path — demand sources feeding a single unified auction, with honest win/loss signals flowing back to every bidder.",
         },
         { type: "heading", text: "Infrastructure that doesn't need rebuilding" },
         {
@@ -80,10 +110,50 @@ const enriched03: NimbusArticle = {
             type: "paragraph",
             text: "Adding Prebid Server demand to Nimbus is one integration into a system designed to absorb the next one too. You adopt server-side innovation as it emerges, without re-architecting your stack to do it. Fewer custom integrations. Fewer moving parts. Less engineering overhead carried forward.",
         },
+        {
+            type: "quote",
+            text: "The job is to let more demand compete without making the system heavier or less fair. Every bid competes on the same terms. That's the whole design.",
+            attribution: "Kristen Smith, Chief Product Officer, Nimbus",
+            role: "Chief Product Officer, Nimbus",
+            avatarSrc: "https://i.pravatar.cc/150?img=47",
+            variant: "navy",
+            layout: "card",
+        },
         { type: "heading", text: "Activating Prebid Server demand" },
         {
             type: "paragraph",
             text: "Already a Nimbus publisher? Reach out to your Account Manager to turn on Prebid Server demand — no new integration required. New to Nimbus and want to see how it works in your stack? Request a demo at nimbus.co, and we'll walk through a test setup.",
+        },
+        {
+            type: "faq",
+            eyebrow: "FAQ",
+            heading: "Prebid on Nimbus, answered",
+            description: "The common questions publishers ask before turning on Prebid Server demand.",
+            items: [
+                {
+                    question: "Do I need to install another SDK?",
+                    answer: "No. Nimbus connects Prebid Server demand server-to-server through the integration you already have. Your app size, startup time, and crash profile stay exactly where they are.",
+                },
+                {
+                    question: "Does Prebid demand get preferential treatment in the auction?",
+                    answer: "No. Prebid Server demand competes in the same unified auction as every other source, under the same normalized rules. It doesn't get a head start, and it doesn't get held back — the highest bid wins.",
+                },
+                {
+                    question: "How does win/loss signaling work?",
+                    answer: "Nimbus passes accurate win/loss signaling to every participant, including Prebid Server demand. Partners see what actually happened, so they can optimize correctly instead of chasing a distorted loop.",
+                },
+                {
+                    question: "I'm already a Nimbus publisher. How do I turn it on?",
+                    answer: "Reach out to your Account Manager to activate Prebid Server demand — no new integration required. New to Nimbus? Request a demo at nimbus.co and we'll walk through a test setup.",
+                },
+            ],
+        },
+        {
+            type: "cta",
+            heading: "Get started with Nimbus",
+            description: "Bring Prebid Server demand into your unified auction — no new SDK, no re-architecture. Just more competition on equal terms.",
+            primaryLabel: "Request a demo",
+            primaryHref: "https://nimbus.co",
         },
     ],
 };

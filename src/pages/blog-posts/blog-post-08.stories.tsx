@@ -22,85 +22,149 @@ export const Floors: Story = { name: "Floors: Pricing Power", args: { article: n
 export const Prebid: Story = { name: "Prebid Is Now Live", args: { article: nimbusArticles[3] } };
 
 const enriched08: NimbusArticle = {
-    ...nimbusArticles[3],
+    ...nimbusArticles[0],
     body: [
+        { type: "heading", text: "What is the Nimbus Dynamic Unit?" },
         {
             type: "paragraph",
-            text: "The in-app monetization stack has a tendency to accumulate. A wrapper here, an SDK bidder there, a mediation layer on top, a few server hops underneath. Every addition promises more competition. Most of it adds weight, latency, and one more place where the auction stops being a fair fight.",
+            text: "The Dynamic Unit is Nimbus' proprietary offering for in-app programmatic native advertising. Our incredibly flexible unit can be customized to suit almost any app's unique visual and UX needs without sacrificing available demand — resulting in a great-looking, unique ad that appeals to both publishers and buyers.",
         },
+        {
+            type: "statGrid",
+            stats: [
+                { value: "45+", label: "demand partners in the core auction" },
+                { value: "4", label: "formats accepted: static, video, interstitial, Meta native" },
+                { value: "+52%", label: "eCPM vs. native programmatic", change: "vs. native-only fill", trend: "positive" },
+                { value: "94%", label: "fill rate on the Dynamic Unit", change: "+9 pts", trend: "positive" },
+            ],
+        },
+        { type: "heading", text: "What Makes It Great?" },
         {
             type: "paragraph",
-            text: "Today we're closing one of those gaps the right way. Prebid's auction demand is now live on Nimbus, giving publishers access to Prebid-native server-side demand that has historically been difficult to operationalize in mobile app environments — with no new SDK.",
-        },
-        {
-            type: "keyTakeaway",
-            text: "Every bid competes on the same terms. That's the whole design.",
-        },
-        { type: "heading", text: "Access the demand, skip the SDK tax" },
-        {
-            type: "paragraph",
-            text: "Bringing Prebid demand into an app has usually meant bringing in more app. Another SDK to install, another dependency to maintain, more startup latency, more crash surface, more weight in a build that's already carrying too much.",
-        },
-        {
-            type: "paragraph",
-            text: "Nimbus connects Prebid Server demand server-to-server, through the integration you already have. No additional SDK. Your app size, startup time, and crash profile stay exactly where they are. The demand shows up. The overhead doesn't.",
+            lead: "Infinite customizability.",
+            text: "Unlike other SDKs, with the Nimbus Dynamic Unit you can make your ads look however you want. Full-screen horizontal slider like Snapchat? No problem. Full-screen vertical slider like TikTok? No problem. Want an X button? Great. No X button? Also great.",
         },
         {
             type: "checklist",
-            heading: "Prebid on Nimbus",
+            heading: "Design it however you want",
             items: [
-                "No new SDK — server-to-server",
-                "One unified auction, one set of rules",
-                "Accurate win/loss signaling",
-                "A cleaner supply path for buyers",
+                "Full-screen horizontal slider, Snapchat-style",
+                "Full-screen vertical slider, TikTok-style",
+                "Close button, ad timers, or neither — your call",
+                "Auto-muted video with swipe-to-advance interactions",
             ],
         },
-        { type: "heading", text: "One auction, one set of rules" },
         {
             type: "paragraph",
-            text: "Most stacks don't run one auction. They run several — a wrapper deciding one thing, SDK bidders deciding another, a mediation layer arbitrating on top, server participants settling somewhere underneath. Decisioning gets fragmented across hops, and 'competition' starts to mean 'whoever the architecture happened to favor.'",
-        },
-        {
-            type: "paragraph",
-            text: "On Nimbus, Prebid Server demand competes in the same unified auction as every other source, under the same normalized rules. One environment. One set of signals. The highest bid wins, no matter the source — including this one. Prebid demand doesn't get a head start, and it doesn't get held back. It bids, and the auction decides.",
+            lead: "No demand limitations.",
+            text: "The Dynamic Unit accepts programmatic demand in multiple formats — it is not limited to 'native programmatic demand,' which is notoriously spotty and hard to come by. That gives you access to a vastly increased ecosystem of demand, letting a native unit fill and earn CPMs at levels more akin to static or video.",
         },
         {
             type: "quote",
-            text: "Most stacks add demand by adding architecture. That's backwards.",
-            attribution: "Kristen Smith, Chief Product Officer, Nimbus", avatarSrc: "https://i.pravatar.cc/150?img=47",
+            text: "We stopped choosing between a native look and real demand. We theme the ad to our feed and still pull static and video CPMs on every impression.",
+            attribution: "Priya Nadar",
+            role: "Director of Monetization, social app",
+            avatarSrc: "https://i.pravatar.cc/150?img=45",
+            variant: "pink",
+            layout: "centered",
         },
-        { type: "heading", text: "Accurate signals in, accurate optimization out" },
+        { type: "heading", text: "The Dynamic Unit vs. Traditional 'Native'" },
         {
             type: "paragraph",
-            text: "Demand partners can only optimize against the feedback they receive. When win and loss signaling is distorted — inconsistent across wrappers, lost in a server hop, or quietly reshaped inside a managed side auction — partners end up bidding against a picture of the auction that isn't real.",
-        },
-        {
-            type: "paragraph",
-            text: "Nimbus passes accurate win/loss signaling to every participant. Prebid Server demand sees what actually happened, which means it can optimize correctly instead of chasing a distorted loop. No double dipping. No preferred networks. No shadow economics running in the background with their own scorekeeping.",
-        },
-        { type: "heading", text: "A cleaner supply path for buyers" },
-        {
-            type: "paragraph",
-            text: "DSPs are paying closer attention than ever to where their supply comes from and whether the path is honest. Accurate outcome representation and consistent signaling make Nimbus an easy supply path to trust — clean, agnostic, and free of the opaque intermediary auctions that erode supply-path efficiency. Better signaling on the publisher side is better SPO on the buyer side.",
-        },
-        { type: "heading", text: "Infrastructure that doesn't need rebuilding" },
-        {
-            type: "paragraph",
-            text: "The pace of change in this space isn't slowing down. New wrappers, new endpoints, new server-side innovations keep arriving, and publishers who hard-wire their monetization to any one of them end up rebuilding every time the ground shifts.",
+            lead: "Publisher native ads",
+            text: "are ad units custom-designed by publishers to work with their specific product, layout, and experience — a fullscreen, side-swipeable unit like Tinder, or something even more custom. You are looking for demand to fill this unit.",
         },
         {
             type: "paragraph",
-            text: "Adding Prebid Server demand to Nimbus is one integration into a system designed to absorb the next one too. You adopt server-side innovation as it emerges, without re-architecting your stack to do it. Fewer custom integrations. Fewer moving parts. Less engineering overhead carried forward.",
+            lead: "Native programmatic ads",
+            text: "refer to a specific type of ad delivered by certain demand partners. These are delivered in 'pieces' and assembled per your app's specifications, giving you some ability to customize.",
+        },
+        {
+            type: "paragraph",
+            lead: "The Nimbus Dynamic Unit",
+            text: "means you are not required to fill your publisher native ad only with native programmatic ads. The unit accepts programmatic demand in multiple formats and widens the auction to bidders on interstitial, static, and video demand.",
+        },
+        {
+            type: "stackRadar",
+            title: "Dynamic Unit vs. standard native, scored across what matters",
+            data: [
+                { dimension: "Customizability", Nimbus: 9, "Legacy stack": 4 },
+                { dimension: "Demand breadth", Nimbus: 9, "Legacy stack": 5 },
+                { dimension: "Fill", Nimbus: 8, "Legacy stack": 6 },
+                { dimension: "CPM", Nimbus: 8, "Legacy stack": 5 },
+                { dimension: "Native feel", Nimbus: 9, "Legacy stack": 7 },
+            ],
+        },
+        { type: "heading", text: "Achieving a Native Feel" },
+        {
+            type: "paragraph",
+            text: "Nimbus works with 45+ demand partners in the core auction, and we make each creative asset they send look great within the custom-designed Dynamic Unit. Once you've specified your design, there is no extra work: the Nimbus SDK automatically places the winning creative to best fit your container — resizing, scaling, or letterboxing as appropriate, or not scaling at all. The decisions are in your hands.",
+        },
+        {
+            type: "paragraph",
+            text: "Depending on your implementation, your CPMs might not be as high as a static-only or video-only unit, but they will almost certainly be significantly higher than the CPMs from native programmatic ads. And you can A/B test to find the best performance for your app.",
+        },
+        {
+            type: "keyTakeaway",
+            title: "The design decisions stay yours",
+            text: "Nimbus fits the winning creative to the container you designed — resizing, scaling, or letterboxing — so every format still looks native without extra work on your side.",
+        },
+        { type: "heading", text: "How Top Publishers Use the Dynamic Unit" },
+        {
+            type: "paragraph",
+            lead: "Timehop",
+            text: "deploys Snapchat-style, full-screen interstitial ads — auto-muted, without a close button or ad timers. Users swipe right to advance, up for a click-through.",
+        },
+        {
+            type: "paragraph",
+            lead: "Tumblr",
+            text: "deploys a publisher native ad that scrolls along with in-app content, then appears full-screen before the user swipes it away.",
+        },
+        {
+            type: "paragraph",
+            lead: "Imgur",
+            text: "uses the Dynamic Unit similarly to Timehop, serving ads within a swipe-based in-app experience.",
         },
         {
             type: "quote",
-            text: "Most stacks add demand by adding architecture — another SDK, another wrapper, another auction running quietly off to the side. That's backwards. The job is to let more demand compete without making the system heavier or less fair. Every bid competes on the same terms. That's the whole design.",
-            attribution: "Kristen Smith, Chief Product Officer, Nimbus", avatarSrc: "https://i.pravatar.cc/150?img=47",
+            text: "Our swipe experience is the product, so the ad had to live inside it, not on top of it. We kept that flow and widened the auction at the same time.",
+            attribution: "Jordan Wells",
+            role: "VP Product, swipe-based content app",
+            avatarSrc: "https://i.pravatar.cc/150?img=52",
+            variant: "pink",
+            layout: "centered",
         },
-        { type: "heading", text: "Activating Prebid Server demand" },
         {
-            type: "paragraph",
-            text: "Already a Nimbus publisher? Reach out to your Account Manager to turn on Prebid Server demand — no new integration required. New to Nimbus and want to see how it works in your stack? Request a demo at nimbus.co, and we'll walk through a test setup.",
+            type: "statGrid",
+            stats: [
+                { value: "+63%", label: "eCPM vs. native programmatic at a swipe-based publisher", trend: "positive" },
+                { value: "97%", label: "impressions rendered fully native", change: "+4 pts", trend: "positive" },
+                { value: "0", label: "extra design work required after setup" },
+            ],
+        },
+        {
+            type: "faq",
+            eyebrow: "FAQ",
+            heading: "Common questions about the Dynamic Unit",
+            items: [
+                {
+                    question: "Is it difficult to implement?",
+                    answer: "No. It's only slightly more complex than a general Nimbus implementation. Most of the lift comes with customizations, which are up to you and can expand over time.",
+                },
+                {
+                    question: "Am I limited to programmatic interstitial?",
+                    answer: "No. You can also run static, video, and Meta native. Because static, MRAID, and VAST demand tends to outperform native programmatic in these units, few publishers end up implementing native programmatic — but we'll help if you want it.",
+                },
+                {
+                    question: "Is the Dynamic Unit oRTB compliant?",
+                    answer: "Yes. It uses the oRTB spec and is fully compliant with all standards for proper performance and reporting.",
+                },
+            ],
+        },
+        {
+            type: "cta",
+            heading: "Get started with Nimbus",
+            description: "Reach out to your Nimbus Account Manager to learn more about the Dynamic Unit, or get started at nimbus.co.",
         },
     ],
 };

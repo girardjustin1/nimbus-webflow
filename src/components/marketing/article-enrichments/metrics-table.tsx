@@ -20,13 +20,18 @@ const defaultRows: MetricsTableRow[] = [
 ];
 
 /** A data table comparing Nimbus floored vs. unfloored eCPM across key geos. */
-export const MetricsTable = ({ rows = defaultRows }: { rows?: MetricsTableRow[] }) => (
+export const MetricsTable = ({
+    rows = defaultRows,
+    title = "Floored vs. unfloored eCPM by geo",
+    description = "Impact of applying price floors on eCPM across key markets.",
+}: {
+    rows?: MetricsTableRow[];
+    title?: string;
+    description?: string;
+}) => (
     <div className="my-10">
         <TableCard.Root>
-            <TableCard.Header
-                title="Floored vs. unfloored eCPM by geo"
-                description="Impact of applying price floors on eCPM across key markets."
-            />
+            <TableCard.Header title={title} description={description} />
 
             <Table aria-label="Floored vs. unfloored eCPM by geo">
                 <Table.Header>
