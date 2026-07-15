@@ -33,7 +33,7 @@ const enriched08: NimbusArticle = {
             type: "statGrid",
             stats: [
                 { value: "45+", label: "demand partners in the core auction" },
-                { value: "4", label: "formats accepted: static, video, interstitial, Meta native" },
+                { value: "4", label: "formats accepted in one unit" },
                 { value: "+52%", label: "eCPM vs. native programmatic", change: "vs. native-only fill", trend: "positive" },
                 { value: "94%", label: "fill rate on the Dynamic Unit", change: "+9 pts", trend: "positive" },
             ],
@@ -137,7 +137,7 @@ const enriched08: NimbusArticle = {
         {
             type: "statGrid",
             stats: [
-                { value: "+63%", label: "eCPM vs. native programmatic at a swipe-based publisher", trend: "positive" },
+                { value: "+63%", label: "eCPM vs. native programmatic", trend: "positive" },
                 { value: "97%", label: "impressions rendered fully native", change: "+4 pts", trend: "positive" },
                 { value: "0", label: "extra design work required after setup" },
             ],

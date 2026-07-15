@@ -1,35 +1,35 @@
-import { MetricsSimple } from "@/components/application/metrics/metrics";
-
 export interface MetricsRowItem {
     /** Big number, e.g. "+31%" or "98%". */
     title: string;
-    /** Label under/over the number, e.g. "eCPM lift". */
+    /** Label above the number, e.g. "Avg eCPM lift". */
     subtitle: string;
-    /** Optional change badge value, e.g. "12%". Omit to hide the indicator. */
+    /** Optional — retained for data compatibility; not rendered as a badge. */
     change?: string;
-    /** Direction of the change badge. Defaults to "positive". */
+    /** Optional — retained for data compatibility. */
     trend?: "positive" | "negative";
 }
 
 const defaultMetrics: MetricsRowItem[] = [
-    { title: "+31%", subtitle: "Avg eCPM lift", change: "31%", trend: "positive" },
-    { title: "98%", subtitle: "Fill rate", change: "4%", trend: "positive" },
-    { title: "60+", subtitle: "Demand sources", change: "12", trend: "positive" },
-    { title: "99.9%", subtitle: "Ad render rate", change: "0.4%", trend: "positive" },
+    { title: "+31%", subtitle: "Avg eCPM lift" },
+    { title: "98%", subtitle: "Fill rate" },
+    { title: "60+", subtitle: "Demand sources" },
+    { title: "99.9%", subtitle: "Ad render rate" },
 ];
 
-/** A responsive row of Untitled UI metric cards — Nimbus ad-tech results at a glance. */
+/**
+ * A responsive row of Nimbus metric cards — clean white cards matching the
+ * infographic style (rounded-xl / bg-white / subtle ring). No action menu.
+ */
 export const MetricsRow = ({ metrics = defaultMetrics }: { metrics?: MetricsRowItem[] }) => (
-    <div className="my-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="my-10 flex flex-col gap-5 sm:flex-row">
         {metrics.map((metric) => (
-            <MetricsSimple
+            <div
                 key={metric.subtitle}
-                type="modern"
-                trend={metric.trend ?? "positive"}
-                title={metric.title}
-                subtitle={metric.subtitle}
-                change={metric.change}
-            />
+                className="flex flex-1 flex-col gap-3 rounded-xl bg-white p-6 shadow-xs-skeuomorphic ring-1 ring-primary ring-inset"
+            >
+                <p className="line-clamp-2 text-sm font-medium text-tertiary">{metric.subtitle}</p>
+                <p className="mt-auto text-display-sm font-semibold text-primary">{metric.title}</p>
+            </div>
         ))}
     </div>
 );

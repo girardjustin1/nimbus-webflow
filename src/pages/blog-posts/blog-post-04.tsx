@@ -190,7 +190,7 @@ const ContentSplitImage04 = ({ article }: { article: NimbusArticle }) => {
                     <h1 className="mt-3 text-display-md font-extrabold text-primary md:mt-4 md:text-display-lg">{article.title}</h1>
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:max-w-120 md:text-xl">{article.summary}</p>
                     <div className="mt-8 flex items-center gap-3 md:mt-12">
-                        <div className="size-12 rounded-full object-cover bg-[#84D7D9]" />
+                        <img src={article.author.avatarUrl} alt={article.author.name} className="size-12 rounded-full object-cover" />
                         <div>
                             <p className="text-md font-semibold text-primary">{article.author.name}</p>
                             <p className="text-md text-tertiary">{article.category.name}</p>
@@ -198,7 +198,7 @@ const ContentSplitImage04 = ({ article }: { article: NimbusArticle }) => {
                     </div>
                 </div>
 
-                <img src="/unsplash/abstract-technology-gradient-blue/abstract-technology-gradient-blue-FpC3XIFM2Bg.jpg" alt="Concentric blue light circles" className="order-first h-60 w-screen max-w-none object-cover md:order-1 md:h-180 md:w-full md:max-w-full" />
+                <img src="/unsplash/futuristic-network-connection-technology/futuristic-network-connection-technology-pREq0ns_p_E.jpg" alt="Abstract blue network of connected nodes" className="order-first h-60 w-screen max-w-none object-cover md:order-1 md:h-180 md:w-full md:max-w-full" />
             </div>
 
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:py-24">

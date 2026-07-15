@@ -63,7 +63,7 @@ const enriched02: NimbusArticle = {
                 { geo: "JP", unflooredEcpm: "$2.90", flooredEcpm: "$3.63", lift: "+25%" },
             ],
         },
-        { type: "stat", value: "+31%", label: "average eCPM lift across geos after granular floors" },
+        { type: "stat", value: "+31%", label: "avg eCPM lift across geos" },
         {
             type: "paragraph",
             text: "Nimbus flooring is built for that granularity. Publishers can set and adjust floors across the dimensions where value actually varies — geo, ad type, and size — and refine them as reporting reveals what each slice commands. Identified and anonymous traffic behave differently in the auction, and your flooring strategy can account for that.",

@@ -24,14 +24,14 @@ const ContentLargeImage02 = ({ article }: { article: NimbusArticle }) => {
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">{article.summary}</p>
 
                     <div className="mt-8 flex items-center gap-4">
-                        <div className="size-14 rounded-full object-cover bg-[#84D7D9]" />
+                        <img src={article.author.avatarUrl} alt={article.author.name} className="size-14 rounded-full object-cover" />
                         <div>
                             <p className="text-lg font-semibold text-primary">{article.author.name}</p>
                             <p className="text-md text-tertiary">{article.publishedAt}</p>
                         </div>
                     </div>
                 </div>
-                <img src="/unsplash/modern-office-business-team/modern-office-business-team-q1jHh0MWTFk.jpg" alt="Diverse professionals collaborating in an office" className="mx-auto mt-12 h-60 w-full object-cover md:mt-16 md:h-140 md:max-w-5xl" />
+                <img src="/unsplash/futuristic-network-connection-technology/futuristic-network-connection-technology-nGoCBxiaRO0.jpg" alt="Abstract sphere of connected network nodes" className="mx-auto mt-12 h-60 w-full object-cover md:mt-16 md:h-140 md:max-w-5xl" />
             </div>
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
                 <div className="mx-auto max-w-prose md:max-w-180">

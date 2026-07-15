@@ -191,7 +191,7 @@ const ContentSplitImage02 = ({ article }: { article: NimbusArticle }) => {
                         <h1 className="mt-3 text-display-md font-extrabold text-primary md:mt-4 md:text-display-lg">{article.title}</h1>
                         <p className="mt-4 text-lg text-tertiary md:mt-6 md:max-w-120 md:text-xl">{article.summary}</p>
                         <div className="mt-8 flex items-center gap-3 md:mt-12">
-                            <div className="size-12 rounded-full object-cover bg-[#84D7D9]" />
+                            <img src={article.author.avatarUrl} alt={article.author.name} className="size-12 rounded-full object-cover" />
                             <div>
                                 <p className="text-md font-semibold text-primary">{article.author.name}</p>
                                 <p className="text-md text-tertiary">{article.category.name}</p>
@@ -200,7 +200,7 @@ const ContentSplitImage02 = ({ article }: { article: NimbusArticle }) => {
                     </div>
                 </div>
                 <div className="flex items-center justify-center px-4 md:h-180 md:w-1/2 md:bg-secondary md:p-8">
-                    <img src="/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-9e9PD9blAto.jpg" alt="Person holding a smartphone showing an app" className="h-100 w-full object-cover md:h-140 md:w-100" />
+                    <img src="/unsplash/person-using-smartphone-mobile-app/person-using-smartphone-mobile-app-8pCtwj37VB4.jpg" alt="Person using a mobile app on a smartphone" className="h-100 w-full object-cover md:h-140 md:w-100" />
                 </div>
             </div>
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:py-24">

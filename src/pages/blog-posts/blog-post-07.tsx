@@ -34,7 +34,7 @@ const ContentLargeImage04 = ({ article }: { article: NimbusArticle }) => {
                         <p className="mt-4 max-w-3xl text-lg text-primary_on-brand md:mt-6 md:text-xl">{article.summary}</p>
 
                         <div className="mt-8 flex items-center gap-3 text-left">
-                            <div className="size-12 rounded-full object-cover bg-[#84D7D9]" />
+                            <img src={article.author.avatarUrl} alt={article.author.name} className="size-12 rounded-full object-cover" />
                             <div>
                                 <p className="text-md font-semibold text-tertiary_on-brand">{article.author.name}</p>
                                 <p className="text-md text-primary_on-brand">{article.publishedAt}</p>
@@ -44,7 +44,7 @@ const ContentLargeImage04 = ({ article }: { article: NimbusArticle }) => {
                 </div>
             </div>
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
-                <img src="/unsplash/abstract-technology-gradient-blue/abstract-technology-gradient-blue-6EQZ2JcHZmk.jpg" alt="Abstract blue technology gradient" className="mx-auto -mt-16 h-60 w-full object-cover md:-mt-24 md:h-160" />
+                <img src="/unsplash/digital-marketing-technology-abstract-blue/digital-marketing-technology-abstract-blue-qY-XlCf9Zs4.jpg" alt="Blue glowing particle waves" className="mx-auto -mt-16 h-60 w-full object-cover md:-mt-24 md:h-160" />
                 <div className="mx-auto max-w-prose pt-16 md:max-w-180 md:pt-24">
                     <ArticleBody blocks={article.body} className="mx-auto max-w-none" />
 

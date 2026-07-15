@@ -27,7 +27,7 @@ const defaultData: RadarDimension[] = [
 
 /** A radar chart comparing Nimbus against a legacy ad stack across five dimensions. */
 export const StackComparisonRadar = ({ title = "Nimbus vs. a legacy stack", data = defaultData }: StackComparisonRadarProps) => (
-    <div className="my-10 flex flex-col gap-4 rounded-xl bg-white p-6 ring-1 ring-black/5 ring-inset">
+    <div className="my-10 flex flex-col gap-4 rounded-xl bg-white p-6 shadow-xs-skeuomorphic ring-1 ring-primary ring-inset">
         <h3 className="text-[18px] font-semibold text-[#181d27]">{title}</h3>
 
         <ResponsiveContainer width="100%" height={340}>

@@ -214,7 +214,7 @@ const ContentAlternative02 = ({ article }: { article: NimbusArticle }) => {
                 <Carousel.Root opts={{ align: "start" }} className="mt-12 md:mt-16">
                     <Carousel.Content overflowHidden={false} className="gap-6 pr-4 md:pr-8 lg:gap-8">
                         {[
-                            { alt: "Analytics dashboard on a laptop screen", imgUrl: "/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-JKUTrJ4vK00.jpg" },
+                            { alt: "Woman using a mobile app on her phone", imgUrl: "/unsplash/person-using-smartphone-mobile-app/person-using-smartphone-mobile-app-HbyYFFokvm0.jpg" },
                             { alt: "Person holding a smartphone", imgUrl: "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-n31x0hhnzOs.jpg" },
                             { alt: "Illuminated billboards on a building at dusk", imgUrl: "/unsplash/advertising-billboard-city/advertising-billboard-city-5GBvm1lhrFM.jpg" },
                             { alt: "Server rack with blinking green lights", imgUrl: "/unsplash/server-network-data-center/server-network-data-center-VHmBX7FnXw0.jpg" },
@@ -247,7 +247,7 @@ const ContentAlternative02 = ({ article }: { article: NimbusArticle }) => {
 
                     <div className="-mt-px flex flex-col items-start justify-between gap-y-6 border-t border-secondary pt-6 md:flex-row">
                         <div className="flex items-center gap-3 md:gap-4">
-                            <div className="size-12 rounded-full object-cover md:size-14 bg-[#84D7D9]" />
+                            <img src={article.author.avatarUrl} alt={article.author.name} className="size-12 rounded-full object-cover md:size-14" />
                             <div>
                                 <p className="text-md font-semibold text-primary md:text-lg">{article.author.name}</p>
                                 <p className="text-md text-tertiary">{article.category.name}</p>

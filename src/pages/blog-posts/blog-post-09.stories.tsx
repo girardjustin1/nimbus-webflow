@@ -25,7 +25,7 @@ const enriched00: NimbusArticle = {
     ...nimbusArticles[0],
     body: [
         ...nimbusArticles[0].body.slice(0, 2),
-        { type: "stat", value: "45+", label: "demand partners competing in the core auction" },
+        { type: "stat", value: "45+", label: "demand partners in the core auction" },
         ...nimbusArticles[0].body.slice(2, 5),
         {
             type: "keyTakeaway",
@@ -46,7 +46,7 @@ const enriched00: NimbusArticle = {
                 { geo: "JP", unflooredEcpm: "$3.60", flooredEcpm: "$5.00", lift: "+39%" },
             ],
         },
-        { type: "stat", value: "+34%", label: "median eCPM lift vs. native programmatic demand alone" },
+        { type: "stat", value: "+34%", label: "median eCPM lift vs. native" },
         {
             type: "quote",
             text: "A native unit shouldn't have to choose between looking right and filling. Opening the Dynamic Unit to static, video, and interstitial demand is what lets a native placement earn like one that isn't.",

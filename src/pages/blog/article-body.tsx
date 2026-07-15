@@ -9,7 +9,6 @@ import {
     StackComparisonRadar,
     StatCallout,
 } from "@/components/marketing/article-enrichments/article-enrichments";
-import { CTASimpleCenteredBrand } from "@/components/marketing/cta/cta-simple-centered-brand";
 import { FAQAccordion04 } from "@/components/marketing/faq/faq-accordion-04";
 import type { BlogBlock } from "@/content/blog/nimbus-articles";
 
@@ -26,9 +25,9 @@ const Block = ({ block }: { block: BlogBlock }) => {
     if (block.type === "faq") {
         return <FAQAccordion04 faqs={block.items} eyebrow={block.eyebrow} heading={block.heading} description={block.description} />;
     }
-    if (block.type === "cta") {
-        return <CTASimpleCenteredBrand heading={block.heading} description={block.description} primaryLabel={block.primaryLabel} primaryHref={block.primaryHref} />;
-    }
+    // CTA ("Get started with Nimbus") removed from article pages for now — the component and
+    // its standalone story are kept; re-enable by rendering CTASimpleCenteredBrand here.
+    if (block.type === "cta") return null;
     if (block.type === "heading") {
         return <h2 className="mt-10 mb-3 text-[28px] leading-[1.2] font-extrabold text-[#181d27]">{block.text}</h2>;
     }

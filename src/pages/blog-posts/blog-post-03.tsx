@@ -185,7 +185,7 @@ const ContentAlternative03 = ({ article }: { article: NimbusArticle }) => {
                     <h1 className="mt-4 text-display-md font-extrabold text-primary md:text-display-lg">{article.title}</h1>
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">{article.summary}</p>
                     <div className="mt-8 flex items-center gap-3 md:mt-auto">
-                        <div className="size-12 rounded-full object-cover bg-[#84D7D9]" />
+                        <img src={article.author.avatarUrl} alt={article.author.name} className="size-12 rounded-full object-cover" />
                         <div>
                             <p className="text-md font-semibold text-primary">{article.author.name}</p>
                             <p className="text-md text-tertiary">
@@ -201,7 +201,7 @@ const ContentAlternative03 = ({ article }: { article: NimbusArticle }) => {
                     </div>
                 </div>
 
-                <img src="/unsplash/abstract-technology-gradient-blue/abstract-technology-gradient-blue-eEjlchmojyU.jpg" alt="Blue glowing technology waves" className="h-80 w-full object-cover md:order-first md:h-200" />
+                <img src="/unsplash/financial-trading-data-dashboard-screen/financial-trading-data-dashboard-screen-fiXLQXAhCfk.jpg" alt="Stock market candlestick chart on a screen" className="h-80 w-full object-cover md:order-first md:h-200" />
             </div>
 
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:py-24">

@@ -69,7 +69,7 @@ export const ContentSplitImage03 = ({ article }: { article: NimbusArticle }) => 
                                 ].map((item) => (
                                     <li key={item.name}>
                                         <div className="flex items-center gap-3">
-                                            <div className="size-12 rounded-full object-cover bg-[#84D7D9]" />
+                                            <img src={item.avatarUrl} alt={item.name} className="size-12 rounded-full object-cover" />
                                             <div>
                                                 <p className="text-md font-semibold text-primary">{item.name}</p>
                                                 <p className="text-md text-tertiary">{item.role}</p>
@@ -131,7 +131,7 @@ export const ContentSplitImage03 = ({ article }: { article: NimbusArticle }) => 
                                     ].map((item) => (
                                         <li key={item.name}>
                                             <div className="flex items-center gap-3">
-                                                <div className="size-12 rounded-full object-cover bg-[#84D7D9]" />
+                                                <img src={item.avatarUrl} alt={item.name} className="size-12 rounded-full object-cover" />
                                                 <div>
                                                     <p className="text-md font-semibold text-primary">{item.name}</p>
                                                     <p className="text-md text-tertiary">{item.role}</p>

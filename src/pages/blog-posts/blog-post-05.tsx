@@ -193,7 +193,7 @@ const ContentSplitImage01 = ({ article }: { article: NimbusArticle }) => {
                     <p className="mt-4 max-w-140 text-lg text-tertiary md:mt-6 md:text-xl">{article.summary}</p>
 
                     <div className="mt-8 flex items-center gap-3 md:mt-12">
-                        <div className="size-12 rounded-full object-cover bg-[#84D7D9]" />
+                        <img src={article.author.avatarUrl} alt={article.author.name} className="size-12 rounded-full object-cover" />
                         <div>
                             <p className="text-md font-semibold text-primary">{article.author.name}</p>
                             <p className="text-md text-tertiary">Published {article.publishedAt}</p>
@@ -201,7 +201,7 @@ const ContentSplitImage01 = ({ article }: { article: NimbusArticle }) => {
                     </div>
                 </div>
 
-                <img src="/unsplash/abstract-technology-gradient-blue/abstract-technology-gradient-blue-dGN0ZrJvaOk.jpg" alt="Blue and black abstract technology pattern" className="mt-16 h-100 w-full object-cover md:mt-0 md:ml-auto md:h-180 md:w-140 md:max-w-[50vw]" />
+                <img src="/unsplash/abstract-data-visualization-network/abstract-data-visualization-network-n6B49lTx7NM.jpg" alt="Abstract data visualization light patterns" className="mt-16 h-100 w-full object-cover md:mt-0 md:ml-auto md:h-180 md:w-140 md:max-w-[50vw]" />
 
                 <svg
                     className="absolute bottom-[53px] left-1/2 hidden -translate-x-[62%] lg:block"

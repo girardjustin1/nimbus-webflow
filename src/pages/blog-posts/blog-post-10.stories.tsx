@@ -29,7 +29,7 @@ const enriched01: NimbusArticle = {
         {
             type: "statGrid",
             stats: [
-                { value: "45+", label: "demand partners competing per auction" },
+                { value: "45+", label: "demand partners in the core auction" },
                 { value: "3.2×", label: "eCPM vs. native programmatic", change: "multi-format demand", trend: "positive" },
                 { value: "4", label: "creative formats in a single unit" },
                 { value: "100%", label: "customizable to your app's UX" },

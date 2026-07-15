@@ -33,7 +33,7 @@ const enriched00: NimbusArticle = {
             type: "statGrid",
             stats: [
                 { value: "45+", label: "demand partners in the core auction" },
-                { value: "4", label: "formats: interstitial, static, video, native" },
+                { value: "4", label: "formats in one unit" },
                 { value: "100%", label: "oRTB compliant" },
             ],
         },

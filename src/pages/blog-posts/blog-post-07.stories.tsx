@@ -29,7 +29,7 @@ const enriched07: NimbusArticle = {
             type: "paragraph",
             text: "The Dynamic Unit is Nimbus' proprietary offering for in-app programmatic native advertising. Our incredibly flexible unit can be customized to suit almost any app's unique visual and UX needs without sacrificing available demand — resulting in a great-looking, unique ad that appeals to both publishers and buyers.",
         },
-        { type: "stat", value: "45+", label: "demand partners competing in the Nimbus core auction" },
+        { type: "stat", value: "45+", label: "demand partners in the core auction" },
         { type: "heading", text: "What Makes It Great?" },
         {
             type: "paragraph",
@@ -80,7 +80,7 @@ const enriched07: NimbusArticle = {
             variant: "navy",
             layout: "card",
         },
-        { type: "stat", value: "4", label: "programmatic formats fill one unit: interstitial, static, video, and native" },
+        { type: "stat", value: "4", label: "programmatic formats in one unit" },
         { type: "heading", text: "Achieving a Native Feel" },
         {
             type: "paragraph",
@@ -110,7 +110,7 @@ const enriched07: NimbusArticle = {
             lead: "Imgur",
             text: "uses the Dynamic Unit similarly to Timehop, serving ads within a swipe-based in-app experience.",
         },
-        { type: "stat", value: "3", label: "flagship apps already ship it: Timehop, Tumblr, and Imgur" },
+        { type: "stat", value: "3", label: "flagship apps already ship it" },
         {
             type: "quote",
             text: "Timehop, Tumblr, and Imgur all ship completely different-looking units — and they all pull from the same full programmatic auction underneath. That's the whole point of the Dynamic Unit.",

@@ -129,9 +129,9 @@ export const unsplashImages: UnsplashImage[] = [
     },
     {
         "id": "q8U1YgBaRQk",
-        "query": "mobile phone app technology",
-        "collection": "mobile-phone-app-technology",
-        "file": "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-q8U1YgBaRQk.jpg",
+        "query": "person using smartphone mobile app",
+        "collection": "person-using-smartphone-mobile-app",
+        "file": "/unsplash/person-using-smartphone-mobile-app/person-using-smartphone-mobile-app-q8U1YgBaRQk.jpg",
         "width": 5032,
         "height": 3355,
         "color": "#d9d9d9",
@@ -145,9 +145,9 @@ export const unsplashImages: UnsplashImage[] = [
     },
     {
         "id": "sScmok4Iq1o",
-        "query": "mobile phone app technology",
-        "collection": "mobile-phone-app-technology",
-        "file": "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-sScmok4Iq1o.jpg",
+        "query": "person using smartphone mobile app",
+        "collection": "person-using-smartphone-mobile-app",
+        "file": "/unsplash/person-using-smartphone-mobile-app/person-using-smartphone-mobile-app-sScmok4Iq1o.jpg",
         "width": 4843,
         "height": 3632,
         "color": "#f3f3f3",
@@ -209,9 +209,9 @@ export const unsplashImages: UnsplashImage[] = [
     },
     {
         "id": "JKUTrJ4vK00",
-        "query": "data analytics dashboard screen",
-        "collection": "data-analytics-dashboard-screen",
-        "file": "/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-JKUTrJ4vK00.jpg",
+        "query": "financial trading data dashboard screen",
+        "collection": "financial-trading-data-dashboard-screen",
+        "file": "/unsplash/financial-trading-data-dashboard-screen/financial-trading-data-dashboard-screen-JKUTrJ4vK00.jpg",
         "width": 4810,
         "height": 3207,
         "color": "#f3f3f3",
@@ -257,9 +257,9 @@ export const unsplashImages: UnsplashImage[] = [
     },
     {
         "id": "qwtCeJ5cLYs",
-        "query": "data analytics dashboard screen",
-        "collection": "data-analytics-dashboard-screen",
-        "file": "/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-qwtCeJ5cLYs.jpg",
+        "query": "financial trading data dashboard screen",
+        "collection": "financial-trading-data-dashboard-screen",
+        "file": "/unsplash/financial-trading-data-dashboard-screen/financial-trading-data-dashboard-screen-qwtCeJ5cLYs.jpg",
         "width": 2947,
         "height": 2121,
         "color": "#595959",
@@ -321,9 +321,9 @@ export const unsplashImages: UnsplashImage[] = [
     },
     {
         "id": "r5lbaK3fDaM",
-        "query": "abstract technology gradient blue",
-        "collection": "abstract-technology-gradient-blue",
-        "file": "/unsplash/abstract-technology-gradient-blue/abstract-technology-gradient-blue-r5lbaK3fDaM.jpg",
+        "query": "digital marketing technology abstract blue",
+        "collection": "digital-marketing-technology-abstract-blue",
+        "file": "/unsplash/digital-marketing-technology-abstract-blue/digital-marketing-technology-abstract-blue-r5lbaK3fDaM.jpg",
         "width": 7680,
         "height": 4320,
         "color": "#0c2640",
@@ -765,6 +765,342 @@ export const unsplashImages: UnsplashImage[] = [
             "username": "profwicks",
             "profile": "https://unsplash.com/@profwicks?utm_source=nimbus_design_system&utm_medium=referral",
             "photo": "https://unsplash.com/photos/chart-treemap-chart-GjBPLkTDzt4?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "xuTJZ7uD7PI",
+        "query": "futuristic network connection technology",
+        "collection": "futuristic-network-connection-technology",
+        "file": "/unsplash/futuristic-network-connection-technology/futuristic-network-connection-technology-xuTJZ7uD7PI.jpg",
+        "width": 4069,
+        "height": 2160,
+        "color": "#0c26a6",
+        "alt": "a blue background with lines and dots",
+        "credit": {
+            "name": "Conny Schneider",
+            "username": "choys_",
+            "profile": "https://unsplash.com/@choys_?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/a-blue-background-with-lines-and-dots-xuTJZ7uD7PI?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "pREq0ns_p_E",
+        "query": "futuristic network connection technology",
+        "collection": "futuristic-network-connection-technology",
+        "file": "/unsplash/futuristic-network-connection-technology/futuristic-network-connection-technology-pREq0ns_p_E.jpg",
+        "width": 4069,
+        "height": 2010,
+        "color": "#0c2673",
+        "alt": "a blue abstract background with lines and dots",
+        "credit": {
+            "name": "Conny Schneider",
+            "username": "choys_",
+            "profile": "https://unsplash.com/@choys_?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/a-blue-abstract-background-with-lines-and-dots-pREq0ns_p_E?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "n6B49lTx7NM",
+        "query": "abstract data visualization network",
+        "collection": "abstract-data-visualization-network",
+        "file": "/unsplash/abstract-data-visualization-network/abstract-data-visualization-network-n6B49lTx7NM.jpg",
+        "width": 5616,
+        "height": 3744,
+        "color": "#260c0c",
+        "alt": "green and red light wallpaper",
+        "credit": {
+            "name": "Pietro Jeng",
+            "username": "pietrozj",
+            "profile": "https://unsplash.com/@pietrozj?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/green-and-red-light-wallpaper-n6B49lTx7NM?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "T9rKvI3N0NM",
+        "query": "futuristic network connection technology",
+        "collection": "futuristic-network-connection-technology",
+        "file": "/unsplash/futuristic-network-connection-technology/futuristic-network-connection-technology-T9rKvI3N0NM.jpg",
+        "width": 3840,
+        "height": 2160,
+        "color": "#262626",
+        "alt": "a group of cubes that are on a black surface",
+        "credit": {
+            "name": "Shubham Dhage",
+            "username": "theshubhamdhage",
+            "profile": "https://unsplash.com/@theshubhamdhage?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/a-group-of-cubes-that-are-on-a-black-surface-T9rKvI3N0NM?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "ZiQkhI7417A",
+        "query": "abstract data visualization network",
+        "collection": "abstract-data-visualization-network",
+        "file": "/unsplash/abstract-data-visualization-network/abstract-data-visualization-network-ZiQkhI7417A.jpg",
+        "width": 3456,
+        "height": 2304,
+        "color": "#d9d9d9",
+        "alt": "low-angle photography of metal structure",
+        "credit": {
+            "name": "Alina Grubnyak",
+            "username": "alinnnaaaa",
+            "profile": "https://unsplash.com/@alinnnaaaa?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/low-angle-photography-of-metal-structure-ZiQkhI7417A?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "qY-XlCf9Zs4",
+        "query": "digital marketing technology abstract blue",
+        "collection": "digital-marketing-technology-abstract-blue",
+        "file": "/unsplash/digital-marketing-technology-abstract-blue/digital-marketing-technology-abstract-blue-qY-XlCf9Zs4.jpg",
+        "width": 7680,
+        "height": 4320,
+        "color": "#40738c",
+        "alt": "Abstract blue waves of glowing particles",
+        "credit": {
+            "name": "jonakoh _",
+            "username": "jonakoh",
+            "profile": "https://unsplash.com/@jonakoh?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/abstract-blue-waves-of-glowing-particles-qY-XlCf9Zs4?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "-aEpe2N916c",
+        "query": "digital marketing technology abstract blue",
+        "collection": "digital-marketing-technology-abstract-blue",
+        "file": "/unsplash/digital-marketing-technology-abstract-blue/digital-marketing-technology-abstract-blue--aEpe2N916c.jpg",
+        "width": 5076,
+        "height": 3384,
+        "color": "#0c2659",
+        "alt": "blue and white abstract painting",
+        "credit": {
+            "name": "Daniele Levis Pelusi",
+            "username": "yogidan2012",
+            "profile": "https://unsplash.com/@yogidan2012?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/blue-and-white-abstract-painting--aEpe2N916c?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "WRmoJBqzXNA",
+        "query": "digital marketing technology abstract blue",
+        "collection": "digital-marketing-technology-abstract-blue",
+        "file": "/unsplash/digital-marketing-technology-abstract-blue/digital-marketing-technology-abstract-blue-WRmoJBqzXNA.jpg",
+        "width": 7680,
+        "height": 4320,
+        "color": "#73c0f3",
+        "alt": "Blue glowing lines create a digital, futuristic pattern.",
+        "credit": {
+            "name": "Logan Voss",
+            "username": "loganvoss",
+            "profile": "https://unsplash.com/@loganvoss?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/blue-glowing-lines-create-a-digital-futuristic-pattern-WRmoJBqzXNA?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "hdWX02b5HhA",
+        "query": "digital marketing technology abstract blue",
+        "collection": "digital-marketing-technology-abstract-blue",
+        "file": "/unsplash/digital-marketing-technology-abstract-blue/digital-marketing-technology-abstract-blue-hdWX02b5HhA.jpg",
+        "width": 3200,
+        "height": 2160,
+        "color": "#738cc0",
+        "alt": "Glowing purple micron logo in a futuristic blue 3D environment.",
+        "credit": {
+            "name": "Brecht Corbeel",
+            "username": "brechtcorbeel",
+            "profile": "https://unsplash.com/@brechtcorbeel?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/glowing-purple-micron-logo-in-a-futuristic-blue-3d-environment-hdWX02b5HhA?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "Pou4t6LQAe8",
+        "query": "digital marketing technology abstract blue",
+        "collection": "digital-marketing-technology-abstract-blue",
+        "file": "/unsplash/digital-marketing-technology-abstract-blue/digital-marketing-technology-abstract-blue-Pou4t6LQAe8.jpg",
+        "width": 4128,
+        "height": 3302,
+        "color": "#d9d9f3",
+        "alt": "a blue iphone sitting in a box next to a roll of toilet paper",
+        "credit": {
+            "name": "Gourmet Lenz",
+            "username": "gourmetlenz",
+            "profile": "https://unsplash.com/@gourmetlenz?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/a-blue-iphone-sitting-in-a-box-next-to-a-roll-of-toilet-paper-Pou4t6LQAe8?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "wK-elt11pF0",
+        "query": "person using smartphone mobile app",
+        "collection": "person-using-smartphone-mobile-app",
+        "file": "/unsplash/person-using-smartphone-mobile-app/person-using-smartphone-mobile-app-wK-elt11pF0.jpg",
+        "width": 5926,
+        "height": 3951,
+        "color": "#a6a6a6",
+        "alt": "person holding black android smartphone",
+        "credit": {
+            "name": "Jonas Leupe",
+            "username": "jonasleupe",
+            "profile": "https://unsplash.com/@jonasleupe?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/person-holding-black-android-smartphone-wK-elt11pF0?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "pb_lF8VWaPU",
+        "query": "person using smartphone mobile app",
+        "collection": "person-using-smartphone-mobile-app",
+        "file": "/unsplash/person-using-smartphone-mobile-app/person-using-smartphone-mobile-app-pb_lF8VWaPU.jpg",
+        "width": 5760,
+        "height": 3840,
+        "color": "#260c0c",
+        "alt": "silhouette photo of person holding smartphone",
+        "credit": {
+            "name": "Gilles Lambert",
+            "username": "gilleslambert",
+            "profile": "https://unsplash.com/@gilleslambert?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/silhouette-photo-of-person-holding-smartphone-pb_lF8VWaPU?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "HbyYFFokvm0",
+        "query": "person using smartphone mobile app",
+        "collection": "person-using-smartphone-mobile-app",
+        "file": "/unsplash/person-using-smartphone-mobile-app/person-using-smartphone-mobile-app-HbyYFFokvm0.jpg",
+        "width": 5472,
+        "height": 3648,
+        "color": "#d9d9d9",
+        "alt": "woman holding iPhone during daytime",
+        "credit": {
+            "name": "Paul Hanaoka",
+            "username": "plhnk",
+            "profile": "https://unsplash.com/@plhnk?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/woman-holding-iphone-during-daytime-HbyYFFokvm0?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "8pCtwj37VB4",
+        "query": "person using smartphone mobile app",
+        "collection": "person-using-smartphone-mobile-app",
+        "file": "/unsplash/person-using-smartphone-mobile-app/person-using-smartphone-mobile-app-8pCtwj37VB4.jpg",
+        "width": 5364,
+        "height": 3576,
+        "color": "#d9f3f3",
+        "alt": "man in black crew-neck top using smartphone",
+        "credit": {
+            "name": "Jonas Leupe",
+            "username": "jonasleupe",
+            "profile": "https://unsplash.com/@jonasleupe?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/man-in-black-crew-neck-top-using-smartphone-8pCtwj37VB4?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "N__BnvQ_w18",
+        "query": "financial trading data dashboard screen",
+        "collection": "financial-trading-data-dashboard-screen",
+        "file": "/unsplash/financial-trading-data-dashboard-screen/financial-trading-data-dashboard-screen-N__BnvQ_w18.jpg",
+        "width": 6000,
+        "height": 4000,
+        "color": "#262626",
+        "alt": "screen showing bitcoin trading chart",
+        "credit": {
+            "name": "Nick Chong",
+            "username": "nick604",
+            "profile": "https://unsplash.com/@nick604?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/screen-showing-bitcoin-trading-chart-N__BnvQ_w18?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "fiXLQXAhCfk",
+        "query": "financial trading data dashboard screen",
+        "collection": "financial-trading-data-dashboard-screen",
+        "file": "/unsplash/financial-trading-data-dashboard-screen/financial-trading-data-dashboard-screen-fiXLQXAhCfk.jpg",
+        "width": 6240,
+        "height": 4160,
+        "color": "#260c0c",
+        "alt": "stock market candlestick chart on dark screen",
+        "credit": {
+            "name": "Maxim Hopman",
+            "username": "nampoh",
+            "profile": "https://unsplash.com/@nampoh?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/stock-market-candlestick-chart-on-dark-screen-fiXLQXAhCfk?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "ip7GFn5JqX8",
+        "query": "financial trading data dashboard screen",
+        "collection": "financial-trading-data-dashboard-screen",
+        "file": "/unsplash/financial-trading-data-dashboard-screen/financial-trading-data-dashboard-screen-ip7GFn5JqX8.jpg",
+        "width": 3073,
+        "height": 2050,
+        "color": "#d9d9d9",
+        "alt": "smartphone calculator on desk with financial charts behind",
+        "credit": {
+            "name": "Jakub Żerdzicki",
+            "username": "jakubzerdzicki",
+            "profile": "https://unsplash.com/@jakubzerdzicki?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/smartphone-calculator-on-desk-with-financial-charts-behind-ip7GFn5JqX8?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "x07ELaNFt34",
+        "query": "financial trading data dashboard screen",
+        "collection": "financial-trading-data-dashboard-screen",
+        "file": "/unsplash/financial-trading-data-dashboard-screen/financial-trading-data-dashboard-screen-x07ELaNFt34.jpg",
+        "width": 5184,
+        "height": 3456,
+        "color": "#0c2640",
+        "alt": "graphical user interface, application",
+        "credit": {
+            "name": "Anne Nygård",
+            "username": "polarmermaid",
+            "profile": "https://unsplash.com/@polarmermaid?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/graphical-user-interface-application-x07ELaNFt34?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "nGoCBxiaRO0",
+        "query": "futuristic network connection technology",
+        "collection": "futuristic-network-connection-technology",
+        "file": "/unsplash/futuristic-network-connection-technology/futuristic-network-connection-technology-nGoCBxiaRO0.jpg",
+        "width": 3840,
+        "height": 2160,
+        "color": "#262640",
+        "alt": "an abstract image of a sphere with dots and lines",
+        "credit": {
+            "name": "Growtika",
+            "username": "growtika",
+            "profile": "https://unsplash.com/@growtika?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/an-abstract-image-of-a-sphere-with-dots-and-lines-nGoCBxiaRO0?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "11KDtiUWRq4",
+        "query": "futuristic network connection technology",
+        "collection": "futuristic-network-connection-technology",
+        "file": "/unsplash/futuristic-network-connection-technology/futuristic-network-connection-technology-11KDtiUWRq4.jpg",
+        "width": 4288,
+        "height": 2848,
+        "color": "#0c4059",
+        "alt": "blue and white floral textile",
+        "credit": {
+            "name": "Uriel SC",
+            "username": "urielsc26",
+            "profile": "https://unsplash.com/@urielsc26?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/blue-and-white-floral-textile-11KDtiUWRq4?utm_source=nimbus_design_system&utm_medium=referral"
+        }
+    },
+    {
+        "id": "tBvF46kmwBw",
+        "query": "futuristic network connection technology",
+        "collection": "futuristic-network-connection-technology",
+        "file": "/unsplash/futuristic-network-connection-technology/futuristic-network-connection-technology-tBvF46kmwBw.jpg",
+        "width": 4608,
+        "height": 2592,
+        "color": "#0c2659",
+        "alt": "A close up of a computer circuit board",
+        "credit": {
+            "name": "Luke Jones",
+            "username": "lukejonesdesign",
+            "profile": "https://unsplash.com/@lukejonesdesign?utm_source=nimbus_design_system&utm_medium=referral",
+            "photo": "https://unsplash.com/photos/a-close-up-of-a-computer-circuit-board-tBvF46kmwBw?utm_source=nimbus_design_system&utm_medium=referral"
         }
     }
 ];

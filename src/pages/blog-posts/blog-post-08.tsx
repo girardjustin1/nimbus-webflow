@@ -196,7 +196,7 @@ const ContentSplitImage03 = ({ article }: { article: NimbusArticle }) => {
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:max-w-120 md:text-xl">{article.summary}</p>
                 </div>
 
-                <img src="/unsplash/advertising-billboard-city/advertising-billboard-city-5GBvm1lhrFM.jpg" alt="Illuminated billboards in the city at dusk" className="order-first -ml-4 h-60 w-screen max-w-none object-cover md:order-1 md:ml-0 md:h-160 md:w-full md:max-w-full" />
+                <img src="/unsplash/person-using-smartphone-mobile-app/person-using-smartphone-mobile-app-pb_lF8VWaPU.jpg" alt="Silhouette of a person holding a smartphone" className="order-first -ml-4 h-60 w-screen max-w-none object-cover md:order-1 md:ml-0 md:h-160 md:w-full md:max-w-full" />
             </div>
 
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
@@ -243,7 +243,7 @@ const ContentSplitImage03 = ({ article }: { article: NimbusArticle }) => {
                                 ].map((item) => (
                                     <li key={item.name}>
                                         <div className="flex items-center gap-3">
-                                            <div className="size-12 rounded-full object-cover bg-[#84D7D9]" />
+                                            <img src={item.avatarUrl} alt={item.name} className="size-12 rounded-full object-cover" />
                                             <div>
                                                 <p className="text-md font-semibold text-primary">{item.name}</p>
                                                 <p className="text-md text-tertiary">{item.role}</p>
@@ -305,7 +305,7 @@ const ContentSplitImage03 = ({ article }: { article: NimbusArticle }) => {
                                     ].map((item) => (
                                         <li key={item.name}>
                                             <div className="flex items-center gap-3">
-                                                <div className="size-12 rounded-full object-cover bg-[#84D7D9]" />
+                                                <img src={item.avatarUrl} alt={item.name} className="size-12 rounded-full object-cover" />
                                                 <div>
                                                     <p className="text-md font-semibold text-primary">{item.name}</p>
                                                     <p className="text-md text-tertiary">{item.role}</p>

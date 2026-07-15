@@ -44,7 +44,7 @@ export const DemandMixPie = ({
     data?: DemandMixSlice[];
     colors?: string[];
 }) => (
-    <div className="my-10 rounded-xl bg-white p-6 ring-1 ring-black/5 ring-inset">
+    <div className="my-10 rounded-xl bg-white p-6 shadow-xs-skeuomorphic ring-1 ring-primary ring-inset">
         <h3 className="mb-4 text-[18px] font-semibold text-[#181d27]">{title}</h3>
 
         <div className="h-[300px] w-full">

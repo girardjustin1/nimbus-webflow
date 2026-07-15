@@ -23,7 +23,7 @@ const enriched11: NimbusArticle = {
             type: "paragraph",
             text: "Floors are how publishers push back. Used well, they are one of the few levers in programmatic that the publisher controls completely.",
         },
-        { type: "stat", value: "+33%", label: "median eCPM lift once granular Nimbus floors go live" },
+        { type: "stat", value: "+33%", label: "median eCPM lift with granular floors" },
         {
             type: "quote",
             text: "Trust the market to find the price. Don't trust it to protect yours — that's the floor's job.",
