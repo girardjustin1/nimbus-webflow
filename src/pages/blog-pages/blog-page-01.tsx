@@ -3,13 +3,10 @@ import { ArrowUpRight } from "@untitledui/icons";
 import { PaginationPageDefault } from "@/components/application/pagination/pagination";
 import { TabList, Tabs } from "@/components/application/tabs/tabs";
 import { Avatar } from "@/components/base/avatar/avatar";
-import { Badge, type BadgeColor } from "@/components/base/badges/badges";
-import { Button } from "@/components/base/buttons/button";
-import { Form } from "@/components/base/form/form";
-import { Input } from "@/components/base/input/input";
+import { type BadgeColor } from "@/components/base/badges/badges";
 import { Select } from "@/components/base/select/select";
-import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
 import { NimbusHeader } from "@/components/marketing/nimbus-header";
+import { NimbusFooter } from "@/components/marketing/nimbus-footer";
 import { SectionDivider } from "@/components/shared-assets/section-divider";
 import { useBreakpoint } from "@/hooks/use-breakpoint";
 import { cx } from "@/utils/cx";
@@ -357,206 +354,9 @@ const BlogHeaderFeaturedPost01 = () => {
     );
 };
 
-const ScreenMockup03 = () => {
-    return (
-        <section className="overflow-hidden bg-[#f9f7f3] py-16 md:pt-24 md:pb-0">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col justify-center text-center">
-                    <h2 className="text-display-sm font-extrabold text-primary md:text-display-md">
-                        <span className="hidden md:inline">Start your 30-day free trial</span>
-                        <span className="md:hidden">Start your free trial</span>
-                    </h2>
-                    <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Join over 4,000+ startups already growing with Nimbus.</p>
-                    <div className="mt-8 flex flex-col-reverse gap-3 self-stretch md:flex-row md:self-center">
-                        <Button color="secondary" size="xl">
-                            Learn more
-                        </Button>
-                        <Button size="xl">Get started</Button>
-                    </div>
-                </div>
-            </div>
-            <div className="mx-auto mt-16 w-full max-w-container px-4 md:max-h-100 md:overflow-hidden md:px-8">
-                <div className="size-full rounded-[9.03px] bg-primary p-[0.9px] shadow-lg ring-[0.56px] ring-utility-neutral-300 ring-inset md:rounded-[32px] md:p-1 md:ring-[2px]">
-                    <div className="size-full rounded-[7.9px] bg-primary p-0.5 shadow-modern-mockup-inner-md md:rounded-[28px] md:p-[5.4px] md:shadow-modern-mockup-inner-lg">
-                        <div className="relative size-full overflow-hidden rounded-[6.77px] bg-utility-neutral-50 ring-[0.56px] ring-utility-neutral-200 md:rounded-[24px] md:ring-[2px]">
-                            {/* Light mode image (hidden in dark mode) */}
-                            <div className="size-full object-cover dark:hidden bg-[#84D7D9]" />
-                            {/* Dark mode image (hidden in light mode) */}
-                            <div className="size-full object-cover not-dark:hidden bg-[#84D7D9]" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-};
 
-const SimpleLeft = () => {
-    return (
-        <section className="bg-secondary py-16 md:py-24">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col justify-between lg:flex-row">
-                    <div className="max-w-3xl">
-                        <h2 className="text-display-sm font-extrabold text-primary md:text-display-md">Start your free trial</h2>
-                        <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Join over 4,000+ startups already growing with Nimbus.</p>
-                    </div>
 
-                    <div className="mt-8 flex flex-col-reverse gap-3 self-stretch sm:flex-row sm:self-start lg:mt-0">
-                        <Button color="secondary" size="xl">
-                            Learn more
-                        </Button>
-                        <Button size="xl">Get started</Button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-};
 
-const footerNavList = [
-    {
-        label: "Product",
-        items: [
-            { label: "Overview", href: "#" },
-            { label: "Products", href: "#" },
-            {
-                label: "Solutions",
-                href: "#",
-                badge: (
-                    <Badge color="gray" type="modern" size="sm" className="ml-1">
-                        New
-                    </Badge>
-                ),
-            },
-            { label: "Tutorials", href: "#" },
-            { label: "Pricing", href: "#" },
-            { label: "Releases", href: "#" },
-        ],
-    },
-    {
-        label: "Company",
-        items: [
-            { label: "About us", href: "#" },
-            { label: "Careers", href: "#" },
-            { label: "Press", href: "#" },
-            { label: "News", href: "#" },
-            { label: "Media kit", href: "#" },
-            { label: "Contact", href: "#" },
-        ],
-    },
-    {
-        label: "Resources",
-        items: [
-            { label: "Blog", href: "#" },
-            { label: "Newsletter", href: "#" },
-            { label: "Events", href: "#" },
-            { label: "Help centre", href: "#" },
-            { label: "Tutorials", href: "#" },
-            { label: "Support", href: "#" },
-        ],
-    },
-    {
-        label: "Use cases",
-        items: [
-            { label: "Startups", href: "#" },
-            { label: "Enterprise", href: "#" },
-            { label: "Government", href: "#" },
-            { label: "SaaS centre", href: "#" },
-            { label: "Marketplaces", href: "#" },
-            { label: "Ecommerce", href: "#" },
-        ],
-    },
-    {
-        label: "Social",
-        items: [
-            { label: "X", href: "#" },
-            { label: "LinkedIn", href: "#" },
-            { label: "Facebook", href: "#" },
-            { label: "GitHub", href: "#" },
-            { label: "AngelList", href: "#" },
-            { label: "Dribbble", href: "#" },
-        ],
-    },
-    {
-        label: "Legal",
-        items: [
-            { label: "Terms", href: "#" },
-            { label: "Privacy", href: "#" },
-            { label: "Cookies", href: "#" },
-            { label: "Licenses", href: "#" },
-            { label: "Settings", href: "#" },
-            { label: "Contact", href: "#" },
-        ],
-    },
-];
-
-const FooterLarge05 = () => {
-    return (
-        <footer className="bg-[#f9f7f3] py-12 md:pt-16">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col items-start justify-between gap-8 border-secondary md:flex-row md:border-b md:pb-16">
-                    <div className="flex flex-col gap-2">
-                        <p id="newsletter-label" className="text-lg font-semibold text-primary md:text-xl">
-                            Join our newsletter
-                        </p>
-                        <p id="newsletter-hint" className="text-md text-tertiary">
-                            We'll send you a nice letter once per week. No spam.
-                        </p>
-                    </div>
-                    <Form
-                        onSubmit={(e) => {
-                            e.preventDefault();
-                            const data = Object.fromEntries(new FormData(e.currentTarget));
-                            console.log("Form data:", data);
-                        }}
-                        className="w-full sm:w-100"
-                    >
-                        <div className="flex flex-col gap-4 sm:flex-row">
-                            <Input
-                                isRequired
-                                aria-labelledby="newsletter-label"
-                                aria-describedby="newsletter-hint"
-                                id="email"
-                                name="email"
-                                type="email"
-                                placeholder="Enter your email"
-                                size="lg"
-                                wrapperClassName="flex-1"
-                            />
-                            <Button type="submit" size="lg">
-                                Subscribe
-                            </Button>
-                        </div>
-                    </Form>
-                </div>
-
-                <nav className="mt-12 md:mt-16">
-                    <ul className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
-                        {footerNavList.map((category) => (
-                            <li key={category.label}>
-                                <h4 className="text-sm font-semibold text-quaternary">{category.label}</h4>
-                                <ul className="mt-4 flex flex-col gap-3">
-                                    {category.items.map((item) => (
-                                        <li key={item.label} className="flex">
-                                            <Button color="link-gray" size="md" href={item.href} iconTrailing={item.badge} className="max-h-5 gap-1">
-                                                {item.label}
-                                            </Button>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-
-                <div className="mt-12 flex flex-col justify-between gap-6 border-t border-secondary pt-8 md:mt-16 md:flex-row md:items-center">
-                    <UntitledLogo className="h-7 w-min" />
-                    <p className="text-sm text-quaternary">© 2026 Nimbus. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-    );
-};
 
 const BlogPage01 = () => {
     return (
@@ -567,11 +367,9 @@ const BlogPage01 = () => {
 
             <SectionDivider />
 
-            <ScreenMockup03 />
 
-            <SimpleLeft />
 
-            <FooterLarge05 />
+            <NimbusFooter />
         </div>
     );
 };

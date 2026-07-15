@@ -6,11 +6,10 @@ import { Avatar } from "@/components/base/avatar/avatar";
 import { BadgeGroup } from "@/components/base/badges/badge-groups";
 import type { BadgeColor } from "@/components/base/badges/badges";
 import { Button } from "@/components/base/buttons/button";
-import { Form } from "@/components/base/form/form";
 import { Input } from "@/components/base/input/input";
 import { NativeSelect } from "@/components/base/select/select-native";
-import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
 import { NimbusHeader } from "@/components/marketing/nimbus-header";
+import { NimbusFooter } from "@/components/marketing/nimbus-footer";
 import { useBreakpoint } from "@/hooks/use-breakpoint";
 import { cx } from "@/utils/cx";
 
@@ -346,81 +345,6 @@ const BlogHeaderSidebar02 = () => {
     );
 };
 
-const FooterLarge08 = () => {
-    return (
-        <footer className="bg-secondary py-12 md:pt-16">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col justify-between gap-x-8 gap-y-12 lg:flex-row">
-                    <div className="flex flex-col gap-8 md:items-start">
-                        <UntitledLogo className="h-7 w-min shrink-0" />
-                        <nav>
-                            <ul className="grid grid-cols-2 gap-x-8 gap-y-3 sm:grid-cols-[repeat(6,max-content)]">
-                                {[
-                                    { title: "Overview", href: "#" },
-                                    { title: "Features", href: "#" },
-                                    { title: "Pricing", href: "#" },
-                                    { title: "Careers", href: "#" },
-                                    { title: "Help", href: "#" },
-                                    { title: "Privacy", href: "#" },
-                                ].map((item) => (
-                                    <li key={item.title}>
-                                        <Button color="link-gray" size="md" href={item.href} className="max-h-5">
-                                            {item.title}
-                                        </Button>
-                                    </li>
-                                ))}
-                            </ul>
-                        </nav>
-                    </div>
-
-                    <Form
-                        onSubmit={(e) => {
-                            e.preventDefault();
-                            const data = Object.fromEntries(new FormData(e.currentTarget));
-                            console.log("Form data:", data);
-                        }}
-                        className="flex w-full flex-col gap-4 sm:max-w-90"
-                    >
-                        <label htmlFor="newsletters-email" className="text-sm font-semibold text-primary">
-                            Stay up to date
-                        </label>
-                        <div className="flex flex-col gap-4 sm:flex-row">
-                            <Input
-                                isRequired
-                                id="newsletters-email"
-                                name="email"
-                                type="email"
-                                placeholder="Enter your email"
-                                size="lg"
-                                wrapperClassName="flex-1"
-                            />
-                            <Button type="submit" size="lg">
-                                Subscribe
-                            </Button>
-                        </div>
-                    </Form>
-                </div>
-                <div className="mt-12 flex flex-col-reverse justify-between gap-4 border-t border-secondary pt-8 md:mt-16 md:flex-row md:gap-6">
-                    <p className="text-sm text-quaternary">© 2026 Nimbus. All rights reserved.</p>
-
-                    <ul className="flex gap-4">
-                        {[
-                            { title: "Terms", href: "#" },
-                            { title: "Privacy", href: "#" },
-                            { title: "Cookies", href: "#" },
-                        ].map(({ title, href }) => (
-                            <li key={title}>
-                                <a href={href} className="text-md text-quaternary transition duration-100 ease-linear hover:text-tertiary">
-                                    {title}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-        </footer>
-    );
-};
 
 const BlogPage04 = () => {
     return (
@@ -429,7 +353,7 @@ const BlogPage04 = () => {
 
             <BlogHeaderSidebar02 />
 
-            <FooterLarge08 />
+            <NimbusFooter />
         </div>
     );
 };

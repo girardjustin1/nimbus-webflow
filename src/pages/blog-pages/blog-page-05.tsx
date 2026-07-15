@@ -1,19 +1,13 @@
-import { type ComponentProps, type FC, useState } from "react";
+import { type ComponentProps, type FC } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "@untitledui/icons";
-import type { Transition } from "motion/react";
-import { AnimatePresence, motion } from "motion/react";
 import { Carousel } from "@/components/application/carousel/carousel-base";
 import { PaginationPageDefault } from "@/components/application/pagination/pagination";
 import { Badge, type BadgeColor } from "@/components/base/badges/badges";
 import { Button } from "@/components/base/buttons/button";
-import { CloseButton } from "@/components/base/buttons/close-button";
 import { Form } from "@/components/base/form/form";
 import { Input } from "@/components/base/input/input";
-import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
-import { RatingBadge } from "@/components/foundations/rating-badge";
-import { StarIcon } from "@/components/foundations/rating-stars";
-import { AngelList, Dribbble, Facebook, GitHub, Layers, LinkedIn, X } from "@/components/foundations/social-icons";
 import { NimbusHeader } from "@/components/marketing/nimbus-header";
+import { NimbusFooter } from "@/components/marketing/nimbus-footer";
 import { useBreakpoint } from "@/hooks/use-breakpoint";
 import { cx } from "@/utils/cx";
 import { isReactComponent } from "@/utils/is-react-component";
@@ -183,106 +177,8 @@ const articles: Article[] = [
     },
 ];
 
-const footerSocials = [
-    { label: "X", icon: X, href: "https://x.com/" },
-    { label: "LinkedIn", icon: LinkedIn, href: "https://www.linkedin.com/" },
-    { label: "Facebook", icon: Facebook, href: "https://www.facebook.com/" },
-    { label: "GitHub", icon: GitHub, href: "https://github.com/" },
-    { label: "AngelList", icon: AngelList, href: "https://angel.co/" },
-    { label: "Dribbble", icon: Dribbble, href: "https://dribbble.com/" },
-    { label: "Layers", icon: Layers, href: "https://layers.com/" },
-];
 
-const footerNavList = [
-    {
-        label: "Product",
-        items: [
-            { label: "Overview", href: "#" },
-            { label: "Products", href: "#" },
-            {
-                label: "Solutions",
-                href: "#",
-                badge: (
-                    <Badge color="gray" type="modern" size="sm" className="ml-1">
-                        New
-                    </Badge>
-                ),
-            },
-            { label: "Tutorials", href: "#" },
-            { label: "Pricing", href: "#" },
-            { label: "Releases", href: "#" },
-        ],
-    },
-    {
-        label: "Company",
-        items: [
-            { label: "About us", href: "#" },
-            { label: "Careers", href: "#" },
-            { label: "Press", href: "#" },
-            { label: "News", href: "#" },
-            { label: "Media kit", href: "#" },
-            { label: "Contact", href: "#" },
-        ],
-    },
-    {
-        label: "Resources",
-        items: [
-            { label: "Blog", href: "#" },
-            { label: "Newsletter", href: "#" },
-            { label: "Events", href: "#" },
-            { label: "Help centre", href: "#" },
-            { label: "Tutorials", href: "#" },
-            { label: "Support", href: "#" },
-        ],
-    },
-    {
-        label: "Social",
-        items: [
-            { label: "X", href: "#" },
-            { label: "LinkedIn", href: "#" },
-            { label: "Facebook", href: "#" },
-            { label: "GitHub", href: "#" },
-            { label: "AngelList", href: "#" },
-            { label: "Dribbble", href: "#" },
-        ],
-    },
-    {
-        label: "Legal",
-        items: [
-            { label: "Terms", href: "#" },
-            { label: "Privacy", href: "#" },
-            { label: "Cookies", href: "#" },
-            { label: "Licenses", href: "#" },
-            { label: "Settings", href: "#" },
-            { label: "Contact", href: "#" },
-        ],
-    },
-];
 
-const BannerSlimBrandFullWidth = () => {
-    return (
-        <div className="relative border-b border-brand_alt bg-brand-section_subtle md:border-brand">
-            <div className="p-4 md:py-3.5">
-                <div className="flex flex-col gap-0.5 md:flex-row md:justify-center md:gap-1.5 md:text-center">
-                    <p className="pr-8 text-md font-semibold text-primary_on-brand md:truncate md:pr-0">We've just launched a new feature!</p>
-                    <p className="text-md text-tertiary_on-brand md:truncate">
-                        Check out the{" "}
-                        <a
-                            href="#"
-                            className="rounded-xs underline underline-offset-3 outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
-                        >
-                            new dashboard
-                        </a>
-                        .
-                    </p>
-                </div>
-            </div>
-            <div className="absolute top-2 right-2 md:top-1.5 md:right-2">
-                <CloseButton size="md" theme="dark" label="Dismiss" />
-            </div>
-        </div>
-    );
-};
 
 const Simple03Vertical = ({
     article,
@@ -454,202 +350,11 @@ const BlogSectionCarouselLayout02 = () => {
     );
 };
 
-const SplitImageQuote02 = () => {
-    const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
 
-    const reviews = [
-        {
-            quote: "Nimbus has saved us thousands of hours of work. We're able to spin up projects faster.",
-            name: "Nina Torres",
-            title: "Product Manager, Nimbus",
-            company: "Web Design Agency",
-            rating: 5,
-            image: "https://www.untitledui.com/images/portraits/alisa-hester",
-        },
-        {
-            quote: "Love the simplicity of the service and the prompt customer support. We can't imagine working without it.",
-            name: "Amara Diop",
-            title: "Head of Yield, Nimbus",
-            company: "UX Agency",
-            rating: 5,
-            image: "https://www.untitledui.com/marketing/podcast-girl.webp",
-        },
-        {
-            quote: "We've really sped up our workflow using Nimbus.",
-            name: "Zoe Adams",
-            title: "Product Manager, Nimbus",
-            company: "Web Design Agency",
-            rating: 5,
-            image: "https://www.untitledui.com/marketing/girl.webp",
-        },
-    ];
-
-    const transition: Transition = { type: "tween", duration: 0.8, ease: [0.8, 0, 0.2, 1] };
-
-    return (
-        <section className="bg-[#f9f7f3] py-16 lg:py-24">
-            <div className="mx-auto grid w-full max-w-container grid-cols-1 gap-x-16 gap-y-12 px-4 md:px-8 lg:grid-cols-2 lg:items-center">
-                <div className="flex max-w-3xl flex-col items-start">
-                    <h2 className="text-display-sm font-extrabold text-primary md:text-display-md lg:text-display-lg">
-                        Join 4,000+ startups growing with Nimbus
-                    </h2>
-                    <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">Start your 30-day free trial today.</p>
-
-                    <div className="mt-8 flex w-full flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-start md:mt-12">
-                        <Button color="secondary" size="xl">
-                            Learn more
-                        </Button>
-                        <Button size="xl">Get started</Button>
-                    </div>
-                </div>
-
-                <div className="relative h-170 w-full overflow-hidden lg:h-180">
-                    <AnimatePresence initial={false} mode="popLayout">
-                        <motion.img
-                            key={currentReviewIndex}
-                            src={reviews[currentReviewIndex].image}
-                            initial={{ opacity: 0 }}
-                            animate={{ zIndex: 1, opacity: 1 }}
-                            exit={{ zIndex: 0, opacity: 0 }}
-                            transition={transition}
-                            className="size-full object-cover"
-                            alt={reviews[currentReviewIndex].name}
-                        />
-                    </AnimatePresence>
-                    <div className="relative">
-                        <div className="absolute inset-x-0 bottom-0 flex h-110 items-end overflow-hidden bg-linear-to-t from-black/40 to-black/0 pt-16 md:pt-20 lg:pt-24"></div>
-                        <AnimatePresence initial={false} mode="popLayout">
-                            <motion.div
-                                key={currentReviewIndex}
-                                initial={{
-                                    y: 180,
-                                    opacity: 0,
-                                }}
-                                animate={{
-                                    y: 0,
-                                    zIndex: 1,
-                                    opacity: 1,
-                                }}
-                                exit={{
-                                    y: 180,
-                                    zIndex: 0,
-                                    opacity: 0,
-                                }}
-                                transition={transition}
-                                className="absolute inset-x-0 bottom-0 flex flex-col border-t border-alpha-white/30 bg-primary/30 px-5 pt-6 pb-8 backdrop-blur-[10px] md:p-8"
-                            >
-                                <q className="text-xl font-extrabold text-white md:text-display-sm">{reviews[currentReviewIndex].quote}</q>
-
-                                <div className="mt-5 flex flex-col-reverse justify-between gap-4 md:mt-8 md:flex-row">
-                                    <p className="text-xl font-extrabold whitespace-nowrap text-white md:text-display-xs">{reviews[currentReviewIndex].name}</p>
-                                    <div aria-hidden="true" className="hidden gap-1 md:flex">
-                                        <StarIcon className="text-fg-white" />
-                                        <StarIcon className="text-fg-white" />
-                                        <StarIcon className="text-fg-white" />
-                                        <StarIcon className="text-fg-white" />
-                                        <StarIcon className="text-fg-white" />
-                                    </div>
-                                </div>
-
-                                <div className="mt-2 flex flex-col justify-between gap-4 md:mt-3 md:flex-row md:gap-3">
-                                    <div className="flex flex-col md:gap-1">
-                                        <p className="text-lg font-semibold text-white md:text-md">{reviews[currentReviewIndex].company}</p>
-                                        <p className="text-md font-medium text-white md:text-sm">{reviews[currentReviewIndex].title}</p>
-                                    </div>
-                                    <div className="flex gap-4 md:gap-8">
-                                        <button
-                                            aria-label="Previous review"
-                                            onClick={() => setCurrentReviewIndex(currentReviewIndex === 0 ? reviews.length - 1 : currentReviewIndex - 1)}
-                                            className="group flex size-12 cursor-pointer items-center justify-center rounded-full ring-1 ring-white/50 outline-focus-ring transition duration-100 ease-linear ring-inset hover:ring-white/40 focus-visible:outline-2 focus-visible:outline-offset-2 md:size-14"
-                                        >
-                                            <ArrowLeft className="size-5 text-white transition-inherit-all group-hover:opacity-70 md:size-6" />
-                                        </button>
-                                        <button
-                                            aria-label="Next review"
-                                            onClick={() => setCurrentReviewIndex(currentReviewIndex === reviews.length - 1 ? 0 : currentReviewIndex + 1)}
-                                            className="group flex size-12 cursor-pointer items-center justify-center rounded-full ring-1 ring-white/50 outline-focus-ring transition duration-100 ease-linear ring-inset hover:ring-white/40 focus-visible:outline-2 focus-visible:outline-offset-2 md:size-14"
-                                        >
-                                            <ArrowRight className="size-5 text-white transition-inherit-all group-hover:opacity-70 md:size-6" />
-                                        </button>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        </AnimatePresence>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-};
-
-const FooterLarge02 = () => {
-    return (
-        <footer>
-            <div className="bg-brand-section py-12 md:pt-16">
-                <div className="mx-auto max-w-container px-4 md:px-8">
-                    <div className="flex flex-col gap-12 md:gap-16 xl:flex-row">
-                        <div className="flex flex-col gap-6 md:w-80 md:gap-6">
-                            <UntitledLogo className="dark-mode" />
-                            <p className="text-md text-tertiary_on-brand">Design amazing digital experiences that create more happy in the world.</p>
-                            <RatingBadge theme="light" className="origin-top-left scale-[0.78]" />
-                        </div>
-                        <nav className="flex-1">
-                            <ul className="grid flex-1 grid-cols-2 gap-8 md:grid-cols-5">
-                                {footerNavList.slice(0, 5).map((category) => (
-                                    <li key={category.label}>
-                                        <h4 className="text-sm font-semibold text-quaternary_on-brand">{category.label}</h4>
-                                        <ul className="mt-4 flex flex-col gap-3">
-                                            {category.items.map((item) => (
-                                                <li key={item.label} className="flex">
-                                                    <Button
-                                                        className="max-h-5 gap-1 text-footer-button-fg hover:text-footer-button-fg_hover"
-                                                        color="link-color"
-                                                        size="md"
-                                                        href={item.href}
-                                                        iconTrailing={item.badge}
-                                                    >
-                                                        {item.label}
-                                                    </Button>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </li>
-                                ))}
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <div className="relative bg-brand-section py-10 md:py-12">
-                <div className="absolute top-0 left-0 h-px w-full bg-border-brand_alt"></div>
-                <div className="mx-auto max-w-container px-4 md:px-8">
-                    <div className="flex flex-col-reverse justify-between gap-6 md:flex-row">
-                        <p className="text-sm text-quaternary_on-brand">© 2026 Nimbus. All rights reserved.</p>
-                        <ul className="flex gap-6">
-                            {footerSocials.map(({ label, icon: Icon, href }) => (
-                                <li key={label}>
-                                    <a
-                                        href={href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-icon-fg-brand_on-brand outline-focus-ring transition duration-100 ease-linear hover:text-fg-quaternary_hover focus-visible:outline-2 focus-visible:outline-offset-2"
-                                    >
-                                        <Icon className="size-5" aria-label={label} />
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    );
-};
 
 const BlogPage05 = () => {
     return (
         <div className="bg-[#f9f7f3]">
-            <BannerSlimBrandFullWidth />
 
             <NimbusHeader />
 
@@ -657,9 +362,8 @@ const BlogPage05 = () => {
 
             <BlogSectionCarouselLayout02 />
 
-            <SplitImageQuote02 />
 
-            <FooterLarge02 />
+            <NimbusFooter />
         </div>
     );
 };

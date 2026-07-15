@@ -1,9 +1,6 @@
 import { Check, Copy01 } from "@untitledui/icons";
 import { Badge } from "@/components/base/badges/badges";
 import { Button } from "@/components/base/buttons/button";
-import { CloseButton } from "@/components/base/buttons/close-button";
-import { Form } from "@/components/base/form/form";
-import { Input } from "@/components/base/input/input";
 import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import { NimbusHeader } from "@/components/marketing/nimbus-header";
 import { NimbusFooter } from "@/components/marketing/nimbus-footer";
@@ -12,30 +9,6 @@ import { useClipboard } from "@/hooks/use-clipboard";
 
 
 
-const BannerSlimBrandFullWidth = () => {
-    return (
-        <div className="relative border-b border-brand_alt bg-brand-section_subtle md:border-brand">
-            <div className="p-4 md:py-3.5">
-                <div className="flex flex-col gap-0.5 md:flex-row md:justify-center md:gap-1.5 md:text-center">
-                    <p className="pr-8 text-md font-semibold text-primary_on-brand md:truncate md:pr-0">We've just launched a new feature!</p>
-                    <p className="text-md text-tertiary_on-brand md:truncate">
-                        Check out the{" "}
-                        <a
-                            href="#"
-                            className="rounded-xs underline underline-offset-3 outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
-                        >
-                            new dashboard
-                        </a>
-                        .
-                    </p>
-                </div>
-            </div>
-            <div className="absolute top-2 right-2 md:top-1.5 md:right-2">
-                <CloseButton size="md" theme="dark" label="Dismiss" />
-            </div>
-        </div>
-    );
-};
 
 const ContentLargeImage02 = () => {
     const { copied, copy } = useClipboard();
@@ -225,121 +198,23 @@ const ContentLargeImage02 = () => {
     );
 };
 
-const NewsletterCardVerticalBrand = () => {
-    return (
-        <section className="bg-[#f9f7f3] pb-16 md:pb-24">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col items-center rounded-2xl bg-brand-section px-6 py-10 text-center lg:p-16">
-                    <h2 className="text-display-sm font-extrabold text-primary_on-brand xl:text-display-md">
-                        Still thinking
-                        <br className="md:hidden" /> about it?
-                    </h2>
-                    <p className="mt-4 text-lg text-tertiary_on-brand md:mt-5 lg:text-xl">Sign up for our newsletter and get 10% off your next purchase.</p>
-                    <Form
-                        onSubmit={(e) => {
-                            e.preventDefault();
-                            const data = Object.fromEntries(new FormData(e.currentTarget));
-                            console.log("Form data:", data);
-                        }}
-                        className="mt-8 flex w-full flex-col gap-4 md:max-w-120 md:flex-row"
-                    >
-                        <Input
-                            isRequired
-                            size="lg"
-                            name="email"
-                            type="email"
-                            placeholder="Enter your email"
-                            inputClassName="border-none"
-                            wrapperClassName="py-0.5 md:max-w-[345px]"
-                            hint={
-                                <span className="text-tertiary_on-brand">
-                                    <span className="md:hidden">Read about our</span>
-                                    <span className="max-md:hidden">We care about your data in our</span>{" "}
-                                    <a
-                                        href="#"
-                                        className="rounded-xs underline underline-offset-3 outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
-                                    >
-                                        privacy policy
-                                    </a>
-                                    .
-                                </span>
-                            }
-                        />
-                        <Button type="submit" size="xl">
-                            Subscribe
-                        </Button>
-                    </Form>
-                </div>
-            </div>
-        </section>
-    );
-};
 
-const CTASimpleLogos02 = () => {
-    return (
-        <section className="bg-[#f9f7f3] py-16 md:py-24">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-16">
-                    <div className="flex flex-col">
-                        <div className="max-w-3xl">
-                            <h2 className="text-display-sm font-extrabold text-primary md:text-display-md">Join over 4,000+ startups growing with Nimbus</h2>
-                            <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Start your 30-day free trial today.</p>
-                        </div>
-
-                        <div className="mt-8 flex flex-col gap-3 self-stretch sm:flex-row sm:self-start md:mt-12 lg:flex-row-reverse">
-                            <Button size="xl">Get started</Button>
-                            <Button color="secondary" size="xl">
-                                Learn more
-                            </Button>
-                        </div>
-                    </div>
-                    <div className="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-4 md:gap-y-6 lg:mt-0">
-                        {/* Light mode images (hidden in dark mode) */}
-                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
-                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
-                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
-                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
-                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
-                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
-                        <div className="h-9 max-md:hidden md:h-10 dark:hidden bg-[#84D7D9]" />
-                        <div className="h-9 max-md:hidden md:h-10 dark:hidden bg-[#84D7D9]" />
-                        <div className="h-9 max-md:hidden md:h-10 dark:hidden bg-[#84D7D9]" />
-
-                        {/* Dark mode images (hidden in light mode) */}
-                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
-                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
-                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
-                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
-                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
-                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
-                        <div className="h-9 opacity-85 not-dark:hidden max-md:hidden md:h-10 bg-[#84D7D9]" />
-                        <div className="h-9 opacity-85 not-dark:hidden max-md:hidden md:h-10 bg-[#84D7D9]" />
-                        <div className="h-9 opacity-85 not-dark:hidden max-md:hidden md:h-10 bg-[#84D7D9]" />
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-};
 
 
 
 const BlogPost10 = () => {
     return (
         <div className="bg-[#f9f7f3]">
-            <BannerSlimBrandFullWidth />
 
             <NimbusHeader />
 
             <ContentLargeImage02 />
 
-            <NewsletterCardVerticalBrand />
 
             <SectionDivider />
 
             <SectionDivider />
 
-            <CTASimpleLogos02 />
 
             <NimbusFooter />
         </div>

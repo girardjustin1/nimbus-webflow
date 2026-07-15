@@ -2,9 +2,6 @@ import { ArrowUpRight, Check, Copy01 } from "@untitledui/icons";
 import { Avatar } from "@/components/base/avatar/avatar";
 import { type BadgeColor } from "@/components/base/badges/badges";
 import { Button } from "@/components/base/buttons/button";
-import { CloseButton } from "@/components/base/buttons/close-button";
-import { Form } from "@/components/base/form/form";
-import { Input } from "@/components/base/input/input";
 import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import { NimbusHeader } from "@/components/marketing/nimbus-header";
 import { NimbusFooter } from "@/components/marketing/nimbus-footer";
@@ -179,30 +176,6 @@ const articles: Article[] = [
 
 
 
-const BannerSlimDefaultFullWidth = () => {
-    return (
-        <div className="relative border-b border-primary bg-secondary">
-            <div className="p-4 md:py-3.5">
-                <div className="flex flex-col gap-0.5 md:flex-row md:justify-center md:gap-1.5 md:text-center">
-                    <p className="pr-8 text-md font-semibold text-secondary md:truncate md:pr-0">We've just launched a new feature!</p>
-                    <p className="text-md text-tertiary md:truncate">
-                        Check out the{" "}
-                        <a
-                            href="#"
-                            className="rounded-xs underline underline-offset-3 outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
-                        >
-                            new dashboard
-                        </a>
-                        .
-                    </p>
-                </div>
-            </div>
-            <div className="absolute top-2 right-2 md:top-1.5 md:right-2">
-                <CloseButton size="md" label="Dismiss" />
-            </div>
-        </div>
-    );
-};
 
 const ContentSplitImage04 = () => {
     const { copied, copy } = useClipboard();
@@ -456,87 +429,13 @@ const BlogSectionSimpleLeftAligned01 = () => {
     );
 };
 
-const CTAAbstractImages = () => {
-    return (
-        <section className="bg-[#f9f7f3] py-16 lg:py-24">
-            <div className="mx-auto grid max-w-container grid-cols-1 gap-16 overflow-hidden px-4 md:px-8 lg:grid-cols-2 lg:items-center">
-                <div className="flex max-w-3xl flex-col items-start">
-                    <h2 className="text-display-sm font-extrabold text-primary md:text-display-md lg:text-display-lg">No long-term contracts. No catches.</h2>
-                    <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">Start your 30-day free trial today.</p>
 
-                    <div className="mt-8 flex w-full flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-start md:mt-12">
-                        <Button color="secondary" size="xl">
-                            Learn more
-                        </Button>
-                        <Button size="xl">Get started</Button>
-                    </div>
-                </div>
-
-                <div className="grid h-122 w-[150%] grid-cols-[repeat(12,1fr)] grid-rows-[repeat(12,1fr)] gap-2 justify-self-center sm:h-124 sm:w-[120%] md:w-auto md:gap-4">
-                    <div className="size-full object-cover bg-[#84D7D9]" />
-                    <div className="size-full object-cover bg-[#84D7D9]" />
-                    <div className="size-full object-cover bg-[#84D7D9]" />
-                    <div className="size-full object-cover bg-[#84D7D9]" />
-                    <div className="size-full object-cover bg-[#84D7D9]" />
-                </div>
-            </div>
-        </section>
-    );
-};
-
-const NewsletterCardHorizontal = () => {
-    return (
-        <section className="bg-[#f9f7f3] pb-16 md:pb-24">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col items-start justify-between gap-x-16 gap-y-8 rounded-2xl bg-secondary px-6 py-10 lg:flex-row lg:p-16">
-                    <div className="flex max-w-3xl flex-col">
-                        <h2 className="text-display-sm font-extrabold text-primary">Join 2,000+ subscribers</h2>
-                        <p className="mt-4 text-lg text-tertiary lg:text-xl">Stay in the loop with everything you need to know.</p>
-                    </div>
-                    <Form
-                        onSubmit={(e) => {
-                            e.preventDefault();
-                            const data = Object.fromEntries(new FormData(e.currentTarget));
-                            console.log("Form data:", data);
-                        }}
-                        className="flex w-full flex-col gap-4 md:max-w-120 md:flex-row"
-                    >
-                        <Input
-                            isRequired
-                            size="lg"
-                            name="email"
-                            type="email"
-                            placeholder="Enter your email"
-                            wrapperClassName="flex-1 py-0.5 md:max-w-[345px]"
-                            hint={
-                                <span>
-                                    Read about our{" "}
-                                    <a
-                                        href="#"
-                                        className="rounded-xs underline underline-offset-3 outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
-                                    >
-                                        privacy policy
-                                    </a>
-                                    .
-                                </span>
-                            }
-                        />
-                        <Button type="submit" size="xl">
-                            Subscribe
-                        </Button>
-                    </Form>
-                </div>
-            </div>
-        </section>
-    );
-};
 
 
 
 const BlogPost04 = () => {
     return (
         <div className="bg-[#f9f7f3]">
-            <BannerSlimDefaultFullWidth />
 
             <NimbusHeader />
 
@@ -548,9 +447,7 @@ const BlogPost04 = () => {
 
             <SectionDivider />
 
-            <CTAAbstractImages />
 
-            <NewsletterCardHorizontal />
 
             <NimbusFooter />
         </div>

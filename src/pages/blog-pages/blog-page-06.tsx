@@ -4,11 +4,10 @@ import { PaginationPageMinimalCenter } from "@/components/application/pagination
 import { TabList, Tabs } from "@/components/application/tabs/tabs";
 import { Avatar } from "@/components/base/avatar/avatar";
 import { BadgeGroup } from "@/components/base/badges/badge-groups";
-import { Badge, type BadgeColor } from "@/components/base/badges/badges";
-import { Button } from "@/components/base/buttons/button";
+import { type BadgeColor } from "@/components/base/badges/badges";
 import { Input } from "@/components/base/input/input";
-import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
 import { NimbusHeader } from "@/components/marketing/nimbus-header";
+import { NimbusFooter } from "@/components/marketing/nimbus-footer";
 import { useBreakpoint } from "@/hooks/use-breakpoint";
 import { cx } from "@/utils/cx";
 
@@ -177,82 +176,6 @@ const articles: Article[] = [
     },
 ];
 
-const footerNavList = [
-    {
-        label: "Product",
-        items: [
-            { label: "Overview", href: "#" },
-            { label: "Products", href: "#" },
-            {
-                label: "Solutions",
-                href: "#",
-                badge: (
-                    <Badge color="gray" type="modern" size="sm" className="ml-1">
-                        New
-                    </Badge>
-                ),
-            },
-            { label: "Tutorials", href: "#" },
-            { label: "Pricing", href: "#" },
-            { label: "Releases", href: "#" },
-        ],
-    },
-    {
-        label: "Company",
-        items: [
-            { label: "About us", href: "#" },
-            { label: "Careers", href: "#" },
-            { label: "Press", href: "#" },
-            { label: "News", href: "#" },
-            { label: "Media kit", href: "#" },
-            { label: "Contact", href: "#" },
-        ],
-    },
-    {
-        label: "Resources",
-        items: [
-            { label: "Blog", href: "#" },
-            { label: "Newsletter", href: "#" },
-            { label: "Events", href: "#" },
-            { label: "Help centre", href: "#" },
-            { label: "Tutorials", href: "#" },
-            { label: "Support", href: "#" },
-        ],
-    },
-    {
-        label: "Use cases",
-        items: [
-            { label: "Startups", href: "#" },
-            { label: "Enterprise", href: "#" },
-            { label: "Government", href: "#" },
-            { label: "SaaS centre", href: "#" },
-            { label: "Marketplaces", href: "#" },
-            { label: "Ecommerce", href: "#" },
-        ],
-    },
-    {
-        label: "Social",
-        items: [
-            { label: "X", href: "#" },
-            { label: "LinkedIn", href: "#" },
-            { label: "Facebook", href: "#" },
-            { label: "GitHub", href: "#" },
-            { label: "AngelList", href: "#" },
-            { label: "Dribbble", href: "#" },
-        ],
-    },
-    {
-        label: "Legal",
-        items: [
-            { label: "Terms", href: "#" },
-            { label: "Privacy", href: "#" },
-            { label: "Cookies", href: "#" },
-            { label: "Licenses", href: "#" },
-            { label: "Settings", href: "#" },
-            { label: "Contact", href: "#" },
-        ],
-    },
-];
 
 const Simple01Vertical = ({ article, imageClassName }: { article: Article; imageClassName?: string }) => (
     <div className="flex flex-col gap-4">
@@ -453,108 +376,9 @@ const BlogHeaderFeaturedPost02 = () => {
     );
 };
 
-const CardHorizontal = () => {
-    return (
-        <section className="bg-[#f9f7f3] pb-16 md:pb-24">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col gap-x-8 gap-y-8 rounded-2xl bg-secondary px-6 py-10 lg:flex-row lg:p-16">
-                    <div className="flex max-w-3xl flex-1 flex-col">
-                        <h2 className="text-display-sm font-extrabold text-primary">
-                            <span className="hidden md:inline">Start your 30-day free trial</span>
-                            <span className="md:hidden">Start your free trial</span>
-                        </h2>
-                        <p className="mt-4 text-lg text-tertiary lg:text-xl">Join over 4,000+ startups already growing with Nimbus.</p>
-                    </div>
-                    <div className="flex flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-start">
-                        <Button color="secondary" size="xl">
-                            Learn more
-                        </Button>
-                        <Button size="xl">Get started</Button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-};
 
-const SocialProofFullWidth = () => {
-    return (
-        <section className="bg-secondary py-16 md:py-24">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col gap-8">
-                    <p className="text-center text-md font-medium text-tertiary">Join 4,000+ companies already growing</p>
-                    <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 xl:gap-x-6">
-                        {/* Light mode images (hidden in dark mode) */}
-                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
-                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
-                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
-                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
-                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
-                        <div className="h-9 md:h-10 dark:hidden bg-[#84D7D9]" />
 
-                        {/* Dark mode images (hidden in light mode) */}
-                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
-                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
-                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
-                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
-                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
-                        <div className="h-9 opacity-85 not-dark:hidden md:h-10 bg-[#84D7D9]" />
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-};
 
-const SimpleCentered = () => {
-    return (
-        <section className="dark-mode bg-[#f9f7f3] py-16 md:py-24">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col justify-center text-center">
-                    <h2 className="text-display-sm font-extrabold text-primary md:text-display-md">Start your free trial</h2>
-                    <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Join over 4,000+ startups already growing with Nimbus.</p>
-                    <div className="mt-8 flex flex-col-reverse gap-3 self-stretch md:mt-8 md:flex-row md:self-center">
-                        <Button color="secondary" size="xl">
-                            Learn more
-                        </Button>
-                        <Button size="xl">Get started</Button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-};
-
-const FooterLarge01 = () => {
-    return (
-        <footer className="bg-secondary py-12 md:pt-16">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <nav>
-                    <ul className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
-                        {footerNavList.map((category) => (
-                            <li key={category.label}>
-                                <h4 className="text-sm font-semibold text-quaternary">{category.label}</h4>
-                                <ul className="mt-4 flex flex-col gap-3">
-                                    {category.items.map((item) => (
-                                        <li key={item.label} className="flex">
-                                            <Button color="link-gray" size="md" href={item.href} iconTrailing={item.badge} className="max-h-5 gap-1">
-                                                {item.label}
-                                            </Button>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-                <div className="mt-12 flex flex-col justify-between gap-6 border-t border-secondary pt-8 md:mt-16 md:flex-row md:items-center">
-                    <UntitledLogo className="h-7 w-min" />
-                    <p className="text-sm text-quaternary">© 2026 Nimbus. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-    );
-};
 
 const BlogPage06 = () => {
     return (
@@ -563,13 +387,10 @@ const BlogPage06 = () => {
 
             <BlogHeaderFeaturedPost02 />
 
-            <CardHorizontal />
 
-            <SocialProofFullWidth />
 
-            <SimpleCentered />
 
-            <FooterLarge01 />
+            <NimbusFooter />
         </div>
     );
 };

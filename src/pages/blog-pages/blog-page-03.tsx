@@ -10,8 +10,8 @@ import { Form } from "@/components/base/form/form";
 import { Input } from "@/components/base/input/input";
 import { Select } from "@/components/base/select/select";
 import { FeaturedIcon } from "@/components/foundations/featured-icon/featured-icon";
-import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
 import { NimbusHeader } from "@/components/marketing/nimbus-header";
+import { NimbusFooter } from "@/components/marketing/nimbus-footer";
 import { useBreakpoint } from "@/hooks/use-breakpoint";
 import { cx } from "@/utils/cx";
 
@@ -320,109 +320,7 @@ const BlogHeaderSimple01 = () => {
     );
 };
 
-const AbstractImages = () => {
-    return (
-        <section className="bg-[#f9f7f3] pb-16 lg:pb-24">
-            <div className="mx-auto grid max-w-container grid-cols-1 gap-16 overflow-hidden px-4 md:px-8 lg:grid-cols-2 lg:items-center">
-                <div className="flex max-w-3xl flex-col items-start">
-                    <h2 className="text-display-sm font-extrabold text-primary md:text-display-md lg:text-display-lg">No long-term contracts. No catches.</h2>
-                    <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">Start your 30-day free trial today.</p>
 
-                    <div className="mt-8 flex w-full flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-start md:mt-12">
-                        <Button color="secondary" size="xl">
-                            Learn more
-                        </Button>
-                        <Button size="xl">Get started</Button>
-                    </div>
-                </div>
-
-                <div className="grid h-122 w-[150%] grid-cols-[repeat(12,1fr)] grid-rows-[repeat(12,1fr)] gap-2 justify-self-center sm:h-124 sm:w-[120%] md:w-auto md:gap-4">
-                    <div className="size-full object-cover bg-[#84D7D9]" />
-                    <div className="size-full object-cover bg-[#84D7D9]" />
-                    <div className="size-full object-cover bg-[#84D7D9]" />
-                    <div className="size-full object-cover bg-[#84D7D9]" />
-                    <div className="size-full object-cover bg-[#84D7D9]" />
-                </div>
-            </div>
-        </section>
-    );
-};
-
-const FooterLarge08 = () => {
-    return (
-        <footer className="bg-[#f9f7f3] py-12 md:pt-16">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col justify-between gap-x-8 gap-y-12 lg:flex-row">
-                    <div className="flex flex-col gap-8 md:items-start">
-                        <UntitledLogo className="h-7 w-min shrink-0" />
-                        <nav>
-                            <ul className="grid grid-cols-2 gap-x-8 gap-y-3 sm:grid-cols-[repeat(6,max-content)]">
-                                {[
-                                    { title: "Overview", href: "#" },
-                                    { title: "Features", href: "#" },
-                                    { title: "Pricing", href: "#" },
-                                    { title: "Careers", href: "#" },
-                                    { title: "Help", href: "#" },
-                                    { title: "Privacy", href: "#" },
-                                ].map((item) => (
-                                    <li key={item.title}>
-                                        <Button color="link-gray" size="md" href={item.href} className="max-h-5">
-                                            {item.title}
-                                        </Button>
-                                    </li>
-                                ))}
-                            </ul>
-                        </nav>
-                    </div>
-
-                    <Form
-                        onSubmit={(e) => {
-                            e.preventDefault();
-                            const data = Object.fromEntries(new FormData(e.currentTarget));
-                            console.log("Form data:", data);
-                        }}
-                        className="flex w-full flex-col gap-4 sm:max-w-90"
-                    >
-                        <label htmlFor="newsletters-email" className="text-sm font-semibold text-primary">
-                            Stay up to date
-                        </label>
-                        <div className="flex flex-col gap-4 sm:flex-row">
-                            <Input
-                                isRequired
-                                id="newsletters-email"
-                                name="email"
-                                type="email"
-                                placeholder="Enter your email"
-                                size="lg"
-                                wrapperClassName="flex-1"
-                            />
-                            <Button type="submit" size="lg">
-                                Subscribe
-                            </Button>
-                        </div>
-                    </Form>
-                </div>
-                <div className="mt-12 flex flex-col-reverse justify-between gap-4 border-t border-secondary pt-8 md:mt-16 md:flex-row md:gap-6">
-                    <p className="text-sm text-quaternary">© 2026 Nimbus. All rights reserved.</p>
-
-                    <ul className="flex gap-4">
-                        {[
-                            { title: "Terms", href: "#" },
-                            { title: "Privacy", href: "#" },
-                            { title: "Cookies", href: "#" },
-                        ].map(({ title, href }) => (
-                            <li key={title}>
-                                <a href={href} className="text-md text-quaternary transition duration-100 ease-linear hover:text-tertiary">
-                                    {title}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-        </footer>
-    );
-};
 
 const BlogPage03 = () => {
     return (
@@ -431,9 +329,8 @@ const BlogPage03 = () => {
 
             <BlogHeaderSimple01 />
 
-            <AbstractImages />
 
-            <FooterLarge08 />
+            <NimbusFooter />
         </div>
     );
 };
