@@ -1,5 +1,5 @@
 import type { ComponentProps, FC } from "react";
-import { ArrowUpRight, Check, Copy01, Link01, Send01 } from "@untitledui/icons";
+import { ArrowUpRight, Check, Copy01, Send01 } from "@untitledui/icons";
 import { Avatar } from "@/components/base/avatar/avatar";
 import { BadgeGroup } from "@/components/base/badges/badge-groups";
 import type { BadgeColor } from "@/components/base/badges/badges";
@@ -9,6 +9,8 @@ import { Input } from "@/components/base/input/input";
 import { FeaturedIcon } from "@/components/foundations/featured-icon/featured-icon";
 import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import { NimbusHeader } from "@/components/marketing/nimbus-header";
+import { ArticleBody } from "@/pages/blog/article-body";
+import { nimbusArticles, type NimbusArticle } from "@/content/blog/nimbus-articles";
 import { NimbusFooter } from "@/components/marketing/nimbus-footer";
 import { SectionDivider } from "@/components/shared-assets/section-divider";
 import { useClipboard } from "@/hooks/use-clipboard";
@@ -57,22 +59,19 @@ const BlobSubscribeCard = ({ icon, title, description }: { icon: FC<{ className?
     </Form>
 );
 
-const ContentLargeImage03 = () => {
+const ContentLargeImage03 = ({ article }: { article: NimbusArticle }) => {
     const { copied, copy } = useClipboard();
 
     return (
         <div className="bg-[#f9f7f3]">
             <div className="mx-auto max-w-container px-4 py-16 md:px-8 md:py-24">
                 <div className="w-full max-w-3xl">
-                    <BadgeGroup size="md" addonText="Leadership" color="brand" theme="light" className="pr-3" iconTrailing={null}>
-                        8 min read
+                    <BadgeGroup size="md" addonText={article.category.name} color="brand" theme="light" className="pr-3" iconTrailing={null}>
+                        {article.readingTime}
                     </BadgeGroup>
 
-                    <h1 className="mt-4 text-display-md font-extrabold text-primary md:text-display-lg">Floors are a publisher's pricing power</h1>
-                    <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">
-                        Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty? Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit.
-                    </p>
+                    <h1 className="mt-4 text-display-md font-extrabold text-primary md:text-display-lg">{article.title}</h1>
+                    <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">{article.summary}</p>
                 </div>
                 <div className="mt-16 w-full">
                     <div className="h-60 w-full object-cover md:h-160 bg-[#84D7D9]" />
@@ -80,11 +79,11 @@ const ContentLargeImage03 = () => {
                         <dl className="flex gap-12 md:gap-12">
                             <div>
                                 <dt className="text-sm font-semibold text-brand-secondary">Written by</dt>
-                                <dd className="mt-3 text-lg font-medium text-primary">Ryan Cho</dd>
+                                <dd className="mt-3 text-lg font-medium text-primary">{article.author.name}</dd>
                             </div>
                             <div>
                                 <dt className="text-sm font-semibold text-brand-secondary">Published on</dt>
-                                <dd className="mt-3 text-lg font-medium text-primary">17 Jan 2026</dd>
+                                <dd className="mt-3 text-lg font-medium text-primary">{article.publishedAt}</dd>
                             </div>
                         </dl>
 
@@ -101,130 +100,7 @@ const ContentLargeImage03 = () => {
             </div>
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
                 <div className="mx-auto flex max-w-180 flex-col justify-center gap-12 md:items-start lg:max-w-none lg:flex-row lg:gap-24">
-                    <div className="prose max-w-180 md:prose-lg">
-                        <h2>Introduction</h2>
-                        <p>
-                            Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis
-                            montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae nisi, tellus tincidunt. At feugiat
-                            sapien varius id.
-                        </p>
-                        <p>
-                            Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu
-                            quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie
-                            aliquet sodales id est ac volutpat.
-                        </p>
-
-                        <figure>
-                            <div className="h-60 md:h-120 bg-[#84D7D9]" />
-                            <figcaption>
-                                <Link01 className="size-4 text-utility-neutral-400" />
-                                <span>
-                                    Image courtesy of Moose Photos via{" "}
-                                    <a
-                                        href="https://www.pexels.com/photo/colleagues-looking-at-laptop-1036641/"
-                                        className="rounded-xs outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
-                                    >
-                                        Pexels
-                                    </a>
-                                </span>
-                            </figcaption>
-                        </figure>
-
-                        <p>
-                            Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien,
-                            dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus. Quis velit eget ut tortor tellus. Sed vel, congue felis elit
-                            erat nam nibh orci.
-                        </p>
-
-                        <figure>
-                            <blockquote>
-                                <p>
-                                    In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we have
-                                    lost or never attained, living by voices we shall never hear.
-                                </p>
-                            </blockquote>
-                            <figcaption className="not-prose mt-6 flex gap-3 text-md md:mt-8">
-                                <div className="size-12 rounded-full object-cover bg-[#84D7D9]" />
-                                <div>
-                                    <p className="text-md font-semibold text-primary">Jordan Kim</p>
-                                    <cite className="text-md text-tertiary not-italic">Product Designer</cite>
-                                </div>
-                            </figcaption>
-                        </figure>
-                        <p>
-                            Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet pellentesque aenean hac vestibulum
-                            turpis mi{" "}
-                            <a href="#" className="rounded-xs outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2">
-                                bibendum diam
-                            </a>
-                            . Tempor integer aliquam in vitae malesuada fringilla.
-                        </p>
-                        <p>
-                            Elit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus. Sed condimentum enim
-                            dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate posuere purus sit
-                            congue convallis aliquet. Arcu id augue ut feugiat donec porttitor neque. Mauris, neque ultricies eu vestibulum, bibendum quam lorem
-                            id. Dolor lacus, eget nunc lectus in tellus, pharetra, porttitor.
-                        </p>
-
-                        <p>
-                            Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien,
-                            dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus. Quis velit eget ut tortor tellus. Sed vel, congue felis elit
-                            erat nam nibh orci.
-                        </p>
-
-                        <h3>Software and tools</h3>
-
-                        <p>
-                            Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis
-                            montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae nisi, tellus tincidunt. At feugiat
-                            sapien varius id.
-                        </p>
-                        <p>
-                            Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu
-                            quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie
-                            aliquet sodales id est ac volutpat.
-                        </p>
-
-                        <h3>Other resources</h3>
-
-                        <p>
-                            Sagittis et eu at elementum, quis in. Proin praesent volutpat egestas sociis sit lorem nunc nunc sit. Eget diam curabitur mi ac.
-                            Auctor rutrum lacus malesuada massa ornare et. Vulputate consectetur ac ultrices at diam dui eget fringilla tincidunt. Arcu sit
-                            dignissim massa erat cursus vulputate gravida id. Sed quis auctor vulputate hac elementum gravida cursus dis.
-                        </p>
-                        <ol>
-                            <li>Lectus id duis vitae porttitor enim gravida morbi.</li>
-                            <li>Eu turpis posuere semper feugiat volutpat elit, ultrices suspendisse. Auctor vel in vitae placerat.</li>
-                            <li>Suspendisse maecenas ac donec scelerisque diam sed est duis purus.</li>
-                        </ol>
-                        <figure>
-                            <div className="h-60 md:h-120 bg-[#84D7D9]" />
-                            <figcaption>
-                                <Link01 className="size-4 text-utility-neutral-400" />
-                                <span>
-                                    Image courtesy of Helena Lopes via{" "}
-                                    <a
-                                        href="https://www.pexels.com/photo/short-coated-tan-dog-2253275/"
-                                        className="rounded-xs outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
-                                    >
-                                        Pexels
-                                    </a>
-                                </span>
-                            </figcaption>
-                        </figure>
-
-                        <p>
-                            Lectus leo massa amet posuere. Malesuada mattis non convallis quisque. Libero sit et imperdiet bibendum quisque dictum vestibulum in
-                            non. Pretium ultricies tempor non est diam. Enim ut enim amet amet integer cursus. Sit ac commodo pretium sed etiam turpis
-                            suspendisse at.
-                        </p>
-
-                        <p>
-                            Tristique odio senectus nam posuere ornare leo metus, ultricies. Blandit duis ultricies vulputate morbi feugiat cras placerat elit.
-                            Aliquam tellus lorem sed ac. Montes, sed mattis pellentesque suscipit accumsan. Cursus viverra aenean magna risus elementum faucibus
-                            molestie pellentesque. Arcu ultricies sed mauris vestibulum.
-                        </p>
-                    </div>
+                    <ArticleBody blocks={article.body} className="max-w-none" />
                     <div className="lg:max-w-sm lg:min-w-85">
                         <BlobSubscribeCard
                             icon={Send01}
@@ -386,12 +262,12 @@ const BlogSectionSplitLayout01 = () => {
 
 
 
-const BlogPost09 = () => {
+const BlogPost09 = ({ article = nimbusArticles[0] }: { article?: NimbusArticle }) => {
     return (
         <div className="bg-[#f9f7f3]">
             <NimbusHeader />
 
-            <ContentLargeImage03 />
+            <ContentLargeImage03 article={article} />
 
             <SectionDivider />
 
