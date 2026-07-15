@@ -69,7 +69,7 @@ const enriched03: NimbusArticle = {
         {
             type: "quote",
             text: "Most stacks add demand by adding architecture. That's backwards.",
-            attribution: "Kristen Smith, Chief Product Officer, Nimbus",
+            attribution: "Kristen Smith, Chief Product Officer, Nimbus", avatarSrc: "https://i.pravatar.cc/150?img=47",
         },
         { type: "heading", text: "Infrastructure that doesn't need rebuilding" },
         {

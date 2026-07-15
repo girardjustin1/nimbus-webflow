@@ -67,7 +67,7 @@ const enriched08: NimbusArticle = {
         {
             type: "quote",
             text: "Most stacks add demand by adding architecture. That's backwards.",
-            attribution: "Kristen Smith, Chief Product Officer, Nimbus",
+            attribution: "Kristen Smith, Chief Product Officer, Nimbus", avatarSrc: "https://i.pravatar.cc/150?img=47",
         },
         { type: "heading", text: "Accurate signals in, accurate optimization out" },
         {
@@ -95,7 +95,7 @@ const enriched08: NimbusArticle = {
         {
             type: "quote",
             text: "Most stacks add demand by adding architecture — another SDK, another wrapper, another auction running quietly off to the side. That's backwards. The job is to let more demand compete without making the system heavier or less fair. Every bid competes on the same terms. That's the whole design.",
-            attribution: "Kristen Smith, Chief Product Officer, Nimbus",
+            attribution: "Kristen Smith, Chief Product Officer, Nimbus", avatarSrc: "https://i.pravatar.cc/150?img=47",
         },
         { type: "heading", text: "Activating Prebid Server demand" },
         {

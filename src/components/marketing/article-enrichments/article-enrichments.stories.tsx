@@ -2,74 +2,18 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Checklist, ImageryIdea, KeyTakeaway, PullQuote, StatCallout, StatGrid } from "./article-enrichments";
 
 /**
- * Components → Body → Enrichments
- * Drop-in sections to break up content-rich Nimbus articles. Copy drawn from the
- * Nimbus article decks (Tumblr case study, Floors, Ad Quality, Prebid).
+ * Components → Body → Enrichments → Intertwined Example
+ * All enrichment sections woven into a sample Nimbus article body.
  */
 const meta = {
-    title: "Components/Body/Enrichments",
+    title: "Components/Body/Enrichments/Intertwined Example",
     parameters: { layout: "padded" },
-    tags: ["autodocs"],
 } satisfies Meta;
 
 export default meta;
 type Story = StoryObj;
 
-export const Metric: Story = {
-    name: "Stat Callout",
-    render: () => <StatCallout value="42%" label="revenue increase Tumblr saw after switching to Nimbus" />,
-};
-
-export const Stats: Story = {
-    name: "Stat Grid (social proof)",
-    render: () => (
-        <StatGrid
-            stats={[
-                { value: "31%", label: "avg publisher lift with Nimbus+" },
-                { value: "24%", label: "avg lift with Nimbus Core" },
-                { value: "60+", label: "demand sources connected" },
-            ]}
-        />
-    ),
-};
-
-export const Quote: Story = {
-    name: "Pull Quote",
-    render: () => (
-        <PullQuote
-            quote="Every bid competes on the same terms. That's the whole design."
-            attribution="Kristen Smith, Chief Product Officer, Nimbus"
-        />
-    ),
-};
-
-export const Takeaway: Story = {
-    name: "Key Takeaway",
-    render: () => <KeyTakeaway text="A floor is a dial, not a switch — set the terms the market has to beat." />,
-};
-
-export const CheckList: Story = {
-    name: "Checklist Infographic",
-    render: () => (
-        <Checklist
-            heading="What publishers get with Nimbus"
-            items={[
-                "Auction transparency and control",
-                "Holistic demand competition",
-                "Operational efficiency across partners",
-                "Full access to the Nimbus demand ecosystem",
-            ]}
-        />
-    ),
-};
-
-export const Imagery: Story = {
-    name: "Imagery Idea",
-    render: () => <ImageryIdea caption="teal flow diagram — request → auction → creative validation → render" />,
-};
-
-/** All enrichments woven into a sample article body — how they break up the copy. */
-export const IntertwinedExample: Story = {
+export const Default: Story = {
     render: () => (
         <article className="mx-auto max-w-3xl bg-[#f9f7f3] p-8">
             <span className="text-[13px] font-semibold tracking-[0.11em] text-[#08c6c7] uppercase">Yield</span>
@@ -100,6 +44,7 @@ export const IntertwinedExample: Story = {
             <PullQuote
                 quote="Every bid competes on the same terms. That's the whole design."
                 attribution="Kristen Smith, Chief Product Officer, Nimbus"
+                avatarSrc="https://i.pravatar.cc/150?img=47"
             />
 
             <p className="my-4 text-[18px] leading-[28px] text-[#535862]">

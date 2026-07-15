@@ -1,4 +1,4 @@
-import { Checklist, ImageryIdea, KeyTakeaway, StatCallout, StatGrid } from "@/components/marketing/article-enrichments/article-enrichments";
+import { Checklist, ImageryIdea, KeyTakeaway, PullQuote, StatCallout, StatGrid } from "@/components/marketing/article-enrichments/article-enrichments";
 import type { BlogBlock } from "@/content/blog/nimbus-articles";
 
 const Block = ({ block }: { block: BlogBlock }) => {
@@ -20,12 +20,7 @@ const Block = ({ block }: { block: BlogBlock }) => {
         );
     }
     if (block.type === "quote") {
-        return (
-            <blockquote className="my-8 border-l-4 border-[#08c6c7] pl-6">
-                <p className="text-[21px] leading-[30px] font-medium text-[#181d27]">{block.text}</p>
-                {block.attribution && <footer className="mt-3 text-[16px] text-[#535862]">— {block.attribution}</footer>}
-            </blockquote>
-        );
+        return <PullQuote quote={block.text} attribution={block.attribution} avatarSrc={block.avatarSrc} />;
     }
     return (
         <p className="my-4 text-[18px] leading-[28px] text-[#535862]">

@@ -5,7 +5,7 @@ export type BlogBlock =
     | { type: "heading"; text: string }
     | { type: "paragraph"; lead?: string; text: string }
     | { type: "list"; items: string[] }
-    | { type: "quote"; text: string; attribution?: string }
+    | { type: "quote"; text: string; attribution?: string; avatarSrc?: string }
     // --- enrichment blocks (rendered via article-enrichments) ---
     | { type: "stat"; value: string; label: string }
     | { type: "statGrid"; stats: { value: string; label: string }[] }
@@ -352,7 +352,7 @@ export const nimbusArticles: NimbusArticle[] = [
             {
                 type: "quote",
                 text: "Most stacks add demand by adding architecture — another SDK, another wrapper, another auction running quietly off to the side. That's backwards. The job is to let more demand compete without making the system heavier or less fair. Every bid competes on the same terms. That's the whole design.",
-                attribution: "Kristen Smith, Chief Product Officer, Nimbus",
+                attribution: "Kristen Smith, Chief Product Officer, Nimbus", avatarSrc: "https://i.pravatar.cc/150?img=47",
             },
             { type: "heading", text: "Activating Prebid Server demand" },
             {
