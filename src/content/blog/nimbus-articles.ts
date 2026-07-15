@@ -1,11 +1,17 @@
 import type { Article } from "@/components/marketing/blog/base-components/blog-cards";
 
-/** A block of blog-post body content. */
+/** A block of blog-post body content. Includes enrichment blocks that break up copy. */
 export type BlogBlock =
     | { type: "heading"; text: string }
     | { type: "paragraph"; lead?: string; text: string }
     | { type: "list"; items: string[] }
-    | { type: "quote"; text: string; attribution?: string };
+    | { type: "quote"; text: string; attribution?: string }
+    // --- enrichment blocks (rendered via article-enrichments) ---
+    | { type: "stat"; value: string; label: string }
+    | { type: "statGrid"; stats: { value: string; label: string }[] }
+    | { type: "checklist"; heading?: string; items: string[] }
+    | { type: "keyTakeaway"; title?: string; text: string }
+    | { type: "imageryIdea"; caption: string };
 
 /** An Article (for cards) enriched with a slug + full body (for post pages). */
 export type NimbusArticle = Article & { slug: string; body: BlogBlock[] };

@@ -1,6 +1,12 @@
+import { Checklist, ImageryIdea, KeyTakeaway, StatCallout, StatGrid } from "@/components/marketing/article-enrichments/article-enrichments";
 import type { BlogBlock } from "@/content/blog/nimbus-articles";
 
 const Block = ({ block }: { block: BlogBlock }) => {
+    if (block.type === "stat") return <StatCallout value={block.value} label={block.label} />;
+    if (block.type === "statGrid") return <StatGrid stats={block.stats} />;
+    if (block.type === "checklist") return <Checklist heading={block.heading} items={block.items} />;
+    if (block.type === "keyTakeaway") return <KeyTakeaway title={block.title} text={block.text} />;
+    if (block.type === "imageryIdea") return <ImageryIdea caption={block.caption} />;
     if (block.type === "heading") {
         return <h2 className="mt-10 mb-3 text-[28px] leading-[1.2] font-extrabold text-[#181d27]">{block.text}</h2>;
     }
