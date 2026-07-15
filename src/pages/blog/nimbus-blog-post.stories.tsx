@@ -29,3 +29,8 @@ export const Floors: Story = {
     name: "Floors: Pricing Power",
     args: { article: nimbusArticles[2] },
 };
+
+export const Prebid: Story = {
+    name: "Prebid Is Now Live",
+    args: { article: nimbusArticles[3] },
+};

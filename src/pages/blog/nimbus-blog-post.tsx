@@ -17,6 +17,14 @@ const Block = ({ block }: { block: BlogBlock }) => {
             </ul>
         );
     }
+    if (block.type === "quote") {
+        return (
+            <blockquote className="my-8 border-l-4 border-[#08c6c7] pl-6">
+                <p className="text-[21px] leading-[30px] font-medium text-[#181d27]">{block.text}</p>
+                {block.attribution && <footer className="mt-3 text-[16px] text-[#535862]">— {block.attribution}</footer>}
+            </blockquote>
+        );
+    }
     return (
         <p className="my-4 text-[18px] leading-[28px] text-[#535862]">
             {block.lead && <strong className="font-bold text-[#181d27]">{block.lead} </strong>}
