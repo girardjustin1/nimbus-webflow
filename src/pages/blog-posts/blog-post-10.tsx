@@ -54,7 +54,7 @@ const ContentLargeImage02 = () => {
             <div className="mx-auto max-w-container px-4 py-16 md:px-8 md:py-24">
                 <div className="mx-auto flex w-full max-w-180 flex-col items-center text-center">
                     <span className="text-sm font-semibold text-brand-secondary md:text-md">Design</span>
-                    <h1 className="mt-3 text-display-md font-semibold text-primary md:text-display-lg">Ad quality review best practices</h1>
+                    <h1 className="mt-3 text-display-md font-extrabold text-primary md:text-display-lg">Ad quality review best practices</h1>
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">
                         How do you create compelling presentations that wow your colleagues and impress your managers? Here's how to get started.
                     </p>
@@ -209,7 +209,7 @@ const ContentLargeImage02 = () => {
                         </p>
 
                         <div className="not-prose my-8 rounded-2xl bg-secondary px-5 py-6 text-lg text-tertiary md:my-12 md:p-8 [&>p+p]:mt-4.5">
-                            <h2 className="mb-4 text-display-xs font-semibold text-primary">Conclusion</h2>
+                            <h2 className="mb-4 text-display-xs font-extrabold text-primary">Conclusion</h2>
                             <p>
                                 Morbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies. Duis est sit sed leo
                                 nisl, blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet nulla purus habitasse.
@@ -259,7 +259,7 @@ const NewsletterCardVerticalBrand = () => {
         <section className="bg-[#f9f7f3] pb-16 md:pb-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-center rounded-2xl bg-brand-section px-6 py-10 text-center lg:p-16">
-                    <h2 className="text-display-sm font-semibold text-primary_on-brand xl:text-display-md">
+                    <h2 className="text-display-sm font-extrabold text-primary_on-brand xl:text-display-md">
                         Still thinking
                         <br className="md:hidden" /> about it?
                     </h2>
@@ -311,7 +311,7 @@ const CTASimpleLogos02 = () => {
                 <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-16">
                     <div className="flex flex-col">
                         <div className="max-w-3xl">
-                            <h2 className="text-display-sm font-semibold text-primary md:text-display-md">Join over 4,000+ startups growing with Nimbus</h2>
+                            <h2 className="text-display-sm font-extrabold text-primary md:text-display-md">Join over 4,000+ startups growing with Nimbus</h2>
                             <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Start your 30-day free trial today.</p>
                         </div>
 

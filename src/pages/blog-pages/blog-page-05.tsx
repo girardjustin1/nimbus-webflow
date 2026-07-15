@@ -343,7 +343,7 @@ const BlogHeaderFeaturedPost03 = () => {
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Nimbus blog</span>
-                        <h2 className="mt-3 text-display-md font-semibold text-primary md:text-display-lg">Insights for in-app publishers</h2>
+                        <h2 className="mt-3 text-display-md font-extrabold text-primary md:text-display-lg">Insights for in-app publishers</h2>
                         <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">Monetization strategy, product deep-dives, and ad-tech insights.</p>
                         <Form
                             onSubmit={(e) => {
@@ -419,7 +419,7 @@ const BlogSectionCarouselLayout02 = () => {
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-start justify-between lg:flex-row">
                     <div className="max-w-3xl">
-                        <h2 className="text-display-sm font-semibold text-primary md:text-display-md">Latest posts</h2>
+                        <h2 className="text-display-sm font-extrabold text-primary md:text-display-md">Latest posts</h2>
                         <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">The latest news, technologies, and resources from our team.</p>
                     </div>
 
@@ -490,7 +490,7 @@ const SplitImageQuote02 = () => {
         <section className="bg-[#f9f7f3] py-16 lg:py-24">
             <div className="mx-auto grid w-full max-w-container grid-cols-1 gap-x-16 gap-y-12 px-4 md:px-8 lg:grid-cols-2 lg:items-center">
                 <div className="flex max-w-3xl flex-col items-start">
-                    <h2 className="text-display-sm font-semibold text-primary md:text-display-md lg:text-display-lg">
+                    <h2 className="text-display-sm font-extrabold text-primary md:text-display-md lg:text-display-lg">
                         Join 4,000+ startups growing with Nimbus
                     </h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">Start your 30-day free trial today.</p>
@@ -538,10 +538,10 @@ const SplitImageQuote02 = () => {
                                 transition={transition}
                                 className="absolute inset-x-0 bottom-0 flex flex-col border-t border-alpha-white/30 bg-primary/30 px-5 pt-6 pb-8 backdrop-blur-[10px] md:p-8"
                             >
-                                <q className="text-xl font-semibold text-white md:text-display-sm">{reviews[currentReviewIndex].quote}</q>
+                                <q className="text-xl font-extrabold text-white md:text-display-sm">{reviews[currentReviewIndex].quote}</q>
 
                                 <div className="mt-5 flex flex-col-reverse justify-between gap-4 md:mt-8 md:flex-row">
-                                    <p className="text-xl font-semibold whitespace-nowrap text-white md:text-display-xs">{reviews[currentReviewIndex].name}</p>
+                                    <p className="text-xl font-extrabold whitespace-nowrap text-white md:text-display-xs">{reviews[currentReviewIndex].name}</p>
                                     <div aria-hidden="true" className="hidden gap-1 md:flex">
                                         <StarIcon className="text-fg-white" />
                                         <StarIcon className="text-fg-white" />

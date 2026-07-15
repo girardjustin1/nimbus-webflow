@@ -255,7 +255,7 @@ const BlogHeaderFeaturedPost04 = () => {
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                         <span className="text-sm font-semibold text-secondary_on-brand md:text-md">Blog</span>
-                        <h2 className="mt-3 text-display-md font-semibold text-primary_on-brand md:text-display-lg">Resource library</h2>
+                        <h2 className="mt-3 text-display-md font-extrabold text-primary_on-brand md:text-display-lg">Resource library</h2>
                         <p className="mt-4 text-lg text-tertiary_on-brand md:mt-6 md:text-xl">
                             Subscribe to learn about new product features, the latest in technology, solutions, and updates.
                         </p>
@@ -310,7 +310,7 @@ const SimpleCentered = () => {
         <section className="bg-secondary py-16 md:py-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
-                    <h1 className="text-display-sm font-semibold text-primary md:text-display-md">Sign up for our newsletter</h1>
+                    <h1 className="text-display-sm font-extrabold text-primary md:text-display-md">Sign up for our newsletter</h1>
                     <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Be the first to know about releases and industry news and insights.</p>
 
                     <Form
@@ -356,7 +356,7 @@ const IPhoneMockup02 = () => {
         <section className="bg-[#f9f7f3] pt-16 md:py-24">
             <div className="relative mx-auto grid w-full max-w-container grid-cols-1 gap-16 px-4 md:px-8 lg:grid-cols-2 lg:items-center">
                 <div className="z-20 flex max-w-3xl flex-col items-start">
-                    <h2 className="text-display-sm font-semibold text-primary md:text-display-md lg:text-display-lg">Growth performance tracking made easy</h2>
+                    <h2 className="text-display-sm font-extrabold text-primary md:text-display-md lg:text-display-lg">Growth performance tracking made easy</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">Start your 30-day free trial today.</p>
                     <div className="mt-8 flex w-full gap-3 md:mt-12">
                         <AppStoreButton size="lg" />

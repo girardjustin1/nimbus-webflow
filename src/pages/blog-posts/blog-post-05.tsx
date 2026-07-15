@@ -189,7 +189,7 @@ const ContentSplitImage01 = () => {
                     <BadgeGroup size="md" addonText="Design" color="brand" theme="light" className="pr-3" iconTrailing={null}>
                         8 min read
                     </BadgeGroup>
-                    <h1 className="mt-4 text-display-md font-semibold text-primary md:text-display-xl">How the Dynamic Unit creates a native ad experience</h1>
+                    <h1 className="mt-4 text-display-md font-extrabold text-primary md:text-display-xl">How the Dynamic Unit creates a native ad experience</h1>
                     <p className="mt-4 max-w-140 text-lg text-tertiary md:mt-6 md:text-xl">
                         Collaboration can make our teams stronger, and our individual designs better. Here's how to do it better.
                     </p>
@@ -375,7 +375,7 @@ const ContentSplitImage01 = () => {
                                 elementum faucibus molestie pellentesque. Arcu ultricies sed mauris vestibulum.
                             </p>
                             <div className="not-prose my-8 rounded-2xl bg-secondary px-5 py-6 text-lg text-tertiary md:my-12 md:p-8 [&>p+p]:mt-4.5">
-                                <h2 className="mb-4 text-display-xs font-semibold text-primary">Conclusion</h2>
+                                <h2 className="mb-4 text-display-xs font-extrabold text-primary">Conclusion</h2>
                                 <p>
                                     Morbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies. Duis est sit sed
                                     leo nisl, blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet nulla purus habitasse.
@@ -489,7 +489,7 @@ const BlogSectionCarouselLayout01 = () => {
                 <div className="flex flex-col items-start justify-between lg:flex-row">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold text-brand-secondary md:text-md">Latest posts</p>
-                        <h2 className="mt-3 text-display-sm font-semibold text-primary md:text-display-md">Nimbus blog</h2>
+                        <h2 className="mt-3 text-display-sm font-extrabold text-primary md:text-display-md">Nimbus blog</h2>
                         <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Interviews, tips, guides, industry best practices, and news.</p>
                     </div>
 
@@ -529,7 +529,7 @@ const CTACardHorizontal = () => {
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col gap-x-8 gap-y-8 rounded-2xl bg-secondary px-6 py-10 lg:flex-row lg:p-16">
                     <div className="flex max-w-3xl flex-1 flex-col">
-                        <h2 className="text-display-sm font-semibold text-primary">
+                        <h2 className="text-display-sm font-extrabold text-primary">
                             <span className="hidden md:inline">Start your 30-day free trial</span>
                             <span className="md:hidden">Start your free trial</span>
                         </h2>

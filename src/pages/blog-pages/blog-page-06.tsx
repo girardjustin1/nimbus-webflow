@@ -388,7 +388,7 @@ const BlogHeaderFeaturedPost02 = () => {
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Nimbus blog</span>
-                        <h2 className="mt-3 text-display-md font-semibold text-primary md:text-display-lg">The latest writings from our team</h2>
+                        <h2 className="mt-3 text-display-md font-extrabold text-primary md:text-display-lg">The latest writings from our team</h2>
                         <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">Monetization strategy, product deep-dives, and ad-tech insights.</p>
                     </div>
                 </div>
@@ -405,7 +405,7 @@ const BlogHeaderFeaturedPost02 = () => {
                     <div className="absolute inset-x-0 bottom-0 w-full bg-linear-to-t from-black/40 to-transparent pt-24">
                         <div className="flex w-full items-start gap-6 p-8">
                             <div className="flex flex-1 flex-col gap-2">
-                                <p className="flex-1 text-display-xs font-semibold text-white">{featuredArticle.title}</p>
+                                <p className="flex-1 text-display-xs font-extrabold text-white">{featuredArticle.title}</p>
                                 <p className="line-clamp-2 text-md text-white/80">{featuredArticle.summary}</p>
                             </div>
                             <div className="flex items-center gap-2">
@@ -463,7 +463,7 @@ const CardHorizontal = () => {
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col gap-x-8 gap-y-8 rounded-2xl bg-secondary px-6 py-10 lg:flex-row lg:p-16">
                     <div className="flex max-w-3xl flex-1 flex-col">
-                        <h2 className="text-display-sm font-semibold text-primary">
+                        <h2 className="text-display-sm font-extrabold text-primary">
                             <span className="hidden md:inline">Start your 30-day free trial</span>
                             <span className="md:hidden">Start your free trial</span>
                         </h2>
@@ -539,7 +539,7 @@ const SimpleCentered = () => {
         <section className="dark-mode bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col justify-center text-center">
-                    <h2 className="text-display-sm font-semibold text-primary md:text-display-md">Start your free trial</h2>
+                    <h2 className="text-display-sm font-extrabold text-primary md:text-display-md">Start your free trial</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Join over 4,000+ startups already growing with Nimbus.</p>
                     <div className="mt-8 flex flex-col-reverse gap-3 self-stretch md:mt-8 md:flex-row md:self-center">
                         <Button color="secondary" size="xl">

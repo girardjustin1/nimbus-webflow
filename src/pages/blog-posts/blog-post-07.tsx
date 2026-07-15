@@ -103,7 +103,7 @@ const ContentLargeImage04 = () => {
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mx-auto flex w-full max-w-240 flex-col items-center text-center">
                         <span className="text-sm font-semibold text-primary_on-brand md:text-md">Design</span>
-                        <h1 className="mt-3 text-display-md font-semibold text-tertiary_on-brand md:text-display-lg">What is bid shading?</h1>
+                        <h1 className="mt-3 text-display-md font-extrabold text-tertiary_on-brand md:text-display-lg">What is bid shading?</h1>
                         <p className="mt-4 max-w-3xl text-lg text-primary_on-brand md:mt-6 md:text-xl">
                             Introduction to Bid shading and its Principles. Learn from the best in the industry with tips, tools, and best practices from those
                             in the know.
@@ -254,7 +254,7 @@ const ContentLargeImage04 = () => {
                         </p>
 
                         <div className="not-prose my-8 rounded-2xl bg-secondary px-5 py-6 text-lg text-tertiary md:my-12 md:p-8 [&>p+p]:mt-4.5">
-                            <h2 className="mb-4 text-display-xs font-semibold text-primary">Conclusion</h2>
+                            <h2 className="mb-4 text-display-xs font-extrabold text-primary">Conclusion</h2>
                             <p>
                                 Morbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies. Duis est sit sed leo
                                 nisl, blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet nulla purus habitasse.
@@ -411,7 +411,7 @@ const BlogSectionSplitLayout01 = () => {
                 <div className="w-full max-w-100">
                     <p className="text-sm font-semibold text-brand-secondary md:text-md">Latest</p>
 
-                    <h2 className="mt-3 text-display-sm font-semibold text-primary md:text-display-md">From the blog</h2>
+                    <h2 className="mt-3 text-display-sm font-extrabold text-primary md:text-display-md">From the blog</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-5">Monetization strategy, product deep-dives, and ad-tech insights.</p>
                     <div className="mt-12 hidden flex-col gap-3 md:mt-8 md:flex md:flex-row">
                         <Button size="xl">View all posts</Button>
@@ -439,7 +439,7 @@ const NewsletterCardVerticalBrand = () => {
         <section className="bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-center rounded-2xl bg-brand-section px-6 py-10 text-center lg:p-16">
-                    <h2 className="text-display-sm font-semibold text-primary_on-brand xl:text-display-md">
+                    <h2 className="text-display-sm font-extrabold text-primary_on-brand xl:text-display-md">
                         Still thinking
                         <br className="md:hidden" /> about it?
                     </h2>

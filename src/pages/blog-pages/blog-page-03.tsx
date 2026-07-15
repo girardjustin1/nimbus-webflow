@@ -280,7 +280,7 @@ const BlogHeaderSimple01 = () => {
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Nimbus blog</span>
-                        <h2 className="mt-3 text-display-md font-semibold text-primary md:text-display-lg">The latest writings from our team</h2>
+                        <h2 className="mt-3 text-display-md font-extrabold text-primary md:text-display-lg">The latest writings from our team</h2>
                         <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">Monetization strategy, product deep-dives, and ad-tech insights.</p>
                         <div className="mt-8 grid self-stretch sm:mt-12 sm:w-80 sm:self-center">
                             <Input isRequired size="lg" aria-label="Search" placeholder="Search" icon={SearchLg} wrapperClassName="md:py-0.5" />
@@ -329,7 +329,7 @@ const AbstractImages = () => {
         <section className="bg-[#f9f7f3] pb-16 lg:pb-24">
             <div className="mx-auto grid max-w-container grid-cols-1 gap-16 overflow-hidden px-4 md:px-8 lg:grid-cols-2 lg:items-center">
                 <div className="flex max-w-3xl flex-col items-start">
-                    <h2 className="text-display-sm font-semibold text-primary md:text-display-md lg:text-display-lg">No long-term contracts. No catches.</h2>
+                    <h2 className="text-display-sm font-extrabold text-primary md:text-display-md lg:text-display-lg">No long-term contracts. No catches.</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">Start your 30-day free trial today.</p>
 
                     <div className="mt-8 flex w-full flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-start md:mt-12">

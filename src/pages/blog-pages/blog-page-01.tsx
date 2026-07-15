@@ -268,7 +268,7 @@ const BlogHeaderFeaturedPost01 = () => {
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="flex w-full max-w-3xl flex-col">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Nimbus blog</span>
-                        <h2 className="mt-3 text-display-md font-semibold text-primary md:text-display-lg">Insights for in-app publishers</h2>
+                        <h2 className="mt-3 text-display-md font-extrabold text-primary md:text-display-lg">Insights for in-app publishers</h2>
                         <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">Monetization strategy, product deep-dives, and ad-tech insights.</p>
                     </div>
                 </div>
@@ -289,7 +289,7 @@ const BlogHeaderFeaturedPost01 = () => {
                         <div className="flex w-full flex-col gap-6 p-8">
                             <div className="flex flex-col gap-2">
                                 <div className="flex gap-4">
-                                    <p className="flex-1 text-display-xs font-semibold text-white">{featuredArticle.title}</p>
+                                    <p className="flex-1 text-display-xs font-extrabold text-white">{featuredArticle.title}</p>
                                     <ArrowUpRight className="size-6 shrink-0 text-fg-white" />
                                 </div>
                                 <p className="line-clamp-2 text-md text-white/80">{featuredArticle.summary}</p>
@@ -370,7 +370,7 @@ const ScreenMockup03 = () => {
         <section className="overflow-hidden bg-[#f9f7f3] py-16 md:pt-24 md:pb-0">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col justify-center text-center">
-                    <h2 className="text-display-sm font-semibold text-primary md:text-display-md">
+                    <h2 className="text-display-sm font-extrabold text-primary md:text-display-md">
                         <span className="hidden md:inline">Start your 30-day free trial</span>
                         <span className="md:hidden">Start your free trial</span>
                     </h2>
@@ -413,7 +413,7 @@ const SimpleLeft = () => {
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col justify-between lg:flex-row">
                     <div className="max-w-3xl">
-                        <h2 className="text-display-sm font-semibold text-primary md:text-display-md">Start your free trial</h2>
+                        <h2 className="text-display-sm font-extrabold text-primary md:text-display-md">Start your free trial</h2>
                         <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Join over 4,000+ startups already growing with Nimbus.</p>
                     </div>
 

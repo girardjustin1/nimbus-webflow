@@ -19,7 +19,7 @@ const ContentLargeImage01 = () => {
                 <div className="mx-auto flex w-full max-w-5xl flex-col items-center">
                     <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Published 20 Jan 2026</span>
-                        <h1 className="mt-3 text-display-md font-semibold text-primary md:text-display-lg">Ad quality review best practices</h1>
+                        <h1 className="mt-3 text-display-md font-extrabold text-primary md:text-display-lg">Ad quality review best practices</h1>
                         <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">
                             How do you create compelling presentations that wow your colleagues and impress your managers?{" "}
                             <span className="max-md:hidden">Find out with our in-depth guide on UX presentations.</span>
@@ -183,7 +183,7 @@ const ContentLargeImage01 = () => {
                         </p>
 
                         <div className="not-prose my-8 rounded-2xl bg-secondary px-5 py-6 text-lg text-tertiary md:my-12 md:p-8 [&>p+p]:mt-4.5">
-                            <h2 className="mb-4 text-display-xs font-semibold text-primary">Conclusion</h2>
+                            <h2 className="mb-4 text-display-xs font-extrabold text-primary">Conclusion</h2>
                             <p>
                                 Morbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies. Duis est sit sed leo
                                 nisl, blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet nulla purus habitasse.
@@ -382,7 +382,7 @@ const BlogSectionSimpleLeftAligned02 = () => {
         <section className="bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="max-w-3xl">
-                    <h2 className="text-display-sm font-semibold text-primary md:text-display-md">From the blog</h2>
+                    <h2 className="text-display-sm font-extrabold text-primary md:text-display-md">From the blog</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Monetization strategy, product deep-dives, and ad-tech insights.</p>
                 </div>
 
@@ -407,7 +407,7 @@ const NewsletterSimpleLeftBrand = () => {
         <section className="bg-brand-section py-16 md:py-24">
             <div className="mx-auto flex w-full max-w-container flex-col items-start justify-between gap-8 px-4 md:px-8 lg:flex-row">
                 <div>
-                    <h1 className="text-display-sm font-semibold text-primary_on-brand md:text-display-md">Sign up for our newsletter</h1>
+                    <h1 className="text-display-sm font-extrabold text-primary_on-brand md:text-display-md">Sign up for our newsletter</h1>
                     <p className="mt-4 text-lg text-tertiary_on-brand md:mt-5 md:text-xl">
                         Be the first to know about releases and industry news and insights.
                     </p>

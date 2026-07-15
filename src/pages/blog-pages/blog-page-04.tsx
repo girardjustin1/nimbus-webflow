@@ -257,7 +257,7 @@ const BlogHeaderSidebar02 = () => {
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="flex w-full max-w-3xl flex-col">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Nimbus blog</span>
-                        <h2 className="mt-3 text-display-md font-semibold text-primary md:text-display-lg">Insights for in-app publishers</h2>
+                        <h2 className="mt-3 text-display-md font-extrabold text-primary md:text-display-lg">Insights for in-app publishers</h2>
                         <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">Monetization strategy, product deep-dives, and ad-tech insights.</p>
                     </div>
                 </div>
@@ -311,7 +311,7 @@ const BlogHeaderSidebar02 = () => {
                                                 <div className="flex flex-col gap-2 xl:gap-3">
                                                     <a
                                                         href={article.category.href}
-                                                        className="flex justify-between gap-x-4 rounded-md text-xl font-semibold text-primary outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2 md:text-display-sm"
+                                                        className="flex justify-between gap-x-4 rounded-md text-xl font-extrabold text-primary outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2 md:text-display-sm"
                                                     >
                                                         {article.title}
                                                     </a>

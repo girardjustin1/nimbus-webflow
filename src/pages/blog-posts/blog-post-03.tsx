@@ -182,7 +182,7 @@ const ContentAlternative03 = () => {
             <div className="grid grid-cols-1 gap-16 px-4 py-16 md:grid-cols-2 md:justify-items-start md:gap-0 md:p-0">
                 <div className="flex w-full max-w-(--breakpoint-sm) flex-col justify-between md:pt-24 md:pr-8 md:pb-16 md:pl-16">
                     <MarkerPin02 className="size-6 text-fg-quaternary" />
-                    <h1 className="mt-4 text-display-md font-semibold text-primary md:text-display-lg">
+                    <h1 className="mt-4 text-display-md font-extrabold text-primary md:text-display-lg">
                         Roy&rsquo;s Peak <br />
                         <span className="text-quaternary">Wanaka, New Zealand</span>
                     </h1>
@@ -348,7 +348,7 @@ const ContentAlternative03 = () => {
                         </p>
 
                         <div className="not-prose my-8 rounded-2xl bg-secondary px-5 py-6 text-lg text-tertiary md:my-12 md:p-8 [&>p+p]:mt-4.5">
-                            <h2 className="mb-4 text-display-xs font-semibold text-primary">Conclusion</h2>
+                            <h2 className="mb-4 text-display-xs font-extrabold text-primary">Conclusion</h2>
                             <p>
                                 Morbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies. Duis est sit sed leo
                                 nisl, blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet nulla purus habitasse.
@@ -388,7 +388,7 @@ const BlogSectionSplitLayout02 = () => {
         <section className="bg-secondary py-16 md:py-24">
             <div className="mx-auto flex max-w-container flex-col gap-x-16 gap-y-12 px-4 md:px-8 lg:flex-row">
                 <div className="w-full max-w-100">
-                    <h2 className="text-display-sm font-semibold text-primary md:text-display-md">From the blog</h2>
+                    <h2 className="text-display-sm font-extrabold text-primary md:text-display-md">From the blog</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-5">Monetization strategy, product deep-dives, and ad-tech insights.</p>
                     <div className="mt-12 hidden flex-col gap-3 md:mt-8 md:flex md:flex-row">
                         <Button size="xl">View all posts</Button>

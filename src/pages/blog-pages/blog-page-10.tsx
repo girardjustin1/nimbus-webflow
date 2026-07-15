@@ -369,7 +369,7 @@ const BlogHeaderAltLayout04 = () => {
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Resources</span>
-                        <h2 className="mt-3 text-display-md font-semibold text-primary md:text-display-lg">Nimbus blog</h2>
+                        <h2 className="mt-3 text-display-md font-extrabold text-primary md:text-display-lg">Nimbus blog</h2>
                         <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">Tool and strategies modern teams need to help their companies grow.</p>
                         <Form
                             onSubmit={(e) => {
@@ -471,7 +471,7 @@ const BlogSectionSimpleCenterAligned01 = () => {
                 <div className="mx-auto max-w-3xl text-center">
                     <p className="text-sm font-semibold text-brand-secondary md:text-md">Latest posts</p>
 
-                    <h2 className="mt-3 text-display-sm font-semibold text-primary md:text-display-md">Nimbus blog</h2>
+                    <h2 className="mt-3 text-display-sm font-extrabold text-primary md:text-display-md">Nimbus blog</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Interviews, tips, guides, industry best practices, and news.</p>
                 </div>
 
@@ -496,7 +496,7 @@ const CardVertical = () => {
         <section className="bg-[#f9f7f3] pb-16 md:pb-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-center rounded-2xl bg-secondary px-6 py-10 text-center lg:p-16">
-                    <h2 className="text-display-sm font-semibold text-primary xl:text-display-md">
+                    <h2 className="text-display-sm font-extrabold text-primary xl:text-display-md">
                         Still thinking <br className="md:hidden" /> about it?
                     </h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-5 lg:text-xl">Sign up for our newsletter and get 10% off your next purchase.</p>

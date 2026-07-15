@@ -322,7 +322,7 @@ const BlogHeaderSimple06 = () => {
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mb-3 text-sm font-semibold text-brand-secondary md:text-md">Nimbus blog</div>
                     <div className="grid grid-cols-[minmax(1fr,768px)] gap-x-16 lg:grid-cols-[2fr_1fr]">
-                        <h2 className="text-display-md font-semibold text-primary md:text-display-lg">Stories and interviews</h2>
+                        <h2 className="text-display-md font-extrabold text-primary md:text-display-lg">Stories and interviews</h2>
 
                         <p className="mt-4 hidden text-lg text-tertiary md:mt-6 md:block md:text-xl lg:mt-3 lg:h-0 lg:w-120">
                             Subscribe to learn about new product features, the latest in technology, solutions, and updates.
@@ -396,7 +396,7 @@ const BlogSectionSplitLayout02 = () => {
         <section className="bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto flex max-w-container flex-col gap-x-16 gap-y-12 px-4 md:px-8 lg:flex-row">
                 <div className="w-full max-w-100">
-                    <h2 className="text-display-sm font-semibold text-primary md:text-display-md">From the blog</h2>
+                    <h2 className="text-display-sm font-extrabold text-primary md:text-display-md">From the blog</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-5">Monetization strategy, product deep-dives, and ad-tech insights.</p>
                     <div className="mt-12 hidden flex-col gap-3 md:mt-8 md:flex md:flex-row">
                         <Button size="xl">View all posts</Button>
@@ -468,7 +468,7 @@ const SimpleCentered = () => {
         <section className="bg-secondary py-16 md:py-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col justify-center text-center">
-                    <h2 className="text-display-sm font-semibold text-primary md:text-display-md">Start your free trial</h2>
+                    <h2 className="text-display-sm font-extrabold text-primary md:text-display-md">Start your free trial</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Join over 4,000+ startups already growing with Nimbus.</p>
                     <div className="mt-8 flex flex-col-reverse gap-3 self-stretch md:mt-8 md:flex-row md:self-center">
                         <Button color="secondary" size="xl">

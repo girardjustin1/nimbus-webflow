@@ -282,7 +282,7 @@ const ContentAlternative02 = () => {
             <div className="mx-auto w-full max-w-container px-4 py-16 md:px-8 md:py-24">
                 <div className="max-w-3xl">
                     <div className="text-sm font-semibold text-brand-secondary md:text-md">Published 13 Jan 2026</div>
-                    <h1 className="mt-3 text-display-md font-semibold text-primary md:text-display-lg">A conversation with a top in-app publisher</h1>
+                    <h1 className="mt-3 text-display-md font-extrabold text-primary md:text-display-lg">A conversation with a top in-app publisher</h1>
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">
                         Northwind Media is one of the fastest-growing app publishers on Nimbus. We caught up with their monetization team to talk floors,
                         ad quality, and the Dynamic Unit.
@@ -448,7 +448,7 @@ const ContentAlternative02 = () => {
                         </p>
 
                         <div className="not-prose my-8 rounded-2xl bg-secondary px-5 py-6 text-lg text-tertiary md:my-12 md:p-8 [&>p+p]:mt-4.5">
-                            <h2 className="mb-4 text-display-xs font-semibold text-primary">Conclusion</h2>
+                            <h2 className="mb-4 text-display-xs font-extrabold text-primary">Conclusion</h2>
                             <p>
                                 Morbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies. Duis est sit sed leo
                                 nisl, blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet nulla purus habitasse.
@@ -551,7 +551,7 @@ const BlogSectionSimpleLeftAligned01 = () => {
                 <div className="flex flex-col items-start justify-between lg:flex-row">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold text-brand-secondary md:text-md">Nimbus blog</p>
-                        <h2 className="mt-3 text-display-sm font-semibold text-primary md:text-display-md">Latest blog posts</h2>
+                        <h2 className="mt-3 text-display-sm font-extrabold text-primary md:text-display-md">Latest blog posts</h2>
                         <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Tool and strategies modern teams need to help their companies grow.</p>
                     </div>
 
@@ -580,7 +580,7 @@ const CTAAbstractImages = () => {
         <section className="bg-[#f9f7f3] py-16 lg:py-24">
             <div className="mx-auto grid max-w-container grid-cols-1 gap-16 overflow-hidden px-4 md:px-8 lg:grid-cols-2 lg:items-center">
                 <div className="flex max-w-3xl flex-col items-start">
-                    <h2 className="text-display-sm font-semibold text-primary md:text-display-md lg:text-display-lg">No long-term contracts. No catches.</h2>
+                    <h2 className="text-display-sm font-extrabold text-primary md:text-display-md lg:text-display-lg">No long-term contracts. No catches.</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">Start your 30-day free trial today.</p>
 
                     <div className="mt-8 flex w-full flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-start md:mt-12">
@@ -634,7 +634,7 @@ const NewsletterCardHorizontal = () => {
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-start justify-between gap-x-16 gap-y-8 rounded-2xl bg-secondary px-6 py-10 lg:flex-row lg:p-16">
                     <div className="flex max-w-3xl flex-col">
-                        <h2 className="text-display-sm font-semibold text-primary">Join 2,000+ subscribers</h2>
+                        <h2 className="text-display-sm font-extrabold text-primary">Join 2,000+ subscribers</h2>
                         <p className="mt-4 text-lg text-tertiary lg:text-xl">Stay in the loop with everything you need to know.</p>
                     </div>
                     <Form

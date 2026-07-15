@@ -351,7 +351,7 @@ const BlogHeaderAltLayout02 = () => {
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Nimbus blog</span>
-                        <h2 className="mt-3 text-display-md font-semibold text-primary md:text-display-lg">Stories and interviews</h2>
+                        <h2 className="mt-3 text-display-md font-extrabold text-primary md:text-display-lg">Stories and interviews</h2>
                         <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">
                             Subscribe to learn about new product features, the latest in technology, solutions, and updates.
                         </p>
@@ -385,7 +385,7 @@ const BlogHeaderAltLayout02 = () => {
             </section>
 
             <section className="mx-auto flex w-full max-w-container flex-col gap-8 bg-[#f9f7f3] px-4 pb-16 md:px-8 md:pb-24">
-                <h2 className="text-xl font-semibold text-primary md:text-display-xs">Recent blog posts</h2>
+                <h2 className="text-xl font-extrabold text-primary md:text-display-xs">Recent blog posts</h2>
                 <ul className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 md:gap-y-8">
                     {articles.slice(0, 3).map((article, index) => (
                         <li key={article.id} className={cx(article.isFeatured ? "xl:row-span-2" : "xl:flex-row xl:gap-6", "flex flex-col gap-6 md:gap-8")}>
@@ -397,7 +397,7 @@ const BlogHeaderAltLayout02 = () => {
 
             <section className="mx-auto flex w-full max-w-container flex-col gap-8 bg-[#f9f7f3] px-4 pb-16 md:px-8 md:pb-24 lg:gap-16">
                 <div className="flex flex-col gap-8">
-                    <h2 className="text-xl font-semibold text-primary md:text-display-xs">All blog posts</h2>
+                    <h2 className="text-xl font-extrabold text-primary md:text-display-xs">All blog posts</h2>
                     <ul className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
                         {articles.slice(3).map((article) => (
                             <li key={article.id} className={cx(!isDesktop && "nth-[n+4]:hidden")}>
@@ -417,7 +417,7 @@ const IPhoneMockup02 = () => {
         <section className="bg-[#f9f7f3] md:pb-24">
             <div className="relative mx-auto grid w-full max-w-container grid-cols-1 gap-16 px-4 md:px-8 lg:grid-cols-2 lg:items-center">
                 <div className="z-20 flex max-w-3xl flex-col items-start">
-                    <h2 className="text-display-sm font-semibold text-primary md:text-display-md lg:text-display-lg">Growth performance tracking made easy</h2>
+                    <h2 className="text-display-sm font-extrabold text-primary md:text-display-md lg:text-display-lg">Growth performance tracking made easy</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">Start your 30-day free trial today.</p>
                     <div className="mt-8 flex w-full gap-3 md:mt-12">
                         <AppStoreButton size="lg" />
@@ -498,7 +498,7 @@ const FooterLarge09 = () => {
         <footer className="dark-mode bg-[#f9f7f3] py-12 md:pt-16">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col justify-center text-center">
-                    <h2 className="text-display-xs font-semibold text-primary md:text-display-sm">Let's get started on something great</h2>
+                    <h2 className="text-display-xs font-extrabold text-primary md:text-display-sm">Let's get started on something great</h2>
                     <p className="mt-2 text-md text-tertiary md:mt-4 md:text-xl">Join over 4,000+ startups already growing with Nimbus.</p>
                     <div className="mt-8 flex flex-col-reverse gap-3 self-stretch md:mt-12 md:flex-row md:self-center">
                         <Button color="secondary" size="xl">

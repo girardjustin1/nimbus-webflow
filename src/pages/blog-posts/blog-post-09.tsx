@@ -68,7 +68,7 @@ const ContentLargeImage03 = () => {
                         8 min read
                     </BadgeGroup>
 
-                    <h1 className="mt-4 text-display-md font-semibold text-primary md:text-display-lg">Floors are a publisher's pricing power</h1>
+                    <h1 className="mt-4 text-display-md font-extrabold text-primary md:text-display-lg">Floors are a publisher's pricing power</h1>
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">
                         Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty? Lorem ipsum dolor sit amet, consectetur
                         adipiscing elit.
@@ -377,7 +377,7 @@ const BlogSectionSplitLayout01 = () => {
                 <div className="w-full max-w-100">
                     <p className="text-sm font-semibold text-brand-secondary md:text-md">Latest</p>
 
-                    <h2 className="mt-3 text-display-sm font-semibold text-primary md:text-display-md">From the blog</h2>
+                    <h2 className="mt-3 text-display-sm font-extrabold text-primary md:text-display-md">From the blog</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-5">Monetization strategy, product deep-dives, and ad-tech insights.</p>
                     <div className="mt-12 hidden flex-col gap-3 md:mt-8 md:flex md:flex-row">
                         <Button size="xl">View all posts</Button>

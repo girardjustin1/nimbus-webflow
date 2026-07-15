@@ -261,7 +261,7 @@ const ContentSplitImage02 = () => {
                 <div className="flex md:w-1/2 md:items-end md:justify-end md:py-24">
                     <div className="flex w-full max-w-(--breakpoint-sm) flex-col px-4 md:px-8">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">13 Jan 2026 • 10 min read</span>
-                        <h1 className="mt-3 text-display-md font-semibold text-primary md:mt-4 md:text-display-lg">Our top 10 tactics for higher eCPMs</h1>
+                        <h1 className="mt-3 text-display-md font-extrabold text-primary md:mt-4 md:text-display-lg">Our top 10 tactics for higher eCPMs</h1>
                         <p className="mt-4 text-lg text-tertiary md:mt-6 md:max-w-120 md:text-xl">
                             JavaScript frameworks make development easy with extensive features and functionalities.
                         </p>
@@ -408,7 +408,7 @@ const ContentSplitImage02 = () => {
                         </p>
 
                         <div className="not-prose my-8 rounded-2xl bg-secondary px-5 py-6 text-lg text-tertiary md:my-12 md:p-8 [&>p+p]:mt-4.5">
-                            <h2 className="mb-4 text-display-xs font-semibold text-primary">Conclusion</h2>
+                            <h2 className="mb-4 text-display-xs font-extrabold text-primary">Conclusion</h2>
                             <p>
                                 Morbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies. Duis est sit sed leo
                                 nisl, blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet nulla purus habitasse.
@@ -520,7 +520,7 @@ const BlogSectionCarouselLayout02 = () => {
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-start justify-between lg:flex-row">
                     <div className="max-w-3xl">
-                        <h2 className="text-display-sm font-semibold text-primary md:text-display-md">Latest posts</h2>
+                        <h2 className="text-display-sm font-extrabold text-primary md:text-display-md">Latest posts</h2>
                         <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">The latest news, technologies, and resources from our team.</p>
                     </div>
 
@@ -560,7 +560,7 @@ const FooterLarge09 = () => {
         <footer className="dark-mode bg-[#f9f7f3] py-12 md:pt-16">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col justify-center text-center">
-                    <h2 className="text-display-xs font-semibold text-primary md:text-display-sm">Start growing with Nimbus</h2>
+                    <h2 className="text-display-xs font-extrabold text-primary md:text-display-sm">Start growing with Nimbus</h2>
                     <p className="mt-2 text-md text-tertiary md:mt-4 md:text-xl">Join over 4,000+ startups already growing with Nimbus.</p>
                     <div className="mt-8 flex flex-col-reverse gap-3 self-stretch md:mt-12 md:flex-row md:self-center">
                         <Button color="secondary" size="xl">

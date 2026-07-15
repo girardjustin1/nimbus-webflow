@@ -326,7 +326,7 @@ const BlogHeaderSimple05 = () => {
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mb-3 text-sm font-semibold text-brand-secondary md:text-md">Blog</div>
                     <div className="grid grid-cols-[minmax(1fr,768px)] gap-x-16 lg:grid-cols-[2fr_1fr]">
-                        <h2 className="text-display-md font-semibold text-primary md:text-display-lg">Resource library</h2>
+                        <h2 className="text-display-md font-extrabold text-primary md:text-display-lg">Resource library</h2>
 
                         <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl lg:mt-3 lg:h-0 lg:w-120">
                             Subscribe to learn about new product features, the latest in technology, solutions, and updates.
@@ -394,7 +394,7 @@ const SimpleCentered = () => {
         <section className="dark-mode bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
-                    <h1 className="text-display-sm font-semibold text-primary md:text-display-md">Sign up for our newsletter</h1>
+                    <h1 className="text-display-sm font-extrabold text-primary md:text-display-md">Sign up for our newsletter</h1>
                     <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Be the first to know about releases and industry news and insights.</p>
 
                     <Form
@@ -507,7 +507,7 @@ const BlogSectionSimpleLeftAligned02 = () => {
         <section className="bg-[#f9f7f3] py-16 md:py-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="max-w-3xl">
-                    <h2 className="text-display-sm font-semibold text-primary md:text-display-md">From the blog</h2>
+                    <h2 className="text-display-sm font-extrabold text-primary md:text-display-md">From the blog</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Monetization strategy, product deep-dives, and ad-tech insights.</p>
                 </div>
 
