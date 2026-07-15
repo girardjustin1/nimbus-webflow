@@ -6,6 +6,18 @@ import "../src/styles/globals.css";
 
 const preview: Preview = {
     parameters: {
+        options: {
+            storySort: {
+                order: [
+                    "Foundations",
+                    "Components",
+                    ["Navigation", "Breadcrumbs", "Body", "Footer"],
+                    "Blog Layouts",
+                    "Nimbus Blog",
+                    "*",
+                ],
+            },
+        },
         controls: {
             matchers: {
                 color: /(background|color)$/i,
