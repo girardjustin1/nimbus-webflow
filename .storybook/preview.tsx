@@ -8,12 +8,15 @@ const preview: Preview = {
     parameters: {
         options: {
             storySort: {
+                method: "alphabetical",
                 order: [
                     "Styles",
                     ["Color", "Elevation", "Icons", "Shape", "Typography"],
                     "Components",
                     ["Navigation", "Breadcrumbs", "Body", "Footer"],
+                    "Blog Sections",
                     "Blog Layouts",
+                    ["Blog Directory", "Blog Article Template"],
                     "Nimbus Blog",
                     "*",
                 ],
