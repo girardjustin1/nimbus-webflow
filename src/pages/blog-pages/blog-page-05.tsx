@@ -42,14 +42,14 @@ type Article = {
 const articles: Article[] = [
     {
         id: "article-1",
-        title: "UX review presentations",
-        summary: "How do you create compelling presentations that wow your colleagues and impress your managers?",
+        title: "Ad quality review best practices",
+        summary: "How to review the ads that actually served in your app and block surgically without sacrificing revenue.",
         href: "#",
         category: { name: "Design", href: "#" },
         thumbnailUrl: "https://www.untitledui.com/marketing/spirals.webp",
         publishedAt: "20 Jan 2026",
         readingTime: "8 min read",
-        author: { name: "Olivia Rhye", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80" },
+        author: { name: "Jordan Kim", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80" },
         tags: [
             { name: "Design", color: "brand", href: "#" },
             { name: "Research", color: "indigo", href: "#" },
@@ -59,15 +59,15 @@ const articles: Article[] = [
     },
     {
         id: "article-2",
-        title: "Migrating to Linear 101",
-        summary: "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get started.",
+        title: "Migrating to in-app header bidding 101",
+        summary: "In-app header bidding gave publishers a better auction. Here is how to migrate without losing fill.",
         href: "#",
         category: { name: "Product", href: "#" },
         thumbnailUrl: "https://www.untitledui.com/marketing/conversation.webp",
 
         publishedAt: "19 Jan 2026",
         readingTime: "8 min read",
-        author: { name: "Phoenix Baker", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/phoenix-baker?fm=webp&q=80" },
+        author: { name: "Marcus Bell", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/phoenix-baker?fm=webp&q=80" },
         tags: [
             { name: "Product", color: "sky", href: "#" },
             { name: "Tools", color: "pink", href: "#" },
@@ -76,29 +76,29 @@ const articles: Article[] = [
     },
     {
         id: "article-3",
-        title: "Building your API stack",
-        summary: "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.",
+        title: "Building your in-app bidding stack",
+        summary: "The rise of in-app bidding has been met by a rise in tools for pricing, quality, and reporting.",
         href: "#",
-        category: { name: "Software Engineering", href: "#" },
+        category: { name: "Programmatic", href: "#" },
         thumbnailUrl: "https://www.untitledui.com/blog/two-mobile-shapes-pattern.webp",
         publishedAt: "18 Jan 2026",
         readingTime: "8 min read",
-        author: { name: "Lana Steiner", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/lana-steiner?fm=webp&q=80" },
+        author: { name: "Elena Vasquez", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/lana-steiner?fm=webp&q=80" },
         tags: [
-            { name: "Software Development", color: "success", href: "#" },
+            { name: "Ad Tech", color: "success", href: "#" },
             { name: "Tools", color: "pink", href: "#" },
         ],
     },
     {
         id: "article-3.5",
-        title: "Bill Walsh leadership lessons",
-        summary: "Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?",
+        title: "Floors are a publisher's pricing power",
+        summary: "How top publishers turn floors into pricing power and set the terms the market has to beat.",
         href: "#",
         category: { name: "Product", href: "#" },
         thumbnailUrl: "https://www.untitledui.com/blog/two-people.webp",
         publishedAt: "17 Jan 2026",
         readingTime: "8 min read",
-        author: { name: "Alec Whitten", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/alec-whitten?fm=webp&q=80" },
+        author: { name: "Ryan Cho", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/alec-whitten?fm=webp&q=80" },
         tags: [
             { name: "Leadership", color: "brand", href: "#" },
             { name: "Management", color: "slate", href: "#" },
@@ -106,14 +106,14 @@ const articles: Article[] = [
     },
     {
         id: "article-4",
-        title: "PM mental models",
-        summary: "Mental models are simple expressions of complex processes or relationships.",
+        title: "Yield management mental models",
+        summary: "Simple mental models for yield management: a floor is a dial, not a switch.",
         href: "#",
         category: { name: "Product", href: "#" },
         thumbnailUrl: "https://www.untitledui.com/marketing/smiling-girl-6.webp",
         publishedAt: "16 Jan 2026",
         readingTime: "8 min read",
-        author: { name: "Demi Wilkinson", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/demi-wilkinson?fm=webp&q=80" },
+        author: { name: "Priya Nair", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/demi-wilkinson?fm=webp&q=80" },
         tags: [
             { name: "Product", color: "sky", href: "#" },
             { name: "Research", color: "indigo", href: "#" },
@@ -122,14 +122,14 @@ const articles: Article[] = [
     },
     {
         id: "article-5",
-        title: "What is wireframing?",
-        summary: "Introduction to Wireframing and its Principles. Learn from the best in the industry.",
+        title: "What is bid shading?",
+        summary: "A plain-language guide to bid shading and how floors keep DSPs honest in the auction.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "https://www.untitledui.com/marketing/wireframing-layout.webp",
+        thumbnailUrl: "https://www.untitledui.com/marketing/bid shading-layout.webp",
         publishedAt: "15 Jan 2026",
         readingTime: "8 min read",
-        author: { name: "Candice Wu", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/candice-wu?fm=webp&q=80" },
+        author: { name: "Sofia Reyes", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/candice-wu?fm=webp&q=80" },
         tags: [
             { name: "Design", color: "brand", href: "#" },
             { name: "Research", color: "indigo", href: "#" },
@@ -137,14 +137,14 @@ const articles: Article[] = [
     },
     {
         id: "article-6",
-        title: "How collaboration makes us better designers",
-        summary: "Collaboration can make our teams stronger, and our individual designs better.",
+        title: "How the Dynamic Unit creates a native ad experience",
+        summary: "The Dynamic Unit adapts to your app's look and UX while accepting programmatic demand in multiple formats.",
         href: "#",
         category: { name: "Design", href: "#" },
         thumbnailUrl: "https://www.untitledui.com/marketing/two-people.webp",
         publishedAt: "14 Jan 2026",
         readingTime: "8 min read",
-        author: { name: "Natali Craig", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/natali-craig?fm=webp&q=80" },
+        author: { name: "Maya Patel", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/natali-craig?fm=webp&q=80" },
         tags: [
             { name: "Design", color: "brand", href: "#" },
             { name: "Research", color: "indigo", href: "#" },
@@ -152,33 +152,33 @@ const articles: Article[] = [
     },
     {
         id: "article-7",
-        title: "Our top 10 Javascript frameworks to use",
-        summary: "JavaScript frameworks make development easy with extensive features and functionalities.",
+        title: "Our top 10 tactics for higher eCPMs",
+        summary: "Ten practical tactics our ad ops team uses to lift eCPMs across geos, formats, and sizes.",
         href: "#",
         category: { name: "Product", href: "#" },
         thumbnailUrl: "https://www.untitledui.com/marketing/workspace-5.webp",
         publishedAt: "13 Jan 2026",
         readingTime: "8 min read",
-        author: { name: "Drew Cano", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/drew-cano?fm=webp&q=80" },
+        author: { name: "Chris Tanaka", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/drew-cano?fm=webp&q=80" },
         tags: [
-            { name: "Software Development", color: "success", href: "#" },
+            { name: "Ad Tech", color: "success", href: "#" },
             { name: "Tools", color: "pink", href: "#" },
             { name: "SaaS", color: "pink", href: "#" },
         ],
     },
     {
         id: "article-8",
-        title: "Podcast: Creating a better CX Community",
-        summary: "Starting a community doesn't need to be complicated, but how do you get started?",
+        title: "Podcast: Building a healthier programmatic auction",
+        summary: "Building a healthier programmatic auction does not need to be complicated. Here is where to start.",
         href: "#",
-        category: { name: "Customer Success", href: "#" },
+        category: { name: "Publisher Success", href: "#" },
         thumbnailUrl: "https://www.untitledui.com/marketing/sythesize.webp",
         publishedAt: "12 Jan 2026",
         readingTime: "8 min read",
-        author: { name: "Orlando Diggs", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/orlando-diggs?fm=webp&q=80" },
+        author: { name: "Andre Okafor", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/orlando-diggs?fm=webp&q=80" },
         tags: [
             { name: "Podcasts", color: "brand", href: "#" },
-            { name: "Customer Success", color: "slate", href: "#" },
+            { name: "Publisher Success", color: "slate", href: "#" },
         ],
     },
 ];
@@ -198,7 +198,7 @@ const footerNavList = [
         label: "Product",
         items: [
             { label: "Overview", href: "#" },
-            { label: "Features", href: "#" },
+            { label: "Products", href: "#" },
             {
                 label: "Solutions",
                 href: "#",
@@ -342,9 +342,9 @@ const BlogHeaderFeaturedPost03 = () => {
             <section className="bg-[#f9f7f3] py-16 md:py-24">
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
-                        <span className="text-sm font-semibold text-brand-secondary md:text-md">Our blog</span>
-                        <h2 className="mt-3 text-display-md font-semibold text-primary md:text-display-lg">Resources and insights</h2>
-                        <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">The latest industry news, interviews, technologies, and resources.</p>
+                        <span className="text-sm font-semibold text-brand-secondary md:text-md">Nimbus blog</span>
+                        <h2 className="mt-3 text-display-md font-semibold text-primary md:text-display-lg">Insights for in-app publishers</h2>
+                        <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">Monetization strategy, product deep-dives, and ad-tech insights.</p>
                         <Form
                             onSubmit={(e) => {
                                 e.preventDefault();
@@ -419,7 +419,7 @@ const BlogSectionCarouselLayout02 = () => {
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-start justify-between lg:flex-row">
                     <div className="max-w-3xl">
-                        <h2 className="text-display-sm font-semibold text-primary md:text-display-md">Latest writings</h2>
+                        <h2 className="text-display-sm font-semibold text-primary md:text-display-md">Latest posts</h2>
                         <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">The latest news, technologies, and resources from our team.</p>
                     </div>
 
@@ -459,25 +459,25 @@ const SplitImageQuote02 = () => {
 
     const reviews = [
         {
-            quote: "Untitled has saved us thousands of hours of work. We're able to spin up projects faster.",
-            name: "Alisa Hester",
-            title: "PM, Hourglass",
+            quote: "Nimbus has saved us thousands of hours of work. We're able to spin up projects faster.",
+            name: "Nina Torres",
+            title: "Product Manager, Nimbus",
             company: "Web Design Agency",
             rating: 5,
             image: "https://www.untitledui.com/images/portraits/alisa-hester",
         },
         {
             quote: "Love the simplicity of the service and the prompt customer support. We can't imagine working without it.",
-            name: "Felicity Pierre",
-            title: "Head of Design, Layers",
+            name: "Amara Diop",
+            title: "Head of Yield, Nimbus",
             company: "UX Agency",
             rating: 5,
             image: "https://www.untitledui.com/marketing/podcast-girl.webp",
         },
         {
-            quote: "We've really sped up our workflow using Untitled.",
-            name: "Fleur Cook",
-            title: "PM, Hourglass",
+            quote: "We've really sped up our workflow using Nimbus.",
+            name: "Zoe Adams",
+            title: "Product Manager, Nimbus",
             company: "Web Design Agency",
             rating: 5,
             image: "https://www.untitledui.com/marketing/girl.webp",
@@ -491,7 +491,7 @@ const SplitImageQuote02 = () => {
             <div className="mx-auto grid w-full max-w-container grid-cols-1 gap-x-16 gap-y-12 px-4 md:px-8 lg:grid-cols-2 lg:items-center">
                 <div className="flex max-w-3xl flex-col items-start">
                     <h2 className="text-display-sm font-semibold text-primary md:text-display-md lg:text-display-lg">
-                        Join 4,000+ startups growing with Untitled
+                        Join 4,000+ startups growing with Nimbus
                     </h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">Start your 30-day free trial today.</p>
 

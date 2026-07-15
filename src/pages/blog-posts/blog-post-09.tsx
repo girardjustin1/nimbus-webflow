@@ -68,7 +68,7 @@ const ContentLargeImage03 = () => {
                         8 min read
                     </BadgeGroup>
 
-                    <h1 className="mt-4 text-display-md font-semibold text-primary md:text-display-lg">Bill Walsh leadership lessons</h1>
+                    <h1 className="mt-4 text-display-md font-semibold text-primary md:text-display-lg">Floors are a publisher's pricing power</h1>
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">
                         Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty? Lorem ipsum dolor sit amet, consectetur
                         adipiscing elit.
@@ -84,7 +84,7 @@ const ContentLargeImage03 = () => {
                         <dl className="flex gap-12 md:gap-12">
                             <div>
                                 <dt className="text-sm font-semibold text-brand-secondary">Written by</dt>
-                                <dd className="mt-3 text-lg font-medium text-primary">Alec Whitten</dd>
+                                <dd className="mt-3 text-lg font-medium text-primary">Ryan Cho</dd>
                             </div>
                             <div>
                                 <dt className="text-sm font-semibold text-brand-secondary">Published on</dt>
@@ -155,10 +155,10 @@ const ContentLargeImage03 = () => {
                                 <img
                                     src="https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80"
                                     className="size-12 rounded-full object-cover"
-                                    alt="Olivia Rhye"
+                                    alt="Jordan Kim"
                                 />
                                 <div>
-                                    <p className="text-md font-semibold text-primary">Olivia Rhye</p>
+                                    <p className="text-md font-semibold text-primary">Jordan Kim</p>
                                     <cite className="text-md text-tertiary not-italic">Product Designer</cite>
                                 </div>
                             </figcaption>
@@ -328,15 +328,15 @@ const Simple02Vertical = ({
 const articles: Article[] = [
     {
         id: "article-1",
-        title: "UX review presentations",
-        summary: "How do you create compelling presentations that wow your colleagues and impress your managers?",
+        title: "Ad quality review best practices",
+        summary: "How to review the ads that actually served in your app and block surgically without sacrificing revenue.",
         href: "#",
         category: { name: "Design", href: "#" },
         thumbnailUrl: "https://www.untitledui.com/marketing/spirals.webp",
         publishedAt: "20 Jan 2026",
         readingTime: "8 min read",
         author: {
-            name: "Olivia Rhye",
+            name: "Jordan Kim",
             href: "#",
             avatarUrl: "https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80",
         },
@@ -349,8 +349,8 @@ const articles: Article[] = [
     },
     {
         id: "article-2",
-        title: "Migrating to Linear 101",
-        summary: "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get started.",
+        title: "Migrating to in-app header bidding 101",
+        summary: "In-app header bidding gave publishers a better auction. Here is how to migrate without losing fill.",
         href: "#",
         category: { name: "Design", href: "#" },
         thumbnailUrl: "https://www.untitledui.com/marketing/conversation.webp",
@@ -358,7 +358,7 @@ const articles: Article[] = [
         publishedAt: "19 Jan 2026",
         readingTime: "8 min read",
         author: {
-            name: "Phoenix Baker",
+            name: "Marcus Bell",
             href: "#",
             avatarUrl: "https://www.untitledui.com/images/avatars/phoenix-baker?fm=webp&q=80",
         },
@@ -378,7 +378,7 @@ const BlogSectionSplitLayout01 = () => {
                     <p className="text-sm font-semibold text-brand-secondary md:text-md">Latest</p>
 
                     <h2 className="mt-3 text-display-sm font-semibold text-primary md:text-display-md">From the blog</h2>
-                    <p className="mt-4 text-lg text-tertiary md:mt-5">The latest industry news, interviews, technologies, and resources.</p>
+                    <p className="mt-4 text-lg text-tertiary md:mt-5">Monetization strategy, product deep-dives, and ad-tech insights.</p>
                     <div className="mt-12 hidden flex-col gap-3 md:mt-8 md:flex md:flex-row">
                         <Button size="xl">View all posts</Button>
                     </div>
@@ -436,7 +436,7 @@ const FooterLarge08 = () => {
                         className="flex w-full flex-col gap-4 sm:max-w-90"
                     >
                         <label htmlFor="newsletters-email" className="text-sm font-semibold text-primary">
-                            Start growing with Untitled
+                            Start growing with Nimbus
                         </label>
                         <div className="flex flex-col gap-4 sm:flex-row">
                             <Input

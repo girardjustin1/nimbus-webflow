@@ -54,7 +54,7 @@ const ContentLargeImage02 = () => {
             <div className="mx-auto max-w-container px-4 py-16 md:px-8 md:py-24">
                 <div className="mx-auto flex w-full max-w-180 flex-col items-center text-center">
                     <span className="text-sm font-semibold text-brand-secondary md:text-md">Design</span>
-                    <h1 className="mt-3 text-display-md font-semibold text-primary md:text-display-lg">UX review presentations</h1>
+                    <h1 className="mt-3 text-display-md font-semibold text-primary md:text-display-lg">Ad quality review best practices</h1>
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">
                         How do you create compelling presentations that wow your colleagues and impress your managers? Here's how to get started.
                     </p>
@@ -63,10 +63,10 @@ const ContentLargeImage02 = () => {
                         <img
                             src="https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80"
                             className="size-14 rounded-full object-cover"
-                            alt="Olivia Rhye"
+                            alt="Jordan Kim"
                         />
                         <div>
-                            <p className="text-lg font-semibold text-primary">Olivia Rhye</p>
+                            <p className="text-lg font-semibold text-primary">Jordan Kim</p>
                             <p className="text-md text-tertiary">20 Jan 2026</p>
                         </div>
                     </div>
@@ -128,9 +128,9 @@ const ContentLargeImage02 = () => {
                                 <img
                                     src="https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80"
                                     className="size-10 rounded-full object-cover"
-                                    alt="Olivia Rhye"
+                                    alt="Jordan Kim"
                                 />
-                                <p className="mt-3 text-md font-semibold text-primary">Olivia Rhye</p>
+                                <p className="mt-3 text-md font-semibold text-primary">Jordan Kim</p>
                                 <cite className="mt-0.5 text-md text-tertiary not-italic">Product Designer</cite>
                             </figcaption>
                         </figure>
@@ -311,7 +311,7 @@ const CTASimpleLogos02 = () => {
                 <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-16">
                     <div className="flex flex-col">
                         <div className="max-w-3xl">
-                            <h2 className="text-display-sm font-semibold text-primary md:text-display-md">Join over 4,000+ startups growing with Untitled</h2>
+                            <h2 className="text-display-sm font-semibold text-primary md:text-display-md">Join over 4,000+ startups growing with Nimbus</h2>
                             <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Start your 30-day free trial today.</p>
                         </div>
 

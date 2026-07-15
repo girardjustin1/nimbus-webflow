@@ -29,7 +29,7 @@ const footerNavList = [
         label: "Product",
         items: [
             { label: "Overview", href: "#" },
-            { label: "Features", href: "#" },
+            { label: "Products", href: "#" },
             {
                 label: "Solutions",
                 href: "#",
@@ -111,9 +111,9 @@ const ContentLargeImage04 = () => {
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mx-auto flex w-full max-w-240 flex-col items-center text-center">
                         <span className="text-sm font-semibold text-primary_on-brand md:text-md">Design</span>
-                        <h1 className="mt-3 text-display-md font-semibold text-tertiary_on-brand md:text-display-lg">What is Wireframing?</h1>
+                        <h1 className="mt-3 text-display-md font-semibold text-tertiary_on-brand md:text-display-lg">What is bid shading?</h1>
                         <p className="mt-4 max-w-3xl text-lg text-primary_on-brand md:mt-6 md:text-xl">
-                            Introduction to Wireframing and its Principles. Learn from the best in the industry with tips, tools, and best practices from those
+                            Introduction to Bid shading and its Principles. Learn from the best in the industry with tips, tools, and best practices from those
                             in the know.
                         </p>
 
@@ -121,10 +121,10 @@ const ContentLargeImage04 = () => {
                             <img
                                 src="https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80"
                                 className="size-12 rounded-full object-cover"
-                                alt="Olivia Rhye"
+                                alt="Jordan Kim"
                             />
                             <div>
-                                <p className="text-md font-semibold text-tertiary_on-brand">Olivia Rhye</p>
+                                <p className="text-md font-semibold text-tertiary_on-brand">Jordan Kim</p>
                                 <p className="text-md text-primary_on-brand">20 Jan 2026</p>
                             </div>
                         </div>
@@ -134,8 +134,8 @@ const ContentLargeImage04 = () => {
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
                 <img
                     className="mx-auto -mt-16 h-60 w-full object-cover md:-mt-24 md:h-160"
-                    src="https://www.untitledui.com/marketing/wireframing-pattern.webp"
-                    alt="Wireframing and design process diagram with patterns and layouts"
+                    src="https://www.untitledui.com/marketing/bid shading-pattern.webp"
+                    alt="Bid shading and design process diagram with patterns and layouts"
                 />
                 <div className="mx-auto max-w-prose pt-16 md:max-w-180 md:pt-24">
                     <div className="mx-auto prose md:prose-lg">
@@ -184,7 +184,7 @@ const ContentLargeImage04 = () => {
                                 </p>
                             </blockquote>
                             <figcaption className="not-prose mt-6 text-md md:mt-8">
-                                — Olivia Rhye, <cite className="not-italic">Product Designer</cite>
+                                — Jordan Kim, <cite className="not-italic">Product Designer</cite>
                             </figcaption>
                         </figure>
 
@@ -378,14 +378,14 @@ const Simple02Vertical = ({
 const articles: Article[] = [
     {
         id: "article-1",
-        title: "UX review presentations",
-        summary: "How do you create compelling presentations that wow your colleagues and impress your managers?",
+        title: "Ad quality review best practices",
+        summary: "How to review the ads that actually served in your app and block surgically without sacrificing revenue.",
         href: "#",
         category: { name: "Design", href: "#" },
         thumbnailUrl: "https://www.untitledui.com/marketing/spirals.webp",
         publishedAt: "20 Jan 2026",
         readingTime: "8 min read",
-        author: { name: "Olivia Rhye", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80" },
+        author: { name: "Jordan Kim", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80" },
         tags: [
             { name: "Design", color: "brand", href: "#" },
             { name: "Research", color: "indigo", href: "#" },
@@ -395,15 +395,15 @@ const articles: Article[] = [
     },
     {
         id: "article-2",
-        title: "Migrating to Linear 101",
-        summary: "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get started.",
+        title: "Migrating to in-app header bidding 101",
+        summary: "In-app header bidding gave publishers a better auction. Here is how to migrate without losing fill.",
         href: "#",
         category: { name: "Design", href: "#" },
         thumbnailUrl: "https://www.untitledui.com/marketing/conversation.webp",
 
         publishedAt: "19 Jan 2026",
         readingTime: "8 min read",
-        author: { name: "Phoenix Baker", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/phoenix-baker?fm=webp&q=80" },
+        author: { name: "Marcus Bell", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/phoenix-baker?fm=webp&q=80" },
         tags: [
             { name: "Product", color: "sky", href: "#" },
             { name: "Tools", color: "pink", href: "#" },
@@ -420,7 +420,7 @@ const BlogSectionSplitLayout01 = () => {
                     <p className="text-sm font-semibold text-brand-secondary md:text-md">Latest</p>
 
                     <h2 className="mt-3 text-display-sm font-semibold text-primary md:text-display-md">From the blog</h2>
-                    <p className="mt-4 text-lg text-tertiary md:mt-5">The latest industry news, interviews, technologies, and resources.</p>
+                    <p className="mt-4 text-lg text-tertiary md:mt-5">Monetization strategy, product deep-dives, and ad-tech insights.</p>
                     <div className="mt-12 hidden flex-col gap-3 md:mt-8 md:flex md:flex-row">
                         <Button size="xl">View all posts</Button>
                     </div>

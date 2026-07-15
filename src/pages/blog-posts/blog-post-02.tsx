@@ -19,7 +19,7 @@ const ContentLargeImage01 = () => {
                 <div className="mx-auto flex w-full max-w-5xl flex-col items-center">
                     <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Published 20 Jan 2026</span>
-                        <h1 className="mt-3 text-display-md font-semibold text-primary md:text-display-lg">UX review presentations</h1>
+                        <h1 className="mt-3 text-display-md font-semibold text-primary md:text-display-lg">Ad quality review best practices</h1>
                         <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">
                             How do you create compelling presentations that wow your colleagues and impress your managers?{" "}
                             <span className="max-md:hidden">Find out with our in-depth guide on UX presentations.</span>
@@ -41,10 +41,10 @@ const ContentLargeImage01 = () => {
                         <img
                             src="https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80"
                             className="size-14 rounded-full object-cover"
-                            alt="Olivia Rhye"
+                            alt="Jordan Kim"
                         />
                         <div>
-                            <p className="text-lg font-semibold text-primary">Olivia Rhye</p>
+                            <p className="text-lg font-semibold text-primary">Jordan Kim</p>
                             <p className="text-md text-tertiary">20 Jan 2026</p>
                         </div>
                     </div>
@@ -52,7 +52,7 @@ const ContentLargeImage01 = () => {
                 <img
                     className="mt-12 h-60 w-full object-cover md:mt-16 md:h-160"
                     src="https://www.untitledui.com/marketing/smiling-girl-5.webp"
-                    alt="UX review presentations - featured article image"
+                    alt="Ad quality review best practices - featured article image"
                 />
             </div>
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
@@ -104,7 +104,7 @@ const ContentLargeImage01 = () => {
                                 </p>
                             </blockquote>
                             <figcaption className="not-prose mt-6 text-md md:mt-8">
-                                — Olivia Rhye, <cite className="not-italic">Product Designer</cite>
+                                — Jordan Kim, <cite className="not-italic">Product Designer</cite>
                             </figcaption>
                         </figure>
 
@@ -205,11 +205,11 @@ const ContentLargeImage01 = () => {
                             <img
                                 src="https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80"
                                 className="size-12 rounded-full object-cover md:size-14"
-                                alt="Olivia Rhye"
+                                alt="Jordan Kim"
                             />
                             <div>
-                                <p className="text-md font-semibold text-primary md:text-lg">Olivia Rhye</p>
-                                <p className="text-md text-tertiary">Product Designer, Untitled</p>
+                                <p className="text-md font-semibold text-primary md:text-lg">Jordan Kim</p>
+                                <p className="text-md text-tertiary">Product Designer, Nimbus</p>
                             </div>
                         </div>
 
@@ -297,15 +297,15 @@ const Simple04Vertical = ({ article, imageClassName, className }: { article: Art
 const articles: Article[] = [
     {
         id: "article-1",
-        title: "UX review presentations",
-        summary: "How do you create compelling presentations that wow your colleagues and impress your managers?",
+        title: "Ad quality review best practices",
+        summary: "How to review the ads that actually served in your app and block surgically without sacrificing revenue.",
         href: "#",
         category: { name: "Design", href: "#" },
         thumbnailUrl: "https://www.untitledui.com/marketing/spirals.webp",
         publishedAt: "20 Jan 2026",
         readingTime: "8 min read",
         author: {
-            name: "Olivia Rhye",
+            name: "Jordan Kim",
             href: "#",
             avatarUrl: "https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80",
         },
@@ -318,8 +318,8 @@ const articles: Article[] = [
     },
     {
         id: "article-2",
-        title: "Migrating to Linear 101",
-        summary: "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get started.",
+        title: "Migrating to in-app header bidding 101",
+        summary: "In-app header bidding gave publishers a better auction. Here is how to migrate without losing fill.",
         href: "#",
         category: { name: "Design", href: "#" },
         thumbnailUrl: "https://www.untitledui.com/marketing/conversation.webp",
@@ -327,7 +327,7 @@ const articles: Article[] = [
         publishedAt: "19 Jan 2026",
         readingTime: "8 min read",
         author: {
-            name: "Phoenix Baker",
+            name: "Marcus Bell",
             href: "#",
             avatarUrl: "https://www.untitledui.com/images/avatars/phoenix-baker?fm=webp&q=80",
         },
@@ -339,34 +339,34 @@ const articles: Article[] = [
     },
     {
         id: "article-3",
-        title: "Building your API stack",
-        summary: "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.",
+        title: "Building your in-app bidding stack",
+        summary: "The rise of in-app bidding has been met by a rise in tools for pricing, quality, and reporting.",
         href: "#",
         category: { name: "Design", href: "#" },
         thumbnailUrl: "https://www.untitledui.com/blog/two-mobile-shapes-pattern.webp",
         publishedAt: "18 Jan 2026",
         readingTime: "8 min read",
         author: {
-            name: "Lana Steiner",
+            name: "Elena Vasquez",
             href: "#",
             avatarUrl: "https://www.untitledui.com/images/avatars/lana-steiner?fm=webp&q=80",
         },
         tags: [
-            { name: "Software Development", color: "success", href: "#" },
+            { name: "Ad Tech", color: "success", href: "#" },
             { name: "Tools", color: "pink", href: "#" },
         ],
     },
     {
         id: "article-3.5",
-        title: "Bill Walsh leadership lessons",
-        summary: "Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?",
+        title: "Floors are a publisher's pricing power",
+        summary: "How top publishers turn floors into pricing power and set the terms the market has to beat.",
         href: "#",
         category: { name: "Design", href: "#" },
         thumbnailUrl: "https://www.untitledui.com/blog/two-people.webp",
         publishedAt: "17 Jan 2026",
         readingTime: "8 min read",
         author: {
-            name: "Alec Whitten",
+            name: "Ryan Cho",
             href: "#",
             avatarUrl: "https://www.untitledui.com/images/avatars/alec-whitten?fm=webp&q=80",
         },
@@ -383,7 +383,7 @@ const BlogSectionSimpleLeftAligned02 = () => {
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="max-w-3xl">
                     <h2 className="text-display-sm font-semibold text-primary md:text-display-md">From the blog</h2>
-                    <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">The latest industry news, interviews, technologies, and resources.</p>
+                    <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Monetization strategy, product deep-dives, and ad-tech insights.</p>
                 </div>
 
                 <ul className="mt-12 grid grid-cols-1 gap-x-8 gap-y-12 md:mt-16 md:grid-cols-2">
@@ -455,7 +455,7 @@ const navList = [
         title: "Product",
         items: [
             { label: "Overview", href: "#" },
-            { label: "Features", href: "#" },
+            { label: "Products", href: "#" },
             {
                 label: "Solutions",
                 href: "#",
@@ -519,7 +519,7 @@ const FooterLarge04 = () => {
                             className="flex w-full flex-col gap-4 md:max-w-90"
                         >
                             <label htmlFor="newsletters-email" className="text-sm font-semibold text-primary">
-                                Start growing with Untitled
+                                Start growing with Nimbus
                             </label>
                             <div className="flex flex-col gap-4 sm:flex-row">
                                 <Input
