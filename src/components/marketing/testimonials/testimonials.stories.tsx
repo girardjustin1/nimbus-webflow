@@ -8,7 +8,7 @@ import { TestimonialSimpleLeftAligned } from "@/components/marketing/testimonial
  * Untitled UI testimonial sections, themed with the Nimbus design system.
  */
 const meta = {
-    title: "Components/Testimonials",
+    title: "Components/Body/Testimonials",
     parameters: { layout: "fullscreen" },
 } satisfies Meta;
 
