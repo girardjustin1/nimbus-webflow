@@ -1,4 +1,6 @@
 import { Checklist, ImageryIdea, KeyTakeaway, PullQuote, StatCallout, StatGrid } from "@/components/marketing/article-enrichments/article-enrichments";
+import { CTASimpleCenteredBrand } from "@/components/marketing/cta/cta-simple-centered-brand";
+import { FAQAccordion04 } from "@/components/marketing/faq/faq-accordion-04";
 import type { BlogBlock } from "@/content/blog/nimbus-articles";
 
 const Block = ({ block }: { block: BlogBlock }) => {
@@ -7,6 +9,12 @@ const Block = ({ block }: { block: BlogBlock }) => {
     if (block.type === "checklist") return <Checklist heading={block.heading} items={block.items} />;
     if (block.type === "keyTakeaway") return <KeyTakeaway title={block.title} text={block.text} />;
     if (block.type === "imageryIdea") return <ImageryIdea caption={block.caption} />;
+    if (block.type === "faq") {
+        return <FAQAccordion04 faqs={block.items} eyebrow={block.eyebrow} heading={block.heading} description={block.description} />;
+    }
+    if (block.type === "cta") {
+        return <CTASimpleCenteredBrand heading={block.heading} description={block.description} primaryLabel={block.primaryLabel} primaryHref={block.primaryHref} />;
+    }
     if (block.type === "heading") {
         return <h2 className="mt-10 mb-3 text-[28px] leading-[1.2] font-extrabold text-[#181d27]">{block.text}</h2>;
     }

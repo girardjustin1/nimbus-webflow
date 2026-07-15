@@ -253,9 +253,9 @@ const BlogHeaderFeaturedPost04 = () => {
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                         <span className="text-sm font-semibold text-secondary_on-brand md:text-md">Blog</span>
-                        <h2 className="mt-3 text-display-md font-extrabold text-primary_on-brand md:text-display-lg">Resource library</h2>
+                        <h2 className="mt-3 text-display-md font-extrabold text-primary_on-brand md:text-display-lg">Get every post in your inbox</h2>
                         <p className="mt-4 text-lg text-tertiary_on-brand md:mt-6 md:text-xl">
-                            Subscribe to learn about new product features, the latest in technology, solutions, and updates.
+                            Subscribe and we'll email you the moment we publish — ad-tech insights, product deep-dives, and monetization strategy, straight to your inbox.
                         </p>
                         <Form
                             onSubmit={(e) => {

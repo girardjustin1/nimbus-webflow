@@ -11,7 +11,9 @@ export type BlogBlock =
     | { type: "statGrid"; stats: { value: string; label: string }[] }
     | { type: "checklist"; heading?: string; items: string[] }
     | { type: "keyTakeaway"; title?: string; text: string }
-    | { type: "imageryIdea"; caption: string };
+    | { type: "imageryIdea"; caption: string }
+    | { type: "faq"; eyebrow?: string; heading?: string; description?: string; items: { question: string; answer: string }[] }
+    | { type: "cta"; heading?: string; description?: string; primaryLabel?: string; primaryHref?: string };
 
 /** An Article (for cards) enriched with a slug + full body (for post pages). */
 export type NimbusArticle = Article & { slug: string; body: BlogBlock[] };
@@ -99,26 +101,27 @@ export const nimbusArticles: NimbusArticle[] = [
                 lead: "Imgur",
                 text: "uses the Dynamic Unit similarly to Timehop, serving ads within a swipe-based in-app experience.",
             },
-            { type: "heading", text: "FAQ" },
             {
-                type: "paragraph",
-                lead: "Is it difficult to implement?",
-                text: "No. It's only slightly more complex than a general Nimbus implementation. Most of the lift comes with customizations, which are up to you and can expand over time.",
+                type: "faq",
+                items: [
+                    {
+                        question: "Is it difficult to implement?",
+                        answer: "No. It's only slightly more complex than a general Nimbus implementation. Most of the lift comes with customizations, which are up to you and can expand over time.",
+                    },
+                    {
+                        question: "Am I limited to programmatic interstitial?",
+                        answer: "No. You can also run static, video, and Meta native. Because static, MRAID, and VAST demand tends to outperform native programmatic in these units, few publishers end up implementing native programmatic — but we'll help if you want it.",
+                    },
+                    {
+                        question: "Is the Dynamic Unit oRTB compliant?",
+                        answer: "Yes. It uses the oRTB spec and is fully compliant with all standards for proper performance and reporting.",
+                    },
+                ],
             },
             {
-                type: "paragraph",
-                lead: "Am I limited to programmatic interstitial?",
-                text: "No. You can also run static, video, and Meta native. Because static, MRAID, and VAST demand tends to outperform native programmatic in these units, few publishers end up implementing native programmatic — but we'll help if you want it.",
-            },
-            {
-                type: "paragraph",
-                lead: "Is the Dynamic Unit oRTB compliant?",
-                text: "Yes. It uses the oRTB spec and is fully compliant with all standards for proper performance and reporting.",
-            },
-            { type: "heading", text: "Get Started with Nimbus" },
-            {
-                type: "paragraph",
-                text: "Reach out to your Nimbus Account Manager to learn more about the Dynamic Unit, or get started at nimbus.co.",
+                type: "cta",
+                heading: "Get started with Nimbus",
+                description: "Reach out to your Nimbus Account Manager to learn more about the Dynamic Unit, or get started at nimbus.co.",
             },
         ],
     },
