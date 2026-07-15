@@ -291,7 +291,7 @@ export const BlogHeaderSimple06 = () => {
                 />
                 <div className="-m-1 hidden w-max self-start overflow-auto p-1 md:flex md:self-auto">
                     <Tabs>
-                        <TabList type="button-minimal" size="md" items={tabs} />
+                        <TabList type="underline" size="md" items={tabs} />
                     </Tabs>
                 </div>
 

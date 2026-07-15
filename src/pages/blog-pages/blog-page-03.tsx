@@ -288,7 +288,7 @@ const BlogHeaderSimple01 = () => {
             <main className="mx-auto flex w-full max-w-container flex-col gap-12 px-4 pb-16 md:gap-16 md:px-8 md:pb-24">
                 <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
                     <Tabs className="-mx-4 -my-1 flex overflow-auto px-4 py-1 md:-ml-8 md:pl-8">
-                        <TabList type="button-minimal" size="md" items={tabs} />
+                        <TabList type="underline" size="md" items={tabs} />
                     </Tabs>
                     <div className="relative w-full md:max-w-44">
                         <Select aria-label="Sort by" size="md" value={sortBy} onChange={(value) => setSortBy(value as string)} items={sortByOptions}>
