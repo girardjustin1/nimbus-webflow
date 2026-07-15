@@ -7,7 +7,7 @@ import { Button } from "@/components/base/buttons/button";
 import { Form } from "@/components/base/form/form";
 import { Input } from "@/components/base/input/input";
 import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
-import { Header } from "@/components/marketing/header-navigation/header";
+import { NimbusHeader } from "@/components/marketing/nimbus-header";
 import { IPhoneMockup } from "@/components/shared-assets/iphone-mockup";
 import { SectionDivider } from "@/components/shared-assets/section-divider";
 import { cx } from "@/utils/cx";
@@ -177,16 +177,8 @@ const articles: Article[] = [
     },
 ];
 
-const HeaderPrimaryDark = (props: ComponentProps<typeof Header>) => {
-    return (
-        <Header
-            {...props}
-            className={cx(
-                "bg-brand-section [&_nav>ul>li>a]:text-secondary_on-brand [&_nav>ul>li>a]:hover:text-secondary_on-brand [&_nav>ul>li>button]:text-secondary_on-brand [&_nav>ul>li>button]:hover:text-secondary_on-brand [&_nav>ul>li>button>svg]:text-fg-brand-secondary_alt [&_svg_path.fill-fg-primary]:fill-fg-white",
-                props.className,
-            )}
-        />
-    );
+const HeaderPrimaryDark = (props: ComponentProps<typeof NimbusHeader>) => {
+    return <NimbusHeader {...props} />;
 };
 
 const Simple03Vertical = ({

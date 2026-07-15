@@ -5,7 +5,7 @@ import { Badge, type BadgeColor } from "@/components/base/badges/badges";
 import { Button } from "@/components/base/buttons/button";
 import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
 import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
-import { Header } from "@/components/marketing/header-navigation/header";
+import { NimbusHeader } from "@/components/marketing/nimbus-header";
 import { useClipboard } from "@/hooks/use-clipboard";
 import { cx } from "@/utils/cx";
 import { isReactComponent } from "@/utils/is-react-component";
@@ -600,7 +600,7 @@ const FooterLarge09 = () => {
 const BlogPost06 = () => {
     return (
         <div className="bg-[#f9f7f3]">
-            <Header />
+            <NimbusHeader />
 
             <ContentSplitImage02 />
 

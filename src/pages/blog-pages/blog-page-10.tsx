@@ -6,7 +6,7 @@ import { Button } from "@/components/base/buttons/button";
 import { Form } from "@/components/base/form/form";
 import { Input } from "@/components/base/input/input";
 import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
-import { Header } from "@/components/marketing/header-navigation/header";
+import { NimbusHeader } from "@/components/marketing/nimbus-header";
 import { SectionDivider } from "@/components/shared-assets/section-divider";
 import { useBreakpoint } from "@/hooks/use-breakpoint";
 import { cx } from "@/utils/cx";
@@ -653,7 +653,7 @@ const FooterLarge04 = () => {
 const BlogPage10 = () => {
     return (
         <div className="bg-[#f9f7f3]">
-            <Header isFloating />
+            <NimbusHeader />
 
             <BlogHeaderAltLayout04 />
 

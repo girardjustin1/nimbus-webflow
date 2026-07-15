@@ -6,7 +6,7 @@ import { Form } from "@/components/base/form/form";
 import { Input } from "@/components/base/input/input";
 import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
 import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
-import { Header } from "@/components/marketing/header-navigation/header";
+import { NimbusHeader } from "@/components/marketing/nimbus-header";
 import { useClipboard } from "@/hooks/use-clipboard";
 
 type Article = {
@@ -486,7 +486,7 @@ const FooterSmall04 = () => {
 const BlogPost03 = () => {
     return (
         <div className="bg-[#f9f7f3]">
-            <Header />
+            <NimbusHeader />
 
             <ContentAlternative03 />
 

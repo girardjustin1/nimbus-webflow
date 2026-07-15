@@ -7,7 +7,7 @@ import { Input } from "@/components/base/input/input";
 import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
 import { RatingBadge } from "@/components/foundations/rating-badge";
 import { AngelList, Dribbble, Facebook, GitHub, Layers, LinkedIn, X } from "@/components/foundations/social-icons";
-import { Header } from "@/components/marketing/header-navigation/header";
+import { NimbusHeader } from "@/components/marketing/nimbus-header";
 import { CheckItemText } from "@/components/marketing/pricing-sections/base-components/pricing-tier-card";
 import { SectionDivider } from "@/components/shared-assets/section-divider";
 import { useClipboard } from "@/hooks/use-clipboard";
@@ -774,7 +774,7 @@ const FooterLarge02 = () => {
 const BlogPost08 = () => {
     return (
         <div className="bg-[#f9f7f3]">
-            <Header />
+            <NimbusHeader />
 
             <ContentSplitImage03 />
 

@@ -13,7 +13,7 @@ import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
 import { RatingBadge } from "@/components/foundations/rating-badge";
 import { StarIcon } from "@/components/foundations/rating-stars";
 import { AngelList, Dribbble, Facebook, GitHub, Layers, LinkedIn, X } from "@/components/foundations/social-icons";
-import { Header } from "@/components/marketing/header-navigation/header";
+import { NimbusHeader } from "@/components/marketing/nimbus-header";
 import { useBreakpoint } from "@/hooks/use-breakpoint";
 import { cx } from "@/utils/cx";
 import { isReactComponent } from "@/utils/is-react-component";
@@ -651,7 +651,7 @@ const BlogPage05 = () => {
         <div className="bg-[#f9f7f3]">
             <BannerSlimBrandFullWidth />
 
-            <Header />
+            <NimbusHeader />
 
             <BlogHeaderFeaturedPost03 />
 

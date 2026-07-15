@@ -8,7 +8,7 @@ import { Form } from "@/components/base/form/form";
 import { Input } from "@/components/base/input/input";
 import { NativeSelect } from "@/components/base/select/select-native";
 import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
-import { Header } from "@/components/marketing/header-navigation/header";
+import { NimbusHeader } from "@/components/marketing/nimbus-header";
 import { SectionDivider } from "@/components/shared-assets/section-divider";
 import { useBreakpoint } from "@/hooks/use-breakpoint";
 import { cx } from "@/utils/cx";
@@ -553,7 +553,7 @@ const FooterLarge05 = () => {
 const BlogPage09 = () => {
     return (
         <div className="bg-[#f9f7f3]">
-            <Header />
+            <NimbusHeader />
 
             <BlogHeaderSimple06 />
 

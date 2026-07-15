@@ -7,7 +7,7 @@ import { Form } from "@/components/base/form/form";
 import { Input } from "@/components/base/input/input";
 import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
 import { AngelList, Dribbble, Facebook, GitHub, Layers, LinkedIn, X } from "@/components/foundations/social-icons";
-import { Header } from "@/components/marketing/header-navigation/header";
+import { NimbusHeader } from "@/components/marketing/nimbus-header";
 import { SectionDivider } from "@/components/shared-assets/section-divider";
 import { useClipboard } from "@/hooks/use-clipboard";
 
@@ -469,7 +469,7 @@ const BlogPost10 = () => {
         <div className="bg-[#f9f7f3]">
             <BannerSlimBrandFullWidth />
 
-            <Header isFloating />
+            <NimbusHeader />
 
             <ContentLargeImage02 />
 

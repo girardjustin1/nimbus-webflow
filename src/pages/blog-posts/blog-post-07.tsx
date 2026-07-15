@@ -9,7 +9,7 @@ import { Input } from "@/components/base/input/input";
 import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
 import { RatingBadge } from "@/components/foundations/rating-badge";
 import { AngelList, Dribbble, Facebook, GitHub, Layers, LinkedIn, X } from "@/components/foundations/social-icons";
-import { Header } from "@/components/marketing/header-navigation/header";
+import { NimbusHeader } from "@/components/marketing/nimbus-header";
 import { SectionDivider } from "@/components/shared-assets/section-divider";
 import { useClipboard } from "@/hooks/use-clipboard";
 import { cx } from "@/utils/cx";
@@ -90,16 +90,8 @@ const footerNavList = [
     },
 ];
 
-const HeaderPrimaryDark = (props: ComponentProps<typeof Header>) => {
-    return (
-        <Header
-            {...props}
-            className={cx(
-                "bg-brand-section [&_nav>ul>li>a]:text-secondary_on-brand [&_nav>ul>li>a]:hover:text-secondary_on-brand [&_nav>ul>li>button]:text-secondary_on-brand [&_nav>ul>li>button]:hover:text-secondary_on-brand [&_nav>ul>li>button>svg]:text-fg-brand-secondary_alt [&_svg_path.fill-fg-primary]:fill-fg-white",
-                props.className,
-            )}
-        />
-    );
+const HeaderPrimaryDark = (props: ComponentProps<typeof NimbusHeader>) => {
+    return <NimbusHeader {...props} />;
 };
 
 const ContentLargeImage04 = () => {
