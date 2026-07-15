@@ -15,7 +15,7 @@ import {
  * themed with the Nimbus design system.
  */
 const meta = {
-    title: "Blog Components/Blog Cards",
+    title: "Components/Blog Cards",
     parameters: { layout: "padded" },
     tags: ["autodocs"],
 } satisfies Meta;

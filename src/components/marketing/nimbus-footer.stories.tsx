@@ -6,7 +6,7 @@ import { NimbusFooter } from "@/components/marketing/nimbus-footer";
  * The Nimbus site footer (navy background, white logo, teal CTA link).
  */
 const meta = {
-    title: "Marketing/Footer",
+    title: "Components/Footer",
     component: NimbusFooter,
     parameters: { layout: "fullscreen" },
     tags: ["autodocs"],
