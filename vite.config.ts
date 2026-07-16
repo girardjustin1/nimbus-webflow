@@ -16,6 +16,12 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src")
     }
   },
+  // Pre-bundle these CommonJS deps so their named exports resolve under the
+  // Vitest browser (ESM) transform — otherwise @testing-library/dom's
+  // `import { elementRoles } from "aria-query"` fails to initialize the addon.
+  optimizeDeps: {
+    include: ["aria-query", "@testing-library/dom"]
+  },
   test: {
     projects: [{
       extends: true,
