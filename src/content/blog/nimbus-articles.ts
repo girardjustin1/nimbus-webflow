@@ -46,7 +46,7 @@ export const nimbusArticles: NimbusArticle[] = [
     {
         id: "dynamic-unit",
         slug: "nimbus-dynamic-unit",
-        heroImage: "/unsplash/person-using-smartphone-mobile-app/person-using-smartphone-mobile-app-HbyYFFokvm0.jpg",
+        heroImage: "unsplash/person-using-smartphone-mobile-app/person-using-smartphone-mobile-app-HbyYFFokvm0.jpg",
         heroImageAlt: "Person using a mobile app on a smartphone",
         href: "#",
         thumbnailUrl: "https://picsum.photos/seed/nimbus-dynamic-unit/1200/800",
@@ -148,7 +148,7 @@ export const nimbusArticles: NimbusArticle[] = [
     {
         id: "ad-quality",
         slug: "ad-quality",
-        heroImage: "/unsplash/streaming-video-content-mobile-app/streaming-video-content-mobile-app-f00CbjZuO1Y.jpg",
+        heroImage: "unsplash/streaming-video-content-mobile-app/streaming-video-content-mobile-app-f00CbjZuO1Y.jpg",
         heroImageAlt: "Smartphone displaying an app interface",
         href: "#",
         thumbnailUrl: "https://picsum.photos/seed/nimbus-ad-quality/1200/800",
@@ -234,7 +234,7 @@ export const nimbusArticles: NimbusArticle[] = [
     {
         id: "floors",
         slug: "floors-pricing-power",
-        heroImage: "/unsplash/financial-trading-data-dashboard-screen/financial-trading-data-dashboard-screen-fiXLQXAhCfk.jpg",
+        heroImage: "unsplash/financial-trading-data-dashboard-screen/financial-trading-data-dashboard-screen-fiXLQXAhCfk.jpg",
         heroImageAlt: "Stock market candlestick chart on a screen",
         href: "#",
         thumbnailUrl: "https://picsum.photos/seed/nimbus-floors/1200/800",
@@ -311,7 +311,7 @@ export const nimbusArticles: NimbusArticle[] = [
     {
         id: "prebid",
         slug: "prebid-live-on-nimbus",
-        heroImage: "/unsplash/futuristic-network-connection-technology/futuristic-network-connection-technology-pREq0ns_p_E.jpg",
+        heroImage: "unsplash/futuristic-network-connection-technology/futuristic-network-connection-technology-pREq0ns_p_E.jpg",
         heroImageAlt: "Abstract network of connected nodes",
         href: "#",
         thumbnailUrl: "https://picsum.photos/seed/nimbus-prebid/1200/800",

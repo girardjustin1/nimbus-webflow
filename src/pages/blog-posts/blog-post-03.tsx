@@ -37,7 +37,7 @@ const articles: Article[] = [
         summary: "How to review the ads that actually served in your app and block surgically without sacrificing revenue.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "/unsplash/advertising-billboard-city/advertising-billboard-city-5GBvm1lhrFM.jpg",
+        thumbnailUrl: "unsplash/advertising-billboard-city/advertising-billboard-city-5GBvm1lhrFM.jpg",
         publishedAt: "20 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Jordan Kim", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80" },
@@ -54,7 +54,7 @@ const articles: Article[] = [
         summary: "In-app header bidding gave publishers a better auction. Here is how to migrate without losing fill.",
         href: "#",
         category: { name: "Product", href: "#" },
-        thumbnailUrl: "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-q8U1YgBaRQk.jpg",
+        thumbnailUrl: "unsplash/mobile-phone-app-technology/mobile-phone-app-technology-q8U1YgBaRQk.jpg",
 
         publishedAt: "19 Jan 2026",
         readingTime: "8 min read",

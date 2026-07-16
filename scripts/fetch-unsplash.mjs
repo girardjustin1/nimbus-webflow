@@ -125,7 +125,7 @@ async function main() {
     for (const [i, photo] of results.entries()) {
         const fileName = `${collection}-${photo.id}.jpg`;
         const filePath = join(outDir, fileName);
-        const webPath = `/${join(publicPrefix, collection, fileName)}`.replace(/\/+/g, "/");
+        const webPath = join(publicPrefix, collection, fileName).replace(/\/+/g, "/");
 
         // Unsplash API guideline: hit download_location to register a download.
         fetch(`${photo.links.download_location}&client_id=${ACCESS_KEY}`, {

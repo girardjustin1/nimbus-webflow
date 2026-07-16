@@ -28,7 +28,7 @@ export const ContentSplitImage02 = () => {
                 </div>
                 <div className="flex items-center justify-center px-4 md:h-180 md:w-1/2 md:bg-secondary md:p-8">
                     <img
-                        src="/unsplash/financial-trading-data-dashboard-screen/financial-trading-data-dashboard-screen-fiXLQXAhCfk.jpg"
+                        src="unsplash/financial-trading-data-dashboard-screen/financial-trading-data-dashboard-screen-fiXLQXAhCfk.jpg"
                         alt="Stock market candlestick chart on a screen"
                         className="h-100 w-full rounded-2xl object-cover md:h-140 md:w-100"
                     />
@@ -69,7 +69,7 @@ export const ContentSplitImage02 = () => {
                         </p>
 
                         <img
-                            src="/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-qwtCeJ5cLYs.jpg"
+                            src="unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-qwtCeJ5cLYs.jpg"
                             alt="Monitoring dashboard on a screen"
                             className="h-60 w-full rounded-2xl object-cover md:h-120"
                         />
