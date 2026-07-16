@@ -24,7 +24,7 @@ npm run storybook
 
 Then open **[http://localhost:6006](http://localhost:6006)**. Start at the **Overview** page (top of the sidebar) for a full tour.
 
-**Hosted Storybook:** _<!-- TODO: add deployed Storybook URL (Chromatic / Netlify / GitHub Pages) here -->_
+**Hosted Storybook:** **[girardjustin1.github.io/nimbus-webflow](https://girardjustin1.github.io/nimbus-webflow/)** — auto-deployed from GitHub Pages on every push.
 
 ---
 
