@@ -2,7 +2,7 @@ name: Deploy Storybook to GitHub Pages
 
 on:
     push:
-        branches: [main, work-071526]
+        branches: [main]
     workflow_dispatch:
 
 # Allow the workflow to publish to GitHub Pages.
