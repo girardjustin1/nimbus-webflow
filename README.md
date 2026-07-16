@@ -1,4 +1,4 @@
-# Nimbus Design System
+# Nimbus Blog Design
 
 A component library and blog-layout kit for **[adsbynimbus.com](https://www.adsbynimbus.com)**, themed to the
 Nimbus brand — teal accent, Proxima Nova type, cream/navy surfaces.
