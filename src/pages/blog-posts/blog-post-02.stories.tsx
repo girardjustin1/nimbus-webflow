@@ -152,7 +152,7 @@ const enriched02: NimbusArticle = {
  * to see how the template adapts to actual content.
  */
 const meta = {
-    title: "Blog Layouts/Blog Article Template/02",
+    title: "Blog Article Templates/02",
     component: BlogPost02,
     parameters: { layout: "fullscreen" },
 } satisfies Meta<typeof BlogPost02>;

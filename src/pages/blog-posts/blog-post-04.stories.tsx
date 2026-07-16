@@ -159,7 +159,7 @@ const enriched03: NimbusArticle = {
 };
 
 const meta = {
-    title: "Blog Layouts/Blog Article Template/04",
+    title: "Blog Article Templates/04",
     component: BlogPost04,
     parameters: { layout: "fullscreen" },
 } satisfies Meta<typeof BlogPost04>;

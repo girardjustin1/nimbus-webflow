@@ -10,14 +10,14 @@ const preview: Preview = {
             storySort: {
                 method: "alphabetical",
                 order: [
+                    "Overview",
                     "Styles",
                     ["Color", "Elevation", "Icons", "Imagery", "Logos", "Shape", "Typography"],
                     "Components",
                     ["Navigation", "Breadcrumbs", "Body", "Footer"],
+                    "Blog Directory",
+                    "Blog Article Templates",
                     "Blog Sections",
-                    "Blog Layouts",
-                    ["Blog Directory", "Blog Article Template"],
-                    "Nimbus Blog",
                     "*",
                 ],
             },

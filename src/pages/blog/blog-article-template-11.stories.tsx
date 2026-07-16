@@ -148,7 +148,7 @@ const enriched11: NimbusArticle = {
  * (NimbusBlogPost), rendered with each of the four real Nimbus articles.
  */
 const meta = {
-    title: "Blog Layouts/Blog Article Template/11",
+    title: "Blog Article Templates/11",
     component: NimbusBlogPost,
     parameters: { layout: "fullscreen" },
 } satisfies Meta<typeof NimbusBlogPost>;

@@ -1,56 +1,150 @@
-# Untitled UI starter kit for Vite
+# Nimbus Design System
 
-This is an official Untitled UI starter kit for Vite. Kickstart your Untitled UI project with Vite in seconds.
+A component library and blog-layout kit for **[adsbynimbus.com](https://www.adsbynimbus.com)**, themed to the
+Nimbus brand — teal accent, Proxima Nova type, cream/navy surfaces.
 
-## Untitled UI React
+It provides three layers to work from:
 
-[Untitled UI React](https://www.untitledui.com/react) is the world’s largest collection of open-source React UI components. Everything you need to design and develop modern, beautiful interfaces—fast.
+1. **Styles** — the design foundations (color tokens, type scale, icons, shape, elevation, logos, imagery).
+2. **Components** — reusable building blocks (navigation, footer, and 20+ body components + article enrichments).
+3. **Blog Directory & Article Templates** — production-ready pages: a blog directory and 11 article templates, driven by real Nimbus article content.
 
-Built with React 19.1, Tailwind CSS v4.1, TypeScript 5.8, and React Aria, Untitled UI React components deliver modern performance, type safety, and maintainability.
+Everything is documented and previewable in **Storybook**.
 
-[Learn more](https://www.untitledui.com/react) • [Documentation](https://www.untitledui.com/react/docs/introduction) • [Figma](https://www.untitledui.com/figma) • [FAQs](https://www.untitledui.com/faqs)
+---
 
-## Getting started
+## 📖 View the component library (Storybook)
 
-First, run the development server:
+**Run it locally:**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run storybook
 ```
 
-Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
+Then open **[http://localhost:6006](http://localhost:6006)**. Start at the **Overview** page (top of the sidebar) for a full tour.
 
-You can start editing the app by modifying the components in `src/` folder. The page auto-updates as you edit the file.
+**Hosted Storybook:** _<!-- TODO: add deployed Storybook URL (Chromatic / Netlify / GitHub Pages) here -->_
 
-## Resources
+---
 
-Untitled UI React is built on top of [Untitled UI Figma](https://www.untitledui.com/figma), the world's largest and most popular Figma UI kit and design system. Explore more:
+## 🧱 What's inside
 
-**[Untitled UI Figma:](https://www.untitledui.com/react/resources/figma-files)** The world's largest Figma UI kit and design system.
-<br/>
-**[Untitled UI Icons:](https://www.untitledui.com/react/resources/icons)** A clean, consistent, and neutral icon library crafted specifically for modern UI design.
-<br/>
-**[Untitled UI file icons:](https://www.untitledui.com/react/resources/file-icons)** Free file format icons, designed specifically for modern web and UI design.
-<br/>
-**[Untitled UI flag icons:](https://www.untitledui.com/react/resources/flag-icons)** Free country flag icons, designed specifically for modern web and UI design.
-<br/>
-**[Untitled UI avatars:](https://www.untitledui.com/react/resources/avatars)** Free placeholder user avatars and profile pictures to use in your projects.
-<br/>
-**[Untitled UI logos:](https://www.untitledui.com/react/resources/logos)** Free fictional company logos to use in your projects.
+### Styles
+Semantic **color tokens** (light + dark), the **Proxima Nova** type scale, a line-style icon set,
+**shape** (radius) and **elevation** (shadow) scales, the **Nimbus logo** (blue + white), and a full
+**imagery** gallery of locally-hosted photos.
+
+### Components
+- **Chrome:** Navigation, Breadcrumbs, Footer
+- **Body atoms:** Buttons (teal + Nimbus-pink primary), Badges, Badge Groups, Avatars, Author Byline, Blog Cards, Category Tabs, Tag List, Pagination
+- **Body sections:** Content (rich text / split image), Metrics, Testimonials, Newsletter, FAQ
+- **Article enrichments:** Stat Callout, Metrics Row, Metrics Table, Demand Mix (Pie), Stack Comparison (Radar), Checklist, Key Takeaway, Pull Quote, Imagery Idea
+
+### Blog Directory & Article Templates
+- **Blog Directory** — index/listing page with hero, featured post, and a card grid
+- **Blog Article Templates 01–11** — eleven distinct article layouts, each rendered with the **same real content** so you can compare designs. Every template ships 5 stories: **Dynamic Unit**, **Ad Quality**, **Floors**, **Prebid**, and **Enriched (with sections)**.
+
+---
+
+## 🚀 Getting started
+
+```bash
+npm install          # install dependencies
+
+npm run dev          # Vite dev app          → http://localhost:5173
+npm run storybook    # component library     → http://localhost:6006
+npm run build        # production build (tsc + vite)
+npm run build-storybook  # static Storybook   → ./storybook-static
+```
+
+**Requirements:** Node 20+ (Node 25 recommended for the imagery script).
+
+---
+
+## 🗂 Project structure
+
+```
+src/
+├── components/
+│   ├── base/                  # core UI (buttons, inputs, badges, avatars…)
+│   ├── application/           # complex components (tabs, table, charts…)
+│   ├── foundations/           # tokens, logo, featured icons, imagery
+│   └── marketing/             # blog sections, testimonials, metrics, enrichments
+├── content/blog/              # Nimbus article data (BlogBlock[]) + Unsplash index
+├── pages/
+│   ├── blog/                  # ArticleBody renderer + template 11
+│   ├── blog-posts/            # article templates 01–10
+│   └── blog-pages/            # blog directory pages
+├── styles/                    # theme.css (brand tokens), globals, typography
+public/unsplash/               # committed, self-hosted imagery library
+scripts/fetch-unsplash.mjs     # Unsplash downloader
+```
+
+---
+
+## ✍️ The content engine
+
+Articles are **data, not markup.** Each article is a list of typed `BlogBlock`s
+(`heading`, `paragraph`, `quote`, `stat`, `statGrid`, `demandMixPie`, `stackRadar`, `metricsTable`,
+`checklist`, `keyTakeaway`, `faq`, …) defined in [`src/content/blog/nimbus-articles.ts`](src/content/blog/nimbus-articles.ts).
+
+A single **`ArticleBody`** renderer ([`src/pages/blog/article-body.tsx`](src/pages/blog/article-body.tsx))
+maps each block to the right component. Benefits:
+
+- **One source of truth** — edit an article once, every template updates.
+- **Article-driven heroes** — each article carries a title-relevant `heroImage`, so a template's five stories each show a different, on-topic image.
+- **Easy authoring** — compose a new article from blocks, no layout code required.
+
+The four articles are the real Nimbus posts: **The Dynamic Unit**, **Ad Quality**, **Floors (Pricing Power)**, and **Prebid Is Now Live**.
+
+---
+
+## 🖼 Imagery (Unsplash connector)
+
+Imagery is **self-hosted from the repo**, not fetched from an API at runtime.
+
+```bash
+# add your key once (kept out of git)
+cp .env.example .env      # then set UNSPLASH_ACCESS_KEY=...
+
+# download images into /public/unsplash and regenerate the typed index
+npm run fetch-images -- --query "programmatic advertising" --count 6
+```
+
+The script downloads real photos into `public/unsplash/` (committed → served locally, in the build, and via
+GitHub), records photographer attribution, and regenerates both `manifest.json` and the typed index that
+powers the **Styles → Imagery** gallery. The library currently holds **100+ images across ~19 ad-tech
+themed collections**. The Unsplash key is only used at download time.
+
+> **Rate limit:** Unsplash demo apps allow 50 requests/hour (each query ≈ 7). The script prints the
+> remaining count and stops before the cap.
+
+---
+
+## 🎨 Theming / rebrand
+
+The entire brand color scale lives in [`src/styles/theme.css`](src/styles/theme.css) as `--color-brand-*`
+(25 → 950). Change those values to rebrand — every component follows automatically through the semantic
+token system. Core Nimbus colors: teal `#08c6c7`, pink `#DA6EA3`, navy `#003a5b`, cream `#F9F7F3`.
+
+---
+
+## 📐 Conventions
+
+- **File names** are kebab-case (`stat-callout.tsx`).
+- **React Aria** imports are prefixed `Aria*` to avoid clashing with custom components.
+- **Colors** use semantic tokens (`text-primary`, `bg-brand-solid`), never raw palette classes.
+- **TypeScript** throughout; run `npm run build` (which runs `tsc -b`) to typecheck.
+
+---
+
+## Built with
+
+React 19 · TypeScript · Tailwind CSS v4 · React Aria Components · Recharts · Storybook 10 · Vite
+
+---
 
 ## License
 
-Untitled UI React open-source components are licensed under the MIT license, which means you can use them for free in unlimited commercial projects.
-
-> [!NOTE]
-> This license applies only to the starter kit and to the components included in this open-source repository. [Untitled UI React PRO](https://www.untitledui.com/react) includes hundreds more advanced UI components and page examples and is subject to a separate [license agreement](https://www.untitledui.com/license).
-
-[Untitled UI license agreement →](https://www.untitledui.com/license)
-
-[Frequently asked questions →](https://www.untitledui.com/faqs)
+Nimbus brand assets, copy, and article content are property of Nimbus.

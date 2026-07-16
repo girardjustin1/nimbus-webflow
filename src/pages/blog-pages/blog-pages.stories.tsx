@@ -15,7 +15,7 @@ import BlogPage10 from "./blog-page-10";
  * themed with the Nimbus design system. One story per variant (01–10).
  */
 const meta = {
-    title: "Blog Layouts/Blog Directory",
+    title: "Blog Directory",
     parameters: { layout: "fullscreen" },
 } satisfies Meta;
 

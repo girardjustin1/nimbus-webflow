@@ -8,7 +8,7 @@ import BlogPost08 from "./blog-post-08";
  * to see how the template adapts to actual content.
  */
 const meta = {
-    title: "Blog Layouts/Blog Article Template/08",
+    title: "Blog Article Templates/08",
     component: BlogPost08,
     parameters: { layout: "fullscreen" },
 } satisfies Meta<typeof BlogPost08>;
