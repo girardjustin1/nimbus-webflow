@@ -1,0 +1,146 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Overview" />
+
+<div style={{ maxWidth: 860 }}>
+
+# Nimbus Design System
+
+A component library and blog-layout kit for **[adsbynimbus.com](https://www.adsbynimbus.com)**, themed to the
+Nimbus brand — teal accent, Proxima Nova type, cream/navy surfaces. It gives you three layers to work from:
+**foundational styles**, **reusable components**, and **production blog layouts** assembled from real Nimbus
+article content.
+
+---
+
+## At a glance
+
+| | |
+|---|---|
+| **Framework** | React 19 + TypeScript |
+| **Styling** | Tailwind CSS v4 with semantic design tokens |
+| **Behavior / a11y** | React Aria Components (imported as `Aria*`) |
+| **Charts** | Recharts (pie / radar / area) |
+| **Docs** | Storybook 10 (`@storybook/react-vite`) |
+| **Brand** | Teal `#08c6c7` · Pink `#DA6EA3` · Navy `#003a5b` · Cream `#F9F7F3` |
+| **Imagery** | 100+ locally-hosted, self-curated Unsplash photos |
+
+The sidebar is organized top-to-bottom as **Styles → Components → Blog Article Templates** (with the Blog Directory nested in).
+
+---
+
+## 1. Styles
+
+The design foundations every component is built on. Change these and the whole system follows.
+
+| Story | What it covers |
+|---|---|
+| **Color** | Semantic text / background / border / foreground tokens (`text-primary`, `bg-brand-solid`, …) across light + dark |
+| **Typography** | The Proxima Nova type scale (display + text sizes) |
+| **Icons** | The line-style icon set and sizing guidance |
+| **Shape** | The corner-radius scale (`rounded-xs` → `rounded-full`) |
+| **Elevation** | The shadow scale |
+| **Logos** | The Nimbus logo (blue + white variants, sizes) |
+| **Imagery** | The full local Unsplash photo library, grouped by collection with photographer credit |
+
+> **Tokens over raw colors.** Components use semantic classes (`text-secondary`, `bg-primary`,
+> `ring-primary`) rather than `text-gray-600` etc., so light/dark and rebrands are automatic.
+
+---
+
+## 2. Components
+
+Reusable building blocks. **Chrome** wraps a page; **Body** is everything that goes between.
+
+### Page chrome
+- **Navigation** — the Nimbus top nav (teal logo, links, brand hover states)
+- **Breadcrumbs** — hierarchical page location
+- **Footer** — the dark navy Nimbus footer
+
+### Body — atoms & controls
+`Buttons` · `Badges` · `Badge Groups` · `Avatars` · `Author Byline` · `Blog Cards` ·
+`Category Tabs` · `Tag List` · `Pagination`
+
+Small, composable pieces — the buttons include a Nimbus pink primary variant alongside the teal.
+
+### Body — content sections
+- **Content** — long-form article bodies (Rich Text, Split Image), themed to Nimbus articles
+- **Metrics** — stat sections (centered text, gray-light card, brand-dark card) with real Nimbus figures
+- **Testimonials** — centered (avatar-tabbed), left-aligned, and card layouts with Nimbus/publisher voices
+- **Newsletter** — the "Get Nimbus Updates" subscribe card
+- **FAQ** — a collapsible accordion in a white card
+
+### Body — article enrichments
+Drop-in blocks that break up long copy. These are what make the "Enriched" article stories rich:
+
+| Component | Purpose |
+|---|---|
+| **Stat Callout** | One headline number — teal / pink / navy colorways, centered / left / inline layouts |
+| **Metrics Row** | A full-width row of metric cards (teal ▲ for `+`, pink ▼ for `-`) |
+| **Metrics Table** | Floored-vs-unfloored eCPM by geo, with lift badges |
+| **Demand Mix (Pie)** | Demand share by format, as a teal donut chart |
+| **Stack Comparison (Radar)** | Nimbus vs. a legacy stack across scored dimensions |
+| **Checklist** | A titled list with check icons |
+| **Key Takeaway** | A highlighted takeaway callout |
+| **Pull Quote** | Testimonial / quote with avatar, auto-varied colorway, and border/centered/card layouts |
+| **Imagery Idea** | An inline image slot (auto-filled from the Unsplash library) with a caption |
+
+The white infographic cards (Pie, Radar, Metrics, FAQ) share one border + shadow treatment for a
+consistent "card" language.
+
+---
+
+## 3. Blog Directory & Article Templates
+
+Full, production-ready pages assembled from the components above — split into two sidebar categories.
+
+### Blog Directory
+The blog index / listing page — hero, featured post, and a responsive grid of blog cards.
+
+### Blog Article Templates (01–11)
+**Eleven distinct article layouts.** Each template renders the **same real content** through a
+different design, so you can compare layouts side-by-side. Every template ships **5 stories**:
+
+- **The Nimbus Dynamic Unit** — a native ad experience without sacrificing demand
+- **Ad Quality** — your reviews are part of your revenue
+- **Floors: Pricing Power** — floors are a publisher's pricing power
+- **Prebid Is Now Live** — server-side demand in the unified auction
+- **Enriched (with sections)** — the article woven together with the enrichment blocks above
+
+Hero imagery is **article-driven**: each of the four articles carries its own title-relevant hero
+(mobile app, app interface, trading chart, network), so a template's five stories each show a
+different, on-topic image.
+
+---
+
+## The content engine
+
+Articles aren't hand-built per template — they're **data**. Each article is a list of typed
+`BlogBlock`s (`heading`, `paragraph`, `quote`, `stat`, `statGrid`, `demandMixPie`, `stackRadar`,
+`metricsTable`, `checklist`, `keyTakeaway`, `faq`, …). A single `ArticleBody` renderer maps each block
+to the right component. That means:
+
+- **One source of truth** — edit the article once, every template updates.
+- **Consistent enrichments** — a `demandMixPie` block always renders the same chart component.
+- **Easy authoring** — build a new article by composing blocks, no layout code.
+
+---
+
+## Imagery system
+
+A dev-time **Unsplash connector** (`npm run fetch-images -- --query "…"`) downloads real photos into
+`/public/unsplash`, commits them to the repo (GitHub-hosted, no runtime API key), and regenerates a
+typed index plus the **Styles → Imagery** gallery. The library currently holds **100+ images across
+~19 ad-tech themed collections** (programmatic advertising, mobile apps, data/analytics, servers,
+billboards, connected TV, and more) — all with photographer attribution.
+
+---
+
+## Conventions
+
+- **File names** are kebab-case (`stat-callout.tsx`).
+- **React Aria** imports are prefixed `Aria*` to avoid clashing with custom components.
+- **Colors** use semantic tokens, never raw palette classes.
+- **Brand color** lives in `src/styles/theme.css` (`--color-brand-*`) — change it there to rebrand.
+
+</div>

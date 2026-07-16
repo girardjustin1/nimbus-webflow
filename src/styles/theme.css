@@ -1,7 +1,10 @@
 @theme {
-    /* FONT FAMILY */
-    --font-body: var(--font-inter, "Inter"), -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    --font-display: var(--font-inter, "Inter"), -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    /* FONT FAMILY
+       Nimbus brand font: Proxima Nova (Adobe Fonts / Typekit — commercial license).
+       Load your Adobe Fonts web-project kit in index.html; the CSS family name is
+       "proxima-nova". Inter remains as the fallback so nothing breaks without the kit. */
+    --font-body: "proxima-nova", "Proxima Nova", var(--font-inter, "Inter"), -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-display: "proxima-nova", "Proxima Nova", var(--font-inter, "Inter"), -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     --font-mono: ui-monospace, "Roboto Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
     /* FONT SIZE */
@@ -121,17 +124,20 @@
     --color-alpha-white: rgb(255 255 255);
     --color-alpha-black: rgb(0 0 0);
 
-    --color-brand-50: rgb(249 245 255);
-    --color-brand-100: rgb(244 235 255);
-    --color-brand-200: rgb(233 215 254);
-    --color-brand-300: rgb(214 187 251);
-    --color-brand-400: rgb(182 146 246);
-    --color-brand-500: rgb(158 119 237);
-    --color-brand-600: rgb(127 86 217);
-    --color-brand-700: rgb(105 65 198);
-    --color-brand-800: rgb(83 56 158);
-    --color-brand-900: rgb(66 48 125);
-    --color-brand-950: rgb(44 28 95);
+    /* Nimbus teal — derived from adsbynimbus.com. Signature #08c6c7 = brand-500;
+       darker steps matched to the site (#23a6a9, #19676c). brand-600 is the
+       primary/button color, chosen dark enough for accessible white text. */
+    --color-brand-50: rgb(235 252 252);
+    --color-brand-100: rgb(208 247 247);
+    --color-brand-200: rgb(163 239 239);
+    --color-brand-300: rgb(95 227 227);
+    --color-brand-400: rgb(31 208 209);
+    --color-brand-500: rgb(8 198 199);
+    --color-brand-600: rgb(10 154 155);
+    --color-brand-700: rgb(11 110 112);
+    --color-brand-800: rgb(13 82 84);
+    --color-brand-900: rgb(14 62 64);
+    --color-brand-950: rgb(6 40 42);
 
     /* LIGHT MODE VARIABLES */
 
