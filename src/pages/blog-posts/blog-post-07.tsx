@@ -44,7 +44,7 @@ const ContentLargeImage04 = ({ article }: { article: NimbusArticle }) => {
                 </div>
             </div>
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
-                <img src="/unsplash/digital-marketing-technology-abstract-blue/digital-marketing-technology-abstract-blue-qY-XlCf9Zs4.jpg" alt="Blue glowing particle waves" className="mx-auto -mt-16 h-60 w-full object-cover md:-mt-24 md:h-160" />
+                <img src={article.heroImage} alt={article.heroImageAlt} className="mx-auto -mt-16 h-60 w-full object-cover md:-mt-24 md:h-160" />
                 <div className="mx-auto max-w-prose pt-16 md:max-w-180 md:pt-24">
                     <ArticleBody blocks={article.body} className="mx-auto max-w-none" />
 

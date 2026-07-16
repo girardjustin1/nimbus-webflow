@@ -198,7 +198,7 @@ const ContentSplitImage04 = ({ article }: { article: NimbusArticle }) => {
                     </div>
                 </div>
 
-                <img src="/unsplash/futuristic-network-connection-technology/futuristic-network-connection-technology-pREq0ns_p_E.jpg" alt="Abstract blue network of connected nodes" className="order-first h-60 w-screen max-w-none object-cover md:order-1 md:h-180 md:w-full md:max-w-full" />
+                <img src={article.heroImage} alt={article.heroImageAlt} className="order-first h-60 w-screen max-w-none object-cover md:order-1 md:h-180 md:w-full md:max-w-full" />
             </div>
 
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:py-24">

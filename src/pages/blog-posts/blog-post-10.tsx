@@ -31,7 +31,7 @@ const ContentLargeImage02 = ({ article }: { article: NimbusArticle }) => {
                         </div>
                     </div>
                 </div>
-                <img src="/unsplash/futuristic-network-connection-technology/futuristic-network-connection-technology-nGoCBxiaRO0.jpg" alt="Abstract sphere of connected network nodes" className="mx-auto mt-12 h-60 w-full object-cover md:mt-16 md:h-140 md:max-w-5xl" />
+                <img src={article.heroImage} alt={article.heroImageAlt} className="mx-auto mt-12 h-60 w-full object-cover md:mt-16 md:h-140 md:max-w-5xl" />
             </div>
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
                 <div className="mx-auto max-w-prose md:max-w-180">

@@ -196,7 +196,7 @@ const ContentSplitImage03 = ({ article }: { article: NimbusArticle }) => {
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:max-w-120 md:text-xl">{article.summary}</p>
                 </div>
 
-                <img src="/unsplash/person-using-smartphone-mobile-app/person-using-smartphone-mobile-app-pb_lF8VWaPU.jpg" alt="Silhouette of a person holding a smartphone" className="order-first -ml-4 h-60 w-screen max-w-none object-cover md:order-1 md:ml-0 md:h-160 md:w-full md:max-w-full" />
+                <img src={article.heroImage} alt={article.heroImageAlt} className="order-first -ml-4 h-60 w-screen max-w-none object-cover md:order-1 md:ml-0 md:h-160 md:w-full md:max-w-full" />
             </div>
 
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">

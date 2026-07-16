@@ -74,7 +74,7 @@ const ContentLargeImage03 = ({ article }: { article: NimbusArticle }) => {
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">{article.summary}</p>
                 </div>
                 <div className="mt-16 w-full">
-                    <img src="/unsplash/financial-trading-data-dashboard-screen/financial-trading-data-dashboard-screen-x07ELaNFt34.jpg" alt="Data dashboard application interface" className="h-60 w-full object-cover md:h-160" />
+                    <img src={article.heroImage} alt={article.heroImageAlt} className="h-60 w-full object-cover md:h-160" />
                     <div className="mt-8 flex items-start justify-between gap-24">
                         <dl className="flex gap-12 md:gap-12">
                             <div>

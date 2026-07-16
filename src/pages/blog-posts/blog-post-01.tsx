@@ -214,7 +214,7 @@ const ContentAlternative02 = ({ article }: { article: NimbusArticle }) => {
                 <Carousel.Root opts={{ align: "start" }} className="mt-12 md:mt-16">
                     <Carousel.Content overflowHidden={false} className="gap-6 pr-4 md:pr-8 lg:gap-8">
                         {[
-                            { alt: "Woman using a mobile app on her phone", imgUrl: "/unsplash/person-using-smartphone-mobile-app/person-using-smartphone-mobile-app-HbyYFFokvm0.jpg" },
+                            { alt: article.heroImageAlt, imgUrl: article.heroImage },
                             { alt: "Person holding a smartphone", imgUrl: "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-n31x0hhnzOs.jpg" },
                             { alt: "Illuminated billboards on a building at dusk", imgUrl: "/unsplash/advertising-billboard-city/advertising-billboard-city-5GBvm1lhrFM.jpg" },
                             { alt: "Server rack with blinking green lights", imgUrl: "/unsplash/server-network-data-center/server-network-data-center-VHmBX7FnXw0.jpg" },

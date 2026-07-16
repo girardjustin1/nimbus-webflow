@@ -28,7 +28,13 @@ export type BlogBlock =
     | { type: "cta"; heading?: string; description?: string; primaryLabel?: string; primaryHref?: string };
 
 /** An Article (for cards) enriched with a slug + full body (for post pages). */
-export type NimbusArticle = Article & { slug: string; body: BlogBlock[] };
+export type NimbusArticle = Article & {
+    slug: string;
+    /** Hero image for post templates — curated to match the article's title/topic. */
+    heroImage: string;
+    heroImageAlt: string;
+    body: BlogBlock[];
+};
 
 const AUTHOR = {
     href: "#",
@@ -40,6 +46,8 @@ export const nimbusArticles: NimbusArticle[] = [
     {
         id: "dynamic-unit",
         slug: "nimbus-dynamic-unit",
+        heroImage: "/unsplash/person-using-smartphone-mobile-app/person-using-smartphone-mobile-app-HbyYFFokvm0.jpg",
+        heroImageAlt: "Person using a mobile app on a smartphone",
         href: "#",
         thumbnailUrl: "https://picsum.photos/seed/nimbus-dynamic-unit/1200/800",
         title: "The Nimbus Dynamic Unit: A Native Ad Experience Without Sacrificing Demand",
@@ -140,6 +148,8 @@ export const nimbusArticles: NimbusArticle[] = [
     {
         id: "ad-quality",
         slug: "ad-quality",
+        heroImage: "/unsplash/streaming-video-content-mobile-app/streaming-video-content-mobile-app-f00CbjZuO1Y.jpg",
+        heroImageAlt: "Smartphone displaying an app interface",
         href: "#",
         thumbnailUrl: "https://picsum.photos/seed/nimbus-ad-quality/1200/800",
         title: "Your Reviews Are Part of Your Revenue: How Nimbus Approaches Ad Quality",
@@ -224,6 +234,8 @@ export const nimbusArticles: NimbusArticle[] = [
     {
         id: "floors",
         slug: "floors-pricing-power",
+        heroImage: "/unsplash/financial-trading-data-dashboard-screen/financial-trading-data-dashboard-screen-fiXLQXAhCfk.jpg",
+        heroImageAlt: "Stock market candlestick chart on a screen",
         href: "#",
         thumbnailUrl: "https://picsum.photos/seed/nimbus-floors/1200/800",
         title: "Floors Are a Publisher's Pricing Power",
@@ -299,6 +311,8 @@ export const nimbusArticles: NimbusArticle[] = [
     {
         id: "prebid",
         slug: "prebid-live-on-nimbus",
+        heroImage: "/unsplash/futuristic-network-connection-technology/futuristic-network-connection-technology-pREq0ns_p_E.jpg",
+        heroImageAlt: "Abstract network of connected nodes",
         href: "#",
         thumbnailUrl: "https://picsum.photos/seed/nimbus-prebid/1200/800",
         title: "Prebid Is Now Live on Nimbus",

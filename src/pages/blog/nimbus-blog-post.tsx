@@ -28,11 +28,7 @@ export const NimbusBlogPost = ({ article }: { article: NimbusArticle }) => (
                 </div>
             </div>
 
-            <img
-                src="/unsplash/financial-trading-data-dashboard-screen/financial-trading-data-dashboard-screen-N__BnvQ_w18.jpg"
-                alt="Bitcoin trading chart on a screen"
-                className="my-10 aspect-[16/9] w-full rounded-2xl object-cover"
-            />
+            <img src={article.heroImage} alt={article.heroImageAlt} className="my-10 aspect-[16/9] w-full rounded-2xl object-cover" />
 
             <div className="flex flex-col">
                 <ArticleBody blocks={article.body} className="max-w-none" />

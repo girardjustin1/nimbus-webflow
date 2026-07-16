@@ -201,7 +201,7 @@ const ContentSplitImage01 = ({ article }: { article: NimbusArticle }) => {
                     </div>
                 </div>
 
-                <img src="/unsplash/abstract-data-visualization-network/abstract-data-visualization-network-n6B49lTx7NM.jpg" alt="Abstract data visualization light patterns" className="mt-16 h-100 w-full object-cover md:mt-0 md:ml-auto md:h-180 md:w-140 md:max-w-[50vw]" />
+                <img src={article.heroImage} alt={article.heroImageAlt} className="mt-16 h-100 w-full object-cover md:mt-0 md:ml-auto md:h-180 md:w-140 md:max-w-[50vw]" />
 
                 <svg
                     className="absolute bottom-[53px] left-1/2 hidden -translate-x-[62%] lg:block"

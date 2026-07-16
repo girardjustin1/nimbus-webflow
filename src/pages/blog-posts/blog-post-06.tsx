@@ -200,7 +200,7 @@ const ContentSplitImage02 = ({ article }: { article: NimbusArticle }) => {
                     </div>
                 </div>
                 <div className="flex items-center justify-center px-4 md:h-180 md:w-1/2 md:bg-secondary md:p-8">
-                    <img src="/unsplash/person-using-smartphone-mobile-app/person-using-smartphone-mobile-app-8pCtwj37VB4.jpg" alt="Person using a mobile app on a smartphone" className="h-100 w-full object-cover md:h-140 md:w-100" />
+                    <img src={article.heroImage} alt={article.heroImageAlt} className="h-100 w-full object-cover md:h-140 md:w-100" />
                 </div>
             </div>
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:py-24">

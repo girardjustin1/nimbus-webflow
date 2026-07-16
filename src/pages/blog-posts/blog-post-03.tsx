@@ -201,7 +201,7 @@ const ContentAlternative03 = ({ article }: { article: NimbusArticle }) => {
                     </div>
                 </div>
 
-                <img src="/unsplash/financial-trading-data-dashboard-screen/financial-trading-data-dashboard-screen-fiXLQXAhCfk.jpg" alt="Stock market candlestick chart on a screen" className="h-80 w-full object-cover md:order-first md:h-200" />
+                <img src={article.heroImage} alt={article.heroImageAlt} className="h-80 w-full object-cover md:order-first md:h-200" />
             </div>
 
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:py-24">

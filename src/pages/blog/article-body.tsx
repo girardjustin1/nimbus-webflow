@@ -41,16 +41,9 @@ const Block = ({ block }: { block: BlogBlock }) => {
         );
     }
     if (block.type === "quote") {
-        return (
-            <PullQuote
-                quote={block.text}
-                attribution={block.attribution}
-                role={block.role}
-                avatarSrc={block.avatarSrc}
-                variant={block.variant}
-                layout={block.layout}
-            />
-        );
+        // variant intentionally not forwarded — PullQuote varies the colorway per quote,
+        // and derives an avatar for any attributed quote missing an avatarSrc.
+        return <PullQuote quote={block.text} attribution={block.attribution} role={block.role} avatarSrc={block.avatarSrc} layout={block.layout} />;
     }
     return (
         <p className="my-4 text-[18px] leading-[28px] text-[#535862]">
