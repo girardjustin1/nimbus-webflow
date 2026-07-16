@@ -39,7 +39,7 @@ const articles: Article[] = [
         summary: "How to review the ads that actually served in your app and block surgically without sacrificing revenue.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-JKUTrJ4vK00.jpg",
+        thumbnailUrl: "unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-JKUTrJ4vK00.jpg",
         publishedAt: "20 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Jordan Kim", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80" },
@@ -56,7 +56,7 @@ const articles: Article[] = [
         summary: "In-app header bidding gave publishers a better auction. Here is how to migrate without losing fill.",
         href: "#",
         category: { name: "Product", href: "#" },
-        thumbnailUrl: "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-9e9PD9blAto.jpg",
+        thumbnailUrl: "unsplash/mobile-phone-app-technology/mobile-phone-app-technology-9e9PD9blAto.jpg",
 
         publishedAt: "19 Jan 2026",
         readingTime: "8 min read",
@@ -73,7 +73,7 @@ const articles: Article[] = [
         summary: "The rise of in-app bidding has been met by a rise in tools for pricing, quality, and reporting.",
         href: "#",
         category: { name: "Programmatic", href: "#" },
-        thumbnailUrl: "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-w33-zg-dNL4.jpg",
+        thumbnailUrl: "unsplash/mobile-phone-app-technology/mobile-phone-app-technology-w33-zg-dNL4.jpg",
         publishedAt: "18 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Elena Vasquez", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/lana-steiner?fm=webp&q=80" },
@@ -88,7 +88,7 @@ const articles: Article[] = [
         summary: "How top publishers turn floors into pricing power and set the terms the market has to beat.",
         href: "#",
         category: { name: "Product", href: "#" },
-        thumbnailUrl: "/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-hpjSkU2UYSU.jpg",
+        thumbnailUrl: "unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-hpjSkU2UYSU.jpg",
         publishedAt: "17 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Ryan Cho", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/alec-whitten?fm=webp&q=80" },
@@ -103,7 +103,7 @@ const articles: Article[] = [
         summary: "Simple mental models for yield management: a floor is a dial, not a switch.",
         href: "#",
         category: { name: "Product", href: "#" },
-        thumbnailUrl: "/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-qwtCeJ5cLYs.jpg",
+        thumbnailUrl: "unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-qwtCeJ5cLYs.jpg",
         publishedAt: "16 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Priya Nair", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/demi-wilkinson?fm=webp&q=80" },
@@ -119,7 +119,7 @@ const articles: Article[] = [
         summary: "A plain-language guide to bid shading and how floors keep DSPs honest in the auction.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "/unsplash/programmatic-advertising/programmatic-advertising-jyoSxjUE22g.jpg",
+        thumbnailUrl: "unsplash/programmatic-advertising/programmatic-advertising-jyoSxjUE22g.jpg",
         publishedAt: "15 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Sofia Reyes", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/candice-wu?fm=webp&q=80" },
@@ -134,7 +134,7 @@ const articles: Article[] = [
         summary: "The Dynamic Unit adapts to your app's look and UX while accepting programmatic demand in multiple formats.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-q8U1YgBaRQk.jpg",
+        thumbnailUrl: "unsplash/mobile-phone-app-technology/mobile-phone-app-technology-q8U1YgBaRQk.jpg",
         publishedAt: "14 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Maya Patel", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/natali-craig?fm=webp&q=80" },
@@ -149,7 +149,7 @@ const articles: Article[] = [
         summary: "Ten practical tactics our ad ops team uses to lift eCPMs across geos, formats, and sizes.",
         href: "#",
         category: { name: "Product", href: "#" },
-        thumbnailUrl: "/unsplash/programmatic-advertising/programmatic-advertising-ZQZrvL7DwiI.jpg",
+        thumbnailUrl: "unsplash/programmatic-advertising/programmatic-advertising-ZQZrvL7DwiI.jpg",
         publishedAt: "13 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Chris Tanaka", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/drew-cano?fm=webp&q=80" },
@@ -165,7 +165,7 @@ const articles: Article[] = [
         summary: "Building a healthier programmatic auction does not need to be complicated. Here is where to start.",
         href: "#",
         category: { name: "Publisher Success", href: "#" },
-        thumbnailUrl: "/unsplash/server-network-data-center/server-network-data-center-pgdaAwf6IJg.jpg",
+        thumbnailUrl: "unsplash/server-network-data-center/server-network-data-center-pgdaAwf6IJg.jpg",
         publishedAt: "12 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Andre Okafor", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/orlando-diggs?fm=webp&q=80" },
@@ -274,7 +274,7 @@ const Simple02Vertical = ({
 const featuredArticle: Article = {
     id: "article-001",
     category: { name: "Design", href: "#" },
-    thumbnailUrl: "/unsplash/modern-office-business-team/modern-office-business-team-l90zRbWvCoE.jpg",
+    thumbnailUrl: "unsplash/modern-office-business-team/modern-office-business-team-l90zRbWvCoE.jpg",
     title: 'Improve your design skills: Develop an "eye" for design',
     summary: 'Tools and trends change, but good design is timeless. Learn how to quickly develop an "eye" for design.',
     href: "#",
@@ -319,7 +319,7 @@ const BlogHeaderFeaturedPost02 = () => {
                     className="relative hidden w-full overflow-hidden outline-focus-ring select-none focus:outline-2 focus:outline-offset-4 md:block md:h-145 lg:h-180"
                 >
                     <img
-                        src="/unsplash/abstract-technology-gradient-blue/abstract-technology-gradient-blue-r5lbaK3fDaM.jpg"
+                        src="unsplash/abstract-technology-gradient-blue/abstract-technology-gradient-blue-r5lbaK3fDaM.jpg"
                         alt={featuredArticle.title}
                         className="absolute inset-0 size-full object-cover"
                     />

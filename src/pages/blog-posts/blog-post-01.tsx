@@ -40,7 +40,7 @@ const articles: Article[] = [
         summary: "How to review the ads that actually served in your app and block surgically without sacrificing revenue.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-JKUTrJ4vK00.jpg",
+        thumbnailUrl: "unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-JKUTrJ4vK00.jpg",
         publishedAt: "20 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Jordan Kim", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/olivia-rhye?fm=webp&q=80" },
@@ -57,7 +57,7 @@ const articles: Article[] = [
         summary: "In-app header bidding gave publishers a better auction. Here is how to migrate without losing fill.",
         href: "#",
         category: { name: "Product", href: "#" },
-        thumbnailUrl: "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-9e9PD9blAto.jpg",
+        thumbnailUrl: "unsplash/mobile-phone-app-technology/mobile-phone-app-technology-9e9PD9blAto.jpg",
 
         publishedAt: "19 Jan 2026",
         readingTime: "8 min read",
@@ -74,7 +74,7 @@ const articles: Article[] = [
         summary: "The rise of in-app bidding has been met by a rise in tools for pricing, quality, and reporting.",
         href: "#",
         category: { name: "Programmatic", href: "#" },
-        thumbnailUrl: "/unsplash/server-network-data-center/server-network-data-center-pgdaAwf6IJg.jpg",
+        thumbnailUrl: "unsplash/server-network-data-center/server-network-data-center-pgdaAwf6IJg.jpg",
         publishedAt: "18 Jan 2026",
         readingTime: "8 min read",
         author: { name: "Elena Vasquez", href: "#", avatarUrl: "https://www.untitledui.com/images/avatars/lana-steiner?fm=webp&q=80" },
@@ -215,10 +215,10 @@ const ContentAlternative02 = ({ article }: { article: NimbusArticle }) => {
                     <Carousel.Content overflowHidden={false} className="gap-6 pr-4 md:pr-8 lg:gap-8">
                         {[
                             { alt: article.heroImageAlt, imgUrl: article.heroImage },
-                            { alt: "Person holding a smartphone", imgUrl: "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-n31x0hhnzOs.jpg" },
-                            { alt: "Illuminated billboards on a building at dusk", imgUrl: "/unsplash/advertising-billboard-city/advertising-billboard-city-5GBvm1lhrFM.jpg" },
-                            { alt: "Server rack with blinking green lights", imgUrl: "/unsplash/server-network-data-center/server-network-data-center-VHmBX7FnXw0.jpg" },
-                            { alt: "Team collaborating around a laptop in an office", imgUrl: "/unsplash/modern-office-business-team/modern-office-business-team-yd_RKGH_RH4.jpg" },
+                            { alt: "Person holding a smartphone", imgUrl: "unsplash/mobile-phone-app-technology/mobile-phone-app-technology-n31x0hhnzOs.jpg" },
+                            { alt: "Illuminated billboards on a building at dusk", imgUrl: "unsplash/advertising-billboard-city/advertising-billboard-city-5GBvm1lhrFM.jpg" },
+                            { alt: "Server rack with blinking green lights", imgUrl: "unsplash/server-network-data-center/server-network-data-center-VHmBX7FnXw0.jpg" },
+                            { alt: "Team collaborating around a laptop in an office", imgUrl: "unsplash/modern-office-business-team/modern-office-business-team-yd_RKGH_RH4.jpg" },
                         ].map((item) => (
                             <Carousel.Item key={item.imgUrl} className="basis-auto">
                                 <img

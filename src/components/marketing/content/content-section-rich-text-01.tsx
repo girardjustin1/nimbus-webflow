@@ -35,7 +35,7 @@ export const ContentSectionRichText01 = () => {
                         <figure>
                             <img
                                 className="h-60 w-full object-cover md:h-120"
-                                src="/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-JKUTrJ4vK00.jpg"
+                                src="unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-JKUTrJ4vK00.jpg"
                                 alt="Analytics graphs on a laptop screen"
                             />
                             <figcaption>
@@ -116,7 +116,7 @@ export const ContentSectionRichText01 = () => {
                         <figure>
                             <img
                                 className="h-110 w-full object-cover md:h-210"
-                                src="/unsplash/person-using-smartphone-mobile-app/person-using-smartphone-mobile-app-HbyYFFokvm0.jpg"
+                                src="unsplash/person-using-smartphone-mobile-app/person-using-smartphone-mobile-app-HbyYFFokvm0.jpg"
                                 alt="Person using a mobile app on a smartphone"
                             />
                             <figcaption>

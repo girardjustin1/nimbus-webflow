@@ -192,7 +192,7 @@ const articles: Article[] = [
         summary: "How to review the ads that actually served in your app and block surgically without sacrificing revenue.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "/unsplash/programmatic-advertising/programmatic-advertising-ZQZrvL7DwiI.jpg",
+        thumbnailUrl: "unsplash/programmatic-advertising/programmatic-advertising-ZQZrvL7DwiI.jpg",
         publishedAt: "20 Jan 2026",
         readingTime: "8 min read",
         author: {
@@ -213,7 +213,7 @@ const articles: Article[] = [
         summary: "In-app header bidding gave publishers a better auction. Here is how to migrate without losing fill.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-n31x0hhnzOs.jpg",
+        thumbnailUrl: "unsplash/mobile-phone-app-technology/mobile-phone-app-technology-n31x0hhnzOs.jpg",
 
         publishedAt: "19 Jan 2026",
         readingTime: "8 min read",

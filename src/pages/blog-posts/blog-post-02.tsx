@@ -141,7 +141,7 @@ const articles: Article[] = [
         summary: "How to review the ads that actually served in your app and block surgically without sacrificing revenue.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "/unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-hpjSkU2UYSU.jpg",
+        thumbnailUrl: "unsplash/data-analytics-dashboard-screen/data-analytics-dashboard-screen-hpjSkU2UYSU.jpg",
         publishedAt: "20 Jan 2026",
         readingTime: "8 min read",
         author: {
@@ -162,7 +162,7 @@ const articles: Article[] = [
         summary: "In-app header bidding gave publishers a better auction. Here is how to migrate without losing fill.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "/unsplash/mobile-phone-app-technology/mobile-phone-app-technology-w33-zg-dNL4.jpg",
+        thumbnailUrl: "unsplash/mobile-phone-app-technology/mobile-phone-app-technology-w33-zg-dNL4.jpg",
 
         publishedAt: "19 Jan 2026",
         readingTime: "8 min read",
@@ -183,7 +183,7 @@ const articles: Article[] = [
         summary: "The rise of in-app bidding has been met by a rise in tools for pricing, quality, and reporting.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "/unsplash/server-network-data-center/server-network-data-center-VHmBX7FnXw0.jpg",
+        thumbnailUrl: "unsplash/server-network-data-center/server-network-data-center-VHmBX7FnXw0.jpg",
         publishedAt: "18 Jan 2026",
         readingTime: "8 min read",
         author: {
@@ -202,7 +202,7 @@ const articles: Article[] = [
         summary: "How top publishers turn floors into pricing power and set the terms the market has to beat.",
         href: "#",
         category: { name: "Design", href: "#" },
-        thumbnailUrl: "/unsplash/modern-office-business-team/modern-office-business-team-l90zRbWvCoE.jpg",
+        thumbnailUrl: "unsplash/modern-office-business-team/modern-office-business-team-l90zRbWvCoE.jpg",
         publishedAt: "17 Jan 2026",
         readingTime: "8 min read",
         author: {
