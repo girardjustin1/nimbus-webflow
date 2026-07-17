@@ -1,4 +1,5 @@
 import { ProgressBarBase } from "@/components/base/progress-indicators/progress-indicators";
+import { CountUp, useInViewOnce } from "./count-up";
 
 export interface PerformanceMetric {
     /** Metric name, e.g. "rCPM". */
@@ -19,24 +20,30 @@ export interface PerformancePanelsProps {
 
 const TEAL = "#08c6c7";
 
-const MetricRow = ({ metric }: { metric: PerformanceMetric }) => (
-    <div className="flex flex-col gap-3 py-5 md:grid md:grid-cols-[150px_1fr_auto] md:items-center md:gap-8 md:py-6">
-        <div className="flex flex-col">
-            <span className="text-[11px] font-semibold tracking-[0.14em] text-quaternary uppercase">Metric</span>
-            <span className="text-[20px] font-bold text-[#181d27]">{metric.label}</span>
+const MetricRow = ({ metric }: { metric: PerformanceMetric }) => {
+    const target = Math.max(0, Math.min(metric.value, 100));
+    // Fill the bar from 0 to target the first time the row scrolls into view.
+    const { ref, inView } = useInViewOnce<HTMLDivElement>();
+
+    return (
+        <div ref={ref} className="flex flex-col gap-3 py-5 md:grid md:grid-cols-[150px_1fr_120px] md:items-center md:gap-8 md:py-6">
+            <div className="flex flex-col">
+                <span className="text-[11px] font-semibold tracking-[0.14em] text-quaternary uppercase">Metric</span>
+                <span className="text-[20px] font-bold text-[#181d27]">{metric.label}</span>
+            </div>
+            <ProgressBarBase
+                value={inView ? target : 0}
+                className="h-3 rounded-full bg-[#e9eaeb]"
+                progressClassName="rounded-full bg-[#4cc4c5] transition-transform duration-1000 ease-out"
+            />
+            <div className="flex items-baseline text-[32px] leading-none font-bold tabular-nums md:justify-end md:text-[42px]">
+                <span style={{ color: TEAL }}>+</span>
+                <CountUp value={metric.value} className="text-[#181d27]" />
+                <span style={{ color: TEAL }}>%</span>
+            </div>
         </div>
-        <ProgressBarBase
-            value={Math.max(0, Math.min(metric.value, 100))}
-            className="h-3 rounded-full bg-[#e9eaeb]"
-            progressClassName="rounded-full bg-[#4cc4c5]"
-        />
-        <div className="flex items-baseline text-[32px] leading-none font-black md:text-[42px]">
-            <span style={{ color: TEAL }}>+</span>
-            <span className="text-[#181d27]">{metric.value}</span>
-            <span style={{ color: TEAL }}>%</span>
-        </div>
-    </div>
-);
+    );
+};
 
 const Panel = ({ panel }: { panel: PerformancePanel }) => (
     <div className="rounded-2xl bg-white p-6 shadow-xs-skeuomorphic ring-1 ring-primary ring-inset md:p-8">

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { SearchLg } from "@untitledui/icons";
 import { PaginationPageMinimalCenter } from "@/components/application/pagination/pagination";
-import { TabList, Tabs } from "@/components/application/tabs/tabs";
 import { BadgeGroup } from "@/components/base/badges/badge-groups";
 import { Input } from "@/components/base/input/input";
 import { NativeSelect } from "@/components/base/select/select-native";
@@ -170,6 +169,37 @@ const tabs = [
     { id: "product", label: "Product", href: "#" },
 ];
 
+/**
+ * Vertical "line" category tabs (Untitled UI line style): a left accent line +
+ * bold text on the selected item, unbold gray items that highlight pink on hover
+ * (matching the nav). Pink accent throughout — no teal.
+ */
+const CategoryLineTabs = ({ items }: { items: { id: string; label: string }[] }) => {
+    const [selected, setSelected] = useState(items[0]?.id);
+    return (
+        <ul className="flex w-full flex-col">
+            {items.map((item) => {
+                const isSelected = item.id === selected;
+                return (
+                    <li key={item.id}>
+                        <button
+                            type="button"
+                            onClick={() => setSelected(item.id)}
+                            aria-current={isSelected ? "true" : undefined}
+                            className={cx(
+                                "flex w-full cursor-pointer items-center border-l-2 py-2.5 pr-3 pl-4 text-md transition duration-100 ease-linear outline-focus-ring focus-visible:outline-2 focus-visible:-outline-offset-2",
+                                isSelected ? "border-[#DC438C] font-bold text-[#DC438C]" : "border-transparent font-normal text-tertiary hover:text-[#DC438C]",
+                            )}
+                        >
+                            {item.label}
+                        </button>
+                    </li>
+                );
+            })}
+        </ul>
+    );
+};
+
 const BlogHeaderSidebar02 = () => {
     const isDesktop = useBreakpoint("lg");
     const [selectedTabIndex, setSelectedTabIndex] = useState(1);
@@ -200,9 +230,7 @@ const BlogHeaderSidebar02 = () => {
                                 options={categories.map((tab) => ({ label: tab.name, value: tab.name }))}
                             />
                             <div className="hidden w-full flex-1 self-start overflow-auto md:flex md:self-auto">
-                                <Tabs orientation="vertical" className="flex w-full">
-                                    <TabList type="button-gray" size="md" items={tabs} className="w-full py-0" />
-                                </Tabs>
+                                <CategoryLineTabs items={tabs} />
                             </div>
                         </div>
                     </div>
@@ -218,8 +246,8 @@ const BlogHeaderSidebar02 = () => {
                             >
                                 {article.isFeatured ? (
                                     <div className="flex flex-col gap-5 lg:flex-row lg:items-start xl:gap-8">
-                                        <a href={article.href} className="shrink-0 overflow-hidden" tabIndex={-1}>
-                                            <img src={article.thumbnailUrl} alt={article.title} className="aspect-[1.5] w-full rounded-2xl object-cover lg:w-105 xl:w-140" />
+                                        <a href={article.href} className="shrink-0 overflow-hidden rounded-2xl" tabIndex={-1}>
+                                            <img src={article.thumbnailUrl} alt={article.title} className="aspect-[1.5] w-full object-cover transition duration-100 ease-linear hover:scale-105 lg:w-105 xl:w-140" />
                                         </a>
 
                                         <div className="flex flex-col gap-6">

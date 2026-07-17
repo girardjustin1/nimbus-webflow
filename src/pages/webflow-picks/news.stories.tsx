@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { enriched11 } from "@/content/blog/enriched-articles";
+import { enriched02, enriched11, enrichedDynamicUnit, enrichedPrebid } from "@/content/blog/enriched-articles";
 import WebflowPicksNews from "./news";
 
 /**
@@ -18,4 +18,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Enriched: Story = { name: "Enriched (with sections)", args: { article: enriched11 } };
+export const DynamicUnit: Story = { name: "The Nimbus Dynamic Unit", args: { article: enrichedDynamicUnit } };
+export const AdQuality: Story = { name: "Ad Quality", args: { article: enriched02 } };
+export const Floors: Story = { name: "Floors: Pricing Power", args: { article: enriched11 } };
+export const Prebid: Story = { name: "Prebid Is Now Live", args: { article: enrichedPrebid } };

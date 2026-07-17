@@ -3,6 +3,9 @@ import { NimbusFooter } from "@/components/marketing/nimbus-footer";
 import { NimbusHeader } from "@/components/marketing/nimbus-header";
 import type { NimbusArticle } from "@/content/blog/nimbus-articles";
 import { ArticleBody } from "@/pages/blog/article-body";
+import { SectionDivider } from "@/components/shared-assets/section-divider";
+import { FromTheBlog } from "./from-the-blog";
+import { ShareArticle } from "./share-article";
 import { toMonthYear } from "./format-date";
 
 /**
@@ -25,6 +28,13 @@ export const WebflowPicksNews = ({ article }: { article: NimbusArticle }) => (
                 <p className="mt-2 text-sm text-[#535862]">
                     {toMonthYear(article.publishedAt)} · {article.readingTime}
                 </p>
+                <div className="mt-2 flex flex-wrap gap-2">
+                    {article.tags.map((tag) => (
+                        <Badge key={tag.name} type="color" color={tag.color}>
+                            {tag.name}
+                        </Badge>
+                    ))}
+                </div>
             </div>
 
             <img src={article.heroImage} alt={article.heroImageAlt} className="my-10 aspect-[16/9] w-full rounded-2xl object-cover" />
@@ -33,14 +43,14 @@ export const WebflowPicksNews = ({ article }: { article: NimbusArticle }) => (
                 <ArticleBody blocks={article.body} className="max-w-none" />
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-2 border-t border-black/5 pt-6">
-                {article.tags.map((tag) => (
-                    <Badge key={tag.name} type="color" color={tag.color}>
-                        {tag.name}
-                    </Badge>
-                ))}
+            <div className="mt-10">
+                <ShareArticle heading="Share this article" />
             </div>
         </article>
+
+        <SectionDivider />
+
+        <FromTheBlog />
 
         <NimbusFooter />
     </div>

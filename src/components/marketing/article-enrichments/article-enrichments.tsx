@@ -14,3 +14,5 @@ export { StackComparisonRadar } from "./stack-comparison-radar";
 export { MetricsTable } from "./metrics-table";
 export { NumberedSteps } from "./numbered-steps";
 export { PerformancePanels } from "./performance-panel";
+export { InsightCallout } from "./insight-callout";
+export { LogoStatement } from "./logo-statement";
