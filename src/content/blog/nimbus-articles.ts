@@ -20,6 +20,8 @@ export type BlogBlock =
     | { type: "checklist"; heading?: string; items: string[] }
     | { type: "keyTakeaway"; title?: string; text: string }
     | { type: "imageryIdea"; caption: string }
+    | { type: "numberedSteps"; heading?: string; description?: string; steps: { title: string; items: string[] }[] }
+    | { type: "performancePanels"; panels: { title: string; badge?: string; metrics: { label: string; value: number }[] }[] }
     // --- data-viz enrichment blocks ---
     | { type: "demandMixPie"; title?: string; data: { name: string; value: number }[] }
     | { type: "stackRadar"; title?: string; data: { dimension: string; Nimbus: number; "Legacy stack": number }[] }

@@ -5,6 +5,8 @@ import {
     KeyTakeaway,
     MetricsRow,
     MetricsTable,
+    NumberedSteps,
+    PerformancePanels,
     PullQuote,
     StackComparisonRadar,
     StatCallout,
@@ -22,6 +24,8 @@ const Block = ({ block }: { block: BlogBlock }) => {
     if (block.type === "demandMixPie") return <DemandMixPie title={block.title} data={block.data} />;
     if (block.type === "stackRadar") return <StackComparisonRadar title={block.title} data={block.data} />;
     if (block.type === "metricsTable") return <MetricsTable title={block.title} description={block.description} rows={block.rows} />;
+    if (block.type === "numberedSteps") return <NumberedSteps heading={block.heading} description={block.description} steps={block.steps} />;
+    if (block.type === "performancePanels") return <PerformancePanels panels={block.panels} />;
     if (block.type === "faq") {
         return <FAQAccordion04 faqs={block.items} eyebrow={block.eyebrow} heading={block.heading} description={block.description} />;
     }
