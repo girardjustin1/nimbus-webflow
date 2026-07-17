@@ -12,3 +12,5 @@ export { MetricsRow } from "./metrics-row";
 export { DemandMixPie } from "./demand-mix-pie";
 export { StackComparisonRadar } from "./stack-comparison-radar";
 export { MetricsTable } from "./metrics-table";
+export { NumberedSteps } from "./numbered-steps";
+export { PerformancePanels } from "./performance-panel";
