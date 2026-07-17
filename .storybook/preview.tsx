@@ -16,7 +16,7 @@ const preview: Preview = {
                     "Components",
                     ["Navigation", "Breadcrumbs", "Body", "Footer"],
                     "Webflow Picks",
-                    ["Blog Directory", "Case Studies", "News"],
+                    ["Blog Directory", "Case Studies", "News", "Blog Components"],
                     "Blog Article Templates",
                     ["Blog Directory", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"],
                     "Blog Sections",

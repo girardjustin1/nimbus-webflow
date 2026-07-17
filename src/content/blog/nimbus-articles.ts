@@ -2,7 +2,7 @@ import type { Article } from "@/components/marketing/blog/base-components/blog-c
 
 /** A block of blog-post body content. Includes enrichment blocks that break up copy. */
 export type BlogBlock =
-    | { type: "heading"; text: string }
+    | { type: "heading"; text: string; divider?: boolean }
     | { type: "paragraph"; lead?: string; text: string }
     | { type: "list"; items: string[] }
     | {
@@ -13,6 +13,8 @@ export type BlogBlock =
           avatarSrc?: string;
           variant?: "teal" | "pink" | "navy";
           layout?: "border" | "centered" | "card";
+          /** Optional colored stroke around the avatar. */
+          avatarRing?: "teal" | "pink" | "navy";
       }
     // --- enrichment blocks (rendered via article-enrichments) ---
     | { type: "stat"; value: string; label: string }
@@ -20,8 +22,10 @@ export type BlogBlock =
     | { type: "checklist"; heading?: string; items: string[] }
     | { type: "keyTakeaway"; title?: string; text: string }
     | { type: "imageryIdea"; caption: string }
-    | { type: "numberedSteps"; heading?: string; description?: string; steps: { title: string; items: string[] }[] }
+    | { type: "numberedSteps"; heading?: string; description?: string; steps: { title: string; items: string[] }[]; divider?: boolean }
     | { type: "performancePanels"; panels: { title: string; badge?: string; metrics: { label: string; value: number }[] }[] }
+    | { type: "insight"; text: string }
+    | { type: "logoStatement"; logoSrc: string; logoAlt: string; text: string }
     // --- data-viz enrichment blocks ---
     | { type: "demandMixPie"; title?: string; data: { name: string; value: number }[] }
     | { type: "stackRadar"; title?: string; data: { dimension: string; Nimbus: number; "Legacy stack": number }[] }

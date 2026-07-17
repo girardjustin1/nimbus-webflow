@@ -37,8 +37,12 @@ export const BlogThumbnailCard = ({
     imageClassName?: string;
 }) => (
     <div className="flex flex-col gap-4">
-        <a href={article.href} className="overflow-hidden" tabIndex={-1}>
-            <img src={article.thumbnailUrl} alt={article.title} className={cx("aspect-[1.5] w-full rounded-2xl object-cover", imageClassName)} />
+        <a href={article.href} className="overflow-hidden rounded-2xl" tabIndex={-1}>
+            <img
+                src={article.thumbnailUrl}
+                alt={article.title}
+                className={cx("aspect-[1.5] w-full object-cover transition duration-100 ease-linear hover:scale-105", imageClassName)}
+            />
         </a>
 
         <div className="flex flex-col gap-5">

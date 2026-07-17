@@ -3,6 +3,8 @@ import {
     DemandMixPie,
     ImageryIdea,
     KeyTakeaway,
+    InsightCallout,
+    LogoStatement,
     MetricsRow,
     MetricsTable,
     NumberedSteps,
@@ -26,6 +28,8 @@ const Block = ({ block }: { block: BlogBlock }) => {
     if (block.type === "metricsTable") return <MetricsTable title={block.title} description={block.description} rows={block.rows} />;
     if (block.type === "numberedSteps") return <NumberedSteps heading={block.heading} description={block.description} steps={block.steps} />;
     if (block.type === "performancePanels") return <PerformancePanels panels={block.panels} />;
+    if (block.type === "insight") return <InsightCallout text={block.text} />;
+    if (block.type === "logoStatement") return <LogoStatement logoSrc={block.logoSrc} logoAlt={block.logoAlt} text={block.text} />;
     if (block.type === "faq") {
         return <FAQAccordion04 faqs={block.items} eyebrow={block.eyebrow} heading={block.heading} description={block.description} />;
     }
@@ -33,7 +37,11 @@ const Block = ({ block }: { block: BlogBlock }) => {
     // its standalone story are kept; re-enable by rendering CTASimpleCenteredBrand here.
     if (block.type === "cta") return null;
     if (block.type === "heading") {
-        return <h2 className="mt-10 mb-3 text-[28px] leading-[1.2] font-extrabold text-[#181d27]">{block.text}</h2>;
+        return (
+            <div className={block.divider ? "mt-16 border-t border-black/10 pt-8" : "mt-10"}>
+                <h2 className="mb-3 text-display-sm leading-[1.2] font-extrabold text-[#181d27] md:text-display-md">{block.text}</h2>
+            </div>
+        );
     }
     if (block.type === "list") {
         return (
@@ -45,9 +53,19 @@ const Block = ({ block }: { block: BlogBlock }) => {
         );
     }
     if (block.type === "quote") {
-        // variant intentionally not forwarded — PullQuote varies the colorway per quote,
-        // and derives an avatar for any attributed quote missing an avatarSrc.
-        return <PullQuote quote={block.text} attribution={block.attribution} role={block.role} avatarSrc={block.avatarSrc} layout={block.layout} />;
+        // When a block sets `variant` it wins; otherwise PullQuote auto-varies the
+        // colorway per quote and derives an avatar for any attributed quote missing an avatarSrc.
+        return (
+            <PullQuote
+                quote={block.text}
+                attribution={block.attribution}
+                role={block.role}
+                avatarSrc={block.avatarSrc}
+                variant={block.variant}
+                layout={block.layout}
+                avatarRing={block.avatarRing}
+            />
+        );
     }
     return (
         <p className="my-4 text-[18px] leading-[28px] text-[#535862]">

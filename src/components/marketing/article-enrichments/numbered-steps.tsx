@@ -7,6 +7,8 @@ export interface NumberedStepsProps {
     heading?: string;
     description?: string;
     steps: NumberedStep[];
+    /** Render a content divider above the section heading. */
+    divider?: boolean;
 }
 
 /** Teal ramp for the big 01 / 02 / 03 numbers — light to dark, matching the live case study. */
@@ -16,9 +18,9 @@ const NUMBER_RAMP = ["#83d7da", "#2fa0a2", "#134f53"];
  * A numbered "factors" section: a big teal-graded number in the left column, a
  * bold title and hollow-bullet list on the right, divided by hairlines.
  */
-export const NumberedSteps = ({ heading, description, steps }: NumberedStepsProps) => (
-    <section className="my-10">
-        {heading && <h2 className="text-[28px] leading-[1.2] font-extrabold text-[#181d27]">{heading}</h2>}
+export const NumberedSteps = ({ heading, description, steps, divider }: NumberedStepsProps) => (
+    <section className={divider ? "mt-16 mb-10 border-t border-black/10 pt-8" : "my-10"}>
+        {heading && <h2 className="text-display-sm leading-[1.2] font-extrabold text-[#181d27] md:text-display-md">{heading}</h2>}
         {description && <p className="mt-3 text-[18px] leading-[28px] text-[#535862]">{description}</p>}
         <div className="mt-6 flex flex-col">
             {steps.map((step, i) => (

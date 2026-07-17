@@ -67,7 +67,7 @@ export const FAQAccordion04 = ({
                                 key={faq.question}
                                 className={cx(
                                     "rounded-2xl bg-transparent p-5 transition duration-300 ease-in-out md:p-6",
-                                    openQuestions.has(index) && "bg-secondary",
+                                    openQuestions.has(index) && "bg-[#f1fcfb]",
                                 )}
                             >
                                 <h3>
@@ -77,7 +77,7 @@ export const FAQAccordion04 = ({
                                     >
                                         <span className="flex-1 text-md font-semibold text-primary">{faq.question}</span>
 
-                                        <span aria-hidden="true" className="flex size-6 items-center text-fg-quaternary">
+                                        <span aria-hidden="true" className="flex size-6 items-center text-fg-brand-primary">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
