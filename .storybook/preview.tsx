@@ -19,6 +19,8 @@ const preview: Preview = {
                     ["Content Style Guide", "Embed Kit", ["*Stylesheet*", "*Charts runtime*", "*"]],
                     "Webflow Guide",
                     ["Blog Directory", "Case Studies", "News", "Blog Components"],
+                    "White Background",
+                    ["Blog Directory", "Case Studies", "News", "Blog Components"],
                     "Styles",
                     ["Color", "Elevation", "Icons", "Imagery", "Logos", "Shape", "Typography"],
                     "Blog Article Templates",

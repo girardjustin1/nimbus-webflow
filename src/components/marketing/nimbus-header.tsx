@@ -66,7 +66,7 @@ export const NimbusHeader = ({
                 {/* Left: logo + desktop links */}
                 <div className="flex items-center gap-10">
                     <a href={logoHref} aria-label="Nimbus home" className="flex shrink-0 items-center">
-                        <NimbusLogo variant="blue" className="h-7" />
+                        <NimbusLogo variant="blue" color="#006E6F" className="h-7" />
                     </a>
                     <nav className="hidden items-center gap-8 md:flex">
                         {links.map((link) => (
@@ -100,7 +100,7 @@ export const NimbusHeader = ({
 
             {/* Mobile menu */}
             {isOpen && (
-                <nav className="flex flex-col gap-4 border-t border-black/5 bg-[#F9F7F3] px-4 py-4 md:hidden">
+                <nav className="flex flex-col gap-4 border-t border-black/5 px-4 py-4 md:hidden">
                     {links.map((link) => (
                         <NavLinkItem key={link.label} {...link} className="text-md" />
                     ))}
