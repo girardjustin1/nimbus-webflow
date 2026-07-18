@@ -24,6 +24,9 @@
 .blog-embed *::after {
     box-sizing: border-box;
 }
+/* Neutralize Webflow's default `.w-richtext figure { max-width: 60% }` so embed
+   components built on <figure> (e.g. Insight Callout) fill the content width. */
+.blog-embed figure { max-width: 100%; }
 
 /* =====================================================================
    Metrics Row  —  .blog-metrics
@@ -288,34 +291,50 @@
     line-height: 1.7;
 }
 .blog-prose > * + * { margin-top: 1.1em; }
-.blog-prose h1,
-.blog-prose h2,
-.blog-prose h3,
-.blog-prose h4 { color: #181d27; letter-spacing: -0.02em; line-height: 1.2; }
-.blog-prose h1 { font-size: 40px; font-weight: 800; margin-top: 1.4em; }
-.blog-prose h2 { font-size: 30px; font-weight: 800; margin-top: 1.5em; }
-.blog-prose h3 { font-size: 24px; font-weight: 800; margin-top: 1.4em; }
-.blog-prose h4 { font-size: 20px; font-weight: 700; margin-top: 1.3em; }
-.blog-prose h5 { font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #181d27; margin-top: 1.3em; }
-.blog-prose h6 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #717680; margin-top: 1.3em; }
-.blog-prose p { font-size: 18px; line-height: 1.7; color: #414651; margin: 0; }
-.blog-prose a { color: #dc438c; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
-.blog-prose a:hover { color: #b32a6e; }
-.blog-prose strong { font-weight: 700; color: #181d27; }
-.blog-prose em { font-style: italic; }
-.blog-prose ul,
-.blog-prose ol { margin: 0; padding-left: 1.4em; display: flex; flex-direction: column; gap: 8px; font-size: 18px; color: #414651; }
-.blog-prose ul { list-style: disc; }
-.blog-prose ol { list-style: decimal; }
-.blog-prose li::marker { color: #08c6c7; }
-.blog-prose blockquote { margin: 0; border-left: 4px solid #dc438c; padding-left: 20px; font-size: 22px; line-height: 1.4; font-weight: 500; color: #181d27; }
-.blog-prose img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
-.blog-prose figure { margin: 0; }
-.blog-prose figcaption { margin-top: 8px; font-size: 15px; font-style: italic; color: #717680; }
-.blog-prose code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.9em; background: #f1f0ec; color: #0b6e70; padding: 2px 6px; border-radius: 6px; }
-.blog-prose pre { background: #fafafa; color: #181d27; border: 1px solid #e9eaeb; padding: 16px 20px; border-radius: 12px; overflow-x: auto; font-size: 14px; line-height: 1.6; }
-.blog-prose pre code { background: none; color: inherit; padding: 0; }
-.blog-prose hr { border: none; border-top: 1px solid rgba(0, 0, 0, 0.1); margin: 2em 0; }
+/* NOTE: prose element rules are scoped to DIRECT children (`>`) so they never
+   leak into pasted `.blog-embed` components (whose nested <p>, <ul>, <li>,
+   <blockquote> would otherwise inherit prose font sizes and list styles). */
+.blog-prose > h1,
+.blog-prose > h2,
+.blog-prose > h3,
+.blog-prose > h4 { color: #181d27; letter-spacing: -0.02em; line-height: 1.2; }
+.blog-prose > h1 { font-size: 40px; font-weight: 800; margin-top: 1.4em; border-top: 1px solid #E0DEDB; padding-top: 0.8em; }
+.blog-prose > h2 { font-size: 30px; font-weight: 800; margin-top: 1.5em; }
+.blog-prose > h3 { font-size: 24px; font-weight: 800; margin-top: 1.4em; }
+.blog-prose > h4 { font-size: 20px; font-weight: 700; margin-top: 1.3em; }
+.blog-prose > h5 { font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #181d27; margin-top: 1.3em; }
+.blog-prose > h6 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #717680; margin-top: 1.3em; }
+.blog-prose > p { font-size: 18px; line-height: 1.7; color: #414651; margin: 0; }
+.blog-prose > p a,
+.blog-prose > ul a,
+.blog-prose > ol a,
+.blog-prose > blockquote a { color: #dc438c; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.blog-prose > p a:hover,
+.blog-prose > ul a:hover,
+.blog-prose > ol a:hover,
+.blog-prose > blockquote a:hover { color: #b32a6e; }
+.blog-prose > p strong,
+.blog-prose > ul strong,
+.blog-prose > ol strong,
+.blog-prose > blockquote strong { font-weight: 700; color: #181d27; }
+.blog-prose > p em,
+.blog-prose > ul em,
+.blog-prose > ol em { font-style: italic; }
+.blog-prose > ul,
+.blog-prose > ol { margin: 0; padding-left: 1.4em; display: flex; flex-direction: column; gap: 8px; font-size: 18px; color: #414651; }
+.blog-prose > ul { list-style: disc; }
+.blog-prose > ol { list-style: decimal; }
+.blog-prose > ul > li::marker,
+.blog-prose > ol > li::marker { color: #08c6c7; }
+.blog-prose > blockquote { margin: 0; border-left: 4px solid #dc438c; padding-left: 20px; font-size: 22px; line-height: 1.4; font-weight: 500; color: #181d27; }
+.blog-prose > figure img,
+.blog-prose > p img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+.blog-prose > figure { margin: 0; }
+.blog-prose > figure figcaption { margin-top: 8px; font-size: 15px; font-style: italic; color: #717680; }
+.blog-prose > p code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.9em; background: #f1f0ec; color: #0b6e70; padding: 2px 6px; border-radius: 6px; }
+.blog-prose > pre { background: #fafafa; color: #181d27; border: 1px solid #e9eaeb; padding: 16px 20px; border-radius: 12px; overflow-x: auto; font-size: 14px; line-height: 1.6; }
+.blog-prose > pre code { background: none; color: inherit; padding: 0; }
+.blog-prose > hr { border: none; border-top: 1px solid rgba(0, 0, 0, 0.1); margin: 2em 0; }
 
 /* Code block — Untitled UI light style with a line-number gutter. */
 .blog-code { background: #ffffff; border: 1px solid #e9eaeb; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05); }
