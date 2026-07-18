@@ -62,6 +62,21 @@ const meta: Meta<Args> = {
 export default meta;
 type Story = StoryObj<Args>;
 
+const guide = (
+    <div className="flex flex-col gap-2 text-sm text-secondary">
+        <p>A radar chart comparing up to 3 stacks across shared axes.</p>
+        <ul className="flex flex-col gap-1.5">
+            <li>
+                <b className="font-semibold text-primary">Axes</b> — comma-separated dimension names (e.g. Fill rate, eCPM, Latency).
+            </li>
+            <li>
+                <b className="font-semibold text-primary">Series</b> — each has a label, a color, and comma-separated values (one per axis; higher reaches further out).
+            </li>
+            <li>Needs the Chart.js runtime loaded once — see Embed Kit → *Charts runtime*.</li>
+        </ul>
+    </div>
+);
+
 /** A radar comparing up to 3 stacks, each its own color (picker). Requires the Chart.js runtime (Embed Kit → *Charts runtime*). */
 export const Embed: Story = {
     args: {
@@ -86,6 +101,6 @@ export const Embed: Story = {
         ];
         const series = all.slice(0, args.seriesCount).filter((s) => s.values.length);
         const config = { dimensions: labels(args.dimensions), series };
-        return <EmbedPlayground renderPreview={(html) => <ChartEmbedPreview html={html} />} html={buildChartEmbed("radar", args.title, config)} />;
+        return <EmbedPlayground guide={guide} renderPreview={(html) => <ChartEmbedPreview html={html} />} html={buildChartEmbed("radar", args.title, config)} />;
     },
 };

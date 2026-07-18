@@ -70,6 +70,21 @@ const meta: Meta<Args> = {
 export default meta;
 type Story = StoryObj<Args>;
 
+const guide = (
+    <div className="flex flex-col gap-2 text-sm text-secondary">
+        <p>A line chart with up to 4 series.</p>
+        <ul className="flex flex-col gap-1.5">
+            <li>
+                <b className="font-semibold text-primary">X-axis labels</b> — comma-separated, one per data point.
+            </li>
+            <li>
+                <b className="font-semibold text-primary">Each line</b> — a label, a color, and comma-separated values (one per X label).
+            </li>
+            <li>Needs the Chart.js runtime loaded once — see Embed Kit → *Charts runtime*.</li>
+        </ul>
+    </div>
+);
+
 /** Up to 4 lines, each its own color (picker) + legend entry. Requires the Chart.js runtime (Embed Kit → *Charts runtime*). */
 export const Embed: Story = {
     args: {
@@ -99,6 +114,6 @@ export const Embed: Story = {
         ];
         const series = all.slice(0, args.seriesCount).filter((s) => s.values.length);
         const config = { labels: labels(args.xLabels), series, valueSuffix: args.valueSuffix };
-        return <EmbedPlayground renderPreview={(html) => <ChartEmbedPreview html={html} />} html={buildChartEmbed("line", args.title, config)} />;
+        return <EmbedPlayground guide={guide} renderPreview={(html) => <ChartEmbedPreview html={html} />} html={buildChartEmbed("line", args.title, config)} />;
     },
 };

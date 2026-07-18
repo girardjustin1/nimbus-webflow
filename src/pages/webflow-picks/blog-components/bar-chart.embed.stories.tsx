@@ -81,6 +81,18 @@ const meta: Meta<Args> = {
 export default meta;
 type Story = StoryObj<Args>;
 
+const guide = (
+    <div className="flex flex-col gap-2 text-sm text-secondary">
+        <p>A bar chart — one bar per category, each its own color and legend entry.</p>
+        <ul className="flex flex-col gap-1.5">
+            <li>
+                <b className="font-semibold text-primary">Each bar</b> — an x-axis label, a value, and a color (custom or brand).
+            </li>
+            <li>Needs the Chart.js runtime loaded once — see Embed Kit → *Charts runtime*.</li>
+        </ul>
+    </div>
+);
+
 /** Each bar's color is a picker (custom or brand). Requires the Chart.js runtime (Embed Kit → *Charts runtime*). */
 export const Embed: Story = {
     args: {
@@ -125,6 +137,6 @@ export const Embed: Story = {
         ];
         const bars = all.slice(0, args.count).filter((b) => b.label);
         const config = { labels: bars.map((b) => b.label), values: bars.map((b) => b.value), colors: bars.map((b) => b.color), valueSuffix: args.valueSuffix };
-        return <EmbedPlayground renderPreview={(html) => <ChartEmbedPreview html={html} />} html={buildChartEmbed("bar", args.title, config)} />;
+        return <EmbedPlayground guide={guide} renderPreview={(html) => <ChartEmbedPreview html={html} />} html={buildChartEmbed("bar", args.title, config)} />;
     },
 };
