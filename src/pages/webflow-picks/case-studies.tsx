@@ -72,11 +72,11 @@ const HeroStatCard = ({ stat, index = 0, className }: { stat: HeroStat; index?: 
 };
 
 /**
- * Webflow Picks — Case Studies.
+ * Webflow Guide — Case Studies.
  *
  * A fork of template 02 (ContentLargeImage01 + a "From the blog" grid) for the
  * Webflow port: byline authors and their avatars are removed, posts are stamped
- * by month/year only, and cards/filters use the Webflow Picks taxonomy
+ * by month/year only, and cards/filters use the Webflow Guide taxonomy
  * (Case Study, News, Announcement, Product). Avatars inside the article body
  * (pull quotes, testimonials) are intentionally kept.
  */

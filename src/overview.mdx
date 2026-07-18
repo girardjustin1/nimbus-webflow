@@ -20,12 +20,33 @@ article content.
 | **Framework** | React 19 + TypeScript |
 | **Styling** | Tailwind CSS v4 with semantic design tokens |
 | **Behavior / a11y** | React Aria Components (imported as `Aria*`) |
-| **Charts** | Recharts (pie / radar / area) |
+| **Charts** | Recharts (in-Storybook) · Chart.js (Webflow embeds) |
 | **Docs** | Storybook 10 (`@storybook/react-vite`) |
 | **Brand** | Teal `#08c6c7` · Pink `#DA6EA3` · Navy `#003a5b` · Cream `#F9F7F3` |
 | **Imagery** | 100+ locally-hosted, self-curated Unsplash photos |
 
-The sidebar is organized top-to-bottom as **Styles → Components → Blog Article Templates** (with the Blog Directory nested in).
+The sidebar is organized top-to-bottom as **Styles → Webflow Guide → Components → Blog Article Templates**.
+
+---
+
+## Webflow Guide
+
+The bridge from this Storybook to a live **Webflow CMS blog**. It holds Webflow-ready blog templates
+plus a copy-paste **Embed Kit** for building CMS article bodies — everything namespaced under
+`.blog-*` so it never touches the marketing site's styles.
+
+- **Blog Directory · Case Studies · News** — the blog listing and two post templates, tuned for
+  Webflow (byline-free, month/year timestamps, a Case Study / News / Announcement / Product taxonomy).
+- **Content Style Guide** — every native Rich Text element (headings, lists, quotes, links, code)
+  styled by the `blog-prose` class, so a Webflow Rich Text field renders on-brand.
+- **Embed Kit** — the blog body components (callouts, quotes, metrics, tables, charts, checklists,
+  steps, FAQ, tags) as **copy-paste HTML embeds**. Each has a live playground: tweak the copy in
+  Controls, then paste the embed into a Webflow Rich Text "Custom Code" block.
+  - **★ Stylesheet** — the one namespaced `.blog-*` stylesheet you paste into Webflow once; every
+    embed references it.
+  - **★ Charts runtime** — Chart.js plus a tiny runtime, pasted once, so chart embeds (line, bar,
+    pie, radar) render themselves from a `data-config` attribute — no per-embed script.
+- **Blog Components** — the same body components documented as a browsable catalog.
 
 ---
 

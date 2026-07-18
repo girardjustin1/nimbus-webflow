@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { DemandMixPie } from "@/components/marketing/article-enrichments/article-enrichments";
 
 const meta = {
-    title: "Webflow Picks/Blog Components/Metrics & Charts/Demand Mix (Pie)",
+    title: "Webflow Guide/Blog Components/Metrics & Charts/Demand Mix (Pie)",
     component: DemandMixPie,
     parameters: { layout: "fullscreen" },
     decorators: [

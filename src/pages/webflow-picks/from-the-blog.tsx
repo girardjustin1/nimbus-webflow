@@ -62,7 +62,7 @@ const articles: WebflowArticle[] = [
     },
 ];
 
-/** The "From the blog" grid shared by the Webflow Picks Case Studies and News pages. */
+/** The "From the blog" grid shared by the Webflow Guide Case Studies and News pages. */
 export const FromTheBlog = () => (
     <section className="bg-[#f9f7f3] py-16 md:py-24">
         <div className="mx-auto max-w-container px-4 md:px-8">

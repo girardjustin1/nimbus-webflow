@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { InsightCallout } from "@/components/marketing/article-enrichments/article-enrichments";
 
 const meta = {
-    title: "Webflow Picks/Blog Components/Callouts & Quotes/Insight Callout",
+    title: "Webflow Guide/Blog Components/Callouts & Quotes/Insight Callout",
     component: InsightCallout,
     parameters: { layout: "fullscreen" },
     decorators: [

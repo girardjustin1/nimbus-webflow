@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { MetricBarChart } from "@/components/marketing/article-enrichments/metric-bar-chart";
 
 const meta = {
-    title: "Webflow Picks/Blog Components/Metrics & Charts/Bar Chart",
+    title: "Webflow Guide/Blog Components/Metrics & Charts/Bar Chart",
     component: MetricBarChart,
     parameters: { layout: "fullscreen" },
     decorators: [

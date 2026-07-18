@@ -4,6 +4,10 @@ import type { Preview } from "@storybook/react-vite";
 // so components render with the correct theme inside Storybook.
 import "../src/styles/globals.css";
 
+// Namespaced blog-embed styles, so the Webflow embed previews render exactly
+// as they will on the Webflow site (which loads this same CSS once).
+import "../src/webflow-embeds/blog-embeds.css";
+
 const preview: Preview = {
     parameters: {
         options: {
@@ -13,10 +17,10 @@ const preview: Preview = {
                     "Overview",
                     "Styles",
                     ["Color", "Elevation", "Icons", "Imagery", "Logos", "Shape", "Typography"],
+                    "Webflow Guide",
+                    ["Blog Directory", "Case Studies", "News", "Content Style Guide", "Embed Kit", ["*Stylesheet*", "*Charts runtime*", "*"], "Blog Components"],
                     "Components",
                     ["Navigation", "Breadcrumbs", "Body", "Footer"],
-                    "Webflow Picks",
-                    ["Blog Directory", "Case Studies", "News", "Blog Components"],
                     "Blog Article Templates",
                     ["Blog Directory", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"],
                     "Blog Sections",

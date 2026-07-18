@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { PullQuote } from "@/components/marketing/article-enrichments/article-enrichments";
 
 const meta = {
-    title: "Webflow Picks/Blog Components/Callouts & Quotes/Pull Quote",
+    title: "Webflow Guide/Blog Components/Callouts & Quotes/Pull Quote",
     component: PullQuote,
     parameters: { layout: "fullscreen" },
     decorators: [

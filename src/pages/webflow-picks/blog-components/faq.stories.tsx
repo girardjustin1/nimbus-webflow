@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { FAQAccordion04 } from "@/components/marketing/faq/faq-accordion-04";
 
 const meta = {
-    title: "Webflow Picks/Blog Components/Lists & Steps/FAQ",
+    title: "Webflow Guide/Blog Components/Lists & Steps/FAQ",
     component: FAQAccordion04,
     parameters: { layout: "fullscreen" },
     decorators: [

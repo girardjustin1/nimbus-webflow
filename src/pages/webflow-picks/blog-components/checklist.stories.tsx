@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Checklist } from "@/components/marketing/article-enrichments/article-enrichments";
 
 const meta = {
-    title: "Webflow Picks/Blog Components/Lists & Steps/Checklist",
+    title: "Webflow Guide/Blog Components/Lists & Steps/Checklist",
     component: Checklist,
     parameters: { layout: "fullscreen" },
     decorators: [
