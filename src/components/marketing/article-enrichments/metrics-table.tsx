@@ -48,7 +48,7 @@ export const MetricsTable = ({
                             <Table.Cell className="text-md">{row.unflooredEcpm}</Table.Cell>
                             <Table.Cell className="text-md font-medium text-primary">{row.flooredEcpm}</Table.Cell>
                             <Table.Cell>
-                                <Badge color="success" size="sm" type="pill-color">
+                                <Badge color="success" size="md" type="pill-color">
                                     {row.lift}
                                 </Badge>
                             </Table.Cell>

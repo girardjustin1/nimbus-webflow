@@ -4,6 +4,11 @@ const config: StorybookConfig = {
   "stories": [
     "../src/**/*.mdx",
     "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+    // Note: the "White Background" category is temporarily hidden. Its files
+    // live in src/pages/white-background/ but their story files use a
+    // `.stories.hidden.tsx` suffix so Storybook does not discover them.
+    // To bring the category back, rename `*.stories.hidden.tsx` →
+    // `*.stories.tsx` in that folder (see scripts note in the PR/commit).
   ],
   "addons": [
     "@chromatic-com/storybook",
