@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { StackComparisonRadar } from "@/components/marketing/article-enrichments/article-enrichments";
 
 const meta = {
-    title: "Webflow Picks/Blog Components/Metrics & Charts/Stack Comparison (Radar)",
+    title: "Webflow Guide/Blog Components/Metrics & Charts/Stack Comparison (Radar)",
     component: StackComparisonRadar,
     parameters: { layout: "fullscreen" },
     decorators: [

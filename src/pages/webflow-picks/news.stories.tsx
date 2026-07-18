@@ -3,14 +3,14 @@ import { enriched02, enriched11, enrichedDynamicUnit, enrichedPrebid } from "@/c
 import WebflowPicksNews from "./news";
 
 /**
- * Webflow Picks — the news article layout selected for the Webflow port.
+ * Webflow Guide — the news article layout selected for the Webflow port.
  *
  * Forked from Blog Article Templates → 11 → Enriched, with the byline author and
  * avatar removed, a month/year timestamp, and a "News" category eyebrow. Avatars
  * inside the article body (pull quotes, testimonials) are kept.
  */
 const meta = {
-    title: "Webflow Picks/News",
+    title: "Webflow Guide/News",
     component: WebflowPicksNews,
     parameters: { layout: "fullscreen" },
 } satisfies Meta<typeof WebflowPicksNews>;

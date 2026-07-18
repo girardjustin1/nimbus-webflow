@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { KeyTakeaway } from "@/components/marketing/article-enrichments/article-enrichments";
 
 const meta = {
-    title: "Webflow Picks/Blog Components/Callouts & Quotes/Key Takeaway",
+    title: "Webflow Guide/Blog Components/Callouts & Quotes/Key Takeaway",
     component: KeyTakeaway,
     parameters: { layout: "fullscreen" },
     decorators: [

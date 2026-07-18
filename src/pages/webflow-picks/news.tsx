@@ -9,7 +9,7 @@ import { ShareArticle } from "./share-article";
 import { toMonthYear } from "./format-date";
 
 /**
- * Webflow Picks — News.
+ * Webflow Guide — News.
  *
  * A fork of the template-11 house-style post (NimbusBlogPost) for the Webflow
  * port: the article byline (author name + avatar) is removed, the post is

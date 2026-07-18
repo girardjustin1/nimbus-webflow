@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { TrendLineChart } from "@/components/marketing/article-enrichments/trend-line-chart";
 
 const meta = {
-    title: "Webflow Picks/Blog Components/Metrics & Charts/Line Chart",
+    title: "Webflow Guide/Blog Components/Metrics & Charts/Line Chart",
     component: TrendLineChart,
     parameters: { layout: "fullscreen" },
     decorators: [

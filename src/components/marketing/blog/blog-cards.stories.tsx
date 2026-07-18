@@ -15,7 +15,7 @@ import { nimbusArticles } from "@/content/blog/nimbus-articles";
  * populated with real Nimbus articles and themed with the Nimbus design system.
  */
 const meta = {
-    title: "Components/Body/Blog Cards",
+    title: "Templates Components/Body/Blog Cards",
     parameters: { layout: "padded" },
     tags: ["autodocs"],
 } satisfies Meta;

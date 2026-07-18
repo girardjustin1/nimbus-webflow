@@ -2,14 +2,14 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import WebflowPicksBlogDirectory from "./blog-directory";
 
 /**
- * Webflow Picks — the blog directory layout selected for the Webflow port.
+ * Webflow Guide — the blog directory layout selected for the Webflow port.
  *
  * Forked from Blog Article Templates → Blog Directory → 04, with byline authors
- * removed, month/year timestamps, and the Webflow Picks category taxonomy
+ * removed, month/year timestamps, and the Webflow Guide category taxonomy
  * (Case Study, News, Announcement, Product).
  */
 const meta = {
-    title: "Webflow Picks/Blog Directory",
+    title: "Webflow Guide/Blog Directory",
     component: WebflowPicksBlogDirectory,
     parameters: { layout: "fullscreen" },
 } satisfies Meta<typeof WebflowPicksBlogDirectory>;

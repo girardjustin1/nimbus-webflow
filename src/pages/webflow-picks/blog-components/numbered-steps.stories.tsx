@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { NumberedSteps } from "@/components/marketing/article-enrichments/article-enrichments";
 
 const meta = {
-    title: "Webflow Picks/Blog Components/Lists & Steps/Numbered Steps",
+    title: "Webflow Guide/Blog Components/Lists & Steps/Numbered Steps",
     component: NumberedSteps,
     parameters: { layout: "fullscreen" },
     decorators: [

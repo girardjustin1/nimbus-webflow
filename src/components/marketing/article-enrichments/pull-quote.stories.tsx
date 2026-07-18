@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { PullQuote } from "./pull-quote";
 
 const meta = {
-    title: "Components/Body/Pull Quote",
+    title: "Templates Components/Body/Pull Quote",
     component: PullQuote,
     parameters: { layout: "padded" },
     tags: ["autodocs"],

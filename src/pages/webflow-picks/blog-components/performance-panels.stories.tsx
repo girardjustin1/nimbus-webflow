@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { PerformancePanels } from "@/components/marketing/article-enrichments/article-enrichments";
 
 const meta = {
-    title: "Webflow Picks/Blog Components/Metrics & Charts/Performance Panels",
+    title: "Webflow Guide/Blog Components/Metrics & Charts/Performance Panels",
     component: PerformancePanels,
     parameters: { layout: "fullscreen" },
     decorators: [

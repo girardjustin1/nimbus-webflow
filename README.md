@@ -1,13 +1,17 @@
 # Nimbus Blog Design
 
+### ▶ [Open the live Storybook →](https://girardjustin1.github.io/nimbus-webflow/)
+
 A component library and blog-layout kit for **[adsbynimbus.com](https://www.adsbynimbus.com)**, themed to the
 Nimbus brand — teal accent, Proxima Nova type, cream/navy surfaces.
 
-It provides three layers to work from:
+It provides five layers to work from:
 
-1. **Styles** — the design foundations (color tokens, type scale, icons, shape, elevation, logos, imagery).
-2. **Components** — reusable building blocks (navigation, footer, and 20+ body components + article enrichments).
-3. **Blog Directory & Article Templates** — production-ready pages: a blog directory and 11 article templates, driven by real Nimbus article content.
+1. **Rich Text Editor** — the kit for building Webflow CMS article bodies: a Content Style Guide and a copy-paste **Embed Kit** (components + charts you paste into a Webflow Rich Text field).
+2. **Webflow Guide** — Webflow-ready blog pages (directory, case studies, news) plus a browsable blog-components catalog.
+3. **Styles** — the design foundations (color tokens, type scale, icons, shape, elevation, logos, imagery).
+4. **Blog Article Templates** — production-ready pages: a blog directory and 11 article templates, driven by real Nimbus article content.
+5. **Templates Components** — reusable building blocks (navigation, footer, and 20+ body components + article enrichments).
 
 Everything is documented and previewable in **Storybook**.
 
@@ -30,12 +34,22 @@ Then open **[http://localhost:6006](http://localhost:6006)**. Start at the **Ove
 
 ## 🧱 What's inside
 
+### Rich Text Editor
+The kit for building **Webflow CMS article bodies** — everything namespaced under `.blog-*` so it never affects the marketing site.
+- **Content Style Guide** — every native Rich Text element styled by the `blog-prose` class, so a Webflow Rich Text field renders on-brand (including a light code block with line numbers + Nimbus-branded syntax highlighting)
+- **Embed Kit** — blog body components (callouts, quotes, metrics, tables, charts, checklists, steps, FAQ, tags) as **copy-paste HTML embeds**, each with a live playground → paste into a Webflow Rich Text "Custom Code" block. Charts (line, bar, pie, radar) support per-item color pickers, a description subheading, and Y-axis controls. Includes a one-time **Stylesheet** (`.blog-*`) and a **Charts runtime** (Chart.js) you paste into Webflow once.
+
+### Webflow Guide
+Webflow-ready blog pages, tuned for a live CMS blog.
+- **Blog Directory · Case Studies · News** — Webflow-tuned blog templates (byline-free, month/year timestamps, a Case Study / News / Announcement / Product taxonomy)
+- **Blog Components** — the blog body components as a browsable catalog
+
 ### Styles
 Semantic **color tokens** (light + dark), the **Proxima Nova** type scale, a line-style icon set,
 **shape** (radius) and **elevation** (shadow) scales, the **Nimbus logo** (blue + white), and a full
 **imagery** gallery of locally-hosted photos.
 
-### Components
+### Templates Components
 - **Chrome:** Navigation, Breadcrumbs, Footer
 - **Body atoms:** Buttons (teal + Nimbus-pink primary), Badges, Badge Groups, Avatars, Author Byline, Blog Cards, Category Tabs, Tag List, Pagination
 - **Body sections:** Content (rich text / split image), Metrics, Testimonials, Newsletter, FAQ
@@ -141,7 +155,7 @@ token system. Core Nimbus colors: teal `#08c6c7`, pink `#DA6EA3`, navy `#003a5b`
 
 ## Built with
 
-React 19 · TypeScript · Tailwind CSS v4 · React Aria Components · Recharts · Storybook 10 · Vite
+React 19 · TypeScript · Tailwind CSS v4 · React Aria Components · Recharts · Chart.js · Storybook 10 · Vite
 
 ---
 

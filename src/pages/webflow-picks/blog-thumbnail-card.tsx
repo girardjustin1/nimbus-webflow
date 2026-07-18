@@ -22,7 +22,7 @@ export type WebflowArticle = {
 };
 
 /**
- * The Webflow Picks blog thumbnail card: a plain top thumbnail, a category +
+ * The Webflow Guide blog thumbnail card: a plain top thumbnail, a category +
  * reading-time badge, the title (with an arrow), a two-line summary, and a
  * month/year stamp — no byline author. Shared by the Blog Directory grid and the
  * Case Studies "From the blog" grid so both use one card style.

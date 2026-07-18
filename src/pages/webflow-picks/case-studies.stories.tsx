@@ -9,14 +9,14 @@ const TUMBLR_HERO_STATS: HeroStat[] = [
 ];
 
 /**
- * Webflow Picks — the case-study article layout selected for the Webflow port.
+ * Webflow Guide — the case-study article layout selected for the Webflow port.
  *
  * Forked from Blog Article Templates → 02 → Enriched, with the byline author and
  * avatar removed and month/year timestamps. Avatars inside the article body
  * (pull quotes, testimonials) are kept.
  */
 const meta = {
-    title: "Webflow Picks/Case Studies",
+    title: "Webflow Guide/Case Studies",
     component: WebflowPicksCaseStudies,
     parameters: { layout: "fullscreen" },
 } satisfies Meta<typeof WebflowPicksCaseStudies>;

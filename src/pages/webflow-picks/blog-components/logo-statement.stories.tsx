@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { LogoStatement } from "@/components/marketing/article-enrichments/article-enrichments";
 
 const meta = {
-    title: "Webflow Picks/Blog Components/Media & Meta/Logo Statement",
+    title: "Webflow Guide/Blog Components/Media & Meta/Logo Statement",
     component: LogoStatement,
     parameters: { layout: "fullscreen" },
     decorators: [

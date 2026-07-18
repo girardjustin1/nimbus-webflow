@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { MetricsTable } from "@/components/marketing/article-enrichments/article-enrichments";
 
 const meta = {
-    title: "Webflow Picks/Blog Components/Metrics & Charts/Metrics Table",
+    title: "Webflow Guide/Blog Components/Metrics & Charts/Metrics Table",
     component: MetricsTable,
     parameters: { layout: "fullscreen" },
     decorators: [

@@ -8,7 +8,7 @@ import { NewsletterSimpleCentered } from "@/components/marketing/newsletter-cta/
  * Nimbus newsletter / email-signup sections, Nimbus-themed.
  */
 const meta = {
-    title: "Components/Body/Newsletter",
+    title: "Templates Components/Body/Newsletter",
     parameters: { layout: "fullscreen" },
 } satisfies Meta;
 

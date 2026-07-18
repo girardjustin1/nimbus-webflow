@@ -12,7 +12,7 @@ import { BlogThumbnailCard, type WebflowArticle } from "./blog-thumbnail-card";
 import { toMonthYear } from "./format-date";
 
 /**
- * Webflow Picks — Blog Directory.
+ * Webflow Guide — Blog Directory.
  *
  * A fork of Blog Directory / 04 (BlogHeaderSidebar02) for the Webflow port:
  * card bylines (author name + avatar) are removed, cards are stamped by

@@ -1,0 +1,346 @@
+/**
+ * Nimbus Blog — Webflow embed stylesheet
+ * =======================================
+ * Upload this ONCE to Webflow (Site Settings → Custom Code → Head, wrapped in
+ * <style>…</style>, OR as a hosted stylesheet). Every blog component embed
+ * pasted into a Rich Text "Custom Code" block references these namespaced
+ * `.blog-*` classes, so the markup you paste stays tiny and updates globally
+ * from here.
+ *
+ * All rules are namespaced under `.blog-embed` / `.blog-*` so they cannot leak
+ * into the marketing site's styles.
+ *
+ * Tokens mirror src/styles/theme.css — teal #08c6c7, pink #dc438c/#da6ea3,
+ * navy #003a5b, ink #181d27.
+ */
+
+.blog-embed {
+    font-family: "proxima-nova", "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #181d27;
+    -webkit-font-smoothing: antialiased;
+}
+.blog-embed *,
+.blog-embed *::before,
+.blog-embed *::after {
+    box-sizing: border-box;
+}
+
+/* =====================================================================
+   Metrics Row  —  .blog-metrics
+===================================================================== */
+.blog-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 40px 0;
+}
+@media (min-width: 900px) {
+    .blog-metrics[data-cols="3"] { grid-template-columns: repeat(3, 1fr); }
+    .blog-metrics[data-cols="4"] { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 520px) {
+    .blog-metrics { grid-template-columns: 1fr; }
+}
+.blog-metric {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #ffffff;
+    border: 1px solid #e9eaeb;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+}
+.blog-metric__label { margin: 0; font-size: 14px; font-weight: 500; line-height: 1.4; color: #717680; }
+.blog-metric__value {
+    display: flex; align-items: center; gap: 6px; margin: auto 0 0;
+    font-size: 30px; line-height: 1.2; font-weight: 600; letter-spacing: -0.02em;
+    color: #181d27; font-variant-numeric: tabular-nums;
+}
+.blog-metric__arrow { font-weight: 800; line-height: 1; }
+.blog-metric__arrow--up { color: #08c6c7; }
+.blog-metric__arrow--down { color: #da6ea3; }
+
+/* =====================================================================
+   Pull Quote  —  .blog-quote  (variants: teal / pink / navy)
+===================================================================== */
+.blog-quote { margin: 40px 0; border-left: 4px solid #08c6c7; padding-left: 24px; }
+.blog-quote--teal { border-color: #08c6c7; }
+.blog-quote--pink { border-color: #da6ea3; }
+.blog-quote--navy { border-color: #003a5b; }
+.blog-quote__text { margin: 0; font-size: 26px; line-height: 1.35; font-weight: 500; color: #181d27; letter-spacing: -0.01em; }
+.blog-quote__by { display: flex; align-items: center; gap: 12px; margin-top: 16px; }
+.blog-quote__avatar {
+    flex: none; width: 48px; height: 48px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 16px; color: #fff;
+    background-size: cover; background-position: center;
+}
+.blog-quote__avatar--teal { background-color: #08c6c7; box-shadow: 0 0 0 2px #fff, 0 0 0 4px #08c6c7; }
+.blog-quote__avatar--pink { background-color: #da6ea3; box-shadow: 0 0 0 2px #fff, 0 0 0 4px #da6ea3; }
+.blog-quote__avatar--navy { background-color: #003a5b; box-shadow: 0 0 0 2px #fff, 0 0 0 4px #003a5b; }
+.blog-quote__name { display: block; font-size: 16px; font-weight: 600; color: #181d27; }
+.blog-quote__role { display: block; font-size: 15px; color: #535862; }
+
+/* =====================================================================
+   Insight Callout  —  .blog-insight  (variants: teal / pink / navy)
+===================================================================== */
+.blog-insight {
+    display: flex; align-items: center; gap: 20px;
+    border-left: 4px solid #4a9ea0; padding: 24px; margin: 40px 0;
+}
+@media (min-width: 768px) { .blog-insight { gap: 28px; padding: 28px 32px; } }
+.blog-insight__icon { flex: none; width: 36px; height: 36px; object-fit: contain; }
+@media (min-width: 768px) { .blog-insight__icon { width: 40px; height: 40px; } }
+.blog-insight__text { margin: 0; font-size: 19px; line-height: 1.45; font-weight: 500; }
+@media (min-width: 768px) { .blog-insight__text { font-size: 21px; } }
+.blog-insight--teal { border-color: #4a9ea0; background: #e9f7f6; }
+.blog-insight--teal .blog-insight__text { color: #4a9ea0; }
+.blog-insight--pink { border-color: #d98cb5; background: #fdf0f6; }
+.blog-insight--pink .blog-insight__text { color: #bf4f8a; }
+.blog-insight--navy { border-color: #6a93ad; background: #eef4f8; }
+.blog-insight--navy .blog-insight__text { color: #3f6d8c; }
+
+/* =====================================================================
+   Key Takeaway  —  .blog-takeaway
+===================================================================== */
+.blog-takeaway {
+    border-top: 3px solid #4a9ea0; background: #f1fbfa;
+    padding: 40px 24px; margin: 64px 0; text-align: center;
+}
+@media (min-width: 768px) { .blog-takeaway { padding: 56px 32px; margin: 80px 0; } }
+.blog-takeaway__eyebrow { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #3f9a9c; }
+.blog-takeaway__text { margin: 16px auto 0; max-width: 42rem; font-size: 22px; line-height: 1.45; font-weight: 500; color: #1f2d33; }
+@media (min-width: 768px) { .blog-takeaway__text { font-size: 26px; } }
+.blog-takeaway--teal { border-color: #4a9ea0; background: #f1fbfa; }
+.blog-takeaway--teal .blog-takeaway__eyebrow { color: #3f9a9c; }
+.blog-takeaway--pink { border-color: #d98cb5; background: #fdf0f6; }
+.blog-takeaway--pink .blog-takeaway__eyebrow { color: #bf4f8a; }
+.blog-takeaway--navy { border-color: #6a93ad; background: #eef4f8; }
+.blog-takeaway--navy .blog-takeaway__eyebrow { color: #3f6d8c; }
+
+/* =====================================================================
+   Stat Callout  —  .blog-stat  (variants: teal / pink / navy; layout: left)
+===================================================================== */
+.blog-stat {
+    display: flex; flex-direction: column; gap: 8px;
+    border-radius: 16px; padding: 40px 24px; margin: 40px 0;
+    align-items: center; text-align: center;
+}
+.blog-stat--left { align-items: flex-start; text-align: left; }
+.blog-stat__value { font-size: 64px; line-height: 1; font-weight: 800; }
+.blog-stat__label { max-width: 28rem; font-size: 18px; color: #535862; }
+.blog-stat--teal { background: #f1fcfb; box-shadow: inset 0 0 0 1px #cef4f4; }
+.blog-stat--teal .blog-stat__value { color: #08c6c7; }
+.blog-stat--pink { background: #fdf2f7; box-shadow: inset 0 0 0 1px #f6d4e6; }
+.blog-stat--pink .blog-stat__value { color: #da6ea3; }
+.blog-stat--navy { background: #eef3f7; box-shadow: inset 0 0 0 1px #d1e0ea; }
+.blog-stat--navy .blog-stat__value { color: #003a5b; }
+
+/* =====================================================================
+   Checklist  —  .blog-checklist
+===================================================================== */
+.blog-checklist { margin: 40px 0; }
+.blog-checklist__heading { margin: 0 0 16px; font-size: 21px; font-weight: 800; color: #181d27; }
+.blog-checklist__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; }
+.blog-checklist__item { display: flex; align-items: flex-start; gap: 16px; font-size: 18px; line-height: 1.35; color: #181d27; }
+.blog-checklist__icon { flex: none; width: 20px; height: 20px; margin-top: 2px; color: #23a6a9; }
+
+/* =====================================================================
+   Numbered Steps  —  .blog-steps
+===================================================================== */
+.blog-steps { margin: 40px 0; }
+.blog-steps__heading { margin: 0; font-size: 30px; line-height: 1.2; font-weight: 800; color: #181d27; }
+@media (min-width: 768px) { .blog-steps__heading { font-size: 36px; } }
+.blog-steps__desc { margin: 12px 0 0; font-size: 18px; line-height: 28px; color: #535862; }
+.blog-steps__list { margin-top: 24px; }
+.blog-step { display: grid; grid-template-columns: auto 1fr; gap: 20px; border-top: 1px solid rgba(0, 0, 0, 0.1); padding: 32px 0; }
+@media (min-width: 768px) { .blog-step { gap: 40px; padding: 40px 0; } }
+.blog-step__num { font-size: 44px; line-height: 1; font-weight: 800; }
+@media (min-width: 768px) { .blog-step__num { font-size: 64px; } }
+.blog-step__title { margin: 0; font-size: 20px; font-weight: 800; color: #181d27; }
+@media (min-width: 768px) { .blog-step__title { font-size: 24px; } }
+.blog-step__items { margin: 16px 0 0; padding-left: 20px; list-style: circle; display: flex; flex-direction: column; gap: 10px; font-size: 18px; line-height: 26px; color: #535862; }
+.blog-step__items li::marker { color: #98a2b3; }
+
+/* =====================================================================
+   Logo Statement  —  .blog-logo-statement
+===================================================================== */
+.blog-logo-statement { margin: 64px 0; padding: 40px 0; border-top: 1px solid rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+@media (min-width: 768px) { .blog-logo-statement { padding: 56px 0; } }
+.blog-logo-statement__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+@media (min-width: 768px) { .blog-logo-statement__grid { grid-template-columns: 200px 1fr; align-items: center; gap: 48px; } }
+.blog-logo-statement__logo { height: 36px; width: auto; }
+@media (min-width: 768px) { .blog-logo-statement__logo { height: 40px; } }
+.blog-logo-statement__text { margin: 0; font-size: 18px; line-height: 28px; color: #535862; }
+@media (min-width: 768px) { .blog-logo-statement__text { font-size: 20px; line-height: 32px; } }
+
+/* =====================================================================
+   Imagery / Figure  —  .blog-figure
+===================================================================== */
+.blog-figure { margin: 40px 0; }
+.blog-figure__img { display: block; width: 100%; border-radius: 16px; object-fit: cover; }
+.blog-figure__caption { margin: 12px 0 0; font-size: 15px; font-style: italic; color: #535862; }
+
+/* =====================================================================
+   Tag List  —  .blog-tags
+===================================================================== */
+.blog-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+.blog-tag { font-size: 14px; font-weight: 600; padding: 4px 12px; border-radius: 999px; }
+.blog-tag--brand { background: #d0f7f7; color: #0b6e70; }
+.blog-tag--pink { background: #fbe4f0; color: #b32a6e; }
+.blog-tag--navy { background: #dbeaf3; color: #003a5b; }
+.blog-tag--gray { background: #f0eee9; color: #5b5347; }
+.blog-tag--success { background: #dcfae6; color: #079455; }
+.blog-tag--indigo { background: #e0eaff; color: #3538cd; }
+.blog-tag--sky { background: #e0f2fe; color: #026aa2; }
+
+/* =====================================================================
+   Metrics Table  —  .blog-table
+===================================================================== */
+.blog-table { margin: 40px 0; background: #fff; border: 1px solid #e9eaeb; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05); }
+.blog-table__head { padding: 20px 24px; border-bottom: 1px solid #e9eaeb; }
+.blog-table__title { margin: 0; font-size: 18px; font-weight: 600; color: #181d27; }
+.blog-table__desc { margin: 4px 0 0; font-size: 14px; color: #717680; }
+.blog-table__scroll { overflow-x: auto; }
+.blog-table table { width: 100%; border-collapse: collapse; }
+.blog-table th { text-align: left; padding: 12px 24px; font-size: 12px; font-weight: 600; color: #717680; background: #fcfcfd; border-bottom: 1px solid #e9eaeb; white-space: nowrap; }
+.blog-table td { padding: 16px 24px; font-size: 14px; color: #535862; border-bottom: 1px solid #f0f0f2; white-space: nowrap; }
+.blog-table tr:last-child td { border-bottom: none; }
+.blog-table__geo { font-weight: 500; color: #181d27; }
+.blog-table__lift { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 13px; font-weight: 600; background: #dcfae6; color: #079455; }
+.blog-table__lift--down { background: #fee4e2; color: #d92d20; }
+.blog-table__lift--gray { background: #f0eee9; color: #5b5347; }
+.blog-table__lift--brand { background: #d0f7f7; color: #0b6e70; }
+.blog-table__lift--navy { background: #dbeaf3; color: #003a5b; }
+.blog-table__bold { font-weight: 600; color: #181d27; }
+.blog-table__muted { color: #a4a7ae; }
+.blog-table__icon { width: 20px; height: 20px; vertical-align: middle; }
+.blog-table__icon--check { color: #079455; }
+.blog-table__icon--cross { color: #d92d20; }
+
+/* =====================================================================
+   FAQ  —  .blog-faq  (native <details>, no JS)
+===================================================================== */
+.blog-faq { margin: 40px 0; background: #fff; border: 1px solid #e9eaeb; border-radius: 12px; padding: 24px; box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05); }
+@media (min-width: 768px) { .blog-faq { padding: 32px; } }
+.blog-faq__eyebrow { font-size: 14px; font-weight: 600; color: #0b6e70; }
+.blog-faq__heading { margin: 12px 0 0; font-size: 30px; line-height: 1.2; font-weight: 600; color: #181d27; }
+@media (min-width: 768px) { .blog-faq__heading { font-size: 36px; } }
+.blog-faq__desc { margin: 16px 0 24px; font-size: 18px; color: #717680; }
+.blog-faq__list { display: flex; flex-direction: column; gap: 8px; }
+.blog-faq__item { border-radius: 16px; padding: 20px; transition: background 0.2s ease; }
+@media (min-width: 768px) { .blog-faq__item { padding: 24px; } }
+.blog-faq__item[open] { background: #f1fcfb; }
+.blog-faq__q { display: flex; justify-content: space-between; align-items: center; gap: 16px; cursor: pointer; list-style: none; font-size: 16px; font-weight: 600; color: #181d27; }
+.blog-faq__q::-webkit-details-marker { display: none; }
+.blog-faq__icon { flex: none; width: 24px; height: 24px; color: #08c6c7; }
+.blog-faq__icon-v { transform-origin: center; transition: transform 0.15s ease-out; }
+.blog-faq__item[open] .blog-faq__icon-v { transform: rotate(-90deg); }
+.blog-faq__a { margin: 8px 0 0; padding-right: 32px; font-size: 16px; line-height: 1.6; color: #535862; }
+
+/* =====================================================================
+   Charts  —  .blog-chart-card / .blog-chart  (rendered by the charts runtime)
+===================================================================== */
+.blog-chart-card {
+    margin: 40px 0;
+    background: #fff;
+    border: 1px solid #e9eaeb;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+}
+.blog-chart-card__head { margin-bottom: 16px; }
+.blog-chart-card__title { margin: 0; font-size: 18px; font-weight: 600; color: #181d27; }
+.blog-chart-card__desc { margin: 4px 0 0; font-size: 14px; color: #717680; }
+.blog-chart { position: relative; height: 300px; }
+.blog-chart canvas { max-width: 100%; }
+
+/* =====================================================================
+   Performance Panels  —  .blog-perf  (static bars)
+===================================================================== */
+.blog-perf { margin: 40px 0; display: flex; flex-direction: column; gap: 24px; }
+.blog-perf__panel { background: #fff; border: 1px solid #e9eaeb; border-radius: 16px; padding: 24px; box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05); }
+@media (min-width: 768px) { .blog-perf__panel { padding: 32px; } }
+.blog-perf__title { display: flex; align-items: center; gap: 12px; margin: 0 0 8px; font-size: 20px; font-weight: 800; color: #181d27; }
+.blog-perf__badge { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #0a9a9b; background: #d0f7f7; padding: 4px 10px; border-radius: 999px; }
+.blog-perf__row { display: grid; grid-template-columns: 1fr; gap: 12px; padding: 20px 0; border-top: 1px solid #eaecf0; }
+.blog-perf__row:first-of-type { border-top: none; }
+@media (min-width: 768px) { .blog-perf__row { grid-template-columns: 150px 1fr 120px; align-items: center; gap: 32px; } }
+.blog-perf__metric-eyebrow { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #a4a7ae; }
+.blog-perf__metric-label { font-size: 20px; font-weight: 700; color: #181d27; }
+.blog-perf__bar { height: 12px; border-radius: 999px; background: #e9eaeb; overflow: hidden; }
+.blog-perf__bar-fill { height: 100%; border-radius: 999px; background: #4cc4c5; }
+.blog-perf__value { font-size: 32px; line-height: 1; font-weight: 700; color: #181d27; font-variant-numeric: tabular-nums; }
+@media (min-width: 768px) { .blog-perf__value { font-size: 42px; text-align: right; } }
+.blog-perf__value .pct { color: #08c6c7; }
+
+/* =====================================================================
+   Rich Text prose  —  .blog-prose
+   Apply this class to a Webflow Rich Text element so the native content
+   elements (headings, paragraphs, lists, quotes, links, images, code)
+   render in the blog's brand style.
+===================================================================== */
+.blog-prose {
+    font-family: "proxima-nova", "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #181d27;
+    font-size: 18px;
+    line-height: 1.7;
+}
+.blog-prose > * + * { margin-top: 1.1em; }
+.blog-prose h1,
+.blog-prose h2,
+.blog-prose h3,
+.blog-prose h4 { color: #181d27; letter-spacing: -0.02em; line-height: 1.2; }
+.blog-prose h1 { font-size: 40px; font-weight: 800; margin-top: 1.4em; }
+.blog-prose h2 { font-size: 30px; font-weight: 800; margin-top: 1.5em; }
+.blog-prose h3 { font-size: 24px; font-weight: 800; margin-top: 1.4em; }
+.blog-prose h4 { font-size: 20px; font-weight: 700; margin-top: 1.3em; }
+.blog-prose h5 { font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #181d27; margin-top: 1.3em; }
+.blog-prose h6 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #717680; margin-top: 1.3em; }
+.blog-prose p { font-size: 18px; line-height: 1.7; color: #414651; margin: 0; }
+.blog-prose a { color: #dc438c; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.blog-prose a:hover { color: #b32a6e; }
+.blog-prose strong { font-weight: 700; color: #181d27; }
+.blog-prose em { font-style: italic; }
+.blog-prose ul,
+.blog-prose ol { margin: 0; padding-left: 1.4em; display: flex; flex-direction: column; gap: 8px; font-size: 18px; color: #414651; }
+.blog-prose ul { list-style: disc; }
+.blog-prose ol { list-style: decimal; }
+.blog-prose li::marker { color: #08c6c7; }
+.blog-prose blockquote { margin: 0; border-left: 4px solid #dc438c; padding-left: 20px; font-size: 22px; line-height: 1.4; font-weight: 500; color: #181d27; }
+.blog-prose img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+.blog-prose figure { margin: 0; }
+.blog-prose figcaption { margin-top: 8px; font-size: 15px; font-style: italic; color: #717680; }
+.blog-prose code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.9em; background: #f1f0ec; color: #0b6e70; padding: 2px 6px; border-radius: 6px; }
+.blog-prose pre { background: #fafafa; color: #181d27; border: 1px solid #e9eaeb; padding: 16px 20px; border-radius: 12px; overflow-x: auto; font-size: 14px; line-height: 1.6; }
+.blog-prose pre code { background: none; color: inherit; padding: 0; }
+.blog-prose hr { border: none; border-top: 1px solid rgba(0, 0, 0, 0.1); margin: 2em 0; }
+
+/* Code block — Untitled UI light style with a line-number gutter. */
+.blog-code { background: #ffffff; border: 1px solid #e9eaeb; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05); }
+.blog-code__header { display: flex; align-items: center; gap: 7px; padding: 12px 16px; background: #fcfcfd; border-bottom: 1px solid #f0f0f2; }
+.blog-code__dot { width: 10px; height: 10px; border-radius: 50%; }
+.blog-code__name { margin-left: 6px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 12px; color: #717680; }
+.blog-code__lines {
+    margin: 0;
+    padding: 14px 0;
+    list-style: none;
+    counter-reset: ln;
+    overflow-x: auto;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.85;
+    color: #181d27;
+}
+.blog-code__lines li { counter-increment: ln; white-space: pre; position: relative; padding: 0 20px 0 56px; }
+.blog-code__lines li::before { content: counter(ln); position: absolute; left: 0; width: 40px; text-align: right; color: #a4a7ae; }
+/* Syntax tokens — Nimbus brand palette. */
+.blog-code .t-obj { color: #003a5b; }
+.blog-code .t-fn { color: #0b6e70; }
+.blog-code .t-key { color: #b32a6e; }
+.blog-code .t-str { color: #b54708; }
+.blog-code .t-num { color: #7a5af8; }
+.blog-code .t-punc { color: #717680; }
+.blog-code .t-kw { color: #7a5af8; }
+.blog-code .t-com { color: #98a2b3; font-style: italic; }

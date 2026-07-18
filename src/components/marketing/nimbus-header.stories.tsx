@@ -6,7 +6,7 @@ import { NimbusHeader } from "@/components/marketing/nimbus-header";
  * The Nimbus site navigation: logo, links (incl. Blog), and Sign In.
  */
 const meta = {
-    title: "Components/Navigation",
+    title: "Templates Components/Navigation",
     component: NimbusHeader,
     parameters: { layout: "fullscreen" },
     tags: ["autodocs"],

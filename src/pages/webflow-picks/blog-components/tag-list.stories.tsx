@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { TagList } from "@/components/marketing/blog-atoms/tag-list";
 
 const meta = {
-    title: "Webflow Picks/Blog Components/Media & Meta/Tag List",
+    title: "Webflow Guide/Blog Components/Media & Meta/Tag List",
     component: TagList,
     parameters: { layout: "fullscreen" },
     decorators: [

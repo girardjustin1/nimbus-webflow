@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { StackComparisonRadar } from "./stack-comparison-radar";
 
 const meta = {
-    title: "Components/Body/Stack Comparison (Radar)",
+    title: "Templates Components/Body/Stack Comparison (Radar)",
     component: StackComparisonRadar,
     parameters: { layout: "padded" },
     tags: ["autodocs"],

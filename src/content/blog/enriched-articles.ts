@@ -8,7 +8,7 @@ import { nimbusArticles } from "@/content/blog/nimbus-articles";
  * content-rich post.
  *
  * These live here rather than inside a *.stories.tsx file so they can be shared
- * by more than one story (the Blog Article Templates set and the Webflow Picks
+ * by more than one story (the Blog Article Templates set and the Webflow Guide
  * set both render them) without duplicating the content.
  */
 

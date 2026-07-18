@@ -3,7 +3,7 @@ import { PaginationPageDefault } from "@/components/application/pagination/pagin
 
 /** Page pagination used at the bottom of blog directory listings. */
 const meta = {
-    title: "Components/Body/Pagination",
+    title: "Templates Components/Body/Pagination",
     component: PaginationPageDefault,
     parameters: { layout: "padded" },
     tags: ["autodocs"],

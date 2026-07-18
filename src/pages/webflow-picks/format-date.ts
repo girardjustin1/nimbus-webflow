@@ -15,7 +15,7 @@ const MONTHS: Record<string, string> = {
 
 /**
  * Reduce a display date to a month + year stamp.
- * Webflow Picks posts are dated by month/year only (no day, no author), so
+ * Webflow Guide posts are dated by month/year only (no day, no author), so
  * "20 Jan 2026" → "January 2026". Falls back to the input if it can't be parsed.
  */
 export const toMonthYear = (input: string): string => {
