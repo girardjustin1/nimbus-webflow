@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { FAQAccordion04 } from "./faq-accordion-04";
 
 const meta = {
-    title: "Components/Body/FAQ",
+    title: "Templates Components/Body/FAQ",
     component: FAQAccordion04,
     parameters: {
         layout: "fullscreen",

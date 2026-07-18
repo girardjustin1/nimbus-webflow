@@ -37,7 +37,7 @@ interface Args {
 const itemsHelp = { name: "", description: "Separate bullet items with a semicolon ( ; )" };
 
 const meta: Meta<Args> = {
-    title: "Webflow Guide/Embed Kit/Lists & Steps/Numbered Steps",
+    title: "Rich Text Editor/Embed Kit/Lists & Steps/Numbered Steps",
     parameters: { layout: "fullscreen" },
     decorators: [
         (Story) => (

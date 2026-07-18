@@ -7,7 +7,7 @@ import { EmbedStylesheet } from "@/webflow-embeds/embed-playground";
  * Rich Text block is styled from here.
  */
 const meta = {
-    title: "Webflow Guide/Embed Kit/*Stylesheet*",
+    title: "Rich Text Editor/Embed Kit/*Stylesheet*",
     parameters: { layout: "fullscreen" },
     decorators: [
         (Story) => (

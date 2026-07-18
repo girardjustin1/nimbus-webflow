@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { MetricsRow } from "./metrics-row";
 
 const meta = {
-    title: "Components/Body/Metrics Row",
+    title: "Templates Components/Body/Metrics Row",
     component: MetricsRow,
     parameters: { layout: "padded" },
     tags: ["autodocs"],

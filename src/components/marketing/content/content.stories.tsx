@@ -7,7 +7,7 @@ import { ContentSplitImage02 } from "@/components/marketing/content/content-spli
  * Nimbus content sections (rich text, split image), Nimbus-themed.
  */
 const meta = {
-    title: "Components/Body/Content",
+    title: "Templates Components/Body/Content",
     parameters: { layout: "fullscreen" },
 } satisfies Meta;
 

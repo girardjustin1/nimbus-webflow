@@ -11,7 +11,7 @@ interface Args {
 }
 
 const meta: Meta<Args> = {
-    title: "Webflow Guide/Embed Kit/Callouts & Quotes/Pull Quote",
+    title: "Rich Text Editor/Embed Kit/Callouts & Quotes/Pull Quote",
     parameters: { layout: "fullscreen" },
     decorators: [
         (Story) => (

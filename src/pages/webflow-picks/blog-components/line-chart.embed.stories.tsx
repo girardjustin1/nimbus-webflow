@@ -36,7 +36,7 @@ interface Args {
 const valuesHelp = "Comma-separated numbers, one per X label";
 
 const meta: Meta<Args> = {
-    title: "Webflow Guide/Embed Kit/Metrics & Charts/Line Chart",
+    title: "Rich Text Editor/Embed Kit/Metrics & Charts/Line Chart",
     parameters: { layout: "fullscreen" },
     decorators: [
         (Story) => (

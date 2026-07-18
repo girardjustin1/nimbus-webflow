@@ -6,7 +6,7 @@ import { EmbedChartsRuntime } from "@/webflow-embeds/embed-playground";
  * Webflow site's footer custom code once; then every chart embed renders itself.
  */
 const meta = {
-    title: "Webflow Guide/Embed Kit/*Charts runtime*",
+    title: "Rich Text Editor/Embed Kit/*Charts runtime*",
     parameters: { layout: "fullscreen" },
     decorators: [
         (Story) => (

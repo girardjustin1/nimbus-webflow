@@ -31,7 +31,7 @@ interface Args {
 }
 
 const meta: Meta<Args> = {
-    title: "Webflow Guide/Embed Kit/Metrics & Charts/Performance Panels",
+    title: "Rich Text Editor/Embed Kit/Metrics & Charts/Performance Panels",
     parameters: { layout: "fullscreen" },
     decorators: [
         (Story) => (

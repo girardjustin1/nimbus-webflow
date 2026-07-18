@@ -45,7 +45,7 @@ interface Args {
 const rowHelp = "Cell values, comma-separated (one per column). First cell is the row label.";
 
 const meta: Meta<Args> = {
-    title: "Webflow Guide/Embed Kit/Metrics & Charts/Metrics Table",
+    title: "Rich Text Editor/Embed Kit/Metrics & Charts/Metrics Table",
     parameters: { layout: "fullscreen" },
     decorators: [
         (Story) => (

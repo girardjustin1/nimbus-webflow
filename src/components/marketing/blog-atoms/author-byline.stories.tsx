@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { AuthorByline } from "./author-byline";
 
 const meta = {
-    title: "Components/Body/Author Byline",
+    title: "Templates Components/Body/Author Byline",
     component: AuthorByline,
     parameters: { layout: "centered" },
     tags: ["autodocs"],

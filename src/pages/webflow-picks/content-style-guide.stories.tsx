@@ -7,7 +7,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
  * and the CMS body renders exactly like this.
  */
 const meta = {
-    title: "Webflow Guide/Content Style Guide/Rich Text Elements",
+    title: "Rich Text Editor/Content Style Guide/Rich Text Elements",
     parameters: { layout: "fullscreen" },
     decorators: [
         (Story) => (

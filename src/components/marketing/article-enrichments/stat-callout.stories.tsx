@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { StatCallout } from "./stat-callout";
 
 const meta = {
-    title: "Components/Body/Stat Callout",
+    title: "Templates Components/Body/Stat Callout",
     component: StatCallout,
     parameters: { layout: "padded" },
     tags: ["autodocs"],

@@ -22,7 +22,7 @@ interface PlaygroundArgs {
 }
 
 const meta: Meta<PlaygroundArgs> = {
-    title: "Webflow Guide/Embed Kit/Metrics & Charts/Metrics Row",
+    title: "Rich Text Editor/Embed Kit/Metrics & Charts/Metrics Row",
     parameters: { layout: "fullscreen" },
     decorators: [
         (Story) => (

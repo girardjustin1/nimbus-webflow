@@ -9,7 +9,7 @@ interface Args {
 }
 
 const meta: Meta<Args> = {
-    title: "Webflow Guide/Embed Kit/Callouts & Quotes/Insight Callout",
+    title: "Rich Text Editor/Embed Kit/Callouts & Quotes/Insight Callout",
     parameters: { layout: "fullscreen" },
     decorators: [
         (Story) => (

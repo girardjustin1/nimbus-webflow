@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { KeyTakeaway } from "./key-takeaway";
 
 const meta = {
-    title: "Components/Body/Key Takeaway",
+    title: "Templates Components/Body/Key Takeaway",
     component: KeyTakeaway,
     parameters: { layout: "padded" },
     tags: ["autodocs"],

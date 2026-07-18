@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { TagList } from "./tag-list";
 
 const meta = {
-    title: "Components/Body/Tag List",
+    title: "Templates Components/Body/Tag List",
     component: TagList,
     parameters: { layout: "centered" },
     tags: ["autodocs"],

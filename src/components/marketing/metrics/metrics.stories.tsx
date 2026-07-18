@@ -8,7 +8,7 @@ import { MetricsSimpleCenteredText } from "@/components/marketing/metrics/metric
  * Nimbus metrics / stats sections, Nimbus-themed.
  */
 const meta = {
-    title: "Components/Body/Metrics",
+    title: "Templates Components/Body/Metrics",
     parameters: { layout: "fullscreen" },
 } satisfies Meta;
 

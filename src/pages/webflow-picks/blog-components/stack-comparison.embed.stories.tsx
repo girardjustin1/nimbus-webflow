@@ -32,7 +32,7 @@ interface Args {
 const valuesHelp = "Comma-separated numbers, one per axis";
 
 const meta: Meta<Args> = {
-    title: "Webflow Guide/Embed Kit/Metrics & Charts/Stack Comparison",
+    title: "Rich Text Editor/Embed Kit/Metrics & Charts/Stack Comparison",
     parameters: { layout: "fullscreen" },
     decorators: [
         (Story) => (

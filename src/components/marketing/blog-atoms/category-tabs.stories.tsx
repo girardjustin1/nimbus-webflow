@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { CategoryTabs } from "./category-tabs";
 
 const meta = {
-    title: "Components/Body/Category Tabs",
+    title: "Templates Components/Body/Category Tabs",
     component: CategoryTabs,
     parameters: { layout: "padded" },
     tags: ["autodocs"],

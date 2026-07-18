@@ -30,7 +30,7 @@ interface Args {
 }
 
 const meta: Meta<Args> = {
-    title: "Webflow Guide/Embed Kit/Lists & Steps/FAQ",
+    title: "Rich Text Editor/Embed Kit/Lists & Steps/FAQ",
     parameters: { layout: "fullscreen" },
     decorators: [
         (Story) => (
