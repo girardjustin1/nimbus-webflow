@@ -44,9 +44,9 @@ export const MetricsTable = ({
                 <Table.Body>
                     {rows.map((row) => (
                         <Table.Row key={row.geo}>
-                            <Table.Cell className="font-medium text-primary">{row.geo}</Table.Cell>
-                            <Table.Cell>{row.unflooredEcpm}</Table.Cell>
-                            <Table.Cell className="font-medium text-primary">{row.flooredEcpm}</Table.Cell>
+                            <Table.Cell className="text-md font-medium text-primary">{row.geo}</Table.Cell>
+                            <Table.Cell className="text-md">{row.unflooredEcpm}</Table.Cell>
+                            <Table.Cell className="text-md font-medium text-primary">{row.flooredEcpm}</Table.Cell>
                             <Table.Cell>
                                 <Badge color="success" size="sm" type="pill-color">
                                     {row.lift}

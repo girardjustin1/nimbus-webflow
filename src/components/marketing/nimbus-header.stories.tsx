@@ -24,6 +24,15 @@ export const Default: Story = {
     ),
 };
 
+/** Default nav on a white background. */
+export const WhiteBackground: Story = {
+    render: (args) => (
+        <div className="min-h-96 bg-white">
+            <NimbusHeader {...args} className="bg-white" />
+        </div>
+    ),
+};
+
 /** Custom link set. */
 export const CustomLinks: Story = {
     args: {
