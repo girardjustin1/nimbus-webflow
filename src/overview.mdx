@@ -7,9 +7,10 @@ import { Meta } from "@storybook/addon-docs/blocks";
 # Nimbus Blog Design
 
 A component library and blog-layout kit for **[adsbynimbus.com](https://www.adsbynimbus.com)**, themed to the
-Nimbus brand — teal accent, Proxima Nova type, cream/navy surfaces. It gives you three layers to work from:
-**foundational styles**, **reusable components**, and **production blog layouts** assembled from real Nimbus
-article content.
+Nimbus brand — teal accent, Proxima Nova type, cream/navy surfaces. It spans a **Rich Text Editor** kit
+for building a Webflow CMS blog from copy-paste embeds, a **Webflow Guide** of Webflow-ready blog pages,
+the **Styles** foundations, and **Blog Article Templates** (with their **Templates Components**) assembled
+from real Nimbus article content.
 
 ---
 
@@ -35,10 +36,12 @@ The kit for building **Webflow CMS article bodies** from copy-paste embeds — e
 under `.blog-*` so it never touches the marketing site's styles.
 
 - **Content Style Guide** — every native Rich Text element (headings, lists, quotes, links, code)
-  styled by the `blog-prose` class, so a Webflow Rich Text field renders on-brand.
+  styled by the `blog-prose` class, so a Webflow Rich Text field renders on-brand — including a light
+  code block with line numbers and Nimbus-branded syntax highlighting.
 - **Embed Kit** — the blog body components (callouts, quotes, metrics, tables, charts, checklists,
   steps, FAQ, tags) as **copy-paste HTML embeds**. Each has a live playground: tweak the copy in
-  Controls, then paste the embed into a Webflow Rich Text "Custom Code" block.
+  Controls, then paste the embed into a Webflow Rich Text "Custom Code" block. Charts (line, bar, pie,
+  radar) add per-item color pickers, a description subheading, and Y-axis controls.
   - **★ Stylesheet** — the one namespaced `.blog-*` stylesheet you paste into Webflow once; every
     embed references it.
   - **★ Charts runtime** — Chart.js plus a tiny runtime, pasted once, so chart embeds (line, bar,

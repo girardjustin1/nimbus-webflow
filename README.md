@@ -1,5 +1,7 @@
 # Nimbus Blog Design
 
+### ▶ [Open the live Storybook →](https://girardjustin1.github.io/nimbus-webflow/)
+
 A component library and blog-layout kit for **[adsbynimbus.com](https://www.adsbynimbus.com)**, themed to the
 Nimbus brand — teal accent, Proxima Nova type, cream/navy surfaces.
 
@@ -32,20 +34,20 @@ Then open **[http://localhost:6006](http://localhost:6006)**. Start at the **Ove
 
 ## 🧱 What's inside
 
-### Styles
-Semantic **color tokens** (light + dark), the **Proxima Nova** type scale, a line-style icon set,
-**shape** (radius) and **elevation** (shadow) scales, the **Nimbus logo** (blue + white), and a full
-**imagery** gallery of locally-hosted photos.
-
 ### Rich Text Editor
 The kit for building **Webflow CMS article bodies** — everything namespaced under `.blog-*` so it never affects the marketing site.
-- **Content Style Guide** — every native Rich Text element styled by the `blog-prose` class, so a Webflow Rich Text field renders on-brand
-- **Embed Kit** — blog body components (callouts, quotes, metrics, tables, charts, checklists, steps, FAQ, tags) as **copy-paste HTML embeds**, each with a live playground → paste into a Webflow Rich Text "Custom Code" block. Includes a one-time **Stylesheet** (`.blog-*`) and a **Charts runtime** (Chart.js) you paste into Webflow once.
+- **Content Style Guide** — every native Rich Text element styled by the `blog-prose` class, so a Webflow Rich Text field renders on-brand (including a light code block with line numbers + Nimbus-branded syntax highlighting)
+- **Embed Kit** — blog body components (callouts, quotes, metrics, tables, charts, checklists, steps, FAQ, tags) as **copy-paste HTML embeds**, each with a live playground → paste into a Webflow Rich Text "Custom Code" block. Charts (line, bar, pie, radar) support per-item color pickers, a description subheading, and Y-axis controls. Includes a one-time **Stylesheet** (`.blog-*`) and a **Charts runtime** (Chart.js) you paste into Webflow once.
 
 ### Webflow Guide
 Webflow-ready blog pages, tuned for a live CMS blog.
 - **Blog Directory · Case Studies · News** — Webflow-tuned blog templates (byline-free, month/year timestamps, a Case Study / News / Announcement / Product taxonomy)
 - **Blog Components** — the blog body components as a browsable catalog
+
+### Styles
+Semantic **color tokens** (light + dark), the **Proxima Nova** type scale, a line-style icon set,
+**shape** (radius) and **elevation** (shadow) scales, the **Nimbus logo** (blue + white), and a full
+**imagery** gallery of locally-hosted photos.
 
 ### Templates Components
 - **Chrome:** Navigation, Breadcrumbs, Footer
