@@ -7,7 +7,11 @@ const colorControl = (name: string) => ({ name, control: { type: "color" as cons
 
 interface Args {
     title: string;
+    description: string;
     valueSuffix: string;
+    yMin?: number;
+    yMax?: number;
+    yStep?: number;
     count: number;
     bar1Label: string;
     bar1Value: number;
@@ -49,7 +53,11 @@ const meta: Meta<Args> = {
     ],
     argTypes: {
         title: { name: "Title" },
+        description: { name: "Description (subheading)" },
         valueSuffix: { name: "Value suffix" },
+        yMin: { ...numControl, name: "Y-axis min (blank = auto)" },
+        yMax: { ...numControl, name: "Y-axis max (blank = auto)" },
+        yStep: { ...numControl, name: "Y-axis step (blank = auto)" },
         count: { name: "Number of bars", control: "select", options: [2, 3, 4, 5, 6, 7, 8] },
         bar1Label: { name: "Bar 1 · label (x-axis)" },
         bar1Value: { ...numControl, name: "Bar 1 · value" },
@@ -81,23 +89,15 @@ const meta: Meta<Args> = {
 export default meta;
 type Story = StoryObj<Args>;
 
-const guide = (
-    <div className="flex flex-col gap-2 text-sm text-secondary">
-        <p>A bar chart — one bar per category, each its own color and legend entry.</p>
-        <ul className="flex flex-col gap-1.5">
-            <li>
-                <b className="font-semibold text-primary">Each bar</b> — an x-axis label, a value, and a color (custom or brand).
-            </li>
-            <li>Needs the Chart.js runtime loaded once — see Embed Kit → *Charts runtime*.</li>
-        </ul>
-    </div>
-);
-
-/** Each bar's color is a picker (custom or brand). Requires the Chart.js runtime (Embed Kit → *Charts runtime*). */
+/** Each bar's color is a picker; set the Y-axis min/max/step to fix the scale (blank = auto). Requires the Chart.js runtime (Embed Kit → *Charts runtime*). */
 export const Embed: Story = {
     args: {
         title: "Floored eCPM by geo",
+        description: "Floored eCPM across key markets.",
         valueSuffix: "",
+        yMin: undefined,
+        yMax: undefined,
+        yStep: undefined,
         count: 5,
         bar1Label: "US",
         bar1Value: 5.6,
@@ -136,7 +136,20 @@ export const Embed: Story = {
             { label: args.bar8Label, value: args.bar8Value, color: args.bar8Color },
         ];
         const bars = all.slice(0, args.count).filter((b) => b.label);
-        const config = { labels: bars.map((b) => b.label), values: bars.map((b) => b.value), colors: bars.map((b) => b.color), valueSuffix: args.valueSuffix };
-        return <EmbedPlayground guide={guide} renderPreview={(html) => <ChartEmbedPreview html={html} />} html={buildChartEmbed("bar", args.title, config)} />;
+        const config = {
+            labels: bars.map((b) => b.label),
+            values: bars.map((b) => b.value),
+            colors: bars.map((b) => b.color),
+            valueSuffix: args.valueSuffix,
+            yMin: args.yMin,
+            yMax: args.yMax,
+            yStep: args.yStep,
+        };
+        return (
+            <EmbedPlayground
+                renderPreview={(html) => <ChartEmbedPreview html={html} />}
+                html={buildChartEmbed("bar", args.title, config, args.description || undefined)}
+            />
+        );
     },
 };

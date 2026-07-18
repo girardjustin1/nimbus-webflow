@@ -410,11 +410,13 @@ const escConfig = (json: string): string => json.replace(/&/g, "&amp;").replace(
  * Build a chart embed. The chart renders via the Nimbus charts runtime
  * (Embed Kit → *Charts runtime*), which reads `data-chart` + `data-config`.
  */
-export function buildChartEmbed(type: ChartType, title: string, config: unknown): string {
+export function buildChartEmbed(type: ChartType, title: string, config: unknown, description?: string): string {
     const json = escConfig(JSON.stringify(config));
-    const heading = title ? `\n    <h3 class="blog-chart-card__title">${esc(title)}</h3>` : "";
+    const titleHtml = title ? `\n      <p class="blog-chart-card__title">${esc(title)}</p>` : "";
+    const descHtml = description ? `\n      <p class="blog-chart-card__desc">${esc(description)}</p>` : "";
+    const head = titleHtml || descHtml ? `\n    <div class="blog-chart-card__head">${titleHtml}${descHtml}\n    </div>` : "";
     return `<div class="blog-embed">
-  <div class="blog-chart-card">${heading}
+  <div class="blog-chart-card">${head}
     <div class="blog-chart" data-chart="${type}" data-config='${json}'></div>
   </div>
 </div>`;

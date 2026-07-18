@@ -47,7 +47,7 @@ export const CHARTS_RUNTIME = `(function () {
   function cartScales(cfg) {
     return {
       x: { grid: { display: false }, ticks: { color: "#535862", font: { size: 12 } } },
-      y: { grid: { color: GRID }, ticks: { color: "#a4a7ae", font: { size: 11 }, callback: function (v) { return v + (cfg.valueSuffix || ""); } } }
+      y: { min: cfg.yMin, max: cfg.yMax, grid: { color: GRID }, ticks: { color: "#a4a7ae", font: { size: 11 }, stepSize: cfg.yStep, callback: function (v) { return v + (cfg.valueSuffix || ""); } } }
     };
   }
 
@@ -144,7 +144,7 @@ const pBarLabels = (labels: string[], colors: string[]) => ({
 
 const pScales = (cfg: any) => ({
     x: { grid: { display: false }, ticks: { color: "#535862", font: { size: 12 } } },
-    y: { grid: { color: P_GRID }, ticks: { color: "#a4a7ae", font: { size: 11 }, callback: (v: any) => v + (cfg.valueSuffix || "") } },
+    y: { min: cfg.yMin, max: cfg.yMax, grid: { color: P_GRID }, ticks: { color: "#a4a7ae", font: { size: 11 }, stepSize: cfg.yStep, callback: (v: any) => v + (cfg.valueSuffix || "") } },
 });
 
 const previewSpec = (type: string, cfg: any): any => {

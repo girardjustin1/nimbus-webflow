@@ -7,6 +7,7 @@ const colorControl = (name: string) => ({ name, control: { type: "color" as cons
 
 interface Args {
     title: string;
+    description: string;
     count: number;
     slice1Label: string;
     slice1Value: number;
@@ -42,6 +43,7 @@ const meta: Meta<Args> = {
     ],
     argTypes: {
         title: { name: "Title" },
+        description: { name: "Description (subheading)" },
         count: { name: "Number of slices", control: "select", options: [2, 3, 4, 5, 6] },
         slice1Label: { name: "Slice 1 · label" },
         slice1Value: { ...numControl, name: "Slice 1 · value" },
@@ -67,23 +69,11 @@ const meta: Meta<Args> = {
 export default meta;
 type Story = StoryObj<Args>;
 
-const guide = (
-    <div className="flex flex-col gap-2 text-sm text-secondary">
-        <p>A donut chart showing share by slice.</p>
-        <ul className="flex flex-col gap-1.5">
-            <li>
-                <b className="font-semibold text-primary">Slices</b> — each has a label, a value, and a color (custom or brand).
-            </li>
-            <li>Values are relative — they don't need to add up to 100.</li>
-            <li>Needs the Chart.js runtime loaded once — see Embed Kit → *Charts runtime*.</li>
-        </ul>
-    </div>
-);
-
 /** Each slice's color is a picker (custom or brand). Requires the Chart.js runtime (Embed Kit → *Charts runtime*). */
 export const Embed: Story = {
     args: {
         title: "Demand mix",
+        description: "Share of monetized impressions by source.",
         count: 4,
         slice1Label: "Open marketplace",
         slice1Value: 42,
@@ -115,6 +105,11 @@ export const Embed: Story = {
         ];
         const slices = all.slice(0, args.count).filter((s) => s.label);
         const config = { labels: slices.map((s) => s.label), values: slices.map((s) => s.value), colors: slices.map((s) => s.color) };
-        return <EmbedPlayground guide={guide} renderPreview={(html) => <ChartEmbedPreview html={html} />} html={buildChartEmbed("doughnut", args.title, config)} />;
+        return (
+            <EmbedPlayground
+                renderPreview={(html) => <ChartEmbedPreview html={html} />}
+                html={buildChartEmbed("doughnut", args.title, config, args.description || undefined)}
+            />
+        );
     },
 };

@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { buildChartEmbed } from "@/webflow-embeds/builders";
 import { ChartEmbedPreview, EmbedPlayground } from "@/webflow-embeds/embed-playground";
 
+const numControl = { control: { type: "number" as const } };
 const colorControl = (name: string) => ({ name, control: { type: "color" as const } });
 const nums = (s: string) =>
     s
@@ -16,7 +17,11 @@ const labels = (s: string) =>
 
 interface Args {
     title: string;
+    description: string;
     valueSuffix: string;
+    yMin?: number;
+    yMax?: number;
+    yStep?: number;
     xLabels: string;
     seriesCount: number;
     s1Label: string;
@@ -49,7 +54,11 @@ const meta: Meta<Args> = {
     ],
     argTypes: {
         title: { name: "Title" },
+        description: { name: "Description (subheading)" },
         valueSuffix: { name: "Value suffix" },
+        yMin: { ...numControl, name: "Y-axis min (blank = auto)" },
+        yMax: { ...numControl, name: "Y-axis max (blank = auto)" },
+        yStep: { ...numControl, name: "Y-axis step (blank = auto)" },
         xLabels: { name: "X-axis labels (comma-separated)" },
         seriesCount: { name: "Number of lines", control: "inline-radio", options: [1, 2, 3, 4] },
         s1Label: { name: "Line 1 · label" },
@@ -70,26 +79,15 @@ const meta: Meta<Args> = {
 export default meta;
 type Story = StoryObj<Args>;
 
-const guide = (
-    <div className="flex flex-col gap-2 text-sm text-secondary">
-        <p>A line chart with up to 4 series.</p>
-        <ul className="flex flex-col gap-1.5">
-            <li>
-                <b className="font-semibold text-primary">X-axis labels</b> — comma-separated, one per data point.
-            </li>
-            <li>
-                <b className="font-semibold text-primary">Each line</b> — a label, a color, and comma-separated values (one per X label).
-            </li>
-            <li>Needs the Chart.js runtime loaded once — see Embed Kit → *Charts runtime*.</li>
-        </ul>
-    </div>
-);
-
-/** Up to 4 lines, each its own color (picker) + legend entry. Requires the Chart.js runtime (Embed Kit → *Charts runtime*). */
+/** Up to 4 lines; set the Y-axis min/max/step to fix the scale (blank = auto). Requires the Chart.js runtime (Embed Kit → *Charts runtime*). */
 export const Embed: Story = {
     args: {
         title: "eCPM trend, last 6 months",
+        description: "Blended eCPM by platform.",
         valueSuffix: "",
+        yMin: undefined,
+        yMax: undefined,
+        yStep: undefined,
         xLabels: "Jan, Feb, Mar, Apr, May, Jun",
         seriesCount: 2,
         s1Label: "iOS",
@@ -113,7 +111,12 @@ export const Embed: Story = {
             { label: args.s4Label, color: args.s4Color, values: nums(args.s4Values) },
         ];
         const series = all.slice(0, args.seriesCount).filter((s) => s.values.length);
-        const config = { labels: labels(args.xLabels), series, valueSuffix: args.valueSuffix };
-        return <EmbedPlayground guide={guide} renderPreview={(html) => <ChartEmbedPreview html={html} />} html={buildChartEmbed("line", args.title, config)} />;
+        const config = { labels: labels(args.xLabels), series, valueSuffix: args.valueSuffix, yMin: args.yMin, yMax: args.yMax, yStep: args.yStep };
+        return (
+            <EmbedPlayground
+                renderPreview={(html) => <ChartEmbedPreview html={html} />}
+                html={buildChartEmbed("line", args.title, config, args.description || undefined)}
+            />
+        );
     },
 };
