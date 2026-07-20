@@ -41,7 +41,7 @@ export const Embed: Story = {
         attribution: "Carolina Wagner",
         role: "Monetization Lead",
         variant: "pink",
-        avatarUrl: "",
+        avatarUrl: "https://cdn.prod.website-files.com/6900d7d25b1ef1963248262d/6a5e451d829f66c5b3ec284b_c-Wagner.png",
     },
     render: (args) => <EmbedPlayground html={buildPullQuoteEmbed(args)} />,
 };

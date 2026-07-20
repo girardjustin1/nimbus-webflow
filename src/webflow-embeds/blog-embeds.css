@@ -82,6 +82,10 @@
 .blog-quote__avatar--teal { background-color: #08c6c7; box-shadow: 0 0 0 2px #fff, 0 0 0 4px #08c6c7; }
 .blog-quote__avatar--pink { background-color: #da6ea3; box-shadow: 0 0 0 2px #fff, 0 0 0 4px #da6ea3; }
 .blog-quote__avatar--navy { background-color: #003a5b; box-shadow: 0 0 0 2px #fff, 0 0 0 4px #003a5b; }
+/* Photo avatars (inline background-image): framed look matching the React component —
+   photo → thin white gap → colored ring (base box-shadow). Drop the colored fill so no
+   colored sliver shows at the photo edge. Initials keep the base fill for the circle. */
+.blog-quote__avatar[style] { background-color: transparent; }
 .blog-quote__name { display: block; font-size: 16px; font-weight: 600; color: #181d27; }
 .blog-quote__role { display: block; font-size: 15px; color: #535862; }
 
