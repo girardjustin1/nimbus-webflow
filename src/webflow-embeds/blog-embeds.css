@@ -35,7 +35,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin: 40px 0;
+    margin: 0;
 }
 @media (min-width: 900px) {
     .blog-metrics[data-cols="3"] { grid-template-columns: repeat(3, 1fr); }
@@ -67,7 +67,7 @@
 /* =====================================================================
    Pull Quote  —  .blog-quote  (variants: teal / pink / navy)
 ===================================================================== */
-.blog-quote { margin: 40px 0; border-left: 4px solid #08c6c7; padding-left: 24px; }
+.blog-quote { margin: 0; border-left: 4px solid #08c6c7; padding-left: 24px; }
 .blog-quote--teal { border-color: #08c6c7; }
 .blog-quote--pink { border-color: #da6ea3; }
 .blog-quote--navy { border-color: #003a5b; }
@@ -90,7 +90,7 @@
 ===================================================================== */
 .blog-insight {
     display: flex; align-items: center; gap: 20px;
-    border-left: 4px solid #4a9ea0; padding: 24px; margin: 40px 0;
+    border-left: 4px solid #4a9ea0; padding: 24px; margin: 0;
 }
 @media (min-width: 768px) { .blog-insight { gap: 28px; padding: 28px 32px; } }
 .blog-insight__icon { flex: none; width: 36px; height: 36px; object-fit: contain; }
@@ -109,9 +109,9 @@
 ===================================================================== */
 .blog-takeaway {
     border-top: 3px solid #4a9ea0; background: #f1fbfa;
-    padding: 40px 24px; margin: 64px 0; text-align: center;
+    padding: 40px 24px; margin: 0; text-align: center;
 }
-@media (min-width: 768px) { .blog-takeaway { padding: 56px 32px; margin: 80px 0; } }
+@media (min-width: 768px) { .blog-takeaway { padding: 56px 32px; margin: 0; } }
 .blog-takeaway__eyebrow { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #3f9a9c; }
 .blog-takeaway__text { margin: 16px auto 0; max-width: 42rem; font-size: 22px; line-height: 1.45; font-weight: 500; color: #1f2d33; }
 @media (min-width: 768px) { .blog-takeaway__text { font-size: 26px; } }
@@ -127,7 +127,7 @@
 ===================================================================== */
 .blog-stat {
     display: flex; flex-direction: column; gap: 8px;
-    border-radius: 16px; padding: 40px 24px; margin: 40px 0;
+    border-radius: 16px; padding: 40px 24px; margin: 0;
     align-items: center; text-align: center;
 }
 .blog-stat--left { align-items: flex-start; text-align: left; }
@@ -143,7 +143,7 @@
 /* =====================================================================
    Checklist  —  .blog-checklist
 ===================================================================== */
-.blog-checklist { margin: 40px 0; }
+.blog-checklist { margin: 0; }
 .blog-checklist__heading { margin: 0 0 16px; font-size: 21px; font-weight: 800; color: #181d27; }
 .blog-checklist__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; }
 .blog-checklist__item { display: flex; align-items: flex-start; gap: 16px; font-size: 18px; line-height: 1.35; color: #181d27; }
@@ -152,7 +152,7 @@
 /* =====================================================================
    Numbered Steps  —  .blog-steps
 ===================================================================== */
-.blog-steps { margin: 40px 0; }
+.blog-steps { margin: 0; }
 .blog-steps__heading { margin: 0; font-size: 30px; line-height: 1.2; font-weight: 800; color: #181d27; }
 @media (min-width: 768px) { .blog-steps__heading { font-size: 36px; } }
 .blog-steps__desc { margin: 12px 0 0; font-size: 18px; line-height: 28px; color: #535862; }
@@ -169,7 +169,7 @@
 /* =====================================================================
    Logo Statement  —  .blog-logo-statement
 ===================================================================== */
-.blog-logo-statement { margin: 64px 0; padding: 40px 0; border-top: 1px solid rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+.blog-logo-statement { margin: 0; padding: 40px 0; border-top: 1px solid rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 @media (min-width: 768px) { .blog-logo-statement { padding: 56px 0; } }
 .blog-logo-statement__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
 @media (min-width: 768px) { .blog-logo-statement__grid { grid-template-columns: 200px 1fr; align-items: center; gap: 48px; } }
@@ -181,14 +181,14 @@
 /* =====================================================================
    Imagery / Figure  —  .blog-figure
 ===================================================================== */
-.blog-figure { margin: 40px 0; }
+.blog-figure { margin: 0; }
 .blog-figure__img { display: block; width: 100%; border-radius: 16px; object-fit: cover; }
 .blog-figure__caption { margin: 12px 0 0; font-size: 15px; font-style: italic; color: #535862; }
 
 /* =====================================================================
    Tag List  —  .blog-tags
 ===================================================================== */
-.blog-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+.blog-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
 .blog-tag { font-size: 14px; font-weight: 600; padding: 4px 12px; border-radius: 999px; }
 .blog-tag--brand { background: #d0f7f7; color: #0b6e70; }
 .blog-tag--pink { background: #fbe4f0; color: #b32a6e; }
@@ -201,7 +201,7 @@
 /* =====================================================================
    Metrics Table  —  .blog-table
 ===================================================================== */
-.blog-table { margin: 40px 0; background: #fff; border: 1px solid #e9eaeb; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05); }
+.blog-table { margin: 0; background: #fff; border: 1px solid #e9eaeb; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05); }
 .blog-table__head { padding: 20px 24px; border-bottom: 1px solid #e9eaeb; }
 .blog-table__title { margin: 0; font-size: 20px; font-weight: 600; color: #181d27; }
 .blog-table__desc { margin: 4px 0 0; font-size: 15px; color: #717680; }
@@ -225,7 +225,7 @@
 /* =====================================================================
    FAQ  —  .blog-faq  (native <details>, no JS)
 ===================================================================== */
-.blog-faq { margin: 40px 0; background: #fff; border: 1px solid #e9eaeb; border-radius: 12px; padding: 24px; box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05); }
+.blog-faq { margin: 0; background: #fff; border: 1px solid #e9eaeb; border-radius: 12px; padding: 24px; box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05); }
 @media (min-width: 768px) { .blog-faq { padding: 32px; } }
 .blog-faq__eyebrow { font-size: 14px; font-weight: 600; color: #0b6e70; }
 .blog-faq__heading { margin: 12px 0 0; font-size: 30px; line-height: 1.2; font-weight: 600; color: #181d27; }
@@ -246,7 +246,7 @@
    Charts  —  .blog-chart-card / .blog-chart  (rendered by the charts runtime)
 ===================================================================== */
 .blog-chart-card {
-    margin: 40px 0;
+    margin: 0;
     background: #fff;
     border: 1px solid #e9eaeb;
     border-radius: 12px;
@@ -262,7 +262,7 @@
 /* =====================================================================
    Performance Panels  —  .blog-perf  (static bars)
 ===================================================================== */
-.blog-perf { margin: 40px 0; display: flex; flex-direction: column; gap: 24px; }
+.blog-perf { margin: 0; display: flex; flex-direction: column; gap: 24px; }
 .blog-perf__panel { background: #fff; border: 1px solid #e9eaeb; border-radius: 16px; padding: 24px; box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05); }
 @media (min-width: 768px) { .blog-perf__panel { padding: 32px; } }
 .blog-perf__title { display: flex; align-items: center; gap: 12px; margin: 0 0 8px; font-size: 20px; font-weight: 800; color: #181d27; }
