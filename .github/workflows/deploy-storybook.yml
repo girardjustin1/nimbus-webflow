@@ -23,6 +23,12 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
 
+            # Refresh the jsDelivr CDN cache for the blog embeds stylesheet so
+            # Webflow (which links it via jsDelivr @main) picks up changes within
+            # seconds of a merge. Non-fatal if the purge endpoint is unavailable.
+            - name: Purge jsDelivr cache (blog-embeds.css)
+              run: curl -sS "https://purge.jsdelivr.net/gh/girardjustin1/nimbus-webflow@main/src/webflow-embeds/blog-embeds.css" || true
+
             - name: Configure GitHub Pages
               uses: actions/configure-pages@v5
               with:
