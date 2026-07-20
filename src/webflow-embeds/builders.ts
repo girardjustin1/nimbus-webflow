@@ -465,3 +465,109 @@ ${blocks}
   </div>
 </div>`;
 }
+
+// ---------------------------------------------------------------------------
+// Code Snippet (line-numbered window, Nimbus-branded syntax colors)
+// ---------------------------------------------------------------------------
+/** Syntax token classes — each maps to a `.t-*` color in blog-embeds.css. */
+export type CodeToken = "kw" | "fn" | "str" | "num" | "com" | "obj" | "key" | "punc";
+/** A run of code text with an optional syntax token; omit `t` for plain text. */
+export interface CodeSeg {
+    s: string;
+    t?: CodeToken;
+}
+/** One code line, as an ordered list of segments. An empty array renders a blank line. */
+export type CodeLine = CodeSeg[];
+
+const codeLineHtml = (line: CodeLine): string => line.map((seg) => (seg.t ? `<span class="t-${seg.t}">${esc(seg.s)}</span>` : esc(seg.s))).join("");
+
+/**
+ * A code window with a line-number gutter and Nimbus-branded syntax colors.
+ * Dots use the Nimbus palette (teal / pink / navy); pass `filename` to label the window.
+ */
+export function buildCodeEmbed({ filename, lines: codeLines }: { filename?: string; lines: CodeLine[] }): string {
+    const name = filename ? `<span class="blog-code__name">${esc(filename)}</span>` : "";
+    const header = `<div class="blog-code__header"><span class="blog-code__dot" style="background:#ff5f57"></span><span class="blog-code__dot" style="background:#febc2e"></span><span class="blog-code__dot" style="background:#28c840"></span>${name}</div>`;
+    const items = codeLines.map((line) => `      <li>${codeLineHtml(line)}</li>`).join("\n");
+    return `<div class="blog-embed">
+  <div class="blog-code">
+    ${header}
+    <ol class="blog-code__lines">
+${items}
+    </ol>
+  </div>
+</div>`;
+}
+
+/** Keywords the auto-highlighter colors as `t-kw`. */
+const CODE_KEYWORDS = new Set([
+    "import", "from", "export", "default", "const", "let", "var", "function", "return", "await", "async", "new", "class",
+    "extends", "if", "else", "for", "while", "do", "switch", "case", "break", "continue", "try", "catch", "finally", "throw",
+    "typeof", "instanceof", "in", "of", "this", "super", "null", "true", "false", "undefined", "void", "yield", "as",
+]);
+
+const isIdentChar = (c: string): boolean => /[A-Za-z0-9_$]/.test(c);
+
+/** Tokenize a single line of code into Nimbus-colored segments (strings, comments, numbers, keywords, calls, types, keys). */
+function tokenizeLine(line: string): CodeLine {
+    const segs: CodeSeg[] = [];
+    let plain = "";
+    const flush = () => {
+        if (plain) segs.push({ s: plain });
+        plain = "";
+    };
+    let i = 0;
+    while (i < line.length) {
+        const c = line[i];
+        if (c === "/" && line[i + 1] === "/") {
+            flush();
+            segs.push({ s: line.slice(i), t: "com" });
+            return segs;
+        }
+        if (c === '"' || c === "'" || c === "`") {
+            flush();
+            let j = i + 1;
+            while (j < line.length && line[j] !== c) {
+                if (line[j] === "\\") j++;
+                j++;
+            }
+            segs.push({ s: line.slice(i, Math.min(j + 1, line.length)), t: "str" });
+            i = j + 1;
+            continue;
+        }
+        if (/[0-9]/.test(c) && !(i > 0 && isIdentChar(line[i - 1]))) {
+            flush();
+            let j = i;
+            while (j < line.length && /[0-9._a-fA-FxX]/.test(line[j])) j++;
+            segs.push({ s: line.slice(i, j), t: "num" });
+            i = j;
+            continue;
+        }
+        if (/[A-Za-z_$]/.test(c)) {
+            flush();
+            let j = i;
+            while (j < line.length && isIdentChar(line[j])) j++;
+            const word = line.slice(i, j);
+            let k = j;
+            while (k < line.length && line[k] === " ") k++;
+            const next = line[k];
+            let t: CodeToken | undefined;
+            if (CODE_KEYWORDS.has(word)) t = "kw";
+            else if (next === "(") t = "fn";
+            else if (next === ":") t = "key";
+            else if (/[A-Z]/.test(word[0])) t = "obj";
+            segs.push(t ? { s: word, t } : { s: word });
+            i = j;
+            continue;
+        }
+        plain += c;
+        i++;
+    }
+    flush();
+    return segs;
+}
+
+/** Auto-highlight a raw code string into `CodeLine[]` for buildCodeEmbed / CodeSnippet. */
+export function tokenizeCode(code: string): CodeLine[] {
+    return code.replace(/\r\n/g, "\n").split("\n").map(tokenizeLine);
+}

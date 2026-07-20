@@ -15,4 +15,5 @@ export { MetricsTable } from "./metrics-table";
 export { NumberedSteps } from "./numbered-steps";
 export { PerformancePanels } from "./performance-panel";
 export { InsightCallout } from "./insight-callout";
+export { CodeSnippet } from "./code-snippet";
 export { LogoStatement } from "./logo-statement";
