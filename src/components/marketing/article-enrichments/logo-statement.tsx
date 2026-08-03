@@ -26,10 +26,10 @@ export const LogoStatement = ({
                 src={logoSrc}
                 alt={logoAlt}
                 className={cx(
-                    "h-auto w-auto self-start object-contain md:self-center",
+                    "self-start object-contain object-left md:self-center",
                     logoShape === "square"
-                        ? "max-h-[72px] max-w-[150px] md:max-h-[88px] md:max-w-[180px]"
-                        : "max-h-10 max-w-[130px] md:max-h-12 md:max-w-40",
+                        ? "h-[76px] w-[150px] md:h-24 md:w-[190px]"
+                        : "h-11 w-[150px] md:h-12 md:w-40",
                 )}
             />
             <p className="text-[18px] leading-[28px] text-[#535862] md:text-[20px] md:leading-[32px]">{text}</p>

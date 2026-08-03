@@ -177,16 +177,17 @@
 @media (min-width: 768px) { .blog-logo-statement { padding: 56px 0; } }
 .blog-logo-statement__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
 @media (min-width: 768px) { .blog-logo-statement__grid { grid-template-columns: 200px 1fr; align-items: center; gap: 48px; } }
-/* Sized inside a bounding box (max-width + max-height) rather than a fixed height,
-   so wide wordmarks are capped by width and compact logos by height — keeping
-   visual weight balanced across different logo aspect ratios. */
-.blog-logo-statement__logo { width: auto; height: auto; max-width: 130px; max-height: 40px; object-fit: contain; }
-@media (min-width: 768px) { .blog-logo-statement__logo { max-width: 160px; max-height: 48px; } }
+/* Fixed box + object-fit:contain SCALES each logo to fill the box (up or down),
+   preserving aspect ratio and left-aligning it in the logo column. Using a fixed
+   width+height (rather than max-*, which can only shrink) means small-intrinsic
+   SVGs enlarge to a consistent size instead of rendering tiny. */
+.blog-logo-statement__logo { width: 150px; height: 44px; object-fit: contain; object-position: left center; }
+@media (min-width: 768px) { .blog-logo-statement__logo { width: 160px; height: 48px; } }
 /* Square / stacked logos (aspect ratio ~1:1–2.5:1, e.g. an icon over a wordmark)
-   read small at wordmark height — raise BOTH caps so they fill the logo column and
-   carry the same visual weight as a wide wordmark. */
-.blog-logo-statement__logo--square { max-width: 150px; max-height: 72px; }
-@media (min-width: 768px) { .blog-logo-statement__logo--square { max-width: 180px; max-height: 88px; } }
+   get a taller, wider box so they fill the column and carry the same visual weight
+   as a wide wordmark. */
+.blog-logo-statement__logo--square { width: 150px; height: 76px; }
+@media (min-width: 768px) { .blog-logo-statement__logo--square { width: 190px; height: 96px; } }
 .blog-logo-statement__text { margin: 0; font-size: 18px; line-height: 28px; color: #535862; }
 @media (min-width: 768px) { .blog-logo-statement__text { font-size: 20px; line-height: 32px; } }
 

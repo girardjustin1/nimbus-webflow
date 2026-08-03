@@ -49,3 +49,18 @@ export const Embed: Story = {
     },
     render: (args) => <EmbedPlayground html={buildLogoStatementEmbed(args)} />,
 };
+
+/**
+ * A compact/stacked logo (icon over a wordmark) in "square" mode — the logo fills
+ * the column at equal visual weight to a wide wordmark. Points at the real hosted
+ * Audiomack SVG so the preview matches what renders on the live site.
+ */
+export const SquareLogo: Story = {
+    args: {
+        logoUrl: "https://cdn.prod.website-files.com/6900d7d25b1ef1963248262d/6a70b46a3603cbb8d5d8718a_audiomack-logo_080326.svg",
+        logoAlt: "Audiomack",
+        logoShape: "square",
+        text: "Audiomack partnered with Nimbus to redesign its in-app monetization around the Dynamic Unit and unified mediation, creating custom ad experiences that nearly doubled revenue without increasing ad load.",
+    },
+    render: (args) => <EmbedPlayground html={buildLogoStatementEmbed(args)} />,
+};
