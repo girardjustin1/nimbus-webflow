@@ -218,11 +218,23 @@ ${rows}
 // ---------------------------------------------------------------------------
 // Logo Statement
 // ---------------------------------------------------------------------------
-export function buildLogoStatementEmbed({ logoUrl, logoAlt, text }: { logoUrl: string; logoAlt: string; text: string }): string {
+export function buildLogoStatementEmbed({
+    logoUrl,
+    logoAlt,
+    text,
+    logoShape = "wide",
+}: {
+    logoUrl: string;
+    logoAlt: string;
+    text: string;
+    /** "square" gives compact/stacked logos a taller size cap so they carry equal visual weight to wide wordmarks. */
+    logoShape?: "wide" | "square";
+}): string {
+    const logoClass = logoShape === "square" ? "blog-logo-statement__logo blog-logo-statement__logo--square" : "blog-logo-statement__logo";
     return `<div class="blog-embed">
   <div class="blog-logo-statement">
     <div class="blog-logo-statement__grid">
-      <img class="blog-logo-statement__logo" src="${escAttr(logoUrl)}" alt="${escAttr(logoAlt)}" />
+      <img class="${logoClass}" src="${escAttr(logoUrl)}" alt="${escAttr(logoAlt)}" />
       <p class="blog-logo-statement__text">${esc(text)}</p>
     </div>
   </div>
@@ -427,8 +439,10 @@ export function buildChartEmbed(type: ChartType, title: string, config: unknown,
 // ---------------------------------------------------------------------------
 export interface PerfMetricEmbed {
     label: string;
-    /** Percentage lift 0–100; drives the bar fill and the "+NN%" value. */
+    /** The number shown as "+NN%". May exceed 100 (e.g. 197) — the bar stays capped at 100%. */
     value: number;
+    /** Optional explicit bar fill 0–100, decoupled from `value`. Defaults to `value` clamped to 0–100. */
+    bar?: number;
 }
 export interface PerfPanelEmbed {
     title: string;
@@ -442,7 +456,7 @@ export function buildPerformancePanelsEmbed(panels: PerfPanelEmbed[]): string {
             const badge = panel.badge ? ` <span class="blog-perf__badge">${esc(panel.badge)}</span>` : "";
             const rows = panel.metrics
                 .map((metric) => {
-                    const pct = Math.max(0, Math.min(metric.value, 100));
+                    const pct = Math.max(0, Math.min(metric.bar ?? metric.value, 100));
                     return `      <div class="blog-perf__row">
         <div>
           <span class="blog-perf__metric-eyebrow">Metric</span>

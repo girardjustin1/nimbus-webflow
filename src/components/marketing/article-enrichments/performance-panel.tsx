@@ -4,8 +4,10 @@ import { CountUp, useInViewOnce } from "./count-up";
 export interface PerformanceMetric {
     /** Metric name, e.g. "rCPM". */
     label: string;
-    /** Percentage lift — drives both the bar fill and the displayed "+NN%". */
+    /** The number shown as "+NN%". May exceed 100 (e.g. 197) — the bar stays capped at 100%. */
     value: number;
+    /** Optional explicit bar fill 0–100, decoupled from `value`. Defaults to `value` clamped to 0–100. */
+    bar?: number;
 }
 
 export interface PerformancePanel {
@@ -21,7 +23,7 @@ export interface PerformancePanelsProps {
 const TEAL = "#08c6c7";
 
 const MetricRow = ({ metric }: { metric: PerformanceMetric }) => {
-    const target = Math.max(0, Math.min(metric.value, 100));
+    const target = Math.max(0, Math.min(metric.bar ?? metric.value, 100));
     // Fill the bar from 0 to target the first time the row scrolls into view.
     const { ref, inView } = useInViewOnce<HTMLDivElement>();
 

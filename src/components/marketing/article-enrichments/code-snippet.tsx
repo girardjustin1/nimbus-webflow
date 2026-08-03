@@ -32,7 +32,7 @@ export const CodeSnippet = ({ filename, lines }: { filename?: string; lines: Cod
         </div>
         <ol className="m-0 list-none overflow-x-auto py-3.5 text-[13px] text-[#181d27]" style={{ fontFamily: MONO, lineHeight: 1.85 }}>
             {lines.map((line, i) => (
-                <li key={i} className="relative py-0 pr-5 pl-14 whitespace-pre">
+                <li key={i} className="relative min-h-[1.85em] py-0 pr-5 pl-14 whitespace-pre">
                     <span className="absolute left-0 w-10 text-right text-[#a4a7ae]" aria-hidden="true">
                         {i + 1}
                     </span>

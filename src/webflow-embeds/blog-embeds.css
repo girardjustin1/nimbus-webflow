@@ -177,8 +177,16 @@
 @media (min-width: 768px) { .blog-logo-statement { padding: 56px 0; } }
 .blog-logo-statement__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
 @media (min-width: 768px) { .blog-logo-statement__grid { grid-template-columns: 200px 1fr; align-items: center; gap: 48px; } }
-.blog-logo-statement__logo { height: 36px; width: auto; }
-@media (min-width: 768px) { .blog-logo-statement__logo { height: 40px; } }
+/* Sized inside a bounding box (max-width + max-height) rather than a fixed height,
+   so wide wordmarks are capped by width and compact logos by height — keeping
+   visual weight balanced across different logo aspect ratios. */
+.blog-logo-statement__logo { width: auto; height: auto; max-width: 130px; max-height: 40px; object-fit: contain; }
+@media (min-width: 768px) { .blog-logo-statement__logo { max-width: 160px; max-height: 48px; } }
+/* Square / stacked logos (aspect ratio ~1:1–2.5:1, e.g. an icon over a wordmark)
+   read small at wordmark height — raise BOTH caps so they fill the logo column and
+   carry the same visual weight as a wide wordmark. */
+.blog-logo-statement__logo--square { max-width: 150px; max-height: 72px; }
+@media (min-width: 768px) { .blog-logo-statement__logo--square { max-width: 180px; max-height: 88px; } }
 .blog-logo-statement__text { margin: 0; font-size: 18px; line-height: 28px; color: #535862; }
 @media (min-width: 768px) { .blog-logo-statement__text { font-size: 20px; line-height: 32px; } }
 
@@ -357,7 +365,10 @@
     line-height: 1.85;
     color: #181d27;
 }
-.blog-code__lines li { counter-increment: ln; white-space: pre; position: relative; padding: 0 20px 0 56px; }
+/* min-height keeps blank lines a full row tall so their line number doesn't collide with the next
+   (an empty `pre` <li> would otherwise collapse to zero height). 1lh matches whatever line-height
+   applies (e.g. the .blog-prose override); em is the fallback for browsers without the lh unit. */
+.blog-code__lines li { counter-increment: ln; white-space: pre; position: relative; padding: 0 20px 0 56px; min-height: 1.85em; min-height: 1lh; }
 .blog-code__lines li::before { content: counter(ln); position: absolute; left: 0; width: 40px; text-align: right; color: #a4a7ae; }
 /* Syntax tokens — Nimbus brand palette. */
 .blog-code .t-obj { color: #003a5b; }
