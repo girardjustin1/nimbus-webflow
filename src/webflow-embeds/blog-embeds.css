@@ -169,6 +169,8 @@
 @media (min-width: 768px) { .blog-step__title { font-size: 24px; } }
 .blog-step__items { margin: 16px 0 0; padding-left: 20px; list-style: circle; display: flex; flex-direction: column; gap: 10px; font-size: 18px; line-height: 26px; color: #535862; }
 .blog-step__items li::marker { color: #98a2b3; }
+/* Flat variant: no bullets, flush to the title. */
+.blog-step__items--flat { padding-left: 0; list-style: none; }
 
 /* =====================================================================
    Logo Statement  —  .blog-logo-statement
