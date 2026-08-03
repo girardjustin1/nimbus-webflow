@@ -11,6 +11,7 @@ const splitItems = (value: string) =>
 interface Args {
     heading: string;
     description: string;
+    bullets: boolean;
     count: number;
     step1Title: string;
     step1Items: string;
@@ -51,6 +52,7 @@ const meta: Meta<Args> = {
     argTypes: {
         heading: { name: "Heading (optional)" },
         description: { name: "Description (optional)" },
+        bullets: { name: "Bullets", control: "boolean" },
         count: { name: "Number of steps", control: "select", options: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
         step1Title: { name: "Step 1 · title" },
         step1Items: { ...itemsHelp, name: "Step 1 · items (; separated)" },
@@ -83,6 +85,7 @@ export const Embed: Story = {
     args: {
         heading: "Why the results held",
         description: "",
+        bullets: true,
         count: 3,
         step1Title: "Unified auction dynamics",
         step1Items: "Every demand source bids in one real-time auction; The highest bid wins, with no waterfall bias",
@@ -119,6 +122,8 @@ export const Embed: Story = {
             { title: args.step10Title, items: splitItems(args.step10Items) },
         ];
         const steps = all.slice(0, args.count);
-        return <EmbedPlayground html={buildNumberedStepsEmbed({ heading: args.heading || undefined, description: args.description || undefined, steps })} />;
+        return (
+            <EmbedPlayground html={buildNumberedStepsEmbed({ heading: args.heading || undefined, description: args.description || undefined, steps, bullets: args.bullets })} />
+        );
     },
 };

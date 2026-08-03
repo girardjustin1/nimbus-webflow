@@ -183,13 +183,17 @@ export function buildNumberedStepsEmbed({
     heading,
     description,
     steps,
+    bullets = true,
 }: {
     heading?: string;
     description?: string;
     steps: NumberedStepEmbed[];
+    /** Show bullet markers on the step items. Set false for a flat, flush list. */
+    bullets?: boolean;
 }): string {
     const head = heading ? `\n  <h2 class="blog-steps__heading">${esc(heading)}</h2>` : "";
     const desc = description ? `\n  <p class="blog-steps__desc">${esc(description)}</p>` : "";
+    const itemsClass = bullets ? "blog-step__items" : "blog-step__items blog-step__items--flat";
     const rows = steps
         .map((step, i) => {
             const num = String(i + 1).padStart(2, "0");
@@ -199,7 +203,7 @@ export function buildNumberedStepsEmbed({
       <span class="blog-step__num" style="color:${color}" aria-hidden="true">${num}</span>
       <div>
         <h3 class="blog-step__title">${esc(step.title)}</h3>
-        <ul class="blog-step__items">
+        <ul class="${itemsClass}">
 ${items}
         </ul>
       </div>
