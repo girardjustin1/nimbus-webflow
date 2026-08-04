@@ -168,6 +168,51 @@ ${list}
 }
 
 // ---------------------------------------------------------------------------
+// Checklist v2 — per-item selectable marker icon (non-breaking; reuses .blog-checklist CSS)
+// ---------------------------------------------------------------------------
+/** Marker icon options for a Checklist v2 item. Each renders at 20px with its own color. */
+export const CHECKLIST_ICON_TYPES = ["check", "check-green", "x", "bulb", "warning", "info", "star", "arrow", "dot"] as const;
+export type ChecklistIcon = (typeof CHECKLIST_ICON_TYPES)[number];
+
+/** color + inner SVG for each marker; stroke/fill use currentColor so `color` drives it. */
+const CHECKLIST_ICONS: Record<ChecklistIcon, { color: string; inner: string }> = {
+    check: { color: "#23a6a9", inner: `<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m9 11 3 3L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>` },
+    "check-green": { color: "#17b26a", inner: `<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m9 11 3 3L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>` },
+    x: { color: "#f04438", inner: `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="m15 9-6 6M9 9l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>` },
+    bulb: { color: "#f79009", inner: `<path d="M9 18h6M10 21h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.45 1 1.15 1.1 1.9l.1.8h4.8l.1-.8c.1-.75.5-1.45 1.1-1.9A6 6 0 0 0 12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>` },
+    warning: { color: "#dc6803", inner: `<path d="M12 3 2 20h20L12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 9v5M12 17.5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>` },
+    info: { color: "#2e90fa", inner: `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 11v5M12 8h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>` },
+    star: { color: "#f79009", inner: `<path d="m12 3 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 18.6 6.2 21.4l1.1-6.5L2.6 9.8l6.5-.9L12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>` },
+    arrow: { color: "#23a6a9", inner: `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M8 12h8M13 9l3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>` },
+    dot: { color: "#98a2b3", inner: `<circle cx="12" cy="12" r="5" fill="currentColor"/>` },
+};
+
+const checklistIconSvg = (icon: ChecklistIcon): string => {
+    const { color, inner } = CHECKLIST_ICONS[icon] ?? CHECKLIST_ICONS.check;
+    return `<svg class="blog-checklist__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="color:${color}">${inner}</svg>`;
+};
+
+export interface ChecklistV2Item {
+    text: string;
+    /** Marker icon for this item; defaults to "check". */
+    icon?: ChecklistIcon;
+}
+
+export function buildChecklistV2Embed({ heading, items }: { heading?: string; items: ChecklistV2Item[] }): string {
+    const head = heading ? `\n  <h3 class="blog-checklist__heading">${esc(heading)}</h3>` : "";
+    const list = items
+        .map((item) => `      <li class="blog-checklist__item">${checklistIconSvg(item.icon ?? "check")}<span>${esc(item.text)}</span></li>`)
+        .join("\n");
+    return `<div class="blog-embed">
+  <div class="blog-checklist">${head}
+    <ul class="blog-checklist__list">
+${list}
+    </ul>
+  </div>
+</div>`;
+}
+
+// ---------------------------------------------------------------------------
 // Numbered Steps
 // ---------------------------------------------------------------------------
 export interface NumberedStepEmbed {
