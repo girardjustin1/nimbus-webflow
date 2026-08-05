@@ -7,11 +7,26 @@
  * into a Webflow Rich Text "Custom Code" block.
  */
 
-/** Escape user copy so it is safe to drop into HTML markup. */
-const esc = (value: string): string => value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+/** Raw HTML escape (no quote conversion) — for attributes and code, where quotes must stay literal. */
+const escRaw = (value: string): string => value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-/** Escape a value used inside a double-quoted HTML attribute. */
-const escAttr = (value: string): string => esc(value).replace(/"/g, "&quot;");
+/**
+ * Convert straight quotes to typographic (curly) quotes in copy — matches the site's
+ * render-time smart-quotes script. Applied to prose text via `esc()`, never to code/attributes.
+ */
+const smartQuotes = (value: string): string =>
+    value
+        .replace(/(^|[\s([{<])"/g, "$1“")
+        .replace(/"/g, "”")
+        .replace(/([A-Za-z0-9.,!?])'/g, "$1’")
+        .replace(/(^|[\s([{<])'/g, "$1‘")
+        .replace(/'/g, "’");
+
+/** Escape user copy for HTML, with curly-quote conversion. */
+const esc = (value: string): string => escRaw(smartQuotes(value));
+
+/** Escape a value used inside a double-quoted HTML attribute (no quote conversion). */
+const escAttr = (value: string): string => escRaw(value).replace(/"/g, "&quot;");
 
 /** Split a multiline textarea value into trimmed, non-empty lines. */
 export const lines = (value: string): string[] =>
@@ -542,14 +557,14 @@ export interface CodeSeg {
 /** One code line, as an ordered list of segments. An empty array renders a blank line. */
 export type CodeLine = CodeSeg[];
 
-const codeLineHtml = (line: CodeLine): string => line.map((seg) => (seg.t ? `<span class="t-${seg.t}">${esc(seg.s)}</span>` : esc(seg.s))).join("");
+const codeLineHtml = (line: CodeLine): string => line.map((seg) => (seg.t ? `<span class="t-${seg.t}">${escRaw(seg.s)}</span>` : escRaw(seg.s))).join("");
 
 /**
  * A code window with a line-number gutter and Nimbus-branded syntax colors.
  * Dots use the Nimbus palette (teal / pink / navy); pass `filename` to label the window.
  */
 export function buildCodeEmbed({ filename, lines: codeLines }: { filename?: string; lines: CodeLine[] }): string {
-    const name = filename ? `<span class="blog-code__name">${esc(filename)}</span>` : "";
+    const name = filename ? `<span class="blog-code__name">${escRaw(filename)}</span>` : "";
     const header = `<div class="blog-code__header"><span class="blog-code__dot" style="background:#ff5f57"></span><span class="blog-code__dot" style="background:#febc2e"></span><span class="blog-code__dot" style="background:#28c840"></span>${name}</div>`;
     const items = codeLines.map((line) => `      <li>${codeLineHtml(line)}</li>`).join("\n");
     return `<div class="blog-embed">
