@@ -1,10 +1,11 @@
 @theme {
     /* FONT FAMILY
-       Nimbus brand font: Proxima Nova (Adobe Fonts / Typekit — commercial license).
-       Load your Adobe Fonts web-project kit in index.html; the CSS family name is
-       "proxima-nova". Inter remains as the fallback so nothing breaks without the kit. */
-    --font-body: "proxima-nova", "Proxima Nova", var(--font-inter, "Inter"), -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    --font-display: "proxima-nova", "Proxima Nova", var(--font-inter, "Inter"), -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+       Nimbus brand font: Proxima Nova, self-hosted in Webflow as "Proximanova"
+       (weights 300/400/600/700/800; no italic faces). Inter + system fonts are the
+       only fallbacks — the Adobe Typekit kit has been removed. @font-face for the
+       self-hosted files is declared in index.html so Storybook renders the brand font. */
+    --font-body: "Proximanova", var(--font-inter, "Inter"), -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-display: "Proximanova", var(--font-inter, "Inter"), -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     --font-mono: ui-monospace, "Roboto Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
     /* FONT SIZE */

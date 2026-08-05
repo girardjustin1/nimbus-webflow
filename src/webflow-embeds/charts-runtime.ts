@@ -14,7 +14,7 @@ export const CHARTJS_CDN = "https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/cha
 export const CHARTS_RUNTIME = `(function () {
   var PALETTE = ["#08c6c7", "#dc438c", "#003a5b", "#15b7f0", "#f79009", "#7a5af8"];
   var GRID = "#e9eaeb";
-  var FONT = "proxima-nova, 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif";
+  var FONT = "Proximanova, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif";
 
   function alpha(hex, a) {
     var h = hex.replace("#", "");
@@ -111,7 +111,7 @@ export const CHARTS_RUNTIME = `(function () {
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const P_PALETTE = ["#08c6c7", "#dc438c", "#003a5b", "#15b7f0", "#f79009", "#7a5af8"];
 const P_GRID = "#e9eaeb";
-const P_FONT = "proxima-nova, 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif";
+const P_FONT = "Proximanova, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif";
 
 const pAlpha = (hex: string, a: number) => {
     const h = hex.replace("#", "");

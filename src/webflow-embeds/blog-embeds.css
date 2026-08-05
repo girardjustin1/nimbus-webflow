@@ -15,7 +15,7 @@
  */
 
 .blog-embed {
-    font-family: "proxima-nova", "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Proximanova", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     color: #181d27;
     -webkit-font-smoothing: antialiased;
 }
@@ -54,7 +54,7 @@
     padding: 24px;
     box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
 }
-.blog-metric__label { margin: 0; font-size: 14px; font-weight: 500; line-height: 1.4; color: #717680; }
+.blog-metric__label { margin: 0; font-size: 14px; font-weight: 400; line-height: 1.4; color: #717680; }
 .blog-metric__value {
     display: flex; align-items: center; gap: 6px; margin: auto 0 0;
     font-size: 30px; line-height: 1.2; font-weight: 600; letter-spacing: -0.02em;
@@ -71,7 +71,7 @@
 .blog-quote--teal { border-color: #08c6c7; }
 .blog-quote--pink { border-color: #da6ea3; }
 .blog-quote--navy { border-color: #003a5b; }
-.blog-quote__text { margin: 0; font-size: 26px; line-height: 1.35; font-weight: 500; color: #181d27; letter-spacing: -0.01em; }
+.blog-quote__text { margin: 0; font-size: 26px; line-height: 1.35; font-weight: 400; color: #181d27; letter-spacing: -0.01em; }
 .blog-quote__by { display: flex; align-items: center; gap: 12px; margin-top: 16px; }
 .blog-quote__avatar {
     flex: none; width: 48px; height: 48px; border-radius: 50%;
@@ -99,7 +99,7 @@
 @media (min-width: 768px) { .blog-insight { gap: 28px; padding: 28px 32px; } }
 .blog-insight__icon { flex: none; width: 36px; height: 36px; object-fit: contain; }
 @media (min-width: 768px) { .blog-insight__icon { width: 40px; height: 40px; } }
-.blog-insight__text { margin: 0; font-size: 19px; line-height: 1.45; font-weight: 500; }
+.blog-insight__text { margin: 0; font-size: 19px; line-height: 1.45; font-weight: 400; }
 @media (min-width: 768px) { .blog-insight__text { font-size: 21px; } }
 .blog-insight--teal { border-color: #4a9ea0; background: #e9f7f6; }
 .blog-insight--teal .blog-insight__text { color: #4a9ea0; }
@@ -117,7 +117,7 @@
 }
 @media (min-width: 768px) { .blog-takeaway { padding: 56px 32px; margin: 0; } }
 .blog-takeaway__eyebrow { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #3f9a9c; }
-.blog-takeaway__text { margin: 16px auto 0; max-width: 42rem; font-size: 22px; line-height: 1.45; font-weight: 500; color: #1f2d33; }
+.blog-takeaway__text { margin: 16px auto 0; max-width: 42rem; font-size: 22px; line-height: 1.45; font-weight: 400; color: #1f2d33; }
 @media (min-width: 768px) { .blog-takeaway__text { font-size: 26px; } }
 .blog-takeaway--teal { border-color: #4a9ea0; background: #f1fbfa; }
 .blog-takeaway--teal .blog-takeaway__eyebrow { color: #3f9a9c; }
@@ -225,7 +225,7 @@
 .blog-table th { text-align: left; padding: 12px 24px; font-size: 13px; font-weight: 600; color: #717680; background: #fcfcfd; border-bottom: 1px solid #e9eaeb; white-space: nowrap; }
 .blog-table td { padding: 16px 24px; font-size: 16px; color: #535862; border-bottom: 1px solid #f0f0f2; white-space: nowrap; }
 .blog-table tr:last-child td { border-bottom: none; }
-.blog-table__geo { font-weight: 500; color: #181d27; }
+.blog-table__geo { font-weight: 400; color: #181d27; }
 .blog-table__lift { display: inline-block; padding: 3px 12px; border-radius: 999px; font-size: 15px; font-weight: 600; background: #dcfae6; color: #079455; }
 .blog-table__lift--down { background: #fee4e2; color: #d92d20; }
 .blog-table__lift--gray { background: #f0eee9; color: #5b5347; }
@@ -300,7 +300,7 @@
    render in the blog's brand style.
 ===================================================================== */
 .blog-prose {
-    font-family: "proxima-nova", "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Proximanova", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     color: #181d27;
     font-size: 18px;
     line-height: 1.7;
@@ -342,7 +342,7 @@
 .blog-prose > ol { list-style: decimal; }
 .blog-prose > ul > li::marker,
 .blog-prose > ol > li::marker { color: #08c6c7; }
-.blog-prose > blockquote { margin: 0; border-left: 4px solid #dc438c; padding-left: 20px; font-size: 22px; line-height: 1.4; font-weight: 500; color: #181d27; }
+.blog-prose > blockquote { margin: 0; border-left: 4px solid #dc438c; padding-left: 20px; font-size: 22px; line-height: 1.4; font-weight: 400; color: #181d27; }
 .blog-prose > figure img,
 .blog-prose > p img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
 .blog-prose > figure { margin: 0; }
