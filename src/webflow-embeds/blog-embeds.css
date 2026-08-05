@@ -314,10 +314,10 @@
 .blog-prose > h3,
 .blog-prose > h4,
 .blog-prose > h5 { color: #181d27; letter-spacing: -0.02em; line-height: 1.2; }
-.blog-prose > h1 { font-size: 40px; font-weight: 700; margin-top: 1.4em; border-top: 1px solid #E0DEDB; padding-top: 0.8em; }
-.blog-prose > h2 { font-size: 32px; font-weight: 700; margin-top: 1.5em; }
-.blog-prose > h3 { font-size: 26px; font-weight: 700; margin-top: 1.5em; }
-.blog-prose > h4 { font-size: 22px; font-weight: 700; margin-top: 1.4em; }
+.blog-prose > h1 { font-size: 40px; font-weight: 800; margin-top: 1.4em; border-top: 1px solid #E0DEDB; padding-top: 0.8em; }
+.blog-prose > h2 { font-size: 32px; font-weight: 800; margin-top: 1.5em; }
+.blog-prose > h3 { font-size: 26px; font-weight: 800; margin-top: 1.5em; }
+.blog-prose > h4 { font-size: 22px; font-weight: 800; margin-top: 1.4em; }
 .blog-prose > h5 { font-size: 18px; font-weight: 700; margin-top: 1.3em; }
 .blog-prose > h6 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #717680; margin-top: 1.3em; }
 .blog-prose > p { font-size: 18px; line-height: 1.7; color: #414651; margin: 0; }
